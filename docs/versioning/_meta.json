@@ -1,0 +1,8 @@
+{
+  "title": "Versioning",
+  "description": "Strategies for maintaining versioned documentation and changelogs.",
+  "order": [
+    { "path": "index.md", "title": "Version Strategy" },
+    { "path": "changelog.md", "title": "Documentation Changelog" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Localization",
+  "description": "Guidance for translating and maintaining multilingual docs.",
+  "order": [
+    { "path": "index.md", "title": "Localization Overview" },
+    { "path": "workflow.md", "title": "Translation Workflow" }
+  ]
+}

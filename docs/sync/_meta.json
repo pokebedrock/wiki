@@ -1,0 +1,7 @@
+{
+  "title": "Sync",
+  "description": "How published docs are synchronized with the website backend.",
+  "order": [
+    { "path": "index.md", "title": "Website Sync" }
+  ]
+}

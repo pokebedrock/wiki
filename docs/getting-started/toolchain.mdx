@@ -1,0 +1,45 @@
+---
+title: "Toolchain Setup"
+description: "Install the recommended PokéBedrock authoring toolchain and linting helpers."
+tags:
+  - tooling
+  - setup
+  - mdx
+lastUpdated: "2025-11-04"
+lang: en
+---
+
+import Snippet from "../snippets/author-checklist.mdx";
+
+<Snippet />
+
+## Required software
+
+```bash
+npm install --global markdownlint-cli@0.41.0
+npm install --global lychee@0.15.1
+```
+
+- Install Node.js 20 LTS
+- Configure your editor with the Markdownlint extension
+- Enable MDX syntax highlighting
+
+## Recommended VS Code extensions
+
+```jsonc
+{
+  "recommendations": [
+    "DavidAnson.vscode-markdownlint",
+    "silvenon.mdx",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
+```
+
+:::note
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum interdum velit, id convallis tortor posuere ut.
+:::
+
+## Next steps
+
+Once your environment is ready, create a new branch, copy the relevant template from `docs/snippets`, and start drafting.

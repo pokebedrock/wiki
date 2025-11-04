@@ -1,0 +1,7 @@
+{
+  "title": "Guidelines",
+  "description": "Standards and style references for contributors.",
+  "order": [
+    { "path": "style-guide.md", "title": "Markdown Style Guide" }
+  ]
+}

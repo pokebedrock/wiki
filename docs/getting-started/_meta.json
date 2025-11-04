@@ -1,0 +1,9 @@
+{
+  "title": "Getting Started",
+  "description": "Step-by-step onboarding for authors and server operators.",
+  "order": [
+    { "path": "index.md", "title": "Overview" },
+    { "path": "toolchain.mdx", "title": "Toolchain Setup" },
+    { "path": "installing.md", "title": "Install PokéBedrock" }
+  ]
+}

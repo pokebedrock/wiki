@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run validate:content
+
+  sync-hook:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Trigger website sync webhook
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBSITE_SYNC_WEBHOOK }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "WEBHOOK_URL secret not configured; skipping";
+            exit 0;
+          fi
+          curl -X POST "$WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d '{"repository": "pokebedrock-wiki", "ref": "'"${GITHUB_REF}"'"}'
+
+  search-index:
+    needs: lint
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build search index payload
+        run: |
+          tar -czf docs.tar.gz docs
+      - name: Upload to Meilisearch webhook
+        env:
+          SEARCH_WEBHOOK_URL: ${{ secrets.SEARCH_SYNC_WEBHOOK }}
+        run: |
+          if [ -z "$SEARCH_WEBHOOK_URL" ]; then
+            echo "SEARCH_WEBHOOK_URL not set; skipping";
+            exit 0;
+          fi
+          curl -X POST "$SEARCH_WEBHOOK_URL" \
+            -H "Content-Type: application/gzip" \
+            --data-binary @docs.tar.gz

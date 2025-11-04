@@ -1,0 +1,14 @@
+export default function Snippet() {
+  return (
+    <aside className="snippet snippet--checklist">
+      <h3>Authoring Checklist</h3>
+      <ol>
+        <li>Copy the appropriate template from <code>docs/snippets</code>.</li>
+        <li>Fill in required frontmatter fields (<code>title</code>, <code>description</code>, <code>tags</code>, <code>lastUpdated</code>).</li>
+        <li>Run <code>npm run lint:markdown</code> and <code>npm run validate:frontmatter</code>.</li>
+        <li>Attach relevant assets under <code>docs/assets</code> (WebP preferred) and add alt text.</li>
+        <li>Open a PR using the template and request review from <code>@pokedex-core</code>.</li>
+      </ol>
+    </aside>
+  );
+}

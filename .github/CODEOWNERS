@@ -1,0 +1,9 @@
+# Default owners
+* @pokedex-core
+
+# Docs
+/docs/ @pokedex-core @pokedex-lore-team
+
+# Schemas and tooling
+/schemas/ @pokedex-core @pokedex-engineering
+/scripts/ @pokedex-engineering

@@ -1,0 +1,7 @@
+{
+  "title": "Search",
+  "description": "Indexing strategy and developer tooling for search experiences.",
+  "order": [
+    { "path": "index.md", "title": "Search Indexing" }
+  ]
+}

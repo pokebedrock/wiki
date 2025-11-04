@@ -1,0 +1,8 @@
+{
+  "title": "Game Mechanics",
+  "description": "Technical breakdowns of PokéBedrock features for builders and designers.",
+  "order": [
+    { "path": "battle-basics/index.md", "title": "Battle Basics" },
+    { "path": "spawning.md", "title": "Mob Spawning" }
+  ]
+}

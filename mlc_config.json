@@ -1,0 +1,16 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^mailto:" },
+    { "pattern": "^#" }
+  ],
+  "httpHeaders": [
+    {
+      "urls": [
+        "https://raw.githubusercontent.com/*"
+      ],
+      "headers": {
+        "user-agent": "pokebedrock-wiki-link-checker"
+      }
+    }
+  ]
+}

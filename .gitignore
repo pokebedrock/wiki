@@ -1,0 +1,17 @@
+# Node / tooling artifacts
+node_modules/
+.cache/
+.DS_Store
+dist/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local tooling overrides
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

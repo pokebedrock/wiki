@@ -1,0 +1,22 @@
+{
+  "name": "pokebedrock-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" README.md CONTRIBUTING.md",
+    "validate:frontmatter": "node scripts/ci/validate-frontmatter.mjs",
+    "validate:assets": "node scripts/ci/check-assets.mjs",
+    "check:links": "node scripts/ci/check-links.mjs",
+    "validate:content": "npm run lint:markdown && npm run validate:frontmatter && npm run validate:assets && npm run check:links"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^2.1.1",
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3",
+    "markdown-link-check": "^3.14.1",
+    "markdownlint": "^0.36.0",
+    "markdownlint-cli2": "^0.12.0"
+  }
+}

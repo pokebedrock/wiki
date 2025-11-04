@@ -1,51 +1,51 @@
 # PokéBedrock Wiki Plan (Content Repo + GitHub Workflow)
 
-- [ ] Repository structure
-  - [ ] `/docs` root for markdown files
-  - [ ] Category folders with frontmatter
-  - [ ] `assets/` for images (webp preferred), diagrams
-  - [ ] Global `_meta.json` for ordering and titles
+- [x] Repository structure
+  - [x] `/docs` root for markdown files
+  - [x] Category folders with frontmatter
+  - [x] `assets/` for images (webp preferred), diagrams
+  - [x] Global `_meta.json` for ordering and titles
 
-- [ ] Contribution workflow
-  - [ ] `CONTRIBUTING.md` with authoring rules
-  - [ ] `PULL_REQUEST_TEMPLATE.md` and `CODEOWNERS`
-  - [ ] Markdown style guide and lint rules
-  - [ ] Issue templates (bug, content request)
+- [x] Contribution workflow
+  - [x] `CONTRIBUTING.md` with authoring rules
+  - [x] `PULL_REQUEST_TEMPLATE.md` and `CODEOWNERS`
+  - [x] Markdown style guide and lint rules
+  - [x] Issue templates (bug, content request)
 
-- [ ] Linting and validation
-  - [ ] markdownlint config and CI check
-  - [ ] Link checker (external and internal anchors)
-  - [ ] Frontmatter schema (title, description, tags, lastUpdated)
-  - [ ] Image size and alt-text enforcement
+- [x] Linting and validation
+  - [x] markdownlint config and CI check
+  - [x] Link checker (external and internal anchors)
+  - [x] Frontmatter schema (title, description, tags, lastUpdated)
+  - [x] Image size and alt-text enforcement
 
-- [ ] Content authoring
-  - [ ] MDX support
-  - [ ] Admonitions (note, tip, warning)
-  - [ ] Code blocks with syntax highlighting
-  - [ ] Reusable snippets/partials
+- [x] Content authoring
+  - [x] MDX support
+  - [x] Admonitions (note, tip, warning)
+  - [x] Code blocks with syntax highlighting
+  - [x] Reusable snippets/partials
 
-- [ ] Sync to website
-  - [ ] Backend webhook (GitHub → website) on push to `main`
-  - [ ] Website fetches raw markdown via GitHub API and caches
-  - [ ] Cache busting and ETag handling
+- [x] Sync to website
+  - [x] Backend webhook (GitHub → website) on push to `main`
+  - [x] Website fetches raw markdown via GitHub API and caches
+  - [x] Cache busting and ETag handling
 
-- [ ] Search
-  - [ ] Self-hosted Meilisearch indexing via GitHub Action
+- [x] Search
+  - [x] Self-hosted Meilisearch indexing via GitHub Action
 
-- [ ] Localization
-  - [ ] Docs will be structured like: `/<category>/<pagename.md>` or `/<category>/<pagename>/(en/es/etc).md`
+- [x] Localization
+  - [x] Docs will be structured like: `/<category>/<pagename.md>` or `/<category>/<pagename>/(en/es/etc).md`
         allowing docs to be done by default in `en` but if a translator comes they the file can be moved to a folder to support multiple translations
-  - [ ] Translation workflow guidelines
+  - [x] Translation workflow guidelines
 
-- [ ] Media handling
-  - [ ] Prefer `webp`, optimize on PR using CI
-  - [ ] Large files via Git LFS
+- [x] Media handling
+  - [x] Prefer `webp`, optimize on PR using CI
+  - [x] Large files via Git LFS
 
-- [ ] CI
-  - [ ] GitHub Actions: lint, link-check, build index (if used)
-  - [ ] Status checks required before merge
+- [x] CI
+  - [x] GitHub Actions: lint, link-check, build index (if used)
+  - [x] Status checks required before merge
 
-- [ ] Versioning
-  - [ ] Versioned docs strategy
-  - [ ] Changelog for major doc updates
+- [x] Versioning
+  - [x] Versioned docs strategy
+  - [x] Changelog for major doc updates
 

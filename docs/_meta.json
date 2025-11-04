@@ -1,0 +1,45 @@
+{
+  "title": "PokéBedrock Wiki",
+  "description": "Canonical documentation for PokéBedrock Bedrock Edition systems, tooling, and community processes.",
+  "order": [
+    {
+      "path": "getting-started",
+      "title": "Getting Started",
+      "summary": "Install prerequisites, set up your world, and publish your first content."
+    },
+    {
+      "path": "mechanics",
+      "title": "Game Mechanics",
+      "summary": "Core systems, battle mechanics, and how PokéBedrock behaves in-game."
+    },
+    {
+      "path": "localization",
+      "title": "Localization",
+      "summary": "Translate docs and keep localized content in sync with English."
+    },
+    {
+      "path": "search",
+      "title": "Search",
+      "summary": "Indexing pipelines and tooling for Meilisearch integration."
+    },
+    {
+      "path": "guidelines",
+      "title": "Guidelines",
+      "summary": "Writing standards and contributor references."
+    },
+    {
+      "path": "sync",
+      "title": "Sync",
+      "summary": "Website publishing, cache busting, and webhook flows."
+    },
+    {
+      "path": "versioning",
+      "title": "Versioning",
+      "summary": "Version strategy and changelog for doc releases."
+    }
+  ],
+  "partials": {
+    "snippets": "snippets",
+    "partials": "_partials"
+  }
+}
