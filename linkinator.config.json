@@ -1,0 +1,17 @@
+{
+  "retry": {
+    "count": 2,
+    "factor": 2
+  },
+  "timeout": 30000,
+  "verbosity": "ERROR",
+  "skip": [
+    "mailto:*",
+    "tel:*"
+  ],
+  "headers": {
+    "user-agent": "pokebedrock-wiki-link-check"
+  }
+}
+
+

@@ -1,0 +1,33 @@
+---
+title: Running the Wiki Locally
+description: Step-by-step instructions for serving docs locally in English.
+tags:
+  - guide
+  - localization
+lastUpdated: "2025-11-21"
+status: beta
+lang: en
+toc: true
+order: 2
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Run Linting in Watch Mode
+
+```bash
+npm run lint -- --watch
+```
+
+## Preview
+
+Until the website frontend wires up MDX rendering, preview using your favorite Markdown
+viewer (VS Code, Obsidian, etc.). Once the Next.js docs portal is ready, run it against
+the `docs/` directory using the `POKEBEDROCK_WIKI_PATH` env var.
+
+
+
