@@ -30,15 +30,15 @@ consistent before syncing to the public website.
 
 ## Tooling & Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run lint:md` | markdownlint checks + formatting rules |
-| `npm run lint:frontmatter` | Validates doc metadata using JSON Schema |
-| `npm run lint:images` | Ensures relative assets exist, are `webp/svg`, and include alt text |
-| `npm run lint:links` | Crawls docs with Linkinator for broken links |
-| `npm run lint` | Runs markdownlint + frontmatter + image checks |
-| `npm run check` | Full suite (`lint` + link check) |
-| `npm run build:search` | Generates `build/search-index.json` for Meilisearch ingestion |
+| Command                    | Description                                                         |
+| -------------------------- | ------------------------------------------------------------------- |
+| `npm run lint:md`          | markdownlint checks + formatting rules                              |
+| `npm run lint:frontmatter` | Validates doc metadata using JSON Schema                            |
+| `npm run lint:images`      | Ensures relative assets exist, are `webp/svg`, and include alt text |
+| `npm run lint:links`       | Crawls docs with Linkinator for broken links                        |
+| `npm run lint`             | Runs markdownlint + frontmatter + image checks                      |
+| `npm run check`            | Full suite (`lint` + link check)                                    |
+| `npm run build:search`     | Generates `build/search-index.json` for Meilisearch ingestion       |
 
 ## CI & Deployment
 
@@ -49,10 +49,32 @@ consistent before syncing to the public website.
   backend when docs change; the website fetches raw Markdown via the GitHub API and
   caches using ETags.
 
+### Required Repository Secrets for Search
+
+The `search-index.yml` workflow requires the following secrets to be configured in
+GitHub repository settings (Settings > Secrets and variables > Actions):
+
+| Secret            | Description                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| `MEILISEARCH_URL` | URL of the Meilisearch instance (e.g., `http://meilisearch:7700` or your production URL) |
+| `MEILISEARCH_KEY` | Admin or indexing API key with permission to add documents to the `wiki-docs` index      |
+
+### Local Search Index Development
+
+To build and sync the search index locally:
+
+```bash
+cd wiki
+export MEILISEARCH_URL=http://localhost:7700
+export MEILISEARCH_KEY=your_master_key
+npm ci
+npm run build:search
+```
+
+This generates `build/search-index.json` and syncs documents to the `wiki-docs` index.
+
 ## Contributing
 
 Read `CONTRIBUTING.md` for branching strategy, review expectations, localization
 workflow, and content guidelines. Issue templates cover bugs and content requests, while
 CODEOWNERS ensures the docs team reviews every change.
-
-

@@ -1,3 +1,21 @@
+/**
+ * Wiki Search Index Builder
+ *
+ * This script builds a search index from all Markdown/MDX files in the docs/ directory
+ * and optionally syncs it to a Meilisearch instance.
+ *
+ * Usage:
+ *   npm run build:search
+ *
+ * Environment Variables:
+ *   MEILISEARCH_URL   - URL of the Meilisearch instance (optional, skips sync if not set)
+ *   MEILISEARCH_KEY   - Admin API key for Meilisearch (optional, skips sync if not set)
+ *   MEILISEARCH_INDEX - Index name (default: "wiki-docs")
+ *
+ * Output:
+ *   build/search-index.json - JSON array of all indexed documents
+ */
+
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { relative, resolve } from "node:path";
 
@@ -5,6 +23,11 @@ import { glob } from "glob";
 import matter from "gray-matter";
 import { MeiliSearch } from "meilisearch";
 
+/**
+ * Shape of a document record for the search index.
+ * The `id` field is derived from the slug with slashes replaced by double underscores
+ * to comply with Meilisearch's ID constraints.
+ */
 type SearchRecord = {
   id: string;
   slug: string;
@@ -18,12 +41,28 @@ type SearchRecord = {
   body: string;
 };
 
+/**
+ * Extracts a string value from unknown frontmatter data.
+ * @param value - The value to check
+ * @returns The string if valid and non-empty, otherwise undefined
+ */
 const ensureString = (value: unknown): string | undefined =>
   typeof value === "string" && value.trim().length > 0 ? value : undefined;
 
+/**
+ * Extracts a string array from unknown frontmatter data.
+ * @param value - The value to check
+ * @returns An array of strings, filtering out non-string items
+ */
 const ensureStringArray = (value: unknown): string[] =>
   Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
 
+/**
+ * Extracts a number from unknown frontmatter data.
+ * @param value - The value to check
+ * @param fallback - Fallback value if not a valid finite number
+ * @returns The number if valid, otherwise the fallback
+ */
 const ensureNumber = (value: unknown, fallback: number): number =>
   typeof value === "number" && Number.isFinite(value) ? value : fallback;
 
@@ -47,8 +86,11 @@ const records: SearchRecord[] = files.map((filePath, index) => {
     .replace(/\\/g, "/")
     .replace(/\.mdx?$/, "");
 
+  // Meilisearch IDs can only contain alphanumeric chars, hyphens, and underscores
+  const id = slug.replace(/\//g, "__");
+
   return {
-    id: slug,
+    id,
     slug,
     title: ensureString(frontmatter.title),
     description: ensureString(frontmatter.description),
@@ -83,6 +125,22 @@ try {
   });
 
   const index = client.index(indexUid);
+
+  // Configure index settings for optimal search relevance
+  const settingsTask = await index.updateSettings({
+    searchableAttributes: ["title", "description", "body"],
+    displayedAttributes: ["id", "slug", "title", "description", "tags", "status", "lang", "order"],
+    filterableAttributes: ["tags", "status", "lang"],
+    sortableAttributes: ["order"],
+    typoTolerance: {
+      enabled: true,
+      minWordSizeForTypos: { oneTypo: 4, twoTypos: 8 }
+    },
+    pagination: { maxTotalHits: 1000 }
+  });
+  console.log(`Updated index settings (task ${settingsTask.taskUid})`);
+
+  // Add documents to the index
   const task = await index.addDocuments(records, { primaryKey: "id" });
   console.log(`Triggered Meilisearch sync (task ${task.taskUid})`);
 } catch (error: unknown) {
