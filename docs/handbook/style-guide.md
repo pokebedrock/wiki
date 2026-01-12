@@ -43,7 +43,22 @@ Common options: `note`, `tip`, `warning`, `danger`. Import complex callouts from
 
 ## MDX Imports
 
-Import components or snippets at the top of the file:
+### Auto-injected components
+
+Components exported from `docs/snippets/` (such as `InfoCallout`, `ShellBlock`, and
+`EarlyReturnExample`) are globally available in all MDX files. The website backend
+registers these automatically, so you can use them without an import statement:
+
+```mdx
+<InfoCallout />
+
+<ShellBlock command="npm install" />
+```
+
+### Custom or partial imports
+
+For components in `docs/_partials/` or one-off snippets, use explicit imports at the top
+of the file:
 
 ```mdx
 import ServicenodeCallout from "../_partials/ServicenodeCallout.mdx";
@@ -52,6 +67,3 @@ import ServicenodeCallout from "../_partials/ServicenodeCallout.mdx";
 ```
 
 Keep imports relative to the document to avoid bundler-dependent aliases.
-
-
-
