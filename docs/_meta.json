@@ -1,0 +1,24 @@
+{
+  "handbook": {
+    "title": "Handbook",
+    "description": "Repository conventions, workflows, and governance.",
+    "order": 1
+  },
+  "guides": {
+    "title": "Guides",
+    "description": "Step-by-step walkthroughs for admins and players.",
+    "order": 2
+  },
+  "reference": {
+    "title": "Reference",
+    "description": "Authoritative specs for sync, search, and automation.",
+    "order": 3
+  },
+  "snippets": {
+    "title": "Snippets",
+    "description": "Reusable MDX and content fragments.",
+    "order": 4
+  }
+}
+
+

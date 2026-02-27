@@ -1,0 +1,41 @@
+name: wiki-search
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "schemas/**"
+      - "scripts/build-search-index.ts"
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm install
+      - name: Build search index
+        run: npm run build:search
+        env:
+          MEILISEARCH_URL: ${{ secrets.MEILISEARCH_URL }}
+          MEILISEARCH_KEY: ${{ secrets.MEILISEARCH_KEY }}
+          MEILISEARCH_INDEX: wiki-docs
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: search-index
+          path: build/search-index.json
+
+

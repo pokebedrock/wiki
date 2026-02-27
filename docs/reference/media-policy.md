@@ -1,0 +1,45 @@
+---
+title: Media & Asset Policy
+description: Requirements for adding images, diagrams, and downloadable files to the wiki.
+tags:
+  - reference
+  - media
+lastUpdated: "2025-11-21"
+status: stable
+lang: en
+toc: true
+order: 3
+---
+
+## Formats
+
+- Prefer `webp` for raster images and `svg` for vector art.
+- Convert PNG/JPEG uploads using ImageMagick or Squoosh before committing.
+- Store diagram source files (`.drawio`, `.excalidraw`) inside `assets/diagrams`.
+
+## Size Limits
+
+- Inline images ≤ 600 KB (enforced by `npm run lint:images`).
+- Diagrams ≤ 5 MB; anything larger must use Git LFS.
+
+## Alt Text & Captions
+
+- Provide descriptive alt text that conveys the same information as the image.
+- Use captions beneath complex diagrams to add context.
+
+## Git LFS
+
+Track large binaries:
+
+<ShellBlock command='git lfs track "assets/diagrams/*.drawio"\ngit add .gitattributes assets/diagrams/example.drawio' />
+
+## Review Checklist
+
+- [ ] File stored under `assets/`
+- [ ] Alt text filled in
+- [ ] Format is `webp` or `svg`
+- [ ] Size ≤ 600 KB (inline)
+- [ ] Referenced using a relative path in docs
+
+
+

@@ -1,0 +1,36 @@
+{
+  "name": "@pokebedrock/wiki",
+  "version": "0.1.0",
+  "description": "Content repo powering the PokéBedrock documentation site.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\"",
+    "build:scripts": "tsc -p tsconfig.build.json",
+    "lint:frontmatter": "npm run build:scripts && npm run lint:frontmatter:run",
+    "lint:frontmatter:run": "node build/scripts/validate-frontmatter.js",
+    "lint:images": "npm run build:scripts && npm run lint:images:run",
+    "lint:images:run": "node build/scripts/check-images.js",
+    "lint:links": "linkinator \"docs/**/*.{md,mdx}\" --config linkinator.config.json",
+    "lint": "npm run build:scripts && npm run lint:md && npm run lint:frontmatter:run && npm run lint:images:run",
+    "check": "npm run lint && npm run lint:links",
+    "build:search": "npm run build:scripts && npm run build:search:run",
+    "build:search:run": "node build/scripts/build-search-index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.10",
+    "ajv": "^8.17.1",
+    "glob": "^10.4.5",
+    "gray-matter": "^4.0.3",
+    "linkinator": "^4.1.3",
+    "markdownlint-cli2": "^0.12.1",
+    "meilisearch": "^0.39.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}
+
