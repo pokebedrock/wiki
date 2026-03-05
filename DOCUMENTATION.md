@@ -90,7 +90,7 @@ wiki/
   - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
     - `WIKI_SEARCH_SYNC_TOKEN`
-  - Current path filter includes `wiki/scripts/build-search-index.mjs`; source file present in repo is `scripts/build-search-index.ts`.
+  - Path filters mention `scripts/build-search-index.ts`, matching the actual TypeScript source checked into the repo.
 
 ## 6. Assets (`assets/`)
 
