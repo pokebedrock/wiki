@@ -1,0 +1,21 @@
+{
+  "name": "Shell Trap",
+  "description": "Fails unless the user is hit by a physical attack from an opponent this turn before it can execute the move. If the user was hit and has not fainted, it attacks immediately after being hit, and the effect ends. If the opponent's physical attack had a secondary effect removed by the Sheer Force Ability, it does not count for the purposes of this effect.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Fire",
+  "priority": -3,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Cannot be selected by Me First.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 733
+}

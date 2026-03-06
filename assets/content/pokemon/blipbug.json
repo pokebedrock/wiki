@@ -1,0 +1,118 @@
+{
+  "name": "Blipbug",
+  "description": "Often found in gardens, this Pokémon has hairs on its body that it uses to assess its surroundings.",
+  "types": [
+    "bug"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Swarm",
+    "1": "Compound Eyes",
+    "H": "Telepathy"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 1,
+    "spe": 0
+  },
+  "base_experience": 36,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    2,
+    9
+  ],
+  "moves": [
+    {
+      "move": "infestation",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "recover",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "stickyweb",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "strugglebug",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "supersonic",
+      "learnMethod": "egg"
+    }
+  ],
+  "stats": {
+    "hp": 25,
+    "atk": 20,
+    "def": 20,
+    "spa": 25,
+    "spd": 45,
+    "spe": 45
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "the_end",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "common"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:string",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:spider_eye",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:dottler",
+      "trigger": "level",
+      "level": 10
+    }
+  ],
+  "sortOrder": 1074
+}

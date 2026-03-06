@@ -1,0 +1,15 @@
+{
+  "name": "Guardian of Alola",
+  "description": "Deals damage to the target equal to 3/4 of its current HP, rounded down, but not less than 1 HP.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Special",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Tough",
+  "isZ": "tapuniumz",
+  "zMove": {},
+  "sortOrder": 355
+}

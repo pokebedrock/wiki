@@ -1,0 +1,19 @@
+{
+  "name": "Spectral Thief",
+  "description": "The target's stat stages greater than 0 are stolen from it and applied to the user before dealing damage.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 781
+}

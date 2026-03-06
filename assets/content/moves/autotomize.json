@@ -1,0 +1,19 @@
+{
+  "name": "Autotomize",
+  "description": "Raises the user's Speed by 2 stages. If the user's Speed was changed, the user's weight is reduced by 100 kg as long as it remains active. This effect is stackable but cannot reduce the user's weight to less than 0.1 kg.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Steel",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 42
+}

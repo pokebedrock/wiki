@@ -1,0 +1,21 @@
+{
+  "name": "Land's Wrath",
+  "description": "No additional effect.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Ground",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "basePower": 185
+  },
+  "sortOrder": 456
+}

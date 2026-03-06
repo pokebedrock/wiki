@@ -1,0 +1,19 @@
+{
+  "name": "Heat Wave",
+  "description": "Has a 10% chance to burn the target.",
+  "accuracy": 90,
+  "pp": 10,
+  "category": "Special",
+  "type": "Fire",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Activates the Wind Power and Wind Rider Abilities."
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 380
+}

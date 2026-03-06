@@ -1,0 +1,18 @@
+{
+  "name": "Gunk Shot",
+  "description": "Has a 30% chance to poison the target.",
+  "accuracy": 80,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Poison",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 359
+}

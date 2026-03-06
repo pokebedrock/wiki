@@ -1,0 +1,16 @@
+{
+  "name": "Teatime",
+  "description": "All active Pokemon consume their held Berries. This effect is not prevented by substitutes, the Klutz or Unnerve Abilities, or the effects of Embargo or Magic Room. Fails if no active Pokemon is holding a Berry.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Ignores a target's substitute.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 856
+}

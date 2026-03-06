@@ -1,0 +1,19 @@
+{
+  "name": "Bulldoze",
+  "description": "Has a 100% chance to lower the target's Speed by 1 stage.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Ground",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 96
+}

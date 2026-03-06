@@ -1,0 +1,19 @@
+{
+  "name": "Low Sweep",
+  "description": "Has a 100% chance to lower the target's Speed by 1 stage.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 479
+}

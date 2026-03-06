@@ -1,0 +1,16 @@
+{
+  "name": "Glacial Lance",
+  "description": "No additional effect.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "zMove": {},
+  "sortOrder": 307
+}

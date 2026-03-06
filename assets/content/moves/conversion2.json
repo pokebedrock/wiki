@@ -1,0 +1,19 @@
+{
+  "name": "Conversion 2",
+  "description": "The user's type changes to match a type that resists or is immune to the type of the last move used by the target, but not either of its current types. The determined type of the move is used rather than the original type. Fails if the target has not made a move, if the user cannot change its type, or if this move would only be able to select one of the user's current types.",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "effect": "heal"
+  },
+  "sortOrder": 136
+}

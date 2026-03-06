@@ -1,0 +1,17 @@
+{
+  "name": "Let's Snuggle Forever",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact."
+  ],
+  "contestType": "Cool",
+  "isZ": "mimikiumz",
+  "zMove": {},
+  "sortOrder": 469
+}

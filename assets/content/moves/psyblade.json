@@ -1,0 +1,19 @@
+{
+  "name": "Psyblade",
+  "description": "If the current terrain is Electric Terrain, this move's power is multiplied by 1.5.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Sharpness."
+  ],
+  "zMove": {},
+  "sortOrder": 634
+}

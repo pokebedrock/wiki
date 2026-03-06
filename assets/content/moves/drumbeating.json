@@ -1,0 +1,16 @@
+{
+  "name": "Drum Beating",
+  "description": "Has a 100% chance to lower the target's Speed by 1 stage.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "zMove": {},
+  "sortOrder": 202
+}

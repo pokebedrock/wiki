@@ -1,0 +1,17 @@
+{
+  "name": "Pika Papow",
+  "description": "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Special",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 602
+}

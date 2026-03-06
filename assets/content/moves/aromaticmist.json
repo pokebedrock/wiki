@@ -1,0 +1,17 @@
+{
+  "name": "Aromatic Mist",
+  "description": "Raises the target's Special Defense by 1 stage. Fails if there is no ally adjacent to the user.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "adjacentAlly",
+  "flags": [
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 31
+}

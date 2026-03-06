@@ -1,0 +1,20 @@
+{
+  "name": "Fire Fang",
+  "description": "Has a 10% chance to burn the target and a 10% chance to make it flinch.",
+  "accuracy": 95,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Fire",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Strong Jaw."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 251
+}

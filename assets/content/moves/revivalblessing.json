@@ -1,0 +1,16 @@
+{
+  "name": "Revival Blessing",
+  "description": "A fainted party member is selected and revived with 1/2 its max HP, rounded down. Fails if there are no fainted party members.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Prevented from being executed or selected during Heal Block's effect.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 678
+}

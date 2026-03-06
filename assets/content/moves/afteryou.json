@@ -1,0 +1,17 @@
+{
+  "name": "After You",
+  "description": "The target makes its move immediately after the user this turn, no matter the priority of its selected move. Fails if the target would have moved next anyway, or if the target already moved this turn.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Ignores a target's substitute.",
+    "The move plays its animation when used on an ally."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 12
+}

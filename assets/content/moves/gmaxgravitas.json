@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Gravitas",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, the effect of Gravity begins.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 323
+}

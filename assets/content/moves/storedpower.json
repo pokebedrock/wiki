@@ -1,0 +1,20 @@
+{
+  "name": "Stored Power",
+  "description": "Power is equal to 20+(X*20), where X is the user's total stat stage changes that are greater than 0.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 812
+}

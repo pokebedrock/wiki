@@ -1,0 +1,19 @@
+{
+  "name": "Fishious Rend",
+  "description": "Power doubles if the user moves before the target.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Water",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Strong Jaw."
+  ],
+  "zMove": {},
+  "sortOrder": 257
+}

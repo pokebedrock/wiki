@@ -1,0 +1,19 @@
+{
+  "name": "Plasma Fists",
+  "description": "If this move is successful, causes Normal-type moves to become Electric type this turn.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Power is multiplied by 1.2 when used by a Pokemon with the Ability Iron Fist."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 604
+}

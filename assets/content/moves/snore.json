@@ -1,0 +1,19 @@
+{
+  "name": "Snore",
+  "description": "Has a 30% chance to make the target flinch. Fails if the user is not asleep.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 769
+}

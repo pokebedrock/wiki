@@ -1,0 +1,19 @@
+{
+  "name": "Dragon Rage",
+  "description": "",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "damage": 40,
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 194
+}

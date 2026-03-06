@@ -1,0 +1,18 @@
+{
+  "name": "Steel Roller",
+  "description": "Fails if there is no terrain active. Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Steel",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 803
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Ion Deluge",
+  "description": "Causes Normal-type moves to become Electric type this turn. The effect happens after other effects that change a move's type.",
+  "accuracy": true,
+  "pp": 25,
+  "category": "Status",
+  "type": "Electric",
+  "priority": 1,
+  "target": "all",
+  "flags": [
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 441
+}

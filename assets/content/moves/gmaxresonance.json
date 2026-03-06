@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Resonance",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, the effect of Aurora Veil begins on the user's side.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 330
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Flame Wheel",
+  "description": "Has a 10% chance to burn the target.",
+  "accuracy": 100,
+  "pp": 25,
+  "category": "Physical",
+  "type": "Fire",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Thaws the user if executed successfully while the user is frozen.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 262
+}

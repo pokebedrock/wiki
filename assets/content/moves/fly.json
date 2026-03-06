@@ -1,0 +1,25 @@
+{
+  "name": "Fly",
+  "description": "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
+  "accuracy": 95,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Flying",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "Makes contact.",
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected during Gravity's effect.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 275
+}

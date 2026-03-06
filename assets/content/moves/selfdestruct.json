@@ -1,0 +1,19 @@
+{
+  "name": "Self-Destruct",
+  "description": "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be made to hit twice via Parental Bond."
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 720
+}

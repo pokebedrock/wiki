@@ -1,0 +1,21 @@
+{
+  "name": "Circle Throw",
+  "description": "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target is under the effect of Ingrain, has the Suction Cups Ability, or this move hit a substitute.",
+  "accuracy": 90,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": -6,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 117
+}

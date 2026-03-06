@@ -1,0 +1,19 @@
+{
+  "name": "Heart Stamp",
+  "description": "Has a 30% chance to make the target flinch.",
+  "accuracy": 100,
+  "pp": 25,
+  "category": "Physical",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 377
+}

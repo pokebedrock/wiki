@@ -1,0 +1,18 @@
+{
+  "name": "Stealth Rock",
+  "description": "Sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Rock type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any Pokemon uses Tidy Up, or if any opposing Pokemon uses Mortal Spin, Rapid Spin, or Defog successfully, or is hit by Defog.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Rock",
+  "priority": 0,
+  "target": "foeSide",
+  "flags": [
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    null,
+    "Additional PP is deducted due to Pressure when it ordinarily would not."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 799
+}

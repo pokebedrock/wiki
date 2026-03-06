@@ -1,0 +1,86 @@
+{
+  "name": "Cosmog",
+  "description": "Cosmog is very curious but not very cautious, often placing itself in danger. If things start to look dicey, it teleports away.",
+  "types": [
+    "psychic"
+  ],
+  "tags": [
+    "Restricted Legendary"
+  ],
+  "abilities": {
+    "0": "Unaware"
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 40,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "splash",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "teleport",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    }
+  ],
+  "stats": {
+    "hp": 43,
+    "atk": 29,
+    "def": 31,
+    "spa": 29,
+    "spd": 31,
+    "spe": 37
+  },
+  "spawn_rules": [
+    {
+      "biome": "plains+flower_forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "the_end",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "pokeb:stardust",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 100
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:cosmoem",
+      "trigger": "level",
+      "level": 43
+    }
+  ],
+  "sortOrder": 1030
+}

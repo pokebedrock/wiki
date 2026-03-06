@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Tartness",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, the evasiveness of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 338
+}

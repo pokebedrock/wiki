@@ -1,0 +1,18 @@
+{
+  "name": "Upper Hand",
+  "description": "Has a 100% chance to make the target flinch. Fails if the target did not select a priority move for use this turn, or if the target moves before the user.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 3,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 905
+}

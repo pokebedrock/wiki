@@ -1,0 +1,18 @@
+{
+  "name": "Hidden Power",
+  "description": "This move's type depends on the user's individual values (IVs), and can be any type but Fairy and Normal.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 384
+}

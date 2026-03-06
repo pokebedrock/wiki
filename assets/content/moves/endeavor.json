@@ -1,0 +1,22 @@
+{
+  "name": "Endeavor",
+  "description": "Deals damage to the target equal to (target's current HP - user's current HP). The target is unaffected if its current HP is less than or equal to the user's current HP.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be made to hit twice via Parental Bond."
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 222
+}

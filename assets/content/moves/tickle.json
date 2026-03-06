@@ -1,0 +1,20 @@
+{
+  "name": "Tickle",
+  "description": "Lowers the target's Attack and Defense by 1 stage.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 880
+}

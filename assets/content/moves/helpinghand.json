@@ -1,0 +1,20 @@
+{
+  "name": "Helping Hand",
+  "description": "The power of the target's attack this turn is multiplied by 1.5 (this effect is stackable). Fails if there is no ally adjacent to the user or if the ally already moved this turn, but does not fail if the ally is using a two-turn move.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 5,
+  "target": "adjacentAlly",
+  "flags": [
+    "Ignores a target's substitute.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat."
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 382
+}

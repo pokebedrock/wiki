@@ -86,8 +86,8 @@ wiki/
 - `.github/workflows/search-index.yml` (`wiki-search`):
   - Triggers on pushes to `main` for docs/schema/search-script paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uploads `wiki/build/search-index.json` as an artifact.
-  - Sends the JSON payload to the website backend sync endpoint using:
+  - Uploads both `wiki/build/search-index.json` and `wiki/build/search-indices.json` as artifacts.
+  - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
     - `WIKI_SEARCH_SYNC_TOKEN`
   - Current path filter includes `wiki/scripts/build-search-index.mjs`; source file present in repo is `scripts/build-search-index.ts`.
@@ -126,12 +126,24 @@ Media policy from docs/scripts:
   - Enforces extension whitelist (`.webp`, `.svg`) and max size (`600 KB`).
 - `scripts/build-search-index.ts`:
   - Scans docs (excluding `_partials` and `snippets`).
-  - Parses frontmatter + content and writes `build/search-index.json`.
+  - Parses frontmatter + content and writes:
+    - `build/search-index.json` (merged local fallback)
+    - `build/search-indices.json` (docs/pokemon/moves split payload)
+  - Reads content JSON from:
+    - `assets/content/pokemon/*.json`
+    - `assets/content/moves/*.json`
   - Optionally pushes documents to Meilisearch when env vars are provided:
     - `MEILISEARCH_URL`
     - `MEILISEARCH_KEY`
-    - optional `MEILISEARCH_INDEX` (default `wiki-docs`)
-  - Production CI instead sends the generated JSON to the backend, which reindexes Meilisearch internally.
+  - Pushes three indices:
+    - `wiki-docs`
+    - `wiki-pokemon`
+    - `wiki-moves`
+  - Production CI instead sends the generated multi-index payload to the backend, which reindexes Meilisearch internally.
+- `scripts/split-content-data.ts`:
+  - Splits legacy monolithic content JSON into per-item files.
+  - Writes Pokemon files to `assets/content/pokemon/`.
+  - Writes move files to `assets/content/moves/`.
 
 ## 9. Docs content (`docs/`)
 

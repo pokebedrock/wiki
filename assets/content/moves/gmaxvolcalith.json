@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Volcalith",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, for 4 turns each non-Rock-type Pokemon on the opposing side takes damage equal to 1/6 of its maximum HP, rounded down, at the end of each turn during effect, including the last turn.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Rock",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 341
+}

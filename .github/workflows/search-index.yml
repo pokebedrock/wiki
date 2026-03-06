@@ -45,11 +45,13 @@ jobs:
             -X POST \
             -H "Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN" \
             -H "Content-Type: application/json" \
-            --data-binary @build/search-index.json \
+            --data-binary @build/search-indices.json \
             "$WIKI_SEARCH_SYNC_URL"
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: search-index
-          path: build/search-index.json
+          path: |
+            build/search-index.json
+            build/search-indices.json
 

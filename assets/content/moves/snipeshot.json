@@ -1,0 +1,17 @@
+{
+  "name": "Snipe Shot",
+  "description": "Has a higher chance for a critical hit. This move cannot be redirected to a different target by any effect.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Water",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 768
+}

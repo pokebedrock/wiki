@@ -1,0 +1,20 @@
+{
+  "name": "Hurricane",
+  "description": "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+  "accuracy": 70,
+  "pp": 10,
+  "category": "Special",
+  "type": "Flying",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null,
+    "Activates the Wind Power and Wind Rider Abilities."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 410
+}

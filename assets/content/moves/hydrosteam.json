@@ -1,0 +1,18 @@
+{
+  "name": "Hydro Steam",
+  "description": "If the current weather is Sunny Day and the user is not holding Utility Umbrella, this move's damage is multiplied by 1.5 instead of halved for being Water type.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Water",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Thaws the user if executed successfully while the user is frozen.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 413
+}

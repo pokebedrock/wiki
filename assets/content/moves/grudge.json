@@ -1,0 +1,19 @@
+{
+  "name": "Grudge",
+  "description": "Until the user's next turn, if an opposing Pokemon's attack knocks the user out, that move loses all its remaining PP.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Status",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "effect": "redirect"
+  },
+  "sortOrder": 354
+}

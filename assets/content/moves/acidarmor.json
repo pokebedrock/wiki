@@ -1,0 +1,19 @@
+{
+  "name": "Acid Armor",
+  "description": "Raises the user's Defense by 2 stages.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Poison",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 5
+}

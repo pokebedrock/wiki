@@ -1,0 +1,21 @@
+{
+  "name": "Magnitude",
+  "description": "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Dig.",
+  "accuracy": 100,
+  "pp": 30,
+  "category": "Physical",
+  "type": "Ground",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "basePower": 140
+  },
+  "sortOrder": 496
+}

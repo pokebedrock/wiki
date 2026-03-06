@@ -1,0 +1,22 @@
+{
+  "name": "Phantom Force",
+  "description": "If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally. This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks. If the user is holding a Power Herb, the move completes in one turn.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "The user is unable to make a move between turns.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 600
+}

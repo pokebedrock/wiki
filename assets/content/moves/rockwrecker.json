@@ -1,0 +1,20 @@
+{
+  "name": "Rock Wrecker",
+  "description": "If this move is successful, the user must recharge on the following turn and cannot select a move.",
+  "accuracy": 90,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Rock",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "If this move is successful, the user must recharge on the following turn and cannot make a move.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 689
+}

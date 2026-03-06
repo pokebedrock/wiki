@@ -1,0 +1,17 @@
+{
+  "name": "Mud Sport",
+  "description": "For 5 turns, all Electric-type attacks used by any active Pokemon have their power multiplied by 0.33. Fails if this effect is already active.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Ground",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 560
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Victory Dance",
+  "description": "Raises the user's Attack, Defense, and Speed by 1 stage.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "When used by a Pokemon, other Pokemon with the Ability Dancer can attempt to execute the same move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 912
+}

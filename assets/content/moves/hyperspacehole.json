@@ -1,0 +1,17 @@
+{
+  "name": "Hyperspace Hole",
+  "description": "If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 419
+}

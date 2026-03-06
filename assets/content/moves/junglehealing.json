@@ -1,0 +1,17 @@
+{
+  "name": "Jungle Healing",
+  "description": "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up, and has its status condition cured.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Grass",
+  "priority": 0,
+  "target": "allies",
+  "flags": [
+    "Prevented from being executed or selected during Heal Block's effect.",
+    "Ignores a target's substitute.",
+    "The move plays its animation when used on an ally."
+  ],
+  "zMove": {},
+  "sortOrder": 450
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Burn Up",
+  "description": "Fails unless the user is a Fire type. If this move is successful and the user is not Terastallized, the user's Fire type becomes typeless as long as it remains active.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Fire",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Thaws the user if executed successfully while the user is frozen.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 101
+}

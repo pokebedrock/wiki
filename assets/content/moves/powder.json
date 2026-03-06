@@ -1,0 +1,21 @@
+{
+  "name": "Powder",
+  "description": "If the target uses a Fire-type move this turn, it is prevented from executing and the target loses 1/4 of its maximum HP, rounded half up. This effect does not happen if the Fire-type move is prevented by Primordial Sea.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Status",
+  "type": "Bug",
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    null,
+    "Has no effect on Pokemon which are Grass-type, have the Ability Overcoat, or hold Safety Goggles."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 619
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Jet Punch",
+  "description": "No additional effect.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Water",
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Power is multiplied by 1.2 when used by a Pokemon with the Ability Iron Fist."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 447
+}

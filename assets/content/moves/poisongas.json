@@ -1,0 +1,19 @@
+{
+  "name": "Poison Gas",
+  "description": "Poisons the target.",
+  "accuracy": 90,
+  "pp": 40,
+  "category": "Status",
+  "type": "Poison",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 609
+}

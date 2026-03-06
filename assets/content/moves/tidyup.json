@@ -1,0 +1,13 @@
+{
+  "name": "Tidy Up",
+  "description": "Raises the user's Attack and Speed by 1 stage. Removes substitutes from all active Pokemon and ends the effects of Spikes, Stealth Rock, Sticky Web, and Toxic Spikes for both sides.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "zMove": {},
+  "sortOrder": 881
+}

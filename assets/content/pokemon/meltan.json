@@ -1,0 +1,158 @@
+{
+  "name": "Meltan",
+  "description": "They live as a group, but when the time comes, one strong Meltan will absorb all the others and evolve.",
+  "types": [
+    "steel"
+  ],
+  "tags": [
+    "Mythical"
+  ],
+  "abilities": {
+    "0": "Magnet Pull"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 150,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    45,
+    45
+  ],
+  "moves": [
+    {
+      "move": "acidarmor",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "gyroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "harden",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "steelbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tailwhip",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thundershock",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 46,
+    "atk": 65,
+    "def": 65,
+    "spa": 55,
+    "spd": 35,
+    "spe": 34
+  },
+  "spawn_rules": [],
+  "drops": [
+    {
+      "typeId": "pokeb:aluminum_ingot",
+      "countRange": [
+        2,
+        4
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "pokeb:silicon",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1053
+}

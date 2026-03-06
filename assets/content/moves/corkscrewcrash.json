@@ -1,0 +1,15 @@
+{
+  "name": "Corkscrew Crash",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Steel",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "steeliumz",
+  "zMove": {},
+  "sortOrder": 139
+}

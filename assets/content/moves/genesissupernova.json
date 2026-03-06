@@ -1,0 +1,15 @@
+{
+  "name": "Genesis Supernova",
+  "description": "If this move is successful, the terrain becomes Psychic Terrain.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "mewniumz",
+  "zMove": {},
+  "sortOrder": 301
+}

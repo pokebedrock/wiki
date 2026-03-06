@@ -1,0 +1,17 @@
+{
+  "name": "Ivy Cudgel",
+  "description": "Has a higher chance for a critical hit. If the user is an Ogerpon, this move's type changes depending on its form. Water type for Wellspring Mask, Fire type for Hearthflame Mask, and Rock type for Cornerstone Mask.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 445
+}

@@ -13,9 +13,11 @@ order: 2
 
 ## Workflow
 
-- `scripts/build-search-index.ts` scans docs plus JSON content datasets
-  (`assets/content/wikiPokemon.json` and `assets/content/wikiMoves.json`),
-  then writes `build/search-index.json`.
+- `scripts/build-search-index.ts` scans docs plus JSON content datasets under
+  `assets/content/pokemon/` and `assets/content/moves/`.
+- It writes:
+  - `build/search-index.json` for local merged search fallback
+  - `build/search-indices.json` for remote multi-index syncing
 - If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes the payload
   directly to the configured index (defaults to `wiki-docs`).
 - `.github/workflows/search-index.yml` runs the script on `main` and nightly, then uploads
@@ -44,16 +46,19 @@ MEILISEARCH_KEY=<docs-key> \
 npm run build:search
 ```
 
-The command writes the JSON file and pushes it to the remote cluster when env vars are set.
+The command writes both JSON files and pushes the three remote indices when env vars are set.
 
 ## Production Sync Endpoint
 
 The default production flow does not expose Meilisearch publicly:
 
-1. GitHub Actions builds `build/search-index.json`.
-2. The workflow `POST`s that JSON to the website backend.
+1. GitHub Actions builds `build/search-index.json` and `build/search-indices.json`.
+2. The workflow `POST`s `build/search-indices.json` to the website backend.
 3. The backend validates `WIKI_SEARCH_SYNC_TOKEN`.
-4. The backend connects to `http://meilisearch:7700` inside the cluster and replaces the `wiki-docs` index.
+4. The backend connects to `http://meilisearch:7700` inside the cluster and replaces:
+   - `wiki-docs`
+   - `wiki-pokemon`
+   - `wiki-moves`
 
 ## Document Schema
 

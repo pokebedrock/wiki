@@ -18,6 +18,12 @@ type SearchRecord = {
   body: string;
 };
 
+type SearchIndicesPayload = {
+  docs: SearchRecord[];
+  pokemon: SearchRecord[];
+  moves: SearchRecord[];
+};
+
 type JsonRecord = Record<string, unknown>;
 
 const ensureString = (value: unknown): string | undefined =>
@@ -63,6 +69,33 @@ const readOptionalJson = <T>(relativePath: string): T | null => {
 
     return null;
   }
+};
+
+const readOptionalJsonDirectory = async (
+  relativeDirectory: string,
+): Promise<Array<{ id: string; value: unknown }> | null> => {
+  const filePaths = await glob(`${relativeDirectory}/*.json`);
+
+  if (filePaths.length === 0) {
+    return null;
+  }
+
+  return filePaths
+    .sort((left, right) => left.localeCompare(right))
+    .map((filePath) => {
+      const id = filePath.split("/").pop()?.replace(/\.json$/i, "");
+      if (!id) {
+        return null;
+      }
+
+      const absolutePath = resolve(repoRoot, filePath);
+      const source = readFileSync(absolutePath, "utf8");
+      return {
+        id,
+        value: JSON.parse(source) as unknown,
+      };
+    })
+    .filter((entry): entry is { id: string; value: unknown } => entry !== null);
 };
 
 const buildPokemonBody = (id: string, pokemonRaw: unknown): string => {
@@ -137,6 +170,11 @@ const buildMoveBody = (id: string, moveRaw: unknown): string => {
 };
 
 const repoRoot = resolve(process.cwd());
+const wikiIndexUids = {
+  docs: "wiki-docs",
+  pokemon: "wiki-pokemon",
+  moves: "wiki-moves",
+} as const;
 
 const files = await glob("docs/**/*.{md,mdx}", {
   ignore: ["**/_partials/**", "**/snippets/**"]
@@ -170,12 +208,10 @@ const docRecords: SearchRecord[] = files.map((filePath, index) => {
   };
 });
 
-const records: SearchRecord[] = [...docRecords];
-let orderOffset = docRecords.length;
+const pokemonEntries = (await readOptionalJsonDirectory("assets/content/pokemon")) ?? [];
 
-const pokemonIndex = readOptionalJson<Record<string, unknown>>("assets/content/wikiPokemon.json");
-if (pokemonIndex) {
-  const pokemonRecords = Object.entries(pokemonIndex).map(([id, pokemon], index) => {
+const pokemonOrderBase = docRecords.length + 1;
+const pokemonRecords: SearchRecord[] = pokemonEntries.map(({ id, value: pokemon }, index) => {
     const pokemonData = ensureObject(pokemon);
     const types = ensureStringArray(pokemonData["types"]);
     const tags = ensureStringArray(pokemonData["tags"]);
@@ -188,18 +224,15 @@ if (pokemonIndex) {
       tags: normalizeTags(["content", "pokemon", ...types, ...tags]),
       status: "stable",
       lang: "en",
-      order: orderOffset + index,
+      order: pokemonOrderBase + ensureNumber(pokemonData["sortOrder"], index + 1),
       body: buildPokemonBody(id, pokemonData)
     } satisfies SearchRecord;
   });
 
-  records.push(...pokemonRecords);
-  orderOffset += pokemonRecords.length;
-}
+const moveEntries = (await readOptionalJsonDirectory("assets/content/moves")) ?? [];
 
-const moveIndex = readOptionalJson<Record<string, unknown>>("assets/content/wikiMoves.json");
-if (moveIndex) {
-  const moveRecords = Object.entries(moveIndex).map(([id, move], index) => {
+const moveOrderBase = pokemonOrderBase + pokemonRecords.length + 1;
+const moveRecords: SearchRecord[] = moveEntries.map(({ id, value: move }, index) => {
     const moveData = ensureObject(move);
     const type = ensureString(moveData["type"]);
     const category = ensureString(moveData["category"]);
@@ -212,13 +245,21 @@ if (moveIndex) {
       tags: normalizeTags(["content", "moves", type ?? "", category ?? ""]),
       status: "stable",
       lang: "en",
-      order: orderOffset + index,
+      order: moveOrderBase + ensureNumber(moveData["sortOrder"], index + 1),
       body: buildMoveBody(id, moveData)
     } satisfies SearchRecord;
   });
 
-  records.push(...moveRecords);
-}
+const indicesPayload: SearchIndicesPayload = {
+  docs: docRecords,
+  pokemon: pokemonRecords,
+  moves: moveRecords,
+};
+const records: SearchRecord[] = [
+  ...indicesPayload.docs,
+  ...indicesPayload.pokemon,
+  ...indicesPayload.moves,
+];
 
 const buildDir = resolve(repoRoot, "build");
 mkdirSync(buildDir, { recursive: true });
@@ -227,8 +268,12 @@ const outputPath = resolve(buildDir, "search-index.json");
 writeFileSync(outputPath, JSON.stringify(records, null, 2));
 console.log(`Wrote ${records.length} records to ${outputPath}`);
 
-const { MEILISEARCH_URL, MEILISEARCH_KEY, MEILISEARCH_INDEX } = process.env;
-const indexUid = MEILISEARCH_INDEX ?? "wiki-docs";
+const indicesOutputPath = resolve(buildDir, "search-indices.json");
+writeFileSync(indicesOutputPath, JSON.stringify(indicesPayload, null, 2));
+console.log(
+  `Wrote docs=${indicesPayload.docs.length}, pokemon=${indicesPayload.pokemon.length}, moves=${indicesPayload.moves.length} to ${indicesOutputPath}`,
+);
+
 const indexSettings = {
   searchableAttributes: ["title", "description", "tags", "slug", "body"],
   filterableAttributes: ["lang", "status", "tags"],
@@ -242,17 +287,7 @@ const isIndexAlreadyExistsError = (error: unknown): boolean =>
   "code" in error &&
   (error as { code?: unknown }).code === "index_already_exists";
 
-if (!MEILISEARCH_URL || !MEILISEARCH_KEY) {
-  console.log("MEILISEARCH_URL/KEY not set. Skipping remote sync.");
-  process.exit(0);
-}
-
-try {
-  const client = new MeiliSearch({
-    host: MEILISEARCH_URL,
-    apiKey: MEILISEARCH_KEY
-  });
-
+const syncIndex = async (client: MeiliSearch, indexUid: string, indexRecords: SearchRecord[]) => {
   const index = client.index(indexUid);
 
   try {
@@ -270,14 +305,32 @@ try {
   const clearTask = await index.deleteAllDocuments();
   await client.waitForTask(clearTask.taskUid);
 
-  if (records.length === 0) {
+  if (indexRecords.length === 0) {
     console.log(`Cleared Meilisearch index ${indexUid} (task ${clearTask.taskUid})`);
-    process.exit(0);
+    return;
   }
 
-  const task = await index.addDocuments(records, { primaryKey: "id" });
+  const task = await index.addDocuments(indexRecords, { primaryKey: "id" });
   await client.waitForTask(task.taskUid);
-  console.log(`Triggered Meilisearch sync (task ${task.taskUid})`);
+  console.log(`Synced ${indexRecords.length} records to ${indexUid} (task ${task.taskUid})`);
+};
+
+const { MEILISEARCH_URL, MEILISEARCH_KEY } = process.env;
+
+if (!MEILISEARCH_URL || !MEILISEARCH_KEY) {
+  console.log("MEILISEARCH_URL/KEY not set. Skipping remote sync.");
+  process.exit(0);
+}
+
+try {
+  const client = new MeiliSearch({
+    host: MEILISEARCH_URL,
+    apiKey: MEILISEARCH_KEY
+  });
+
+  await syncIndex(client, wikiIndexUids.docs, indicesPayload.docs);
+  await syncIndex(client, wikiIndexUids.pokemon, indicesPayload.pokemon);
+  await syncIndex(client, wikiIndexUids.moves, indicesPayload.moves);
 } catch (error: unknown) {
   console.error("Failed to sync with Meilisearch:");
 

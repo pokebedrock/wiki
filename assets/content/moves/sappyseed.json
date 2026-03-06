@@ -1,0 +1,18 @@
+{
+  "name": "Sappy Seed",
+  "description": "This move summons Leech Seed on the foe.",
+  "accuracy": 90,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 705
+}

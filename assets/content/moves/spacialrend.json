@@ -1,0 +1,18 @@
+{
+  "name": "Spacial Rend",
+  "description": "Has a higher chance for a critical hit.",
+  "accuracy": 95,
+  "pp": 5,
+  "category": "Special",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 777
+}

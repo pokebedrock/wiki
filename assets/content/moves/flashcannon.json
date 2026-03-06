@@ -1,0 +1,18 @@
+{
+  "name": "Flash Cannon",
+  "description": "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Steel",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 266
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Acid Downpour",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Poison",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "poisoniumz",
+  "zMove": {},
+  "sortOrder": 6
+}

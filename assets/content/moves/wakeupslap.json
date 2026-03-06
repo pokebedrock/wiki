@@ -1,0 +1,19 @@
+{
+  "name": "Wake-Up Slap",
+  "description": "Power doubles if the target is asleep. If the user has not fainted, the target wakes up.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 918
+}
