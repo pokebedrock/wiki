@@ -13,7 +13,9 @@ order: 2
 
 ## Workflow
 
-- `scripts/build-search-index.ts` scans all docs, extracts metadata, and writes `build/search-index.json`.
+- `scripts/build-search-index.ts` scans docs plus JSON content datasets
+  (`assets/content/wikiPokemon.json` and `assets/content/wikiMoves.json`),
+  then writes `build/search-index.json`.
 - If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes the payload
   directly to the configured index (defaults to `wiki-docs`).
 - `.github/workflows/search-index.yml` runs the script on `main` and nightly to keep the search cluster in sync.
@@ -54,6 +56,4 @@ The command writes the JSON file and pushes it to the remote cluster when env va
 ```
 
 Keep descriptions ≤ 180 characters to avoid truncation in search UIs.
-
-
 

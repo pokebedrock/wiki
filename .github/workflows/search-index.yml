@@ -6,8 +6,11 @@ on:
       - main
     paths:
       - "docs/**"
+      - "assets/content/**"
       - "schemas/**"
       - "scripts/build-search-index.ts"
+      - "package.json"
+      - "package-lock.json"
   workflow_dispatch: {}
   schedule:
     - cron: "0 6 * * *"
@@ -25,6 +28,7 @@ jobs:
           node-version: 20
           cache: npm
           cache-dependency-path: package-lock.json
+          cache-dependency-path: package-lock.json
       - run: npm install
       - name: Build search index
         run: npm run build:search
@@ -37,5 +41,4 @@ jobs:
         with:
           name: search-index
           path: build/search-index.json
-
 

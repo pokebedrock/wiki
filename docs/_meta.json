@@ -1,24 +1,28 @@
 {
+  "content": {
+    "title": "Content",
+    "description": "Pokédex and move encyclopedia for the addon.",
+    "order": 1
+  },
   "handbook": {
     "title": "Handbook",
     "description": "Repository conventions, workflows, and governance.",
-    "order": 1
+    "order": 2
   },
   "guides": {
     "title": "Guides",
     "description": "Step-by-step walkthroughs for admins and players.",
-    "order": 2
+    "order": 3
   },
   "reference": {
     "title": "Reference",
     "description": "Authoritative specs for sync, search, and automation.",
-    "order": 3
+    "order": 4
   },
   "snippets": {
     "title": "Snippets",
     "description": "Reusable MDX and content fragments.",
-    "order": 4
+    "order": 5
   }
 }
-
 
