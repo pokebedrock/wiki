@@ -43,8 +43,8 @@ consistent before syncing to the public website.
 ## CI & Deployment
 
 - `ci.yml` runs lint + validation + link checks for every PR.
-- `search-index.yml` builds `search-index.json` on pushes to `main` and ships it to a
-  self-hosted Meilisearch instance via API (requires repo secrets).
+- `search-index.yml` builds `search-index.json` on pushes to `main` and posts it to the
+  website backend's protected sync endpoint, which reindexes Meilisearch from inside the cluster.
 - A webhook (documented in `docs/reference/sync-to-website.md`) notifies the website
   backend when docs change; the website fetches raw Markdown via the GitHub API and
   caches using ETags.

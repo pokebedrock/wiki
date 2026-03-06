@@ -18,7 +18,8 @@ order: 2
   then writes `build/search-index.json`.
 - If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes the payload
   directly to the configured index (defaults to `wiki-docs`).
-- `.github/workflows/search-index.yml` runs the script on `main` and nightly to keep the search cluster in sync.
+- `.github/workflows/search-index.yml` runs the script on `main` and nightly, then uploads
+  the JSON payload to the website backend's protected sync endpoint so Meilisearch can stay private.
 
 ## Required Settings
 
@@ -27,6 +28,13 @@ order: 2
 | `MEILISEARCH_URL` | Base URL of the self-hosted Meilisearch instance |
 | `MEILISEARCH_KEY` | Admin or documents key with write access |
 | `MEILISEARCH_INDEX` | Optional override of the index UID |
+
+## CI Settings
+
+| Secret | Description |
+| --- | --- |
+| `WIKI_SEARCH_SYNC_URL` | Public HTTPS URL of the backend sync endpoint |
+| `WIKI_SEARCH_SYNC_TOKEN` | Shared bearer token validated by the backend before importing documents |
 
 ## Local Run
 
@@ -37,6 +45,15 @@ npm run build:search
 ```
 
 The command writes the JSON file and pushes it to the remote cluster when env vars are set.
+
+## Production Sync Endpoint
+
+The default production flow does not expose Meilisearch publicly:
+
+1. GitHub Actions builds `build/search-index.json`.
+2. The workflow `POST`s that JSON to the website backend.
+3. The backend validates `WIKI_SEARCH_SYNC_TOKEN`.
+4. The backend connects to `http://meilisearch:7700` inside the cluster and replaces the `wiki-docs` index.
 
 ## Document Schema
 

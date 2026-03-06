@@ -229,6 +229,18 @@ console.log(`Wrote ${records.length} records to ${outputPath}`);
 
 const { MEILISEARCH_URL, MEILISEARCH_KEY, MEILISEARCH_INDEX } = process.env;
 const indexUid = MEILISEARCH_INDEX ?? "wiki-docs";
+const indexSettings = {
+  searchableAttributes: ["title", "description", "tags", "slug", "body"],
+  filterableAttributes: ["lang", "status", "tags"],
+  sortableAttributes: ["order", "lastUpdated"],
+  displayedAttributes: ["id", "slug", "title", "description", "tags", "status", "lang", "order"],
+};
+
+const isIndexAlreadyExistsError = (error: unknown): boolean =>
+  typeof error === "object" &&
+  error !== null &&
+  "code" in error &&
+  (error as { code?: unknown }).code === "index_already_exists";
 
 if (!MEILISEARCH_URL || !MEILISEARCH_KEY) {
   console.log("MEILISEARCH_URL/KEY not set. Skipping remote sync.");
@@ -242,7 +254,29 @@ try {
   });
 
   const index = client.index(indexUid);
+
+  try {
+    const createIndexTask = await client.createIndex(indexUid, { primaryKey: "id" });
+    await client.waitForTask(createIndexTask.taskUid);
+  } catch (error: unknown) {
+    if (!isIndexAlreadyExistsError(error)) {
+      throw error;
+    }
+  }
+
+  const settingsTask = await index.updateSettings(indexSettings);
+  await client.waitForTask(settingsTask.taskUid);
+
+  const clearTask = await index.deleteAllDocuments();
+  await client.waitForTask(clearTask.taskUid);
+
+  if (records.length === 0) {
+    console.log(`Cleared Meilisearch index ${indexUid} (task ${clearTask.taskUid})`);
+    process.exit(0);
+  }
+
   const task = await index.addDocuments(records, { primaryKey: "id" });
+  await client.waitForTask(task.taskUid);
   console.log(`Triggered Meilisearch sync (task ${task.taskUid})`);
 } catch (error: unknown) {
   console.error("Failed to sync with Meilisearch:");

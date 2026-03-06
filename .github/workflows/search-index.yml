@@ -33,9 +33,20 @@ jobs:
       - name: Build search index
         run: npm run build:search
         env:
-          MEILISEARCH_URL: ${{ secrets.MEILISEARCH_URL }}
-          MEILISEARCH_KEY: ${{ secrets.MEILISEARCH_KEY }}
           MEILISEARCH_INDEX: wiki-docs
+      - name: Sync search index via website backend
+        env:
+          WIKI_SEARCH_SYNC_URL: ${{ secrets.WIKI_SEARCH_SYNC_URL }}
+          WIKI_SEARCH_SYNC_TOKEN: ${{ secrets.WIKI_SEARCH_SYNC_TOKEN }}
+        run: |
+          test -n "$WIKI_SEARCH_SYNC_URL"
+          test -n "$WIKI_SEARCH_SYNC_TOKEN"
+          curl --fail-with-body --show-error --silent \
+            -X POST \
+            -H "Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data-binary @build/search-index.json \
+            "$WIKI_SEARCH_SYNC_URL"
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

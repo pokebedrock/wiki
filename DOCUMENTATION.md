@@ -86,7 +86,10 @@ wiki/
 - `.github/workflows/search-index.yml` (`wiki-search`):
   - Triggers on pushes to `main` for docs/schema/search-script paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uses Meilisearch secrets and uploads `wiki/build/search-index.json` artifact.
+  - Uploads `wiki/build/search-index.json` as an artifact.
+  - Sends the JSON payload to the website backend sync endpoint using:
+    - `WIKI_SEARCH_SYNC_URL`
+    - `WIKI_SEARCH_SYNC_TOKEN`
   - Current path filter includes `wiki/scripts/build-search-index.mjs`; source file present in repo is `scripts/build-search-index.ts`.
 
 ## 6. Assets (`assets/`)
@@ -128,6 +131,7 @@ Media policy from docs/scripts:
     - `MEILISEARCH_URL`
     - `MEILISEARCH_KEY`
     - optional `MEILISEARCH_INDEX` (default `wiki-docs`)
+  - Production CI instead sends the generated JSON to the backend, which reindexes Meilisearch internally.
 
 ## 9. Docs content (`docs/`)
 
