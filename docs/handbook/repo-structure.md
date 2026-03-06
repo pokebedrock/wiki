@@ -42,7 +42,9 @@ Images referenced from docs must live under `assets/`. Diagrams keep their edita
 - `schemas/frontmatter.schema.json` – JSON Schema used by `npm run lint:frontmatter`.
 - `scripts/validate-frontmatter.ts` – Ensures metadata consistency.
 - `scripts/check-images.ts` – Validates file format, size, and alt text.
-- `scripts/build-search-index.ts` – Creates search payloads plus frontend content manifests in `build/`, then optionally pushes the docs/pokemon/moves indices to Meilisearch.
+- `scripts/build-search-index.ts` – Creates search payloads plus frontend
+  content manifests in `build/`, then optionally pushes the
+  docs/pokemon/moves indices to Meilisearch.
 
 ## GitHub Automation
 
