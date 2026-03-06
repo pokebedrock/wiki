@@ -41,14 +41,15 @@ description: One-line summary used in search results.
 tags:
   - guide
   - survival
-lastUpdated: 2025-11-21
+lastUpdated: "2025-11-21"
 status: stable
 lang: en
 ---
 ```
 
 - `tags` should be lowercase kebab-case.
-- `lastUpdated` uses ISO dates.
+- `lastUpdated` uses ISO dates. **Always wrap the date in quotes** so the validator treats it as a string
+  (`schemas/frontmatter.schema.json` rejects YAML date objects).
 - Use `status` (`draft`, `beta`, `stable`) for transparency.
 
 ### Localization
