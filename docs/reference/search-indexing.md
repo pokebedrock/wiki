@@ -18,6 +18,9 @@ order: 2
 - It writes:
   - `build/search-index.json` for local merged search fallback
   - `build/search-indices.json` for remote multi-index syncing
+  - `build/pokemon-manifest.json` for fast frontend Pokemon list/navigation
+  - `build/moves-manifest.json` for fast frontend move list/navigation
+  - `build/move-learners-manifest.json` for fast move detail learner lookups
 - If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes the payload
   directly to the configured index (defaults to `wiki-docs`).
 - `.github/workflows/search-index.yml` runs the script on `main` and nightly, then uploads
@@ -46,7 +49,8 @@ MEILISEARCH_KEY=<docs-key> \
 npm run build:search
 ```
 
-The command writes both JSON files and pushes the three remote indices when env vars are set.
+The command writes the search payloads plus frontend manifests, and pushes the three remote
+indices when env vars are set.
 
 ## Production Sync Endpoint
 

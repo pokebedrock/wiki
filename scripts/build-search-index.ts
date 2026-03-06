@@ -24,6 +24,33 @@ type SearchIndicesPayload = {
   moves: SearchRecord[];
 };
 
+type PokemonManifestEntry = {
+  id: string;
+  name: string;
+  description: string;
+  sortOrder: number;
+  types: string[];
+  tags: string[];
+};
+
+type MoveManifestEntry = {
+  id: string;
+  name: string;
+  description: string;
+  sortOrder: number;
+  type?: string;
+  category?: string;
+};
+
+type MoveLearnerManifestEntry = {
+  pokemonId: string;
+  pokemonName: string;
+  methods: string[];
+  earliestLevel?: number;
+};
+
+type MoveLearnersManifest = Record<string, MoveLearnerManifestEntry[]>;
+
 type JsonRecord = Record<string, unknown>;
 
 const ensureString = (value: unknown): string | undefined =>
@@ -169,6 +196,92 @@ const buildMoveBody = (id: string, moveRaw: unknown): string => {
     .join("\n");
 };
 
+const buildPokemonManifestEntry = (id: string, pokemonRaw: unknown, fallbackSortOrder: number): PokemonManifestEntry => {
+  const pokemon = ensureObject(pokemonRaw);
+
+  return {
+    id,
+    name: ensureString(pokemon["name"]) ?? formatLabel(id),
+    description: ensureString(pokemon["description"]) ?? "No description available.",
+    sortOrder: ensureNumber(pokemon["sortOrder"], fallbackSortOrder),
+    types: ensureStringArray(pokemon["types"]),
+    tags: ensureStringArray(pokemon["tags"]),
+  };
+};
+
+const buildMoveManifestEntry = (id: string, moveRaw: unknown, fallbackSortOrder: number): MoveManifestEntry => {
+  const move = ensureObject(moveRaw);
+  const type = ensureString(move["type"]);
+  const category = ensureString(move["category"]);
+
+  return {
+    id,
+    name: ensureString(move["name"]) ?? formatLabel(id),
+    description: ensureString(move["description"]) ?? "No description available.",
+    sortOrder: ensureNumber(move["sortOrder"], fallbackSortOrder),
+    ...(type ? { type } : {}),
+    ...(category ? { category } : {}),
+  };
+};
+
+const buildMoveLearnersManifest = (
+  pokemonItems: Array<{ id: string; value: unknown }>,
+): MoveLearnersManifest => {
+  const learnersByMove = new Map<
+    string,
+    Map<string, { pokemonId: string; pokemonName: string; methods: Set<string>; levels: number[] }>
+  >();
+
+  for (const { id, value } of pokemonItems) {
+    const pokemon = ensureObject(value);
+    const pokemonName = ensureString(pokemon["name"]) ?? formatLabel(id);
+    const moves = Array.isArray(pokemon["moves"]) ? pokemon["moves"] : [];
+
+    for (const moveEntry of moves) {
+      const moveData = ensureObject(moveEntry);
+      const moveId = ensureString(moveData["move"]);
+      const learnMethod = ensureString(moveData["learnMethod"]);
+      if (!moveId || !learnMethod) {
+        continue;
+      }
+
+      const normalizedMoveId = moveId.trim().toLowerCase();
+      const learnersForMove = learnersByMove.get(normalizedMoveId) ?? new Map();
+      const learner =
+        learnersForMove.get(id) ?? {
+          pokemonId: id,
+          pokemonName,
+          methods: new Set<string>(),
+          levels: [],
+        };
+
+      learner.methods.add(learnMethod);
+
+      const levelLearnedAt = ensureNumber(moveData["level_learned_at"], Number.NaN);
+      if (Number.isFinite(levelLearnedAt)) {
+        learner.levels.push(levelLearnedAt);
+      }
+
+      learnersForMove.set(id, learner);
+      learnersByMove.set(normalizedMoveId, learnersForMove);
+    }
+  }
+
+  return Object.fromEntries(
+    Array.from(learnersByMove.entries()).map(([moveId, learners]) => [
+      moveId,
+      Array.from(learners.values())
+        .map((learner) => ({
+          pokemonId: learner.pokemonId,
+          pokemonName: learner.pokemonName,
+          methods: Array.from(learner.methods),
+          ...(learner.levels.length > 0 ? { earliestLevel: Math.min(...learner.levels) } : {}),
+        }))
+        .sort((left, right) => left.pokemonName.localeCompare(right.pokemonName)),
+    ]),
+  );
+};
+
 const repoRoot = resolve(process.cwd());
 const wikiIndexUids = {
   docs: "wiki-docs",
@@ -209,6 +322,10 @@ const docRecords: SearchRecord[] = files.map((filePath, index) => {
 });
 
 const pokemonEntries = (await readOptionalJsonDirectory("assets/content/pokemon")) ?? [];
+const pokemonManifest = pokemonEntries.map(({ id, value }, index) =>
+  buildPokemonManifestEntry(id, value, index + 1),
+);
+const moveLearnersManifest = buildMoveLearnersManifest(pokemonEntries);
 
 const pokemonOrderBase = docRecords.length + 1;
 const pokemonRecords: SearchRecord[] = pokemonEntries.map(({ id, value: pokemon }, index) => {
@@ -230,6 +347,7 @@ const pokemonRecords: SearchRecord[] = pokemonEntries.map(({ id, value: pokemon 
   });
 
 const moveEntries = (await readOptionalJsonDirectory("assets/content/moves")) ?? [];
+const moveManifest = moveEntries.map(({ id, value }, index) => buildMoveManifestEntry(id, value, index + 1));
 
 const moveOrderBase = pokemonOrderBase + pokemonRecords.length + 1;
 const moveRecords: SearchRecord[] = moveEntries.map(({ id, value: move }, index) => {
@@ -273,6 +391,18 @@ writeFileSync(indicesOutputPath, JSON.stringify(indicesPayload, null, 2));
 console.log(
   `Wrote docs=${indicesPayload.docs.length}, pokemon=${indicesPayload.pokemon.length}, moves=${indicesPayload.moves.length} to ${indicesOutputPath}`,
 );
+
+const pokemonManifestPath = resolve(buildDir, "pokemon-manifest.json");
+writeFileSync(pokemonManifestPath, JSON.stringify(pokemonManifest, null, 2));
+console.log(`Wrote ${pokemonManifest.length} Pokemon manifest entries to ${pokemonManifestPath}`);
+
+const moveManifestPath = resolve(buildDir, "moves-manifest.json");
+writeFileSync(moveManifestPath, JSON.stringify(moveManifest, null, 2));
+console.log(`Wrote ${moveManifest.length} move manifest entries to ${moveManifestPath}`);
+
+const moveLearnersManifestPath = resolve(buildDir, "move-learners-manifest.json");
+writeFileSync(moveLearnersManifestPath, JSON.stringify(moveLearnersManifest, null, 2));
+console.log(`Wrote ${Object.keys(moveLearnersManifest).length} move learner entries to ${moveLearnersManifestPath}`);
 
 const indexSettings = {
   searchableAttributes: ["title", "description", "tags", "slug", "body"],

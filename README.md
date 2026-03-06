@@ -38,7 +38,7 @@ consistent before syncing to the public website.
 | `npm run lint:links` | Crawls docs with Linkinator for broken links |
 | `npm run lint` | Runs markdownlint + frontmatter + image checks |
 | `npm run check` | Full suite (`lint` + link check) |
-| `npm run build:search` | Generates `build/search-index.json` and `build/search-indices.json` for Meilisearch ingestion |
+| `npm run build:search` | Generates search payloads plus frontend content manifests in `build/` |
 | `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/` |
 
 ## CI & Deployment
@@ -47,6 +47,11 @@ consistent before syncing to the public website.
 - `search-index.yml` builds `search-index.json` and `search-indices.json` on pushes to `main`
   and posts the multi-index payload to the website backend's protected sync endpoint, which
   reindexes Meilisearch from inside the cluster.
+- The same build also writes content manifests used by the frontend for fast wiki content
+  list/detail navigation:
+  - `build/pokemon-manifest.json`
+  - `build/moves-manifest.json`
+  - `build/move-learners-manifest.json`
 - A webhook (documented in `docs/reference/sync-to-website.md`) notifies the website
   backend when docs change; the website fetches raw Markdown via the GitHub API and
   caches using ETags.

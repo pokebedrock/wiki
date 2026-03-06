@@ -129,6 +129,9 @@ Media policy from docs/scripts:
   - Parses frontmatter + content and writes:
     - `build/search-index.json` (merged local fallback)
     - `build/search-indices.json` (docs/pokemon/moves split payload)
+    - `build/pokemon-manifest.json` (frontend Pokemon summaries)
+    - `build/moves-manifest.json` (frontend move summaries)
+    - `build/move-learners-manifest.json` (frontend move learner lookup)
   - Reads content JSON from:
     - `assets/content/pokemon/*.json`
     - `assets/content/moves/*.json`
@@ -204,7 +207,7 @@ Media policy from docs/scripts:
 
 ### Search workflow
 
-1. Build script generates `build/search-index.json`.
+1. Build script generates search payloads plus frontend content manifests in `build/`.
 2. If Meilisearch credentials exist, records are pushed remotely.
 3. Schema includes metadata and body text for ranking and filtering.
 
