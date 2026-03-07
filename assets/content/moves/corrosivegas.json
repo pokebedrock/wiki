@@ -1,0 +1,19 @@
+{
+  "name": "Corrosive Gas",
+  "description": "The target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+  "accuracy": 100,
+  "pp": 40,
+  "category": "Status",
+  "type": "Poison",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 140
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Shadow Ball",
+  "description": "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 721
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Lucky Chant",
+  "description": "For 5 turns, the user and its party members cannot be struck by a critical hit. Fails if the effect is already active on the user's side.",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "allySide",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 480
+}

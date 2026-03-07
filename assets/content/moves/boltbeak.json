@@ -1,0 +1,18 @@
+{
+  "name": "Bolt Beak",
+  "description": "Power doubles if the user moves before the target.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 76
+}

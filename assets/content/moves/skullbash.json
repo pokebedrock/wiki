@@ -1,0 +1,22 @@
+{
+  "name": "Skull Bash",
+  "description": "This attack charges on the first turn and executes on the second. Raises the user's Defense by 1 stage on the first turn. If the user is holding a Power Herb, the move completes in one turn.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 748
+}

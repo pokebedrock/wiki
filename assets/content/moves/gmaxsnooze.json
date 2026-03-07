@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Snooze",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, there is a 50% chance the effect of Yawn begins on the target, even if it has a substitute.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 333
+}

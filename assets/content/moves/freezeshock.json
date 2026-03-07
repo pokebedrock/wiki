@@ -1,0 +1,20 @@
+{
+  "name": "Freeze Shock",
+  "description": "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+  "accuracy": 90,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 286
+}

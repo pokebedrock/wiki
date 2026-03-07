@@ -1,0 +1,21 @@
+{
+  "name": "Perish Song",
+  "description": "Each active Pokemon receives a perish count of 4 if it doesn't already have a perish count. At the end of each turn including the turn used, the perish count of all active Pokemon lowers by 1 and Pokemon faint if the number reaches 0. The perish count is removed from Pokemon that switch out. If a Pokemon uses Baton Pass while it has a perish count, the replacement will gain the perish count and continue to count down.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 597
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Freeze-Dry",
+  "description": "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Special",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 285
+}

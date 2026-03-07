@@ -1,0 +1,19 @@
+{
+  "name": "Grassy Glide",
+  "description": "If the current terrain is Grassy Terrain and the user is grounded, this move has its priority increased by 1.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 348
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Zygarde-10%",
+  "description": "Some say it can change to an even more powerful form when battling those who threaten the ecosystem.",
+  "types": [
+    "dragon",
+    "ground"
+  ],
+  "tags": [],
+  "abilities": {
+    "0": "Aura Break",
+    "S": "Power Construct"
+  },
+  "evYield": {
+    "hp": 3,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 300,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [],
+  "stats": {
+    "hp": 54,
+    "atk": 100,
+    "def": 71,
+    "spa": 61,
+    "spd": 85,
+    "spe": 115
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 919
+}

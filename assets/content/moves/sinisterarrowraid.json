@@ -1,0 +1,15 @@
+{
+  "name": "Sinister Arrow Raid",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "decidiumz",
+  "zMove": {},
+  "sortOrder": 743
+}

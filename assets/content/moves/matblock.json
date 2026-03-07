@@ -1,0 +1,19 @@
+{
+  "name": "Mat Block",
+  "description": "The user and its party members are protected from damaging attacks made by other Pokemon, including allies, during this turn. Fails unless it is the user's first turn on the field, if the user moves last this turn, or if this move is already in effect for the user's side.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "allySide",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 500
+}

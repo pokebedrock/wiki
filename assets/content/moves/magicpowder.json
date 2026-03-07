@@ -1,0 +1,20 @@
+{
+  "name": "Magic Powder",
+  "description": "Causes the target to become a Psychic type. Fails if the target is an Arceus or a Silvally, if the target is already purely Psychic type, or if the target is Terastallized.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "The move plays its animation when used on an ally.",
+    null,
+    "Has no effect on Pokemon which are Grass-type, have the Ability Overcoat, or hold Safety Goggles."
+  ],
+  "zMove": {},
+  "sortOrder": 490
+}

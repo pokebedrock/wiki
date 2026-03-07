@@ -1,0 +1,19 @@
+{
+  "name": "Lovely Kiss",
+  "description": "",
+  "accuracy": 75,
+  "pp": 10,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 477
+}

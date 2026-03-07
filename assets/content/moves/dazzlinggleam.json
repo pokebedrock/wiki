@@ -1,0 +1,18 @@
+{
+  "name": "Dazzling Gleam",
+  "description": "No additional effect.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 159
+}

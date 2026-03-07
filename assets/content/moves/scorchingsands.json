@@ -1,0 +1,18 @@
+{
+  "name": "Scorching Sands",
+  "description": "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Ground",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Thaws the user if executed successfully while the user is frozen.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 710
+}

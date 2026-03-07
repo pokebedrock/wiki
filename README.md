@@ -7,9 +7,9 @@ consistent before syncing to the public website.
 ## Quickstart
 
 1. Install Node 20+.
-2. Run `npm install` from the repository root.
+2. Run `npm ci` from the repository root.
 3. Create/edit docs under `docs/`.
-4. Run `npm run lint` locally before opening a PR.
+4. Run `npm run ci` locally before opening a PR.
 
 ## Repository Layout
 
@@ -38,13 +38,22 @@ consistent before syncing to the public website.
 | `npm run lint:links` | Crawls docs with Linkinator for broken links |
 | `npm run lint` | Runs markdownlint + frontmatter + image checks |
 | `npm run check` | Full suite (`lint` + link check) |
-| `npm run build:search` | Generates `build/search-index.json` for Meilisearch ingestion |
+| `npm run ci` | Launch gate (`lint`, links, search build) |
+| `npm run audit:prod` | Audits production dependency graph |
+| `npm run build:search` | Generates search payloads plus frontend content manifests in `build/` |
+| `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/` |
 
 ## CI & Deployment
 
 - `ci.yml` runs lint + validation + link checks for every PR.
-- `search-index.yml` builds `search-index.json` on pushes to `main` and ships it to a
-  self-hosted Meilisearch instance via API (requires repo secrets).
+- `search-index.yml` builds `search-index.json` and `search-indices.json` on pushes to `main`
+  and posts the multi-index payload to the website backend's protected sync endpoint, which
+  reindexes Meilisearch from inside the cluster.
+- The same build also writes content manifests used by the frontend for fast wiki content
+  list/detail navigation:
+  - `build/pokemon-manifest.json`
+  - `build/moves-manifest.json`
+  - `build/move-learners-manifest.json`
 - A webhook (documented in `docs/reference/sync-to-website.md`) notifies the website
   backend when docs change; the website fetches raw Markdown via the GitHub API and
   caches using ETags.
@@ -55,4 +64,5 @@ Read `CONTRIBUTING.md` for branching strategy, review expectations, localization
 workflow, and content guidelines. Issue templates cover bugs and content requests, while
 CODEOWNERS ensures the docs team reviews every change.
 
+Release checklist: [`docs/reference/release-checklist.md`](./docs/reference/release-checklist.md)
 

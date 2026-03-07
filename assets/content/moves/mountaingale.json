@@ -1,0 +1,17 @@
+{
+  "name": "Mountain Gale",
+  "description": "Has a 30% chance to make the target flinch.",
+  "accuracy": 85,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 556
+}

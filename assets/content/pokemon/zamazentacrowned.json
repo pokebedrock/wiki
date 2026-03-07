@@ -1,0 +1,40 @@
+{
+  "name": "Zamazenta-Crowned",
+  "description": "This Pokémon slept for aeons while in the form of a statue. It was asleep for so long, people forgot that it ever existed.",
+  "types": [
+    "fighting",
+    "steel"
+  ],
+  "tags": [],
+  "abilities": {
+    "0": "Dauntless Shield"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 3
+  },
+  "base_experience": 330,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [],
+  "stats": {
+    "hp": 92,
+    "atk": 120,
+    "def": 140,
+    "spa": 80,
+    "spd": 140,
+    "spe": 128
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 1163
+}

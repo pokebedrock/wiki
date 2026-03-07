@@ -1,0 +1,19 @@
+{
+  "name": "Earth Power",
+  "description": "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Ground",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 207
+}

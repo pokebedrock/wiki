@@ -1,0 +1,20 @@
+{
+  "name": "Round",
+  "description": "If there are other active Pokemon that chose this move for use this turn, those Pokemon take their turn immediately after the user, in Speed order, and this move's power is 120 for each other user.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 695
+}

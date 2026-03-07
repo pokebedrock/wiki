@@ -1,0 +1,21 @@
+{
+  "name": "Low Kick",
+  "description": "This move's power is 20 if the target weighs less than 10 kg, 40 if less than 25 kg, 60 if less than 50 kg, 80 if less than 100 kg, 100 if less than 200 kg, and 120 if greater than or equal to 200 kg.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 478
+}

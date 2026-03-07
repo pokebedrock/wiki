@@ -1,0 +1,19 @@
+{
+  "name": "Drill Run",
+  "description": "Has a higher chance for a critical hit.",
+  "accuracy": 95,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Ground",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 201
+}

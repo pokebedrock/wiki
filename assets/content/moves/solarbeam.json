@@ -1,0 +1,21 @@
+{
+  "name": "Solar Beam",
+  "description": "This attack charges on the first turn and executes on the second. Power is halved if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 773
+}

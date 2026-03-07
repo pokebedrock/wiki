@@ -1,0 +1,17 @@
+{
+  "name": "Withdraw",
+  "description": "Raises the user's Defense by 1 stage.",
+  "accuracy": true,
+  "pp": 40,
+  "category": "Status",
+  "type": "Water",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 938
+}

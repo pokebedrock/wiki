@@ -1,0 +1,19 @@
+{
+  "name": "Stone Axe",
+  "description": "If this move is successful, it sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Rock type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any Pokemon uses Tidy Up, or if any opposing Pokemon uses Mortal Spin, Rapid Spin, or Defog successfully, or is hit by Defog.",
+  "accuracy": 90,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Rock",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Sharpness."
+  ],
+  "zMove": {},
+  "sortOrder": 810
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Sandsear Storm",
+  "description": "Has a 20% chance to burn the target. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
+  "accuracy": 80,
+  "pp": 10,
+  "category": "Special",
+  "type": "Ground",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Activates the Wind Power and Wind Rider Abilities."
+  ],
+  "zMove": {},
+  "sortOrder": 702
+}

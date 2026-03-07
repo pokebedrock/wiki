@@ -1,0 +1,21 @@
+{
+  "name": "Punishment",
+  "description": "Power is equal to 60+(X*20), where X is the target's total stat stage changes that are greater than 0, but not more than 200 power.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 648
+}

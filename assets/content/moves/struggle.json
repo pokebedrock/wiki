@@ -1,0 +1,25 @@
+{
+  "name": "Struggle",
+  "description": "Deals typeless damage to a random opposing Pokemon. If this move was successful, the user loses 1/4 of its maximum HP, rounded half up, and the Rock Head Ability does not prevent this. This move is automatically used if none of the user's known moves can be selected.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "randomNormal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Encore fails if target used this move.",
+    "Cannot be selected by Me First.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be copied by Mimic.",
+    "Cannot be repeated by Instruct.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 818
+}

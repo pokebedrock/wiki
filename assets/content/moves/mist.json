@@ -1,0 +1,19 @@
+{
+  "name": "Mist",
+  "description": "For 5 turns, the user and its party members are protected from having their stat stages lowered by other Pokemon. Fails if the effect is already active on the user's side.",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Ice",
+  "priority": 0,
+  "target": "allySide",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "effect": "heal"
+  },
+  "sortOrder": 547
+}

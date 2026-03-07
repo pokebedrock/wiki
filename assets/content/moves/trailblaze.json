@@ -1,0 +1,18 @@
+{
+  "name": "Trailblaze",
+  "description": "Has a 100% chance to raise the user's Speed by 1 stage.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 888
+}

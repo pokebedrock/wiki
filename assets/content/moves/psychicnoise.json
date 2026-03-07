@@ -1,0 +1,19 @@
+{
+  "name": "Psychic Noise",
+  "description": "For 2 turns, the target is prevented from restoring any HP as long as it remains active. During the effect, healing and draining moves are unusable, and Abilities and items that grant healing will not heal the user. If an affected Pokemon uses Baton Pass, the replacement will remain unable to restore its HP. Pain Split and the Regenerator Ability are unaffected.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 638
+}

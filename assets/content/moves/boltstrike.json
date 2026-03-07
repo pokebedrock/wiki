@@ -1,0 +1,19 @@
+{
+  "name": "Bolt Strike",
+  "description": "Has a 20% chance to paralyze the target.",
+  "accuracy": 85,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 77
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Calm Mind",
+  "description": "Raises the user's Special Attack and Special Defense by 1 stage.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 103
+}

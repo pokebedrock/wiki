@@ -1,0 +1,20 @@
+{
+  "name": "Rest",
+  "description": "The user falls asleep for the next two turns and restores all of its HP, curing itself of any non-volatile status condition in the process. Fails if the user has full HP, is already asleep, or if another effect is preventing sleep.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Prevented from being executed or selected during Heal Block's effect.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 672
+}

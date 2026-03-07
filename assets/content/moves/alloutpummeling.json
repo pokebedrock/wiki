@@ -1,0 +1,15 @@
+{
+  "name": "All-Out Pummeling",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "fightiniumz",
+  "zMove": {},
+  "sortOrder": 16
+}

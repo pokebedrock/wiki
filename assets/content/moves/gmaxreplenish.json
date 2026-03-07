@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Replenish",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, there is a 50% chance every Pokemon on the user's side has its Berry restored, even if they have a substitute.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 329
+}

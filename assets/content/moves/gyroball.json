@@ -1,0 +1,22 @@
+{
+  "name": "Gyro Ball",
+  "description": "Power is equal to (25 * target's current Speed / user's current Speed) + 1, rounded down, but not more than 150. If the user's current Speed is 0, this move's power is 1.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Steel",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Cool",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 361
+}

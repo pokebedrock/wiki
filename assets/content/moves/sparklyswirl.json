@@ -1,0 +1,17 @@
+{
+  "name": "Sparkly Swirl",
+  "description": "Every Pokemon in the user's party is cured of its non-volatile status condition.",
+  "accuracy": 85,
+  "pp": 5,
+  "category": "Special",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 780
+}

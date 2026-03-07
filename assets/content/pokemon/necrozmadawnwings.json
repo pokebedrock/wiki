@@ -1,0 +1,40 @@
+{
+  "name": "Necrozma-Dawn-Wings",
+  "description": "It needs light to survive, and it goes on a rampage seeking it out. Its laser beams will cut anything to pieces.",
+  "types": [
+    "psychic",
+    "ghost"
+  ],
+  "tags": [],
+  "abilities": {
+    "0": "Prism Armor"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 2,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 300,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [],
+  "stats": {
+    "hp": 97,
+    "atk": 113,
+    "def": 109,
+    "spa": 157,
+    "spd": 127,
+    "spe": 77
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 1043
+}

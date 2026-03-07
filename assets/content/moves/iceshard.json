@@ -1,0 +1,18 @@
+{
+  "name": "Ice Shard",
+  "description": "No additional effect.",
+  "accuracy": 100,
+  "pp": 30,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 428
+}

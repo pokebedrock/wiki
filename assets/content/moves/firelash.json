@@ -1,0 +1,19 @@
+{
+  "name": "Fire Lash",
+  "description": "Has a 100% chance to lower the target's Defense by 1 stage.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Fire",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 252
+}

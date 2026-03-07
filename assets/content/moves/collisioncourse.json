@@ -1,0 +1,18 @@
+{
+  "name": "Collision Course",
+  "description": "Damage is multiplied by 1.3333 if this move is super effective against the target.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 126
+}

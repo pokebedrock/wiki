@@ -1,0 +1,17 @@
+{
+  "name": "Meditate",
+  "description": "Raises the user's Attack by 1 stage.",
+  "accuracy": true,
+  "pp": 40,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 522
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Dual Chop",
+  "description": "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+  "accuracy": 90,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 203
+}

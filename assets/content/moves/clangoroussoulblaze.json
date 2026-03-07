@@ -1,0 +1,18 @@
+{
+  "name": "Clangorous Soulblaze",
+  "description": "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Special",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute."
+  ],
+  "contestType": "Cool",
+  "isZ": "kommoniumz",
+  "zMove": {},
+  "sortOrder": 121
+}

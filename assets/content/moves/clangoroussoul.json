@@ -1,0 +1,17 @@
+{
+  "name": "Clangorous Soul",
+  "description": "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage in exchange for the user losing 33% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Status",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "When used by a Pokemon, other Pokemon with the Ability Dancer can attempt to execute the same move."
+  ],
+  "zMove": {},
+  "sortOrder": 120
+}

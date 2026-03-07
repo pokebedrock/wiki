@@ -1,0 +1,15 @@
+{
+  "name": "Continental Crush",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Rock",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "rockiumz",
+  "zMove": {},
+  "sortOrder": 134
+}

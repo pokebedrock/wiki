@@ -1,0 +1,20 @@
+{
+  "name": "Air Slash",
+  "description": "Has a 30% chance to make the target flinch.",
+  "accuracy": 95,
+  "pp": 15,
+  "category": "Special",
+  "type": "Flying",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Sharpness."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 15
+}

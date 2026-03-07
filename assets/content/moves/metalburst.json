@@ -1,0 +1,19 @@
+{
+  "name": "Metal Burst",
+  "description": "Deals damage to the last opposing Pokemon to hit the user with a physical or special attack this turn equal to 1.5 times the HP lost by the user from that attack, rounded down. If the user did not lose HP from that attack, this move deals 1 HP of damage instead. If that opposing Pokemon's position is no longer in use and there is another opposing Pokemon on the field, the damage is done to it instead. Only the last hit of a multi-hit attack is counted. Fails if the user was not hit by an opposing Pokemon's physical or special attack this turn.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Steel",
+  "priority": 0,
+  "target": "scripted",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be selected by Me First."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 530
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Sky Attack",
+  "description": "Has a 30% chance to make the target flinch and a higher chance for a critical hit. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+  "accuracy": 90,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Flying",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 749
+}

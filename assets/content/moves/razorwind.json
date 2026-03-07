@@ -1,0 +1,21 @@
+{
+  "name": "Razor Wind",
+  "description": "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 665
+}

@@ -1,0 +1,14 @@
+{
+  "name": "G-Max One Blow",
+  "description": "Power is equal to the base move's Max Move power. This move bypasses all protection effects, including Max Guard.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 327
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Ally Switch",
+  "description": "The user swaps positions with its ally. Fails if the user is the only Pokemon on its side. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails or if the user's last move used is not Ally Switch.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 2,
+  "target": "self",
+  "flags": [
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 18
+}

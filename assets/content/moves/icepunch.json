@@ -1,0 +1,20 @@
+{
+  "name": "Ice Punch",
+  "description": "Has a 10% chance to freeze the target.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Power is multiplied by 1.2 when used by a Pokemon with the Ability Iron Fist.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 427
+}

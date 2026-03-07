@@ -1,0 +1,19 @@
+{
+  "name": "Snarl",
+  "description": "Has a 100% chance to lower the target's Special Attack by 1 stage.",
+  "accuracy": 95,
+  "pp": 15,
+  "category": "Special",
+  "type": "Dark",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 766
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Bloom Doom",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "grassiumz",
+  "zMove": {},
+  "sortOrder": 72
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Bulk Up",
+  "description": "Raises the user's Attack and Defense by 1 stage.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 95
+}

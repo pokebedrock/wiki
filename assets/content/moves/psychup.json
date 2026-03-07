@@ -1,0 +1,20 @@
+{
+  "name": "Psych Up",
+  "description": "The user copies all of the target's current stat stage changes.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Ignores a target's substitute.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "heal"
+  },
+  "sortOrder": 635
+}

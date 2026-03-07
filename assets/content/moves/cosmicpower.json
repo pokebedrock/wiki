@@ -1,0 +1,17 @@
+{
+  "name": "Cosmic Power",
+  "description": "Raises the user's Defense and Special Defense by 1 stage.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 141
+}

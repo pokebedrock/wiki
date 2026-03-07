@@ -1,0 +1,17 @@
+{
+  "name": "Flower Shield",
+  "description": "Raises the Defense of all active Grass-type Pokemon by 1 stage. Fails if there are no active Grass-type Pokemon.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 273
+}

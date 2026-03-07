@@ -1,0 +1,17 @@
+{
+  "name": "Life Dew",
+  "description": "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Water",
+  "priority": 0,
+  "target": "allies",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Prevented from being executed or selected during Heal Block's effect.",
+    "Ignores a target's substitute."
+  ],
+  "zMove": {},
+  "sortOrder": 471
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Magnetic Flux",
+  "description": "Raises the Defense and Special Defense of Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Electric",
+  "priority": 0,
+  "target": "allySide",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 494
+}

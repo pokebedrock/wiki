@@ -1,0 +1,19 @@
+{
+  "name": "Revelation Dance",
+  "description": "This move's type depends on the user's primary type. If the user's primary type is typeless, this move's type is the user's secondary type if it has one, otherwise the added type from Forest's Curse or Trick-or-Treat. This move is typeless if the user's type is typeless alone.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "When used by a Pokemon, other Pokemon with the Ability Dancer can attempt to execute the same move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 675
+}

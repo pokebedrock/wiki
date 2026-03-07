@@ -1,0 +1,17 @@
+{
+  "name": "Coaching",
+  "description": "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "adjacentAlly",
+  "flags": [
+    "Ignores a target's substitute.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 124
+}

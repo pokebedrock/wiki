@@ -1,0 +1,19 @@
+{
+  "name": "Sonic Boom",
+  "description": "Deals 20 HP of damage to the target.",
+  "accuracy": 90,
+  "pp": 20,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "damage": 20,
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 775
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Gust",
+  "description": "Power doubles if the target is using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
+  "accuracy": 100,
+  "pp": 35,
+  "category": "Special",
+  "type": "Flying",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null,
+    "Activates the Wind Power and Wind Rider Abilities."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 360
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Hold Back",
+  "description": "Leaves the target with at least 1 HP.",
+  "accuracy": 100,
+  "pp": 40,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 403
+}

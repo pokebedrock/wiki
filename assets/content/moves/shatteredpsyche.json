@@ -1,0 +1,15 @@
+{
+  "name": "Shattered Psyche",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "psychiumz",
+  "zMove": {},
+  "sortOrder": 728
+}

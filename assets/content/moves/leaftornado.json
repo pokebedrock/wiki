@@ -1,0 +1,18 @@
+{
+  "name": "Leaf Tornado",
+  "description": "Has a 50% chance to lower the target's accuracy by 1 stage.",
+  "accuracy": 90,
+  "pp": 10,
+  "category": "Special",
+  "type": "Grass",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 465
+}

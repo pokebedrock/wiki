@@ -1,0 +1,17 @@
+{
+  "name": "Soul-Stealing 7-Star Strike",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact."
+  ],
+  "contestType": "Cool",
+  "isZ": "marshadiumz",
+  "zMove": {},
+  "sortOrder": 776
+}

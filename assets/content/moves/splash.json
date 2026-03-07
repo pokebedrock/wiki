@@ -1,0 +1,17 @@
+{
+  "name": "Splash",
+  "description": "",
+  "accuracy": true,
+  "pp": 40,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Prevented from being executed or selected during Gravity's effect.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 793
+}

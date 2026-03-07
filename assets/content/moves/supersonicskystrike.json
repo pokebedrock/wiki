@@ -1,0 +1,15 @@
+{
+  "name": "Supersonic Skystrike",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Flying",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "flyiniumz",
+  "zMove": {},
+  "sortOrder": 832
+}

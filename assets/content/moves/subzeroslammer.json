@@ -1,0 +1,15 @@
+{
+  "name": "Subzero Slammer",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "iciumz",
+  "zMove": {},
+  "sortOrder": 824
+}

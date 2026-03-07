@@ -1,0 +1,18 @@
+{
+  "name": "Mystical Fire",
+  "description": "Has a 100% chance to lower the target's Special Attack by 1 stage.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Fire",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 563
+}

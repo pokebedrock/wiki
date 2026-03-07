@@ -1,0 +1,22 @@
+{
+  "name": "Disable",
+  "description": "For 4 turns, the target's last move used becomes disabled. Fails if one of the target's moves is already disabled, if the target has not made a move, if the target no longer knows the move, or if the move was a Max or G-Max Move.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 169
+}

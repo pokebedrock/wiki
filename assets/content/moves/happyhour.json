@@ -1,0 +1,16 @@
+{
+  "name": "Happy Hour",
+  "description": "",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "allySide",
+  "flags": [
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 364
+}

@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Chi Strike",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, each Pokemon on the user's side has their critical hit ratio raised by 1 stage, even if they have a substitute.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 315
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Rollout",
+  "description": "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Defense Curl was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
+  "accuracy": 90,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Rock",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be repeated by Instruct.",
+    "Cannot be made to hit twice via Parental Bond."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 692
+}

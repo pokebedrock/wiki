@@ -1,0 +1,19 @@
+{
+  "name": "Darkest Lariat",
+  "description": "Ignores the target's stat stage changes, including evasiveness.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 156
+}

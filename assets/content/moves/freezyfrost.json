@@ -1,0 +1,17 @@
+{
+  "name": "Freezy Frost",
+  "description": "Resets the stat stages of all active Pokemon to 0.",
+  "accuracy": 90,
+  "pp": 10,
+  "category": "Special",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 288
+}

@@ -86,7 +86,10 @@ wiki/
 - `.github/workflows/search-index.yml` (`wiki-search`):
   - Triggers on pushes to `main` for docs/schema/search-script paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uses Meilisearch secrets and uploads `wiki/build/search-index.json` artifact.
+  - Uploads both `wiki/build/search-index.json` and `wiki/build/search-indices.json` as artifacts.
+  - Sends the multi-index JSON payload to the website backend sync endpoint using:
+    - `WIKI_SEARCH_SYNC_URL`
+    - `WIKI_SEARCH_SYNC_TOKEN`
   - Current path filter includes `wiki/scripts/build-search-index.mjs`; source file present in repo is `scripts/build-search-index.ts`.
 
 ## 6. Assets (`assets/`)
@@ -123,11 +126,27 @@ Media policy from docs/scripts:
   - Enforces extension whitelist (`.webp`, `.svg`) and max size (`600 KB`).
 - `scripts/build-search-index.ts`:
   - Scans docs (excluding `_partials` and `snippets`).
-  - Parses frontmatter + content and writes `build/search-index.json`.
+  - Parses frontmatter + content and writes:
+    - `build/search-index.json` (merged local fallback)
+    - `build/search-indices.json` (docs/pokemon/moves split payload)
+    - `build/pokemon-manifest.json` (frontend Pokemon summaries)
+    - `build/moves-manifest.json` (frontend move summaries)
+    - `build/move-learners-manifest.json` (frontend move learner lookup)
+  - Reads content JSON from:
+    - `assets/content/pokemon/*.json`
+    - `assets/content/moves/*.json`
   - Optionally pushes documents to Meilisearch when env vars are provided:
     - `MEILISEARCH_URL`
     - `MEILISEARCH_KEY`
-    - optional `MEILISEARCH_INDEX` (default `wiki-docs`)
+  - Pushes three indices:
+    - `wiki-docs`
+    - `wiki-pokemon`
+    - `wiki-moves`
+  - Production CI instead sends the generated multi-index payload to the backend, which reindexes Meilisearch internally.
+- `scripts/split-content-data.ts`:
+  - Splits legacy monolithic content JSON into per-item files.
+  - Writes Pokemon files to `assets/content/pokemon/`.
+  - Writes move files to `assets/content/moves/`.
 
 ## 9. Docs content (`docs/`)
 
@@ -188,7 +207,7 @@ Media policy from docs/scripts:
 
 ### Search workflow
 
-1. Build script generates `build/search-index.json`.
+1. Build script generates search payloads plus frontend content manifests in `build/`.
 2. If Meilisearch credentials exist, records are pushed remotely.
 3. Schema includes metadata and body text for ranking and filtering.
 

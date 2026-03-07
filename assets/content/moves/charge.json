@@ -1,0 +1,17 @@
+{
+  "name": "Charge",
+  "description": "Raises the user's Special Defense by 1 stage. The user's next Electric-type attack will have its power doubled; the effect ends when the user is no longer active, or after the user attempts to use any Electric-type move besides Charge, even if it is not successful.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Electric",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 109
+}

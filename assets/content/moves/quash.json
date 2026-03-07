@@ -1,0 +1,17 @@
+{
+  "name": "Quash",
+  "description": "Causes the target to take its turn after all other Pokemon this turn, no matter the priority of its selected move. Fails if the target already moved this turn.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Status",
+  "type": "Dark",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 652
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Searing Shot",
+  "description": "Has a 30% chance to burn the target.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Fire",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 713
+}

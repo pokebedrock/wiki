@@ -1,0 +1,21 @@
+{
+  "name": "Aerial Ace",
+  "description": "",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Flying",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Sharpness."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 10
+}

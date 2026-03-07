@@ -1,0 +1,18 @@
+{
+  "name": "Flame Burst",
+  "description": "If this move is successful, the target's ally loses 1/16 of its maximum HP, rounded down, unless it has the Magic Guard Ability.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Special",
+  "type": "Fire",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 260
+}
