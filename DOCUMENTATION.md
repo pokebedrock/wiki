@@ -45,7 +45,6 @@ wiki/
 
 - `README.md`: main project overview, quickstart, layout, tooling, CI/deployment summary.
 - `CONTRIBUTING.md`: contributor workflow, authoring rules, localization/media guidance, validation commands.
-- `PLAN.md`: implementation checklist for the wiki system (structure, CI, sync, search, localization).
 - `CODEOWNERS`: assigns repository ownership to `@pokebedrock/wiki-maintainers`.
 
 ### Tooling and package management
