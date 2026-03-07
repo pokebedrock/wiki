@@ -4,11 +4,13 @@
   "description": "Content repo powering the PokéBedrock documentation site.",
   "private": true,
   "type": "module",
+  "packageManager": "npm@10.9.0",
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
   },
   "scripts": {
+    "ci": "npm run lint && npm run lint:links && npm run build:search",
     "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\"",
     "build:scripts": "tsc -p tsconfig.build.json",
     "lint:frontmatter": "npm run build:scripts && npm run lint:frontmatter:run",
@@ -20,7 +22,8 @@
     "check": "npm run lint && npm run lint:links",
     "content:split": "npm run build:scripts && node build/scripts/split-content-data.js",
     "build:search": "npm run build:scripts && npm run build:search:run",
-    "build:search:run": "node build/scripts/build-search-index.js"
+    "build:search:run": "node build/scripts/build-search-index.js",
+    "audit:prod": "npm audit --omit=dev"
   },
   "devDependencies": {
     "@types/node": "^20.16.10",
@@ -34,4 +37,3 @@
     "typescript": "^5.6.3"
   }
 }
-

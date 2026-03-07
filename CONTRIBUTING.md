@@ -12,7 +12,7 @@ community reads, so every change should be tested and linted before merge.
 Install dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 ## Branch & PR Flow
