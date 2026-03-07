@@ -4,7 +4,7 @@ description: Breakdown of the wiki folders, metadata files, and how the website 
 tags:
   - handbook
   - structure
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-07"
 status: stable
 lang: en
 toc: true
@@ -58,5 +58,8 @@ Images referenced from docs must live under `assets/`. Diagrams keep their edita
 CODEOWNERS
 ```
 
-The wiki lives inside a larger monorepo, but all automation is scoped to the `wiki/`
-directory so it can be split into its own repo later without adjustments.
+This repository now houses the wiki as a standalone project. All automation lives at
+the repo root (`.github/workflows`, shared lint scripts, CODEOWNERS) so nothing
+depends on a surrounding monorepo layout anymore. Downstream jobs (search indexing,
+link checks, linting) only look at this repo's files, which keeps CI scopes and
+required secrets simple.
