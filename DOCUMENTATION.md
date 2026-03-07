@@ -1,10 +1,10 @@
 # PokéBedrock Wiki Documentation
 
-This file documents the entire tracked `wiki/` subfolder: purpose, structure, and the role of each part.
+This file documents the tracked repository contents: purpose, structure, and the role of each part.
 
 ## 1. Scope and conventions
 
-- Scope of this document: repository-tracked files returned by `git -C wiki ls-files`.
+- Scope of this document: repository-tracked files returned by `git ls-files`.
 - Not documented file-by-file: local/runtime artifacts such as `.git/`, `node_modules/`, and generated `build/` output.
 - Primary content source: `docs/` (Markdown/MDX).
 - Governance and automation source: root configs, `scripts/`, `schemas/`, and `.github/`.
@@ -21,22 +21,23 @@ This file documents the entire tracked `wiki/` subfolder: purpose, structure, an
 ## 3. Directory map
 
 ```text
-wiki/
-  .github/
-    ISSUE_TEMPLATE/
-    workflows/
-  assets/
-    diagrams/
-    images/
-  docs/
-    _partials/
-    guides/
-    handbook/
-    reference/
-    snippets/
-  schemas/
-  scripts/
-  (root configs, metadata, package scripts)
+.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+├── assets/
+│   ├── content/
+│   ├── diagrams/
+│   └── images/
+├── docs/
+│   ├── _partials/
+│   ├── guides/
+│   ├── handbook/
+│   ├── reference/
+│   └── snippets/
+├── schemas/
+├── scripts/
+└── root configs, metadata, and package scripts
 ```
 
 ## 4. Root files
@@ -45,7 +46,6 @@ wiki/
 
 - `README.md`: main project overview, quickstart, layout, tooling, CI/deployment summary.
 - `CONTRIBUTING.md`: contributor workflow, authoring rules, localization/media guidance, validation commands.
-- `PLAN.md`: implementation checklist for the wiki system (structure, CI, sync, search, localization).
 - `CODEOWNERS`: assigns repository ownership to `@pokebedrock/wiki-maintainers`.
 
 ### Tooling and package management
@@ -80,17 +80,16 @@ wiki/
 ### Workflows
 
 - `.github/workflows/ci.yml` (`wiki-ci`):
-  - Triggers on PR and push with `wiki/**` path filter.
-  - Runs in `wiki/` working directory.
-  - Executes `npm install`, `npm run lint`, and `npm run lint:links`.
+  - Triggers on all PR and push events.
+  - Uses Node 20 with npm cache.
+  - Executes `npm ci`, `npm run ci`, and `npm run audit:prod`.
 - `.github/workflows/search-index.yml` (`wiki-search`):
-  - Triggers on pushes to `main` for docs/schema/search-script paths, manual dispatch, and daily schedule.
+  - Triggers on pushes to `main` for docs/content/schema/search-script paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uploads both `wiki/build/search-index.json` and `wiki/build/search-indices.json` as artifacts.
+  - Uploads `build/search-index.json` and `build/search-indices.json` as artifacts.
   - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
-    - `WIKI_SEARCH_SYNC_TOKEN`
-  - Current path filter includes `wiki/scripts/build-search-index.mjs`; source file present in repo is `scripts/build-search-index.ts`.
+    - `WIKI_SEARCH_SYNC_TOKEN`.
 
 ## 6. Assets (`assets/`)
 
