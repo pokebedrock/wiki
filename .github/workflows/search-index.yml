@@ -8,7 +8,8 @@ on:
       - "docs/**"
       - "assets/content/**"
       - "schemas/**"
-      - "scripts/build-search-index.ts"
+      - "scripts/**/*.ts"
+      - "tsconfig.build.json"
       - "package.json"
       - "package-lock.json"
   workflow_dispatch: {}
