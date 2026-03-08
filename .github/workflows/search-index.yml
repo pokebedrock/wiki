@@ -9,6 +9,7 @@ on:
       - "assets/content/**"
       - "schemas/**"
       - "scripts/**"
+      - ".github/workflows/search-index.yml"
       - "tsconfig*.json"
       - "package.json"
       - "package-lock.json"
