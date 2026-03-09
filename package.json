@@ -11,7 +11,7 @@
   },
   "scripts": {
     "ci": "npm run lint && npm run lint:links && npm run build:search",
-    "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\"",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\" \"#.tmp-*.md\"",
     "build:scripts": "tsc -p tsconfig.build.json",
     "lint:frontmatter": "npm run build:scripts && npm run lint:frontmatter:run",
     "lint:frontmatter:run": "node build/scripts/validate-frontmatter.js",
