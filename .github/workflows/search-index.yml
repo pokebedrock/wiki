@@ -8,7 +8,8 @@ on:
       - "docs/**"
       - "assets/content/**"
       - "schemas/**"
-      - "scripts/build-search-index.ts"
+      - "scripts/**"
+      - "tsconfig.build.json"
       - "package.json"
       - "package-lock.json"
   workflow_dispatch: {}
@@ -53,3 +54,6 @@ jobs:
           path: |
             build/search-index.json
             build/search-indices.json
+            build/pokemon-manifest.json
+            build/moves-manifest.json
+            build/move-learners-manifest.json
