@@ -1,10 +1,10 @@
 # PokéBedrock Wiki Documentation
 
-This file documents the entire tracked `wiki/` subfolder: purpose, structure, and the role of each part.
+This file documents the tracked repository contents: purpose, structure, and the role of each part.
 
 ## 1. Scope and conventions
 
-- Scope of this document: repository-tracked files returned by `git -C wiki ls-files`.
+- Scope of this document: repository-tracked files returned by `git ls-files`.
 - Not documented file-by-file: local/runtime artifacts such as `.git/`, `node_modules/`, and generated `build/` output.
 - Primary content source: `docs/` (Markdown/MDX).
 - Governance and automation source: root configs, `scripts/`, `schemas/`, and `.github/`.
@@ -21,22 +21,23 @@ This file documents the entire tracked `wiki/` subfolder: purpose, structure, an
 ## 3. Directory map
 
 ```text
-wiki/
-  .github/
-    ISSUE_TEMPLATE/
-    workflows/
-  assets/
-    diagrams/
-    images/
-  docs/
-    _partials/
-    guides/
-    handbook/
-    reference/
-    snippets/
-  schemas/
-  scripts/
-  (root configs, metadata, package scripts)
+.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+├── assets/
+│   ├── content/
+│   ├── diagrams/
+│   └── images/
+├── docs/
+│   ├── _partials/
+│   ├── guides/
+│   ├── handbook/
+│   ├── reference/
+│   └── snippets/
+├── schemas/
+├── scripts/
+└── root configs, metadata, and package scripts
 ```
 
 ## 4. Root files
