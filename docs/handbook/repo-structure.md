@@ -4,7 +4,7 @@ description: Breakdown of the wiki folders, metadata files, and how the website 
 tags:
   - handbook
   - structure
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-07"
 status: stable
 lang: en
 toc: true
@@ -33,9 +33,19 @@ the slug (see `docs/guides/running-the-server` for an example).
 assets/
   images/                 # webp/svg exports
   diagrams/               # source files (.drawio, .excalidraw, etc.)
+  content/                # normalized JSON datasets for Pokemon + moves
+    pokemon/              # one file per Pokemon, generated via content:split
+    moves/                # one file per move, generated via content:split
 ```
 
-Images referenced from docs must live under `assets/`. Diagrams keep their editable sources so future contributors can revise them.
+Images referenced from docs must live under `assets/`. Diagrams keep their
+editable sources so future contributors can revise them. Structured datasets for
+Pokemon and moves also live under `assets/content/` so search indexing and the
+frontend can diff individual entries.
+
+> ℹ️ Upstream content drops land as `assets/content/wikiPokemon.json` and
+> `assets/content/wikiMoves.json`. Run `npm run content:split` to regenerate
+> the per-entry files tracked in git.
 
 ## Schemas & Scripts
 
@@ -45,6 +55,9 @@ Images referenced from docs must live under `assets/`. Diagrams keep their edita
 - `scripts/build-search-index.ts` – Creates search payloads plus frontend
   content manifests in `build/`, then optionally pushes the
   docs/pokemon/moves indices to Meilisearch.
+- `scripts/split-content-data.ts` – Splits upstream `wikiPokemon.json` and
+  `wikiMoves.json` into the tracked `assets/content/pokemon|moves` directories via
+  `npm run content:split`.
 
 ## GitHub Automation
 
