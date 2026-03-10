@@ -83,7 +83,7 @@ wiki/
   - Uses Node 20 with npm cache restoration.
   - Executes `npm ci`, `npm run ci` (lint + links + search build), and `npm run audit:prod`.
 - `.github/workflows/search-index.yml` (`wiki-search`):
-  - Triggers on pushes to `main` for docs/schema/search-script paths, manual dispatch, and daily schedule.
+  - Triggers on pushes to `main` for docs/content/schema/search-build paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
   - Uploads both `build/search-index.json` and `build/search-indices.json` as artifacts.
   - Sends the multi-index JSON payload to the website backend sync endpoint using:

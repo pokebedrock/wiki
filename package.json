@@ -11,7 +11,8 @@
   },
   "scripts": {
     "ci": "npm run lint && npm run lint:links && npm run build:search",
-    "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\"",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\" \"#.tmp-*.md\"",
+    "build": "npm run build:search",
     "build:scripts": "tsc -p tsconfig.build.json",
     "lint:frontmatter": "npm run build:scripts && npm run lint:frontmatter:run",
     "lint:frontmatter:run": "node build/scripts/validate-frontmatter.js",
@@ -21,6 +22,7 @@
     "lint": "npm run build:scripts && npm run lint:md && npm run lint:frontmatter:run && npm run lint:images:run",
     "check": "npm run lint && npm run lint:links",
     "content:split": "npm run build:scripts && node build/scripts/split-content-data.js",
+    "build": "npm run build:search",
     "build:search": "npm run build:scripts && npm run build:search:run",
     "build:search:run": "node build/scripts/build-search-index.js",
     "audit:prod": "npm audit --omit=dev"
