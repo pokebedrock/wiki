@@ -45,6 +45,7 @@ wiki/
 
 - `README.md`: main project overview, quickstart, layout, tooling, CI/deployment summary.
 - `CONTRIBUTING.md`: contributor workflow, authoring rules, localization/media guidance, validation commands.
+- `DOCUMENTATION.md`: this living inventory of the repo (replaces the deprecated `PLAN.md`).
 - `CODEOWNERS`: assigns repository ownership to `@pokebedrock/wiki-maintainers`.
 
 ### Tooling and package management
@@ -89,7 +90,7 @@ wiki/
   - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
     - `WIKI_SEARCH_SYNC_TOKEN`
-  - Path filters include docs/content/schema/script/package changes that can affect search output.
+  - Path filter watches `scripts/build-search-index.ts`, matching the TypeScript source emitted into `build/scripts` during CI.
 
 ## 6. Assets (`assets/`)
 
