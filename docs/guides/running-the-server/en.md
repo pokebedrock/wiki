@@ -15,9 +15,13 @@ order: 2
 
 <ShellBlock command="npm install" />
 
-## Run Linting in Watch Mode
+## Run Linting
 
-<ShellBlock command="npm run lint --watch" />
+<ShellBlock command="npm run lint" />
+
+The consolidated lint task runs markdown, frontmatter, and asset validation once per
+execution. Re-run it after editing files; there's no watch flag wired up for the
+current tooling stack.
 
 ## Preview
 
