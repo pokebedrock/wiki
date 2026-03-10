@@ -9,7 +9,8 @@ on:
       - "assets/content/**"
       - "schemas/**"
       - "scripts/**"
-      - "tsconfig.build.json"
+      - ".github/workflows/search-index.yml"
+      - "tsconfig*.json"
       - "package.json"
       - "package-lock.json"
   workflow_dispatch: {}
