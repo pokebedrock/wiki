@@ -14,7 +14,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 - Authors write docs in `docs/**/*.md` and `docs/**/*.mdx`.
 - Frontmatter is validated against `schemas/frontmatter.schema.json`.
 - Markdown, links, frontmatter, and media are validated via `npm` scripts.
-- CI (`.github/workflows/ci.yml`) runs checks for changes under `wiki/**`.
+- CI (`.github/workflows/ci.yml`) runs on every push and pull request in this repository.
 - Search index is generated from docs by `scripts/build-search-index.ts` and can be pushed to Meilisearch.
 - Website sync behavior is specified in docs (`docs/reference/sync-to-website.md`) and example payload (`docs/reference/webhook-example.json`).
 
@@ -46,6 +46,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 
 - `README.md`: main project overview, quickstart, layout, tooling, CI/deployment summary.
 - `CONTRIBUTING.md`: contributor workflow, authoring rules, localization/media guidance, validation commands.
+- `DOCUMENTATION.md`: this living inventory of the repo (replaces the deprecated `PLAN.md`).
 - `CODEOWNERS`: assigns repository ownership to `@pokebedrock/wiki-maintainers`.
 
 ### Tooling and package management
@@ -80,16 +81,17 @@ This file documents the tracked repository contents: purpose, structure, and the
 ### Workflows
 
 - `.github/workflows/ci.yml` (`wiki-ci`):
-  - Triggers on all PR and push events.
-  - Uses Node 20 with npm cache.
-  - Executes `npm ci`, `npm run ci`, and `npm run audit:prod`.
+  - Triggers on every pull request and push.
+  - Uses Node 20 with npm cache restoration.
+  - Executes `npm ci`, `npm run ci` (lint + links + search build), and `npm run audit:prod`.
 - `.github/workflows/search-index.yml` (`wiki-search`):
-  - Triggers on pushes to `main` for docs/content/schema/search-script paths, manual dispatch, and daily schedule.
+  - Triggers on pushes to `main` for docs/content/schema/search-build paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uploads `build/search-index.json` and `build/search-indices.json` as artifacts.
+  - Uploads both `build/search-index.json` and `build/search-indices.json` as artifacts.
   - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
-    - `WIKI_SEARCH_SYNC_TOKEN`.
+    - `WIKI_SEARCH_SYNC_TOKEN`
+  - Path filter watches `scripts/build-search-index.ts`, matching the TypeScript source emitted into `build/scripts` during CI.
 
 ## 6. Assets (`assets/`)
 

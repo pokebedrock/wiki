@@ -38,7 +38,8 @@ consistent before syncing to the public website.
 | `npm run lint:links` | Crawls docs with Linkinator for broken links |
 | `npm run lint` | Runs markdownlint + frontmatter + image checks |
 | `npm run check` | Full suite (`lint` + link check) |
-| `npm run ci` | Launch gate (`lint`, links, search build) |
+| `npm run ci` | Launch gate (`lint`, links, search build, generated-file drift check) |
+| `npm run build` | Default build entrypoint (aliases `build:search`) |
 | `npm run audit:prod` | Audits production dependency graph |
 | `npm run build:search` | Generates search payloads plus frontend content manifests in `build/` |
 | `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/` |
