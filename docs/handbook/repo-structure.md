@@ -71,5 +71,8 @@ frontend can diff individual entries.
 CODEOWNERS
 ```
 
-The wiki lives inside a larger monorepo, but all automation is scoped to the `wiki/`
-directory so it can be split into its own repo later without adjustments.
+This repository now houses the wiki as a standalone project. All automation lives at
+the repo root (`.github/workflows`, shared lint scripts, CODEOWNERS) so nothing
+depends on a surrounding monorepo layout anymore. Downstream jobs (search indexing,
+link checks, linting) only look at this repo's files, which keeps CI scopes and
+required secrets simple.
