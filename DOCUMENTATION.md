@@ -80,17 +80,16 @@ wiki/
 ### Workflows
 
 - `.github/workflows/ci.yml` (`wiki-ci`):
-  - Triggers on PR and push with `wiki/**` path filter.
-  - Runs in `wiki/` working directory.
-  - Executes `npm install`, `npm run lint`, and `npm run lint:links`.
+  - Triggers on every push and pull request.
+  - Uses Node 20 with npm cache keyed by `package-lock.json`.
+  - Executes `npm ci`, `npm run ci`, and `npm run audit:prod`.
 - `.github/workflows/search-index.yml` (`wiki-search`):
-  - Triggers on pushes to `main` for docs/schema/search-script paths, manual dispatch, and daily schedule.
+  - Triggers on pushes to `main` for docs/content/schema/search-build paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uploads both `wiki/build/search-index.json` and `wiki/build/search-indices.json` as artifacts.
+  - Uploads `build/search-index.json` and `build/search-indices.json` as artifacts.
   - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
-    - `WIKI_SEARCH_SYNC_TOKEN`
-  - Current path filter includes `wiki/scripts/build-search-index.mjs`; source file present in repo is `scripts/build-search-index.ts`.
+    - `WIKI_SEARCH_SYNC_TOKEN`.
 
 ## 6. Assets (`assets/`)
 
