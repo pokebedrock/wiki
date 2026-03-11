@@ -13,7 +13,9 @@ order: 5
 
 ## Filosofia
 
-Versionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma incompatible. Las ediciones de texto rutinarias permanecen en la version activa.
+Versionamos docs cuando la experiencia de juego o las APIs publicas cambian de
+forma incompatible. Las ediciones de texto rutinarias permanecen en la version
+activa.
 
 ## Tipos de version
 
@@ -28,7 +30,8 @@ Versionamos docs cuando la experiencia de juego o las APIs publicas cambian de f
 1. Preparar cambios bajo `docs/`.
 2. Cuando la actualizacion salga, copiar la carpeta a `versions/vX.Y/` y congelar.
 3. Actualizar `docs/reference/changelog.md` con puntos clave y links.
-4. Asegurar que el indexado de busqueda excluya versiones archivadas salvo que se solicite explicitamente (configurar filtro en Meilisearch).
+4. Asegurar que el indexado de busqueda excluya versiones archivadas salvo que se
+   solicite explicitamente (configurar filtro en Meilisearch).
 
 ## Changelog
 
