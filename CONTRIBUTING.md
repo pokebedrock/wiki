@@ -54,10 +54,11 @@ lang: en
 
 ### Localization
 
-- Default English pages live directly under their category (e.g. `docs/guides/getting-started.mdx`).
-- When adding a translation, move the file into a folder: `docs/guides/getting-started/en.md`.
-- Always keep the English version updated when content changes; translators can diff to know what's new.
-- Add translation context in the PR description when possible.
+- English content lives under `docs/en/**` and Spanish content under `docs/es/**`.
+- Keep identical slugs across locales so diffing stays easy (for example `docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`).
+- Add locale-specific `_meta.json` entries whenever you introduce a new page so navigation titles/descriptions stay in sync.
+- Always update the English source first, then translate or open a follow-up issue when a locale needs help catching up.
+- Call out notable phrasing/terminology changes in the PR description so translators know what changed.
 
 ### Media
 
