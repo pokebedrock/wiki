@@ -13,7 +13,8 @@ order: 5
 
 ## Filosofia
 
-Versionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma incompatible. Las ediciones de texto rutinarias permanecen en la version activa.
+Versionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma
+incompatible. Las ediciones de texto rutinarias permanecen en la version activa.
 
 ## Tipos de version
 
