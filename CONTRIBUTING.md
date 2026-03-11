@@ -19,7 +19,7 @@ npm ci
 
 1. Create a feature branch from `main`.
 2. Commit focused changes (docs + assets + metadata).
-3. Run `npm run check`.
+3. Run `npm run ci`.
 4. Open a PR using the template; link any related issues.
 5. At least one CODEOWNER review is required.
 
@@ -54,9 +54,9 @@ lang: en
 
 ### Localization
 
-- Default English pages live directly under their category (e.g. `docs/guides/getting-started.mdx`).
-- When adding a translation, move the file into a folder: `docs/guides/getting-started/en.md`.
-- Always keep the English version updated when content changes; translators can diff to know what's new.
+- English source docs live under `docs/en/**` (for example `docs/en/guides/getting-started.mdx`).
+- Spanish translations live under `docs/es/**` and should keep the same category + slug path when possible (for example `docs/es/guides/getting-started.mdx`).
+- Keep the English page updated first when content changes so translators can diff against the latest source.
 - Add translation context in the PR description when possible.
 
 ### Media
@@ -75,7 +75,7 @@ npm run lint
 npm run lint:links
 ```
 
-CI runs the same checks plus link validation and search indexing, so keeping a clean local run prevents surprises.
+`npm run ci` wraps these checks and also verifies generated search/manifests are in sync, so running it before push best matches GitHub CI.
 
 ## Reporting Issues
 
