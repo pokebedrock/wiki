@@ -1,0 +1,17 @@
+{
+  "name": "Lumina Crash",
+  "description": "Has a 100% chance to lower the target's Special Defense by 2 stages.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 481
+}

@@ -8,14 +8,14 @@ consistent before syncing to the public website.
 
 1. Install Node 20+.
 2. Run `npm ci` from the repository root.
-3. Create/edit docs under `docs/`.
+3. Create/edit docs under `docs/en/` or `docs/es/`.
 4. Run `npm run ci` locally before opening a PR.
 
 ## Repository Layout
 
-- `docs/` – source Markdown/MDX organized by category with required frontmatter. `_meta.json` defines ordering and labels.
+- `docs/` – localized Markdown/MDX source (`docs/en/**`, `docs/es/**`) organized by category with required frontmatter and locale-scoped `_meta.json`.
 - `assets/` – shared media (`webp` images, diagrams, LFS-tracked large files).
-- `docs/_partials/` + `docs/snippets/` – reusable MDX fragments imported via relative paths.
+- `docs/<locale>/_partials/` + `docs/<locale>/snippets/` – reusable MDX fragments imported via relative paths.
 - `schemas/` – JSON Schema for validating doc frontmatter.
 - `scripts/` – Node utilities for linting, validation, search indexing.
 - `.github/` – issue templates, PR template, CI workflows (linting, link checks, search indexing).
@@ -24,9 +24,9 @@ consistent before syncing to the public website.
 
 - Every page must include the schema defined in `schemas/frontmatter.schema.json`.
 - Use MDX when you need components, tabs, or callouts; plain Markdown is fine for simple prose.
-- Prefer admonitions (`:::note`) for tips/warnings and reuse snippets from `docs/_partials`.
+- Prefer admonitions (`:::note`) for tips/warnings and reuse snippets from `docs/<locale>/_partials`.
 - Images should live inside `assets/` and be referenced with relative paths. Always supply descriptive alt text.
-- For translated docs, create a folder named after the slug and add `<lang>.md`; English lives either directly as `<slug>.md` or as `/<slug>/en.md`.
+- Keep docs slugs aligned across locales, for example `docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`.
 
 ## Tooling & Scripts
 
@@ -41,8 +41,8 @@ consistent before syncing to the public website.
 | `npm run ci` | Launch gate (`lint`, links, search build, generated-file drift check) |
 | `npm run build` | Default build entrypoint (aliases `build:search`) |
 | `npm run audit:prod` | Audits production dependency graph |
-| `npm run build:search` | Generates search payloads plus frontend content manifests in `build/` |
-| `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/` |
+| `npm run build:search` | Generates search payloads plus frontend content manifests in `build/content/<locale>/` |
+| `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/<locale>/` |
 
 ## CI & Deployment
 
@@ -52,9 +52,9 @@ consistent before syncing to the public website.
   reindexes Meilisearch from inside the cluster.
 - The same build also writes content manifests used by the frontend for fast wiki content
   list/detail navigation:
-  - `build/pokemon-manifest.json`
-  - `build/moves-manifest.json`
-  - `build/move-learners-manifest.json`
+  - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`
+  - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`
+  - `build/content/en/move-learners-manifest.json` and `build/content/es/move-learners-manifest.json`
 - A webhook (documented in `docs/reference/sync-to-website.md`) notifies the website
   backend when docs change; the website fetches raw Markdown via the GitHub API and
   caches using ETags.
@@ -65,5 +65,5 @@ Read `CONTRIBUTING.md` for branching strategy, review expectations, localization
 workflow, and content guidelines. Issue templates cover bugs and content requests, while
 CODEOWNERS ensures the docs team reviews every change.
 
-Release checklist: [`docs/reference/release-checklist.md`](./docs/reference/release-checklist.md)
+Release checklist: [`docs/en/reference/release-checklist.md`](./docs/en/reference/release-checklist.md)
 

@@ -1,0 +1,421 @@
+{
+  "name": "Tapu Lele",
+  "description": "Although called a guardian deity, Tapu Lele is devoid of guilt about its cruel disposition and can be described as nature incarnate.",
+  "types": [
+    "psychic",
+    "fairy"
+  ],
+  "tags": [
+    "Sub-Legendary"
+  ],
+  "abilities": {
+    "0": "Psychic Surge",
+    "H": "Telepathy"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 3,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 285,
+  "base_happiness": 50,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "aromatherapy",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "aromaticmist",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confusion",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "extrasensory",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flatter",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "futuresight",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "guardswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "meanlook",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "moonblast",
+      "learnMethod": "level-up",
+      "level_learned_at": 60
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "naturesmadness",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powerswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicterrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 75
+    },
+    {
+      "move": "psychocut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "psywave",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "speedswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetscent",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tickle",
+      "learnMethod": "level-up",
+      "level_learned_at": 65
+    },
+    {
+      "move": "torment",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "withdraw",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 70,
+    "atk": 85,
+    "def": 75,
+    "spa": 130,
+    "spd": 115,
+    "spe": 95
+  },
+  "spawn_rules": [
+    {
+      "biome": "jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:ender_pearl",
+      "countRange": [
+        2,
+        4
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:psychic_seed",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:psychic_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1027
+}

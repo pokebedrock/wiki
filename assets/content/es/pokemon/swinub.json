@@ -1,0 +1,544 @@
+{
+  "name": "Swinub",
+  "description": "Swinub excels at sniffing out mushrooms buried beneath grass or snow. Since ancient times, the people of Hisui have often relied upon this skill.",
+  "types": [
+    "ice",
+    "ground"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Oblivious",
+    "1": "Snow Cloak",
+    "H": "Thick Fat"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 50,
+  "base_happiness": 50,
+  "growth_rate": "slow",
+  "level_range": [
+    10,
+    33
+  ],
+  "moves": [
+    {
+      "move": "amnesia",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "amnesia",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "ancientpower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "ancientpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "avalanche",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "avalanche",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fissure",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flail",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "freezedry",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "haze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "highhorsepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "iceshard",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "iciclecrash",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "iciclespear",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "iciclespear",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mist",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "mudbomb",
+      "learnMethod": "level-up",
+      "level_learned_at": 18
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mudsport",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "odorsleuth",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "powdersnow",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandtomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "smackdown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snowscape",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trailblaze",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 50,
+    "atk": 50,
+    "def": 40,
+    "spa": 30,
+    "spd": 30,
+    "spe": 50
+  },
+  "spawn_rules": [
+    {
+      "biome": "ice",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "frozen+ice_plain+ice",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "common"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:porkchop",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 55
+    },
+    {
+      "typeId": "minecraft:leather",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 27
+    },
+    {
+      "typeId": "minecraft:snowball",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 16
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:piloswine",
+      "trigger": "level",
+      "level": 33
+    }
+  ],
+  "sortOrder": 311
+}

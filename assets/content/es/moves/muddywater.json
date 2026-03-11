@@ -1,0 +1,19 @@
+{
+  "name": "Muddy Water",
+  "description": "Has a 30% chance to lower the target's accuracy by 1 stage.",
+  "accuracy": 85,
+  "pp": 10,
+  "category": "Special",
+  "type": "Water",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 561
+}

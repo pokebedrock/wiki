@@ -1,0 +1,474 @@
+{
+  "name": "Obstagoon",
+  "description": "It evolved after experiencing numerous fights. While crossing its arms, it lets out a shout that would make any opponent flinch.",
+  "types": [
+    "dark",
+    "normal"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Reckless",
+    "1": "Guts",
+    "H": "Defiant"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 3,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 260,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    35,
+    50
+  ],
+  "moves": [
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "babydolleyes",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodypress",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulkup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "closecombat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "counter",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "crosschop",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "crosspoison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusenergy",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "furyswipes",
+      "learnMethod": "level-up",
+      "level_learned_at": 18
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "honeclaws",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lashout",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "lick",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megapunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nightslash",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "obstruct",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pinmissile",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pinmissile",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "level-up",
+      "level_learned_at": 23
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "screech",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snarl",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snarl",
+      "learnMethod": "level-up",
+      "level_learned_at": 9
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "submission",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "switcheroo",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "level-up",
+      "level_learned_at": 49
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "whirlpool",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "xscissor",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 93,
+    "atk": 90,
+    "def": 101,
+    "spa": 60,
+    "spd": 81,
+    "spe": 95
+  },
+  "spawn_rules": [
+    {
+      "biome": "plains",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "frozen+ice_plains",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "frozen+ice_plain+ice",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:bone",
+      "countRange": [
+        2,
+        4
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:pokemail_rsvp",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:razor_claw",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1128
+}

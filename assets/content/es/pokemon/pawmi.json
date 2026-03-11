@@ -1,0 +1,302 @@
+{
+  "name": "Pawmi",
+  "description": "It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws. ",
+  "types": [
+    "electric"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Static",
+    "1": "Natural Cure",
+    "H": "Iron Fist"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 48,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    5,
+    18
+  ],
+  "moves": [
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "batonpass",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 19
+    },
+    {
+      "move": "charge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charge",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "discharge",
+      "learnMethod": "level-up",
+      "level_learned_at": 38
+    },
+    {
+      "move": "eerieimpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electricterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "entrainment",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fakeout",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "growl",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "machpunch",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "metalclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nuzzle",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 6
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scratch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "slam",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spark",
+      "learnMethod": "level-up",
+      "level_learned_at": 23
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetkiss",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thundershock",
+      "learnMethod": "level-up",
+      "level_learned_at": 3
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "level-up",
+      "level_learned_at": 27
+    },
+    {
+      "move": "voltswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "wish",
+      "learnMethod": "egg"
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 20,
+    "spa": 40,
+    "spd": 25,
+    "spe": 60
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [
+    {
+      "typeId": "pokemon:pawmo",
+      "trigger": "level",
+      "level": 18
+    }
+  ],
+  "sortOrder": 1206
+}

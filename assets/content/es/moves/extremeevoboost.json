@@ -1,0 +1,15 @@
+{
+  "name": "Extreme Evoboost",
+  "description": "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 2 stages.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "contestType": "Beautiful",
+  "isZ": "eeviumz",
+  "zMove": {},
+  "sortOrder": 232
+}

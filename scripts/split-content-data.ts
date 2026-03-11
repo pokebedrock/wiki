@@ -7,8 +7,8 @@ const repoRoot = resolve(process.cwd());
 const contentRoot = resolve(repoRoot, "assets", "content");
 const pokemonMonolithPath = resolve(contentRoot, "wikiPokemon.json");
 const movesMonolithPath = resolve(contentRoot, "wikiMoves.json");
-const pokemonDirectory = resolve(contentRoot, "pokemon");
-const movesDirectory = resolve(contentRoot, "moves");
+const getPokemonDirectory = (locale: "en" | "es") => resolve(contentRoot, locale, "pokemon");
+const getMovesDirectory = (locale: "en" | "es") => resolve(contentRoot, locale, "moves");
 
 const readJsonObject = (filePath: string): JsonObject => {
   const source = JSON.parse(readFileSync(filePath, "utf8")) as unknown;
@@ -44,8 +44,13 @@ const writeEntryFiles = (entries: [string, unknown][], targetDirectory: string) 
 const pokemonEntries = Object.entries(readJsonObject(pokemonMonolithPath));
 const moveEntries = Object.entries(readJsonObject(movesMonolithPath));
 
-writeEntryFiles(pokemonEntries, pokemonDirectory);
-writeEntryFiles(moveEntries, movesDirectory);
+const locales: Array<"en" | "es"> = ["en", "es"];
+for (const locale of locales) {
+  writeEntryFiles(pokemonEntries, getPokemonDirectory(locale));
+  writeEntryFiles(moveEntries, getMovesDirectory(locale));
+}
 
-console.log(`Wrote ${pokemonEntries.length} Pokemon files to ${pokemonDirectory}`);
-console.log(`Wrote ${moveEntries.length} move files to ${movesDirectory}`);
+for (const locale of locales) {
+  console.log(`Wrote ${pokemonEntries.length} Pokemon files to ${getPokemonDirectory(locale)}`);
+  console.log(`Wrote ${moveEntries.length} move files to ${getMovesDirectory(locale)}`);
+}

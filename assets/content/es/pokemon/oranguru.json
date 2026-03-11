@@ -1,0 +1,574 @@
+{
+  "name": "Oranguru",
+  "description": "It knows the forest inside and out. If it comes across a wounded Pokémon, Oranguru will gather medicinal herbs to treat it.",
+  "types": [
+    "normal",
+    "psychic"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Inner Focus",
+    "1": "Telepathy",
+    "H": "Symbiosis"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 2,
+    "spe": 0
+  },
+  "base_experience": 172,
+  "base_happiness": 50,
+  "growth_rate": "slow",
+  "level_range": [
+    15,
+    40
+  ],
+  "moves": [
+    {
+      "move": "afteryou",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "afteryou",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "block",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chillingwater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confusion",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "covet",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "embargo",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "expandingforce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "expandingforce",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "extrasensory",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "feintattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 22
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "futuresight",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "futuresight",
+      "learnMethod": "level-up",
+      "level_learned_at": 60
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "instruct",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megapunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "psychicnoise",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicterrain",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quash",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "quash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terrainpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trailblaze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "yawn",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 90,
+    "atk": 60,
+    "def": 80,
+    "spa": 90,
+    "spd": 110,
+    "spe": 60
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:cocoa_beans",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:pinap_berry",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:twisted_spoon",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 983
+}

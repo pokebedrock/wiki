@@ -1,0 +1,15 @@
+{
+  "name": "Splintered Stormshards",
+  "description": "Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Rock",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "lycaniumz",
+  "zMove": {},
+  "sortOrder": 794
+}

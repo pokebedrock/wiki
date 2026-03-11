@@ -1,0 +1,16 @@
+{
+  "name": "Aura Wheel",
+  "description": "Has a 100% chance to raise the user's Speed by 1 stage. If the user is a Morpeko in Full Belly Mode, this move is Electric type. If the user is a Morpeko in Hangry Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Full Belly or Hangry Mode Morpeko.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "zMove": {},
+  "sortOrder": 39
+}

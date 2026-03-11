@@ -1,0 +1,435 @@
+{
+  "name": "Stakataka",
+  "description": "When stone walls started moving and attacking, the brute’s true identity was this mysterious life-form, which brings to mind an Ultra Beast.",
+  "types": [
+    "rock",
+    "steel"
+  ],
+  "tags": [
+    "Ultra Beast"
+  ],
+  "abilities": {
+    "0": "Beast Boost"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 3,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 285,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    60,
+    60
+  ],
+  "moves": [
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "autotomize",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "bide",
+      "learnMethod": "level-up",
+      "level_learned_at": 17
+    },
+    {
+      "move": "bind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "block",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "block",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bodypress",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gyroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "harden",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "heatcrash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heavyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "highhorsepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "infestation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "magnetrise",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "magnetrise",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "meteorbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "recycle",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockblast",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "rockpolish",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "rockthrow",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "smackdown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "level-up",
+      "level_learned_at": 65
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "steelbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "steelroller",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stomp",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 60
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wideguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 61,
+    "atk": 131,
+    "def": 211,
+    "spa": 53,
+    "spd": 101,
+    "spe": 13
+  },
+  "spawn_rules": [
+    {
+      "biome": "desert",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:stone_bricks",
+      "countRange": [
+        3,
+        6
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:pokeball",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:steel_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1050
+}

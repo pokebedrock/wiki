@@ -1,0 +1,20 @@
+{
+  "name": "Cut",
+  "description": "",
+  "accuracy": 95,
+  "pp": 30,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Sharpness."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 155
+}

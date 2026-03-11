@@ -1,0 +1,18 @@
+{
+  "name": "Howl",
+  "description": "Raises the Attack of the user and all allies 1 stage.",
+  "accuracy": true,
+  "pp": 40,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "allies",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 409
+}

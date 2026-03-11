@@ -1,0 +1,19 @@
+{
+  "name": "Cotton Guard",
+  "description": "Raises the user's Defense by 3 stages.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Grass",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 142
+}

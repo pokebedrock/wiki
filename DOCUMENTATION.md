@@ -11,7 +11,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 
 ## 2. High-level architecture
 
-- Authors write docs in `docs/**/*.md` and `docs/**/*.mdx`.
+- Authors write docs in `docs/<locale>/**/*.md` and `docs/<locale>/**/*.mdx`.
 - Frontmatter is validated against `schemas/frontmatter.schema.json`.
 - Markdown, links, frontmatter, and media are validated via `npm` scripts.
 - CI (`.github/workflows/ci.yml`) runs on every push and pull request in this repository.
@@ -30,11 +30,8 @@ This file documents the tracked repository contents: purpose, structure, and the
 │   ├── diagrams/
 │   └── images/
 ├── docs/
-│   ├── _partials/
-│   ├── guides/
-│   ├── handbook/
-│   ├── reference/
-│   └── snippets/
+│   ├── en/
+│   └── es/
 ├── schemas/
 ├── scripts/
 └── root configs, metadata, and package scripts
@@ -130,12 +127,12 @@ Media policy from docs/scripts:
   - Parses frontmatter + content and writes:
     - `build/search-index.json` (merged local fallback)
     - `build/search-indices.json` (docs/pokemon/moves split payload)
-    - `build/pokemon-manifest.json` (frontend Pokemon summaries)
-    - `build/moves-manifest.json` (frontend move summaries)
-    - `build/move-learners-manifest.json` (frontend move learner lookup)
+    - `build/content/<locale>/pokemon-manifest.json` (frontend Pokemon summaries)
+    - `build/content/<locale>/moves-manifest.json` (frontend move summaries)
+    - `build/content/<locale>/move-learners-manifest.json` (frontend move learner lookup)
   - Reads content JSON from:
-    - `assets/content/pokemon/*.json`
-    - `assets/content/moves/*.json`
+    - `assets/content/<locale>/pokemon/*.json`
+    - `assets/content/<locale>/moves/*.json`
   - Optionally pushes documents to Meilisearch when env vars are provided:
     - `MEILISEARCH_URL`
     - `MEILISEARCH_KEY`
@@ -146,43 +143,43 @@ Media policy from docs/scripts:
   - Production CI instead sends the generated multi-index payload to the backend, which reindexes Meilisearch internally.
 - `scripts/split-content-data.ts`:
   - Splits legacy monolithic content JSON into per-item files.
-  - Writes Pokemon files to `assets/content/pokemon/`.
-  - Writes move files to `assets/content/moves/`.
+  - Writes Pokemon files to `assets/content/<locale>/pokemon/`.
+  - Writes move files to `assets/content/<locale>/moves/`.
 
 ## 9. Docs content (`docs/`)
 
 ### Category metadata
 
-- `docs/_meta.json`: declares top-level categories (`handbook`, `guides`, `reference`, `snippets`) with title, description, and order.
+- `docs/<locale>/_meta.json`: declares top-level categories (`handbook`, `guides`, `reference`, `snippets`) with title, description, and order.
 
 ### Handbook pages
 
-- `docs/handbook/overview.md`: mission, principles, and repository goals.
-- `docs/handbook/repo-structure.md`: folder breakdown and automation notes.
-- `docs/handbook/style-guide.md`: Markdown/MDX conventions and snippet usage.
-- `docs/handbook/localization.md`: translation layout/workflow/review expectations.
-- `docs/handbook/versioning.md`: docs versioning strategy and release flow.
+- `docs/<locale>/handbook/overview.md`: mission, principles, and repository goals.
+- `docs/<locale>/handbook/repo-structure.md`: folder breakdown and automation notes.
+- `docs/<locale>/handbook/style-guide.mdx`: Markdown/MDX conventions and snippet usage.
+- `docs/<locale>/handbook/localization.md`: translation layout/workflow/review expectations.
+- `docs/<locale>/handbook/versioning.md`: docs versioning strategy and release flow.
 
 ### Guides
 
-- `docs/guides/getting-started.mdx`: onboarding flow for first contribution; uses imported snippet components.
-- `docs/guides/running-the-server/en.md`: English guide for local setup/lint/preview notes.
-- `docs/guides/running-the-server/es.md`: Spanish translation for local workflow.
+- `docs/<locale>/guides/getting-started.mdx`: onboarding flow for first contribution; uses imported snippet components.
+- `docs/en/guides/running-the-server.mdx`: English guide for local setup/lint/preview notes.
+- `docs/es/guides/running-the-server.md`: Spanish translation for local workflow.
 
 ### Reference pages
 
-- `docs/reference/sync-to-website.md`: webhook-driven sync design, cache behavior, local test example.
-- `docs/reference/search-indexing.md`: local and CI indexing behavior for Meilisearch integration.
-- `docs/reference/media-policy.md`: format, size, alt-text, and LFS rules.
-- `docs/reference/changelog.md`: release-aligned documentation changelog.
-- `docs/reference/localization-glossary.md`: shared terminology for translators.
-- `docs/reference/webhook-example.json`: example webhook payload for local testing.
+- `docs/<locale>/reference/sync-to-website.md`: webhook-driven sync design, cache behavior, local test example.
+- `docs/<locale>/reference/search-indexing.md`: local and CI indexing behavior for Meilisearch integration.
+- `docs/<locale>/reference/media-policy.mdx`: format, size, alt-text, and LFS rules.
+- `docs/<locale>/reference/changelog.md`: release-aligned documentation changelog.
+- `docs/<locale>/reference/localization-glossary.md`: shared terminology for translators.
+- `docs/<locale>/reference/webhook-example.json`: example webhook payload for local testing.
 
 ### Reusable MDX building blocks
 
-- `docs/snippets/callouts.mdx`: exports reusable callout components (`InfoCallout`, `WarningCallout`).
-- `docs/snippets/code-blocks.mdx`: exports `ShellBlock` and `EarlyReturnExample` components.
-- `docs/_partials/ReleaseChecklist.mdx`: reusable release checklist block.
+- `docs/<locale>/snippets/callouts.mdx`: exports reusable callout components (`InfoCallout`, `WarningCallout`).
+- `docs/<locale>/snippets/code-blocks.mdx`: exports `ShellBlock` and `EarlyReturnExample` components.
+- `docs/<locale>/_partials/ReleaseChecklist.mdx`: reusable release checklist block.
 
 ## 10. Operational workflow summary
 

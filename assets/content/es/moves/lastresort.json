@@ -1,0 +1,19 @@
+{
+  "name": "Last Resort",
+  "description": "This move fails unless the user knows this move and at least one other move, and has used all the other moves it knows at least once each since it became active or Transformed.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 459
+}

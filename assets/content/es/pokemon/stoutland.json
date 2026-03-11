@@ -1,0 +1,431 @@
+{
+  "name": "Stoutland",
+  "description": "Stoutland is immensely proud of its impressive moustache. It’s said that moustache length is what determines social standing among this species.",
+  "types": [
+    "normal"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Intimidate",
+    "1": "Sand Rush",
+    "H": "Scrappy"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 3,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 250,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    33,
+    46
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "afteryou",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "babydolleyes",
+      "learnMethod": "level-up",
+      "level_learned_at": 19
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "covet",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "level-up",
+      "level_learned_at": 78
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "level-up",
+      "level_learned_at": 46
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icefang",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "odorsleuth",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicfangs",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "level-up",
+      "level_learned_at": 54
+    },
+    {
+      "move": "roar",
+      "learnMethod": "level-up",
+      "level_learned_at": 62
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snarl",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 38
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    }
+  ],
+  "stats": {
+    "hp": 85,
+    "atk": 110,
+    "def": 90,
+    "spa": 45,
+    "spd": 90,
+    "spe": 80
+  },
+  "spawn_rules": [
+    {
+      "biome": "plains",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:bone",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 52
+    },
+    {
+      "typeId": "minecraft:leather",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 26
+    },
+    {
+      "typeId": "minecraft:mutton",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 15
+    },
+    {
+      "typeId": "pokeb:normal_gem",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 5
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 667
+}

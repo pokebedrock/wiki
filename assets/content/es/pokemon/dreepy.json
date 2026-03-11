@@ -1,0 +1,239 @@
+{
+  "name": "Dreepy",
+  "description": "If this weak Pokémon is by itself, a mere child could defeat it. But if Dreepy has friends to help it train, it can evolve and become much stronger.",
+  "types": [
+    "dragon",
+    "ghost"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Clear Body",
+    "1": "Infiltrator",
+    "H": "Cursed Body"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 54,
+  "base_happiness": 50,
+  "growth_rate": "slow",
+  "level_range": [
+    25,
+    45
+  ],
+  "moves": [
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "batonpass",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "disable",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dragontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragontail",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grudge",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "infestation",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 28,
+    "atk": 60,
+    "def": 30,
+    "spa": 40,
+    "spd": 30,
+    "spe": 82
+  },
+  "spawn_rules": [
+    {
+      "biome": "beach+warm",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "nether",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:ghast_tear",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 43
+    },
+    {
+      "typeId": "minecraft:rotten_flesh",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 21
+    },
+    {
+      "typeId": "pokeb:candy_bag",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 34
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:drakloak",
+      "trigger": "level",
+      "level": 50
+    }
+  ],
+  "sortOrder": 1157
+}

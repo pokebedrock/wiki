@@ -1,0 +1,19 @@
+{
+  "name": "Coil",
+  "description": "Raises the user's Attack, Defense, and accuracy by 1 stage.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Poison",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 125
+}

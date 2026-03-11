@@ -1,0 +1,46 @@
+---
+title: Primeros pasos
+description: Configura el repo de la wiki de PokéBedrock localmente y publica tu primer cambio de docs.
+tags:
+  - guide
+  - onboarding
+lastUpdated: "2025-11-21"
+status: stable
+lang: es
+toc: true
+order: 1
+---
+
+import { InfoCallout } from "../snippets/callouts.mdx";
+import { ShellBlock } from "../snippets/code-blocks.mdx";
+
+<InfoCallout />
+
+## 1. Clonar e instalar
+
+<ShellBlock command="git clone git@github.com:pokebedrock/wiki.git\ncd wiki\nnpm install" />
+
+## 2. Crear una rama
+
+<ShellBlock command="git checkout -b docs/my-topic" />
+
+
+## 3. Crear contenido
+
+- Elegi una categoria bajo `docs/`.
+- Copia la plantilla de frontmatter desde `CONTRIBUTING.md`.
+- Agrega assets con ruta relativa al documento (por ejemplo,
+  `../../assets/images/ui.webp`).
+
+Usa MDX si necesitas componentes; en caso contrario, usa Markdown por legibilidad.
+
+## 4. Validar
+
+<ShellBlock command="npm run lint\nnpm run lint:links" />
+
+## 5. Abrir una PR
+
+Completa la plantilla de PR, enlaza issues relacionados y solicita revision a `@pokebedrock/wiki-maintainers`.
+
+
+

@@ -1,0 +1,295 @@
+{
+  "name": "Alcremie-Gmax",
+  "description": "When Alcremie is content, the cream it secretes from its hands becomes sweeter and richer.",
+  "types": [
+    "fairy"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 1
+  },
+  "abilities": {
+    "0": "Sweet Veil",
+    "H": "Aroma Veil"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 2,
+    "spe": 0
+  },
+  "base_experience": 173,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "acidarmor",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "alluringvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "aromatherapy",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "aromaticmist",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "attract",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "decorate",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "disarmingvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "entrainment",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicalleaf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "metronome",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mistyexplosion",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mistyexplosion",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mistyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mistyterrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "mysticalfire",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "recover",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetkiss",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "sweetscent",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "triattack",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 65,
+    "atk": 60,
+    "def": 75,
+    "spa": 110,
+    "spd": 121,
+    "spe": 64
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 1136
+}

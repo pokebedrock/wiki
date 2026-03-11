@@ -1,0 +1,17 @@
+{
+  "name": "Defend Order",
+  "description": "Raises the user's Defense and Special Defense by 1 stage.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Bug",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 161
+}

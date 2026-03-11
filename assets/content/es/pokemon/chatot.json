@@ -1,0 +1,408 @@
+{
+  "name": "Chatot",
+  "description": "A versatile performer skilled in the imitation of human speech. It is said that older, more experienced Chatot can even understand the meaning of the words they mimic.",
+  "types": [
+    "normal",
+    "flying"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Keen Eye",
+    "1": "Tangled Feet",
+    "H": "Big Pecks"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 144,
+  "base_happiness": 35,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    5,
+    30
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "aircutter",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "aircutter",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "boomburst",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chatter",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "defog",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "defog",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "defog",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 37
+    },
+    {
+      "move": "encore",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "featherdance",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "fly",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "furyattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 17
+    },
+    {
+      "move": "growl",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "level-up",
+      "level_learned_at": 33
+    },
+    {
+      "move": "mirrormove",
+      "learnMethod": "level-up",
+      "level_learned_at": 9
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nightshade",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "ominouswind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "peck",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "pluck",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "level-up",
+      "level_learned_at": 41
+    },
+    {
+      "move": "roost",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "level-up",
+      "level_learned_at": 29
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sing",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "skyattack",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "steelwing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "steelwing",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "supersonic",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "synchronoise",
+      "learnMethod": "level-up",
+      "level_learned_at": 49
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "torment",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "twister",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 76,
+    "atk": 65,
+    "def": 45,
+    "spa": 92,
+    "spd": 42,
+    "spe": 91
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "jungle",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:feather",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:melon_seeds",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:genius_feather",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 569
+}

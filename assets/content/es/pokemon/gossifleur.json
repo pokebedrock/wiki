@@ -1,0 +1,254 @@
+{
+  "name": "Gossifleur",
+  "description": "It whirls around in the wind while singing a joyous song. This delightful display has charmed many into raising this Pokémon.",
+  "types": [
+    "grass"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Cotton Down",
+    "1": "Regenerator",
+    "H": "Effect Spore"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 1,
+    "spe": 0
+  },
+  "base_experience": 50,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    5,
+    19
+  ],
+  "moves": [
+    {
+      "move": "aromatherapy",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulletseed",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "growth",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "leafage",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "leaftornado",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "leechseed",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicalleaf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poisonpowder",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "pollenpuff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rapidspin",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "razorleaf",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "sing",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "sleeppowder",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetscent",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "egg"
+    }
+  ],
+  "stats": {
+    "hp": 40,
+    "atk": 40,
+    "def": 60,
+    "spa": 40,
+    "spd": 60,
+    "spe": 10
+  },
+  "spawn_rules": [
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:yellow_flower",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:torchflower",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:eldegoss",
+      "trigger": "level",
+      "level": 20
+    }
+  ],
+  "sortOrder": 1080
+}

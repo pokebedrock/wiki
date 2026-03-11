@@ -1,0 +1,616 @@
+{
+  "name": "Exeggcute",
+  "description": "These Pokémon get nervous when they’re not in a group of six. The minute even one member of the group goes missing, Exeggcute become cowardly.",
+  "types": [
+    "grass",
+    "psychic"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Chlorophyll",
+    "H": "Harvest"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 65,
+  "base_happiness": 50,
+  "growth_rate": "slow",
+  "level_range": [
+    15,
+    20
+  ],
+  "moves": [
+    {
+      "move": "absorb",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "ancientpower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "ancientpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "barrage",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "bestow",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "block",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "block",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bulletseed",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulletseed",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confusion",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "curse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "explosion",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "explosion",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "extrasensory",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypnosis",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "infestation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ingrain",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "leechseed",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "luckychant",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "megadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "moonlight",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "level-up",
+      "level_learned_at": 37
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "nightmare",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "poisonpowder",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "poisonpowder",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "powerswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powerswap",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "level-up",
+      "level_learned_at": 47
+    },
+    {
+      "move": "psychicnoise",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeppowder",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeppowder",
+      "learnMethod": "level-up",
+      "level_learned_at": 23
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "level-up",
+      "level_learned_at": 19
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 60,
+    "atk": 40,
+    "def": 80,
+    "spa": 60,
+    "spd": 45,
+    "spe": 40
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:egg",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 90
+    },
+    {
+      "typeId": "pokeb:lum_berry",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 9
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:exeggutor",
+      "trigger": "useItem",
+      "item": "pokeb:leaf_stone"
+    },
+    {
+      "typeId": "pokemon:exeggutoralola",
+      "trigger": "useItem",
+      "item": "pokeb:leaf_stone",
+      "region": "Alola"
+    }
+  ],
+  "sortOrder": 162
+}

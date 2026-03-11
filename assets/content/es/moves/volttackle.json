@@ -1,0 +1,19 @@
+{
+  "name": "Volt Tackle",
+  "description": "Has a 10% chance to paralyze the target. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 917
+}

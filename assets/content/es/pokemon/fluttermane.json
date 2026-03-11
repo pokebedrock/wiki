@@ -1,0 +1,333 @@
+{
+  "name": "Flutter Mane",
+  "description": "This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book. ",
+  "types": [
+    "ghost",
+    "fairy"
+  ],
+  "tags": [
+    "Paradox"
+  ],
+  "abilities": {
+    "0": "Protosynthesis"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 1,
+    "spe": 1
+  },
+  "base_experience": 285,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    57,
+    57
+  ],
+  "moves": [
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "disarmingvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hex",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicalleaf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "meanlook",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "memento",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "mistyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "moonblast",
+      "learnMethod": "level-up",
+      "level_learned_at": 84
+    },
+    {
+      "move": "mysticalfire",
+      "learnMethod": "level-up",
+      "level_learned_at": 49
+    },
+    {
+      "move": "nightshade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "level-up",
+      "level_learned_at": 77
+    },
+    {
+      "move": "perishsong",
+      "learnMethod": "level-up",
+      "level_learned_at": 91
+    },
+    {
+      "move": "phantomforce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "phantomforce",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "poltergeist",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powergem",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powergem",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "level-up",
+      "level_learned_at": 63
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wish",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    }
+  ],
+  "stats": {
+    "hp": 55,
+    "atk": 55,
+    "def": 55,
+    "spa": 135,
+    "spd": 135,
+    "spe": 135
+  },
+  "spawn_rules": [
+    {
+      "biome": "nether",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "cherry_grove",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "pokeb:candy_bag",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 100
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1278
+}

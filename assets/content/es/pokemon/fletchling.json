@@ -1,0 +1,419 @@
+{
+  "name": "Fletchling",
+  "description": "When this Pokémon gets excited, its body temperature increases sharply. If you touch a Fletchling with bare hands, you might get burned.",
+  "types": [
+    "normal",
+    "flying"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Big Pecks",
+    "H": "Gale Wings"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 56,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    5,
+    16
+  ],
+  "moves": [
+    {
+      "move": "acrobatics",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "acrobatics",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "aerialace",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "aircutter",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "airslash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bravebird",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defog",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "defog",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualwingbeat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualwingbeat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "ember",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "featherdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flail",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "level-up",
+      "level_learned_at": 34
+    },
+    {
+      "move": "flareblitz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fly",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fly",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "growl",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hurricane",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mefirst",
+      "learnMethod": "level-up",
+      "level_learned_at": 41
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "level-up",
+      "level_learned_at": 29
+    },
+    {
+      "move": "overheat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "peck",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "quickguard",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "razorwind",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "roost",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "steelwing",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "steelwing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "willowisp",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 43,
+    "spa": 40,
+    "spd": 38,
+    "spe": 62
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+birch+forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "animal+taiga+cold+forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "cherry_grove",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "common"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:feather",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:chicken",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:fletchinder",
+      "trigger": "level",
+      "level": 17
+    }
+  ],
+  "sortOrder": 846
+}

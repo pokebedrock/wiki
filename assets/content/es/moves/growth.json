@@ -1,0 +1,17 @@
+{
+  "name": "Growth",
+  "description": "Raises the user's Attack and Special Attack by 1 stage. If the weather is Sunny Day or Desolate Land, this move raises the user's Attack and Special Attack by 2 stages. If the user is holding Utility Umbrella, this move will only raise the user's Attack and Special Attack by 1 stage, even if the weather is Sunny Day or Desolate Land.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 353
+}

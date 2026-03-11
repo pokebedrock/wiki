@@ -1,0 +1,18 @@
+{
+  "name": "Electro Shot",
+  "description": "This attack charges on the first turn and executes on the second. Raises the user's Special Attack by 1 stage on the first turn. If the user is holding a Power Herb or the weather is Primordial Sea or Rain Dance, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Primordial Sea or Rain Dance, the move still requires a turn to charge.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "The user is unable to make a move between turns.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 217
+}

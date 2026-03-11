@@ -1,0 +1,21 @@
+{
+  "name": "Weather Ball",
+  "description": "Power doubles if a weather condition other than Delta Stream is active, and this move's type changes to match. Ice type during Snow, Water type during Primordial Sea or Rain Dance, Rock type during Sandstorm, and Fire type during Desolate Land or Sunny Day. If the user is holding Utility Umbrella and uses Weather Ball during Primordial Sea, Rain Dance, Desolate Land, or Sunny Day, this move remains Normal type and does not double in power.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 927
+}

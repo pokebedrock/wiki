@@ -1,0 +1,204 @@
+{
+  "name": "Eevee-Starter",
+  "description": "Harbors the potential to evolve into manifold forms. Within Eevee lies the key to the mysteries of Pokémon evolution—I'm certain of it.",
+  "types": [
+    "normal"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0.875,
+    "F": 0.125
+  },
+  "abilities": {
+    "0": "Run Away",
+    "1": "Adaptability",
+    "H": "Anticipation"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 1,
+    "spe": 0
+  },
+  "base_experience": 65,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    5,
+    5
+  ],
+  "moves": [
+    {
+      "move": "baddybad",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 17
+    },
+    {
+      "move": "bouncybubble",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "buzzybuzz",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "doublekick",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "freezyfrost",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "glitzyglow",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "growl",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 6
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "sappyseed",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sizzlyslide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sparklyswirl",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "tailwhip",
+      "learnMethod": "level-up",
+      "level_learned_at": 3
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "veeveevolley",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 65,
+    "atk": 75,
+    "def": 70,
+    "spa": 65,
+    "spd": 85,
+    "spe": 75
+  },
+  "spawn_rules": [
+    {
+      "biome": "meadow",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 206
+}

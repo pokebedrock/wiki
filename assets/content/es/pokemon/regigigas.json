@@ -1,0 +1,567 @@
+{
+  "name": "Regigigas",
+  "description": "According to legend, Regigigas pulled landmasses together and bound them with rope to create the continent of Hisui. Though I have my doubts, the story could well contain a shred of truth.",
+  "types": [
+    "normal"
+  ],
+  "tags": [
+    "Sub-Legendary"
+  ],
+  "abilities": {
+    "0": "Slow Start"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 3,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 335,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ancientpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "avalanche",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "block",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bodypress",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodypress",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "crushgrip",
+      "learnMethod": "level-up",
+      "level_learned_at": 78
+    },
+    {
+      "move": "darkestlariat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dizzypunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "earthpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "firepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firepunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "firepunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focuspunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focuspunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "foresight",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "level-up",
+      "level_learned_at": 72
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hammerarm",
+      "learnMethod": "level-up",
+      "level_learned_at": 66
+    },
+    {
+      "move": "hardpress",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "heatcrash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heavyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heavyslam",
+      "learnMethod": "level-up",
+      "level_learned_at": 60
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "highhorsepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megapunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megapunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "level-up",
+      "level_learned_at": 6
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pound",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "poweruppunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "rockclimb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockpolish",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "smackdown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stomp",
+      "learnMethod": "level-up",
+      "level_learned_at": 18
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terrainpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wideguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 54
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 110,
+    "atk": 160,
+    "def": 110,
+    "spa": 80,
+    "spd": 110,
+    "spe": 100
+  },
+  "spawn_rules": [
+    {
+      "biome": "birch_forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:red_sandstone",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 52
+    },
+    {
+      "typeId": "minecraft:blue_ice",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 26
+    },
+    {
+      "typeId": "minecraft:iron_block",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 15
+    },
+    {
+      "typeId": "pokeb:normal_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 5
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 625
+}

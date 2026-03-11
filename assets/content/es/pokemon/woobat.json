@@ -1,0 +1,597 @@
+{
+  "name": "Woobat",
+  "description": "It emits ultrasonic waves as it flutters about, searching for its prey—bug Pokémon.",
+  "types": [
+    "psychic",
+    "flying"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Unaware",
+    "1": "Klutz",
+    "H": "Simple"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 2
+  },
+  "base_experience": 149,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    15,
+    24
+  ],
+  "moves": [
+    {
+      "move": "acrobatics",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "afteryou",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "aircutter",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "airslash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "airslash",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "amnesia",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "amnesia",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "assurance",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "batonpass",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confusion",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "defog",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualwingbeat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "embargo",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "expandingforce",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flatter",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "fly",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "futuresight",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "futuresight",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gust",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "gyroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heartstamp",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "odorsleuth",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "pluck",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "psychocut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychoshift",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "simplebeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "speedswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "steelwing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "supersonic",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "synchronoise",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "torment",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venomdrench",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venomdrench",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 65,
+    "atk": 45,
+    "def": 43,
+    "spa": 55,
+    "spd": 43,
+    "spe": 72
+  },
+  "spawn_rules": [
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "mesa",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "mangrove_swamp",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:light_blue_wool",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:rotten_flesh",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "minecraft:ender_pearl",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:swoobat",
+      "trigger": "levelFriendship"
+    }
+  ],
+  "sortOrder": 686
+}

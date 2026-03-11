@@ -1,0 +1,18 @@
+{
+  "name": "Rototiller",
+  "description": "Raises the Attack and Special Attack of all grounded Grass-type Pokemon on the field by 1 stage.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Ground",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 694
+}

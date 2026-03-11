@@ -1,0 +1,528 @@
+{
+  "name": "Rattata",
+  "description": "Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.",
+  "types": [
+    "normal"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Run Away",
+    "1": "Guts",
+    "H": "Hustle"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 51,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    2,
+    20
+  ],
+  "moves": [
+    {
+      "move": "assurance",
+      "learnMethod": "level-up",
+      "level_learned_at": 19
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "bite",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "counter",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "counter",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "covet",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 22
+    },
+    {
+      "move": "cut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "level-up",
+      "level_learned_at": 34
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "finalgambit",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flamewheel",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "focusenergy",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "furyswipes",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperfang",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "mefirst",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pluck",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pursuit",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "screech",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "tailwhip",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 30,
+    "atk": 56,
+    "def": 35,
+    "spa": 25,
+    "spd": 35,
+    "spe": 72
+  },
+  "spawn_rules": [
+    {
+      "biome": "plains",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "common"
+    },
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "common"
+    },
+    {
+      "biome": "nether",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "common"
+    },
+    {
+      "biome": "plains",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "nether",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "plains",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:rotten_flesh",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:cooked_mutton",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:oran_berry",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:raticate",
+      "trigger": "level",
+      "level": 20
+    }
+  ],
+  "sortOrder": 29
+}

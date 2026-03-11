@@ -1,0 +1,70 @@
+---
+title: Guia de estilo de Markdown y MDX
+description: Convenciones de autoria para Markdown, MDX, admonitions y fragmentos de codigo.
+tags:
+  - handbook
+  - style-guide
+lastUpdated: "2026-03-06"
+status: stable
+lang: es
+toc: true
+order: 3
+---
+
+## Reglas de formato
+
+- Mantener longitud de linea <= 100 caracteres cuando sea posible.
+- Usar sentence case en titulos (`## Getting started`, no `## Getting Started`).
+- Preferir listas ordenadas para secuencias y listas sin ordenar para detalles de apoyo.
+- Usar bloques de codigo con lenguaje (` ```ts `) para resaltado de sintaxis.
+
+## Admonitions
+
+Usar bloques estilo Docusaurus:
+
+```text
+Consejo breve y accionable.
+```
+
+Opciones comunes: `note`, `tip`, `warning`, `danger`. Importar callouts complejos desde `docs/<locale>/_partials`.
+
+## Fragmentos de codigo
+
+- Priorizar patrones de early-return en pseudo-codigo para reflejar como escribimos servicios reales.
+- Mantener snippets <= 30 lineas. Si es mas largo, dividir en varias secciones.
+- Anotar comandos de shell con comentarios cuando tengan efectos secundarios.
+
+## Tablas
+
+- Alinear columnas usando pipes de Markdown.
+- Mantener encabezados concisos; envolver contenido largo en la siguiente linea en vez de ensanchar la tabla sin limite.
+
+## Imports de MDX
+
+### Componentes autoinyectados
+
+Los componentes exportados desde `docs/<locale>/snippets/` (como `InfoCallout`, `ShellBlock` y
+`EarlyReturnExample`) estan disponibles globalmente en todos los archivos MDX. El backend
+del sitio los registra automaticamente, por lo que se pueden usar sin sentencia de import:
+
+<InfoCallout />
+
+<ShellBlock command="npm install" />
+
+Deben renderizarse como componentes, no como codigo.
+
+### Imports custom o parciales
+
+Para componentes en `docs/<locale>/_partials/` o snippets de uso unico, usar imports explicitos al inicio
+del archivo:
+
+```mdx
+import ServicenodeCallout from "../_partials/ServicenodeCallout.mdx";
+
+<ServicenodeCallout />
+```
+
+Mantener imports relativos al documento para evitar aliases dependientes del bundler.
+
+
+

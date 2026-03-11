@@ -1,0 +1,405 @@
+{
+  "name": "Foongus",
+  "description": "The spores released from this Pokémon’s hands are highly poisonous, but when thoroughly dried, the spores can be used as stomach medicine.",
+  "types": [
+    "grass",
+    "poison"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Effect Spore",
+    "H": "Regenerator"
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 59,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    20,
+    38
+  ],
+  "moves": [
+    {
+      "move": "absorb",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "afteryou",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bide",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "bulletseed",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "clearsmog",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "feintattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gastroacid",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gastroacid",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "growth",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "growth",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ingrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicalleaf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poisonpowder",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "pollenpuff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ragepowder",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "spore",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetscent",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "venoshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 69,
+    "atk": 55,
+    "def": 45,
+    "spa": 55,
+    "spd": 55,
+    "spe": 15
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "mooshroom_island",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "mooshroom_island",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:red_mushroom",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:brown_mushroom",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "minecraft:crimson_fungus",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:amoonguss",
+      "trigger": "level",
+      "level": 39
+    }
+  ],
+  "sortOrder": 761
+}

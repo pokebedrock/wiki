@@ -1,0 +1,623 @@
+{
+  "name": "Meloetta",
+  "description": "Its melodies are sung with a special vocalization method that can control the feelings of those who hear it.",
+  "types": [
+    "normal",
+    "psychic"
+  ],
+  "tags": [
+    "Mythical"
+  ],
+  "abilities": {
+    "0": "Serene Grace"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 1,
+    "spe": 1
+  },
+  "base_experience": 300,
+  "base_happiness": 100,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "acrobatics",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "acrobatics",
+      "learnMethod": "level-up",
+      "level_learned_at": 26
+    },
+    {
+      "move": "alluringvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "batonpass",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "closecombat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "closecombat",
+      "learnMethod": "level-up",
+      "level_learned_at": 78
+    },
+    {
+      "move": "coaching",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confusion",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "covet",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "disarmingvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualchop",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "embargo",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firepunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focuspunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focuspunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "healbell",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "honeclaws",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 64
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "laserfocus",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lowsweep",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "magicroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "metronome",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "perishsong",
+      "learnMethod": "level-up",
+      "level_learned_at": 85
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poweruppunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psybeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "level-up",
+      "level_learned_at": 57
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "recycle",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "relicsong",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "relicsong",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "level-up",
+      "level_learned_at": 71
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sing",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "teeterdance",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tripleaxel",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "level-up",
+      "level_learned_at": 43
+    },
+    {
+      "move": "wakeupslap",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 100,
+    "atk": 77,
+    "def": 77,
+    "spa": 128,
+    "spd": 128,
+    "spe": 90
+  },
+  "spawn_rules": [
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:wither_rose",
+      "countRange": [
+        2,
+        3
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:noteblock",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:psychic_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 827
+}

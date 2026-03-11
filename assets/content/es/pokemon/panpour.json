@@ -1,0 +1,446 @@
+{
+  "name": "Panpour",
+  "description": "The water stored inside the tuft on its head is full of nutrients. Plants that receive its water grow large.",
+  "types": [
+    "water"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0.875,
+    "F": 0.125
+  },
+  "abilities": {
+    "0": "Gluttony",
+    "H": "Torrent"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 63,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    11,
+    23
+  ],
+  "moves": [
+    {
+      "move": "acrobatics",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "acrobatics",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "aquaring",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "aquatail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "aquatail",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "astonish",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 19
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brine",
+      "learnMethod": "level-up",
+      "level_learned_at": 34
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "covet",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "covet",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 43
+    },
+    {
+      "move": "cut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "disarmingvoice",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dive",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "focuspunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "furyswipes",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "gastroacid",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "honeclaws",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "lick",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "lowsweep",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudsport",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playnice",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "recycle",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "recycle",
+      "learnMethod": "level-up",
+      "level_learned_at": 37
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scald",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scald",
+      "learnMethod": "level-up",
+      "level_learned_at": 22
+    },
+    {
+      "move": "scratch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tickle",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "torment",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "waterfall",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watergun",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "waterpledge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "watersport",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 50,
+    "atk": 53,
+    "def": 48,
+    "spa": 53,
+    "spd": 48,
+    "spe": 64
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:waterlily",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 52
+    },
+    {
+      "typeId": "pokeb:fresh_water",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 26
+    },
+    {
+      "typeId": "pokeb:nanab_berry",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 15
+    },
+    {
+      "typeId": "pokeb:water_stone_shard",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 5
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:simipour",
+      "trigger": "useItem",
+      "item": "pokeb:water_stone"
+    }
+  ],
+  "sortOrder": 674
+}

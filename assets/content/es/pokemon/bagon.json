@@ -1,0 +1,523 @@
+{
+  "name": "Bagon",
+  "description": "Bagon is a solitary Pokémon that doesn’t form groups with others of its kind. It also has a head hard enough to cleave a boulder in one strike.",
+  "types": [
+    "dragon"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Rock Head",
+    "H": "Sheer Force"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 60,
+  "base_happiness": 35,
+  "growth_rate": "slow",
+  "level_range": [
+    5,
+    29
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "cut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dragonbreath",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "dragoncheer",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonclaw",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "dragondance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragondance",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dragonrage",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dragonrush",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dragontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ember",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fireblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "firespin",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "focusenergy",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "focusenergy",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "furycutter",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "honeclaws",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "incinerate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rage",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thrash",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "twister",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "twister",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 75,
+    "def": 60,
+    "spa": 40,
+    "spd": 30,
+    "spe": 50
+  },
+  "spawn_rules": [
+    {
+      "biome": "mesa",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:gold_nugget",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 90
+    },
+    {
+      "typeId": "pokeb:rocky_helmet",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 9
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:shelgon",
+      "trigger": "level",
+      "level": 30
+    }
+  ],
+  "sortOrder": 485
+}

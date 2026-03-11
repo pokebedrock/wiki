@@ -1,0 +1,20 @@
+{
+  "name": "Heal Order",
+  "description": "The user restores 1/2 of its maximum HP, rounded half up.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Bug",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Prevented from being executed or selected during Heal Block's effect.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 375
+}

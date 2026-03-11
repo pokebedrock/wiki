@@ -1,0 +1,20 @@
+{
+  "name": "Psychic Fangs",
+  "description": "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Strong Jaw."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 637
+}

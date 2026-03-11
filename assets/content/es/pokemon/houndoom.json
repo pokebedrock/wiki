@@ -1,0 +1,636 @@
+{
+  "name": "Houndoom",
+  "description": "Identifiable by its eerie howls, people a long time ago thought it was the grim reaper and feared it.",
+  "types": [
+    "dark",
+    "fire"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Early Bird",
+    "1": "Flash Fire",
+    "H": "Unnerve"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 2,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 175,
+  "base_happiness": 35,
+  "growth_rate": "slow",
+  "level_range": [
+    24,
+    50
+  ],
+  "moves": [
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "beatup",
+      "learnMethod": "level-up",
+      "level_learned_at": 26
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "burningjealousy",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "comeuppance",
+      "learnMethod": "level-up",
+      "level_learned_at": 41
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "counter",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "embargo",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "embargo",
+      "learnMethod": "level-up",
+      "level_learned_at": 41
+    },
+    {
+      "move": "ember",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "feintattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "fireblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "firespin",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "flareblitz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "howl",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "incinerate",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "incinerate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "inferno",
+      "learnMethod": "level-up",
+      "level_learned_at": 62
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "laserfocus",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lashout",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nightmare",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "odorsleuth",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "overheat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicfangs",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "smog",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "snarl",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "temperflare",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "torment",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "torment",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trailblaze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "willowisp",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 75,
+    "atk": 90,
+    "def": 50,
+    "spa": 110,
+    "spd": 80,
+    "spe": 95
+  },
+  "spawn_rules": [
+    {
+      "biome": "desert",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "mesa",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "extreme_hills",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "nether",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:bone",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 55
+    },
+    {
+      "typeId": "minecraft:blaze_rod",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 27
+    },
+    {
+      "typeId": "pokeb:dusk_stone_shard",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 16
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 321
+}

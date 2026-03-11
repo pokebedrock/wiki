@@ -1,0 +1,422 @@
+{
+  "name": "Arcanine-Hisui",
+  "description": "Snaps at its foes with fangs cloaked in blazing flame. Despite its bulk, it deftly feints every which way, leading opponents on a deceptively merry chase as it all but dances around them.",
+  "types": [
+    "fire",
+    "rock"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0.75,
+    "F": 0.25
+  },
+  "abilities": {
+    "0": "Intimidate",
+    "1": "Flash Fire",
+    "H": "Rock Head"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 2,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 194,
+  "base_happiness": 50,
+  "growth_rate": "slow",
+  "level_range": [
+    25,
+    50
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "closecombat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ember",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "extremespeed",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fireblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firefang",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "firespin",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "flamewheel",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "flareblitz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flareblitz",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatcrash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "howl",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "overheat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powergem",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicfangs",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ragingfury",
+      "learnMethod": "level-up",
+      "level_learned_at": 64
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rockblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rockthrow",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scorchingsands",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "smackdown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "smartstrike",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snarl",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "temperflare",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderfang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "willowisp",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 95,
+    "atk": 115,
+    "def": 80,
+    "spa": 95,
+    "spd": 80,
+    "spe": 90
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+savanna",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "extreme_hills",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+extreme_hills",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "extreme_hills",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "desert",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 101
+}

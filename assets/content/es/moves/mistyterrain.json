@@ -1,0 +1,17 @@
+{
+  "name": "Misty Terrain",
+  "description": "For 5 turns, the terrain becomes Misty Terrain. During the effect, the power of Dragon-type attacks used against grounded Pokemon is multiplied by 0.5 and grounded Pokemon cannot be inflicted with a non-volatile status condition nor confusion. Grounded Pokemon can become affected by Yawn but cannot fall asleep from its effect. Camouflage transforms the user into a Fairy type, Nature Power becomes Moonblast, and Secret Power has a 30% chance to lower Special Attack by 1 stage. Fails if the current terrain is Misty Terrain.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 550
+}

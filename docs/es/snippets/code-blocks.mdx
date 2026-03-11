@@ -1,0 +1,46 @@
+---
+title: Patrones de bloques de codigo
+description: Snippets MDX importables que muestran convenciones de shell y TypeScript.
+tags:
+  - snippets
+  - code
+lastUpdated: "2025-11-21"
+status: stable
+lang: es
+toc: false
+order: 2
+---
+
+const shellTemplate = `#!/bin/bash
+set -euo pipefail
+
+`;
+
+const earlyReturnSnippet = [
+  "function ensurePlayerCanTrade(player) {",
+  "  if (!player?.inventory) {",
+  "    return false;",
+  "  }",
+  "",
+  "  if (player.inventory.slots < 1) {",
+  "    return false;",
+  "  }",
+  "",
+  "  return true;",
+  "}"
+].join("\n");
+
+export const ShellBlock = ({ command }) => (
+  <pre>
+    <code>{`${shellTemplate}${command}`}</code>
+  </pre>
+);
+
+export const EarlyReturnExample = () => (
+  <pre>
+    <code>{earlyReturnSnippet}</code>
+  </pre>
+);
+
+
+

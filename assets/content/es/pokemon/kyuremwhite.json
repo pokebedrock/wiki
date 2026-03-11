@@ -1,0 +1,494 @@
+{
+  "name": "Kyurem-White",
+  "description": "It appears that this Pokémon uses its powers over ice to freeze its own body in order to stabilize its cellular structure.",
+  "types": [
+    "dragon",
+    "ice"
+  ],
+  "tags": [],
+  "abilities": {
+    "0": "Turboblaze"
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 1,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 330,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ancientpower",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "avalanche",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "bodypress",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "breakingswipe",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "cut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dragonbreath",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "dragoncheer",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragondance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "dragonpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dragonrage",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "dragontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualwingbeat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualwingbeat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "earthpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fly",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "freezedry",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fusionflare",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "honeclaws",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "iceburn",
+      "learnMethod": "level-up",
+      "level_learned_at": 80
+    },
+    {
+      "move": "icefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "iciclespear",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "level-up",
+      "level_learned_at": 64
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "laserfocus",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nobleroar",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "level-up",
+      "level_learned_at": 72
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaleshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaleshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sheercold",
+      "learnMethod": "level-up",
+      "level_learned_at": 88
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "slash",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snowscape",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "steelwing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "weatherball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 125,
+    "atk": 120,
+    "def": 90,
+    "spa": 170,
+    "spd": 100,
+    "spe": 95
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 824
+}

@@ -1,0 +1,457 @@
+{
+  "name": "Genesect-Shock",
+  "description": "This Pokémon existed 300 million years ago. Team Plasma altered it and attached a cannon to its back.",
+  "types": [
+    "bug",
+    "steel"
+  ],
+  "tags": [],
+  "abilities": {
+    "0": "Download"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 300,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blazekick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bugbite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bugbuzz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bugbuzz",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "explosion",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fellstinger",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fly",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "furycutter",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gravity",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "honeclaws",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 73
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "infestation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lastresort",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leechlife",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lockon",
+      "learnMethod": "level-up",
+      "level_learned_at": 77
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "magnetbomb",
+      "learnMethod": "level-up",
+      "level_learned_at": 22
+    },
+    {
+      "move": "magnetrise",
+      "learnMethod": "level-up",
+      "level_learned_at": 49
+    },
+    {
+      "move": "magnetrise",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "metalclaw",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "metalsound",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "recycle",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockpolish",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "screech",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "screech",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "level-up",
+      "level_learned_at": 91
+    },
+    {
+      "move": "shadowclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "simplebeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 63
+    },
+    {
+      "move": "slash",
+      "learnMethod": "level-up",
+      "level_learned_at": 29
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "steelbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "strugglebug",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "technoblast",
+      "learnMethod": "level-up",
+      "level_learned_at": 84
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "triattack",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "triattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "xscissor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "xscissor",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "zapcannon",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 71,
+    "atk": 120,
+    "def": 95,
+    "spa": 120,
+    "spd": 95,
+    "spe": 99
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 831
+}

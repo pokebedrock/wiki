@@ -1,0 +1,20 @@
+{
+  "name": "Bestow",
+  "description": "The target receives the user's held item. Fails if the user has no item or is holding a Mail or Z-Crystal, if the target is already holding an item, if the user is a Kyogre holding a Blue Orb, a Groudon holding a Red Orb, a Giratina holding a Griseous Orb, an Arceus holding a Plate, a Genesect holding a Drive, a Silvally holding a Memory, a Pokemon that can Mega Evolve holding the Mega Stone for its species, or if the target is one of those Pokemon and the user is holding the respective item.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    "The move plays its animation when used on an ally.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 58
+}

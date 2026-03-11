@@ -1,0 +1,15 @@
+{
+  "name": "Gigavolt Havoc",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "electriumz",
+  "zMove": {},
+  "sortOrder": 306
+}

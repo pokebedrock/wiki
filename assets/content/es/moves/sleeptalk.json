@@ -1,0 +1,23 @@
+{
+  "name": "Sleep Talk",
+  "description": "One of the user's known moves, besides this move, is selected for use at random. Fails if the user is not asleep. The selected move does not have PP deducted from it, and can currently have 0 PP. This move cannot select Assist, Beak Blast, Belch, Bide, Blazing Torque, Celebrate, Chatter, Combat Torque, Copycat, Dynamax Cannon, Focus Punch, Hold Hands, Magical Torque, Me First, Metronome, Mimic, Mirror Move, Nature Power, Noxious Torque, Shell Trap, Sketch, Sleep Talk, Struggle, Uproar, Wicked Torque, or any two-turn move.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Encore fails if target used this move.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be copied by Mimic.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cute",
+  "zMove": {
+    "effect": "crit2"
+  },
+  "sortOrder": 756
+}

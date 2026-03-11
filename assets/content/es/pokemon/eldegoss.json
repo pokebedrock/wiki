@@ -1,0 +1,258 @@
+{
+  "name": "Eldegoss",
+  "description": "The cotton on the head of this Pokémon can be spun into a glossy, gorgeous yarn—a Galar regional specialty.",
+  "types": [
+    "grass"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Cotton Down",
+    "1": "Regenerator",
+    "H": "Effect Spore"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 2,
+    "spe": 0
+  },
+  "base_experience": 161,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    20,
+    40
+  ],
+  "moves": [
+    {
+      "move": "aromatherapy",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulletseed",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "cottonguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 52
+    },
+    {
+      "move": "cottonspore",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "level-up",
+      "level_learned_at": 34
+    },
+    {
+      "move": "leafage",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "level-up",
+      "level_learned_at": 46
+    },
+    {
+      "move": "leaftornado",
+      "learnMethod": "level-up",
+      "level_learned_at": 23
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magicalleaf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pollenpuff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rapidspin",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "razorleaf",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sing",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetscent",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "weatherball",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 60,
+    "atk": 50,
+    "def": 90,
+    "spa": 80,
+    "spd": 120,
+    "spe": 60
+  },
+  "spawn_rules": [
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:yellow_flower",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:yellow_flower",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:miracle_seed",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1081
+}

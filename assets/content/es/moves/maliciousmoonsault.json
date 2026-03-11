@@ -1,0 +1,17 @@
+{
+  "name": "Malicious Moonsault",
+  "description": "Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact."
+  ],
+  "contestType": "Cool",
+  "isZ": "inciniumz",
+  "zMove": {},
+  "sortOrder": 498
+}

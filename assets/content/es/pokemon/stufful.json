@@ -1,0 +1,438 @@
+{
+  "name": "Stufful",
+  "description": "The way it protects itself by flailing its arms may be an adorable sight, but stay well away. This is flailing that can snap thick tree trunks.",
+  "types": [
+    "normal",
+    "fighting"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Fluffy",
+    "1": "Klutz",
+    "H": "Cute Charm"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 68,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    10,
+    26
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "babydolleyes",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "bide",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "bind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "bulkup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "coaching",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dualchop",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "endure",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flail",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focuspunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "forcepalm",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hammerarm",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "icepunch",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "lowsweep",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "megapunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roar",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stomp",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "superpower",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thrash",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunderpunch",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wideguard",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "workup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 70,
+    "atk": 75,
+    "def": 50,
+    "spa": 45,
+    "spd": 50,
+    "spe": 50
+  },
+  "spawn_rules": [
+    {
+      "biome": "hills",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "animal+birch+forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "common"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "common"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:honeycomb",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:leather",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:bewear",
+      "trigger": "level",
+      "level": 27
+    }
+  ],
+  "sortOrder": 977
+}

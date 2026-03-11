@@ -1,0 +1,426 @@
+{
+  "name": "Pheromosa",
+  "description": "Although it’s alien to this world and a danger here, it’s apparently a common organism in the world where it normally lives.",
+  "types": [
+    "bug",
+    "fighting"
+  ],
+  "tags": [
+    "Ultra Beast"
+  ],
+  "abilities": {
+    "0": "Beast Boost"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 3
+  },
+  "base_experience": 285,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    60,
+    60
+  ],
+  "moves": [
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "block",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bounce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bounce",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "bounce",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bugbite",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "bugbite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bugbuzz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bugbuzz",
+      "learnMethod": "level-up",
+      "level_learned_at": 60
+    },
+    {
+      "move": "closecombat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "coaching",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doublekick",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drillrun",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drillrun",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "falseswipe",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "feint",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "highjumpkick",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "jumpkick",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "laserfocus",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lowsweep",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lunge",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "mefirst",
+      "learnMethod": "level-up",
+      "level_learned_at": 59
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "outrage",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "quiverdance",
+      "learnMethod": "level-up",
+      "level_learned_at": 65
+    },
+    {
+      "move": "rapidspin",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roost",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "silverwind",
+      "learnMethod": "level-up",
+      "level_learned_at": 23
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snatch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "speedswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "speedswap",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "stomp",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "torment",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tripleaxel",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "triplekick",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 71,
+    "atk": 137,
+    "def": 37,
+    "spa": 137,
+    "spd": 37,
+    "spe": 151
+  },
+  "spawn_rules": [
+    {
+      "biome": "desert",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:string",
+      "countRange": [
+        3,
+        6
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:pokeball",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:fighting_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1036
+}

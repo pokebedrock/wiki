@@ -1,0 +1,22 @@
+{
+  "name": "Beak Blast",
+  "description": "If the user is hit by a contact move this turn before it can execute this move, the attacker is burned.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Flying",
+  "priority": -3,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Cannot be selected by Me First.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be repeated by Instruct.",
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 52
+}

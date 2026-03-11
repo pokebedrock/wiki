@@ -1,0 +1,43 @@
+{
+  "name": "Pikachu-Rock-Star",
+  "description": "Possesses cheek sacs in which it stores electricity. This clever forest-dweller roasts tough berries with an electric shock before consuming them.",
+  "types": [
+    "electric"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 1
+  },
+  "abilities": {
+    "0": "Lightning Rod"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 2
+  },
+  "base_experience": 112,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    70,
+    70
+  ],
+  "moves": [],
+  "stats": {
+    "hp": 35,
+    "atk": 55,
+    "def": 40,
+    "spa": 50,
+    "spd": 50,
+    "spe": 90
+  },
+  "spawn_rules": [],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 40
+}

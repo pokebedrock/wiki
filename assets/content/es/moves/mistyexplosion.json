@@ -1,0 +1,17 @@
+{
+  "name": "Misty Explosion",
+  "description": "If the current terrain is Misty Terrain and the user is grounded, this move's power is multiplied by 1.5. The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 549
+}

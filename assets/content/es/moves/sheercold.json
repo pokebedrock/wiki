@@ -1,0 +1,20 @@
+{
+  "name": "Sheer Cold",
+  "description": "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + X)%, where X is 30 if the user is an Ice type and 20 otherwise, and fails if the target is at a higher level. Ice-type Pokemon and Pokemon with the Sturdy Ability are immune.",
+  "accuracy": 30,
+  "pp": 5,
+  "category": "Special",
+  "type": "Ice",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "basePower": 180
+  },
+  "sortOrder": 730
+}

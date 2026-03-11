@@ -1,0 +1,528 @@
+{
+  "name": "Litwick",
+  "description": "The younger the life this Pokémon absorbs, the brighter and eerier the flame on its head burns.",
+  "types": [
+    "ghost",
+    "fire"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Flash Fire",
+    "1": "Flame Body",
+    "H": "Infiltrator"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 55,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    5,
+    25
+  ],
+  "moves": [
+    {
+      "move": "acid",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "acidarmor",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "burningjealousy",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "burningjealousy",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "calmmind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "clearsmog",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "curse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "embargo",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ember",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fireblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firespin",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "firespin",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "flameburst",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "flamecharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flamethrower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flareblitz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "haze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "haze",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "heatwave",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "hex",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hex",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "imprison",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "incinerate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "inferno",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "memento",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "minimize",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "mysticalfire",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nightshade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nightshade",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "overheat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "overheat",
+      "learnMethod": "level-up",
+      "level_learned_at": 52
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poltergeist",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poltergeist",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "powersplit",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "smog",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "temperflare",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "willowisp",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "willowisp",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    }
+  ],
+  "stats": {
+    "hp": 50,
+    "atk": 30,
+    "def": 55,
+    "spa": 65,
+    "spd": 55,
+    "spe": 20
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "mangrove_swamp",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:torch",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 41
+    },
+    {
+      "typeId": "minecraft:soul_torch",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 20
+    },
+    {
+      "typeId": "minecraft:blaze_rod",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 4
+    },
+    {
+      "typeId": "pokeb:candy_bag",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:lampent",
+      "trigger": "level",
+      "level": 41
+    }
+  ],
+  "sortOrder": 778
+}

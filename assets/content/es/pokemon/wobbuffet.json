@@ -1,0 +1,145 @@
+{
+  "name": "Wobbuffet",
+  "description": "To keep its pitch-black tail hidden, it lives quietly in the darkness. It is never first to attack.",
+  "types": [
+    "psychic"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Shadow Tag",
+    "H": "Telepathy"
+  },
+  "evYield": {
+    "hp": 2,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 142,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    15,
+    30
+  ],
+  "moves": [
+    {
+      "move": "amnesia",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "amnesia",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "counter",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "destinybond",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "mirrorcoat",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 0
+    },
+    {
+      "move": "splash",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    }
+  ],
+  "stats": {
+    "hp": 190,
+    "atk": 33,
+    "def": 58,
+    "spa": 33,
+    "spd": 58,
+    "spe": 33
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+taiga+cold+forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "the_end",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "pokeb:pokemail_inquiry",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 55
+    },
+    {
+      "typeId": "pokeb:apicot_berry",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 27
+    },
+    {
+      "typeId": "pokeb:ganlon_berry",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 16
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 288
+}

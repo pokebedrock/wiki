@@ -1,0 +1,801 @@
+{
+  "name": "Qwilfish",
+  "description": "Fishers detest this troublesome Pokémon because it sprays poison from its spines, getting it everywhere. A different form of Qwilfish lives in other regions.",
+  "types": [
+    "water",
+    "poison"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Poison Point",
+    "1": "Swift Swim",
+    "H": "Intimidate"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 88,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    5,
+    45
+  ],
+  "moves": [
+    {
+      "move": "acidspray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "acidspray",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "acupressure",
+      "learnMethod": "level-up",
+      "level_learned_at": 52
+    },
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "aquajet",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "aquatail",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "aquatail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "astonish",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "barbbarrage",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bounce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bounce",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "brine",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "brine",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brine",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "bubble",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "bubblebeam",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chillingwater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "destinybond",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "dive",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dive",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "explosion",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fellstinger",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "flail",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flipturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gyroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "harden",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "haze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "haze",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hex",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "liquidation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "liquidation",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "minimize",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pinmissile",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "pinmissile",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "poisonsting",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "poisontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "level-up",
+      "level_learned_at": 17
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scald",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaleshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaleshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "shadowball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "shockwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sludgewave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "spikes",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spikes",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "spite",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spitup",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "steelroller",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stockpile",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "supersonic",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "toxicspikes",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxicspikes",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "venomdrench",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venoshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "waterfall",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watergun",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "whirlpool",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 65,
+    "atk": 95,
+    "def": 85,
+    "spa": 55,
+    "spd": 55,
+    "spe": 85
+  },
+  "spawn_rules": [
+    {
+      "biome": "ocean",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+warm",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+warm+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+lukewarm",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+lukewarm+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+cold",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+cold+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+warm",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+warm+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+lukewarm",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+lukewarm+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+cold",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+cold+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:pufferfish",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:sticky_barb",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:poison_barb",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 298
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Laser Focus",
+  "description": "Until the end of the next turn, the user's attacks will be critical hits.",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 457
+}

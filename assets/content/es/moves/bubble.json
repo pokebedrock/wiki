@@ -1,0 +1,18 @@
+{
+  "name": "Bubble",
+  "description": "Has a 10% chance to lower the target's Speed by 1 stage.",
+  "accuracy": 100,
+  "pp": 30,
+  "category": "Special",
+  "type": "Water",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 91
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Psycho Shift",
+  "description": "The user's non-volatile status condition is transferred to the target, and the user is then cured. Fails if the user has no non-volatile status condition or if the target already has one.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 642
+}

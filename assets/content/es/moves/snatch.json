@@ -1,0 +1,19 @@
+{
+  "name": "Snatch",
+  "description": "If another Pokemon uses certain non-damaging moves this turn, the user steals that move to use itself. If multiple Pokemon use one of those moves this turn, the applicable moves are all stolen by the first Pokemon in turn order that used this move this turn. This effect is ignored while the user is under the effect of Sky Drop.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Dark",
+  "priority": 4,
+  "target": "self",
+  "flags": [
+    "Ignores a target's substitute.",
+    "Additional PP is deducted due to Pressure when it ordinarily would not.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 767
+}

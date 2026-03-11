@@ -55,6 +55,9 @@ jobs:
           path: |
             build/search-index.json
             build/search-indices.json
-            build/pokemon-manifest.json
-            build/moves-manifest.json
-            build/move-learners-manifest.json
+            build/content/en/pokemon-manifest.json
+            build/content/en/moves-manifest.json
+            build/content/en/move-learners-manifest.json
+            build/content/es/pokemon-manifest.json
+            build/content/es/moves-manifest.json
+            build/content/es/move-learners-manifest.json

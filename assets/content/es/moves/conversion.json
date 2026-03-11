@@ -1,0 +1,17 @@
+{
+  "name": "Conversion",
+  "description": "The user's type changes to match the original type of the move in its first move slot. Fails if the user cannot change its type, or if the type is one of the user's current types.",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 135
+}

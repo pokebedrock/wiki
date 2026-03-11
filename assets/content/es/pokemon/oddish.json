@@ -1,0 +1,488 @@
+{
+  "name": "Oddish",
+  "description": "During the day, it stays in the cold underground to avoid the sun. It grows by bathing in moonlight.",
+  "types": [
+    "grass",
+    "poison"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Chlorophyll",
+    "H": "Run Away"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 64,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    5,
+    21
+  ],
+  "moves": [
+    {
+      "move": "absorb",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "acid",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "acidspray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "afteryou",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "afteryou",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulletseed",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "cut",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flail",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gastroacid",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "growth",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "infestation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ingrain",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "leafstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leechseed",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "luckychant",
+      "learnMethod": "level-up",
+      "level_learned_at": 23
+    },
+    {
+      "move": "magicalleaf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "moonblast",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "moonlight",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "level-up",
+      "level_learned_at": 39
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "petaldance",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "poisonpowder",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "razorleaf",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeppowder",
+      "learnMethod": "level-up",
+      "level_learned_at": 18
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strengthsap",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sweetscent",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "synthesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "teeterdance",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tickle",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "trailblaze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venoshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 50,
+    "def": 55,
+    "spa": 75,
+    "spd": 65,
+    "spe": 30
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+swamp",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+swamp",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:beetroot",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:beetroot_seeds",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:gloom",
+      "trigger": "level",
+      "level": 21
+    }
+  ],
+  "sortOrder": 77
+}

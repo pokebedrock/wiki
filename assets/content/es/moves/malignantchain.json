@@ -1,0 +1,17 @@
+{
+  "name": "Malignant Chain",
+  "description": "Has a 50% chance to badly poison the target.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Poison",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 499
+}

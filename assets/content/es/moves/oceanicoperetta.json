@@ -1,0 +1,15 @@
+{
+  "name": "Oceanic Operetta",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Special",
+  "type": "Water",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "primariumz",
+  "zMove": {},
+  "sortOrder": 581
+}

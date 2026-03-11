@@ -1,0 +1,17 @@
+{
+  "name": "Mind Blown",
+  "description": "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability. This move is prevented from executing and the user does not lose HP if any active Pokemon has the Damp Ability, or if this move is Fire type and the user is affected by Powder or the weather is Primordial Sea.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Fire",
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 540
+}

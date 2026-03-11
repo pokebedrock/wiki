@@ -1,0 +1,16 @@
+{
+  "name": "Sunny Day",
+  "description": "For 5 turns, the weather becomes Sunny Day. The damage of Fire-type attacks is multiplied by 1.5 and the damage of Water-type attacks is multiplied by 0.5 during the effect. Lasts for 8 turns if the user is holding Heat Rock. Fails if the current weather is Sunny Day.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Status",
+  "type": "Fire",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 826
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Pulverizing Pancake",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact."
+  ],
+  "contestType": "Cool",
+  "isZ": "snorliumz",
+  "zMove": {},
+  "sortOrder": 647
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Play Nice",
+  "description": "Lowers the target's Attack by 1 stage.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 605
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Sludge Bomb",
+  "description": "Has a 30% chance to poison the target.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Poison",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 758
+}

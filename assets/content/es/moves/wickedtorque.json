@@ -1,0 +1,23 @@
+{
+  "name": "Wicked Torque",
+  "description": "Has a 10% chance to cause the target to fall asleep.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Encore fails if target used this move.",
+    "Cannot be selected by Me First.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be copied by Mimic.",
+    "Cannot be repeated by Instruct.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 931
+}

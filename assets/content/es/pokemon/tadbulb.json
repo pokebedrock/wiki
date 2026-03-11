@@ -1,0 +1,286 @@
+{
+  "name": "Tadbulb",
+  "description": "Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies. ",
+  "types": [
+    "electric"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Own Tempo",
+    "1": "Static",
+    "H": "Damp"
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 54,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    5,
+    25
+  ],
+  "moves": [
+    {
+      "move": "acidspray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charge",
+      "learnMethod": "level-up",
+      "level_learned_at": 17
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chillingwater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confuseray",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "discharge",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "eerieimpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electricterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electricterrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "electroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flail",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "hypervoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "muddywater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "muddywater",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "paraboliccharge",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "soak",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "spark",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thundershock",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "voltswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watergun",
+      "learnMethod": "level-up",
+      "level_learned_at": 11
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "weatherball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "weatherball",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zapcannon",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    }
+  ],
+  "stats": {
+    "hp": 61,
+    "atk": 31,
+    "def": 41,
+    "spa": 59,
+    "spd": 35,
+    "spe": 45
+  },
+  "spawn_rules": [
+    {
+      "biome": "river",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+swamp",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    },
+    {
+      "biome": "river+warm",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [
+    {
+      "typeId": "pokemon:bellibolt",
+      "trigger": "useItem",
+      "item": "pokeb:thunder_stone"
+    }
+  ],
+  "sortOrder": 1227
+}

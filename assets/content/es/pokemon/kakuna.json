@@ -1,0 +1,215 @@
+{
+  "name": "Kakuna",
+  "description": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
+  "types": [
+    "bug",
+    "poison"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Shed Skin"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 2,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 72,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    7,
+    10
+  ],
+  "moves": [
+    {
+      "move": "bugbite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "harden",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stringshot",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 25,
+    "def": 50,
+    "spa": 25,
+    "spd": 25,
+    "spe": 35
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+birch+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+birch+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+taiga",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+jungle",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:string",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:yellow_flower",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:shed_shell",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:beedrill",
+      "trigger": "level",
+      "level": 10
+    }
+  ],
+  "sortOrder": 22
+}

@@ -1,0 +1,28 @@
+{
+  "content": {
+    "title": "Contenido",
+    "description": "Pokedex y enciclopedia de moves para el addon.",
+    "order": 1
+  },
+  "handbook": {
+    "title": "Manual",
+    "description": "Convenciones del repositorio, workflows y gobernanza.",
+    "order": 2
+  },
+  "guides": {
+    "title": "Guias",
+    "description": "Recorridos paso a paso para admins y jugadores.",
+    "order": 3
+  },
+  "reference": {
+    "title": "Referencia",
+    "description": "Especificaciones de referencia para sync, busqueda y automatizacion.",
+    "order": 4
+  },
+  "snippets": {
+    "title": "Snippets",
+    "description": "Fragmentos reutilizables de MDX y contenido.",
+    "order": 5
+  }
+}
+

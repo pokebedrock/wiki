@@ -1,0 +1,19 @@
+{
+  "name": "Relic Song",
+  "description": "Has a 10% chance to cause the target to fall asleep. If this move is successful on at least one target and the user is a Meloetta, it changes to Pirouette Forme if it is currently in Aria Forme, or changes to Aria Forme if it is currently in Pirouette Forme. This forme change does not happen if the Meloetta has the Sheer Force Ability. The Pirouette Forme reverts to Aria Forme when Meloetta is not active.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute."
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 671
+}

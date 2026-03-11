@@ -1,0 +1,21 @@
+{
+  "name": "Assist",
+  "description": "A random move among those known by the user's party members is selected for use. Does not select Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Blazing Torque, Bounce, Celebrate, Chatter, Circle Throw, Combat Torque, Copycat, Counter, Covet, Destiny Bond, Detect, Dig, Dive, Dragon Tail, Endure, Feint, Fly, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Magical Torque, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Noxious Torque, Phantom Force, Protect, Rage Powder, Roar, Shadow Force, Shell Trap, Sketch, Sky Drop, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Tera Starstorm, Thief, Transform, Trick, Whirlwind, or Wicked Torque.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Encore fails if target used this move.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be copied by Mimic.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 32
+}

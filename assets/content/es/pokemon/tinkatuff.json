@@ -1,0 +1,297 @@
+{
+  "name": "Tinkatuff",
+  "description": "This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer. ",
+  "types": [
+    "fairy",
+    "steel"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 1
+  },
+  "abilities": {
+    "0": "Mold Breaker",
+    "1": "Own Tempo",
+    "H": "Pickpocket"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 2,
+    "spe": 0
+  },
+  "base_experience": 133,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    25,
+    35
+  ],
+  "moves": [
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "babydolleyes",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "covet",
+      "learnMethod": "level-up",
+      "level_learned_at": 11
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "level-up",
+      "level_learned_at": 17
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fairywind",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "fakeout",
+      "learnMethod": "level-up",
+      "level_learned_at": 39
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "flashcannon",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "flatter",
+      "learnMethod": "level-up",
+      "level_learned_at": 43
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "level-up",
+      "level_learned_at": 52
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "metalclaw",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "metalclaw",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "metalsound",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "metronome",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "pounce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skillswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "level-up",
+      "level_learned_at": 47
+    },
+    {
+      "move": "slam",
+      "learnMethod": "level-up",
+      "level_learned_at": 27
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "steelbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sweetkiss",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 65,
+    "atk": 55,
+    "def": 55,
+    "spa": 45,
+    "spd": 82,
+    "spe": 78
+  },
+  "spawn_rules": [
+    {
+      "biome": "forest_hills",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "cherry_grove",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [
+    {
+      "typeId": "pokemon:tinkaton",
+      "trigger": "level",
+      "level": 38
+    }
+  ],
+  "sortOrder": 1247
+}

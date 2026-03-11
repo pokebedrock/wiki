@@ -1,0 +1,15 @@
+{
+  "name": "Shed Tail",
+  "description": "The user takes 1/2 of its maximum HP, rounded up, and creates a substitute that has 1/4 of the user's maximum HP, rounded down. The user is replaced with another Pokemon in its party and the selected Pokemon has the substitute transferred to it. Fails if the user would faint, or if there are no unfainted party members.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 729
+}

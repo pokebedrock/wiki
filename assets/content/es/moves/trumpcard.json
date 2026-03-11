@@ -1,0 +1,21 @@
+{
+  "name": "Trump Card",
+  "description": "The power of this move is based on the amount of PP remaining after normal PP reduction and the Pressure Ability resolve. 200 power for 0 PP, 80 power for 1 PP, 60 power for 2 PP, 50 power for 3 PP, and 40 power for 4 or more PP.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 899
+}

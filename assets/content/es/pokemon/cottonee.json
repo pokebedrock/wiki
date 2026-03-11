@@ -1,0 +1,430 @@
+{
+  "name": "Cottonee",
+  "description": "Weaving together the cotton of both Cottonee and Eldegoss produces exquisite cloth that’s highly prized by many luxury brands.",
+  "types": [
+    "grass",
+    "fairy"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Prankster",
+    "1": "Infiltrator",
+    "H": "Chlorophyll"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 1
+  },
+  "base_experience": 56,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    5,
+    25
+  ],
+  "moves": [
+    {
+      "move": "absorb",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "beatup",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "beatup",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "charm",
+      "learnMethod": "level-up",
+      "level_learned_at": 27
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "cottonguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "cottonspore",
+      "learnMethod": "level-up",
+      "level_learned_at": 33
+    },
+    {
+      "move": "covet",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defog",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dreameater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fairywind",
+      "learnMethod": "level-up",
+      "level_learned_at": 3
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "flash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grasswhistle",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "growth",
+      "learnMethod": "level-up",
+      "level_learned_at": 18
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "helpinghand",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leechseed",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "megadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "memento",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "mistyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mistyterrain",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "naturepower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poisonpowder",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "razorleaf",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "seedbomb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarbeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "stunspore",
+      "learnMethod": "level-up",
+      "level_learned_at": 6
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sunnyday",
+      "learnMethod": "level-up",
+      "level_learned_at": 39
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "switcheroo",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "tailwind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tickle",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 40,
+    "atk": 27,
+    "def": 60,
+    "spa": 37,
+    "spd": 50,
+    "spe": 66
+  },
+  "spawn_rules": [
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:white_wool",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:yellow_flower",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:whimsicott",
+      "trigger": "useItem",
+      "item": "pokeb:sun_stone"
+    }
+  ],
+  "sortOrder": 706
+}

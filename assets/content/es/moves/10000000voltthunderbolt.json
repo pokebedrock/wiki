@@ -1,0 +1,15 @@
+{
+  "name": "10,000,000 Volt Thunderbolt",
+  "description": "Has a very high chance for a critical hit.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Special",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "pikashuniumz",
+  "zMove": {},
+  "sortOrder": 1
+}

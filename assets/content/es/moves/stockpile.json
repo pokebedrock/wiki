@@ -1,0 +1,19 @@
+{
+  "name": "Stockpile",
+  "description": "Raises the user's Defense and Special Defense by 1 stage. The user's Stockpile count increases by 1. Fails if the user's Stockpile count is 3. The user's Stockpile count is reset to 0 when it is no longer active.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "effect": "heal"
+  },
+  "sortOrder": 806
+}

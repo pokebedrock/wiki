@@ -1,0 +1,446 @@
+{
+  "name": "Nihilego",
+  "description": "It appeared in this world from an Ultra Wormhole. Nihilego appears to be a parasite that lives by feeding on people and Pokémon.",
+  "types": [
+    "rock",
+    "poison"
+  ],
+  "tags": [
+    "Ultra Beast"
+  ],
+  "abilities": {
+    "0": "Beast Boost"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 3,
+    "spe": 0
+  },
+  "base_experience": 285,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    60,
+    60
+  ],
+  "moves": [
+    {
+      "move": "acid",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "acidspray",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "allyswitch",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brutalswing",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chargebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "clearsmog",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "constrict",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "corrosivegas",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "crosspoison",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "grassknot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "guardsplit",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gunkshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "headsmash",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "hex",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "magiccoat",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "meteorbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mirrorcoat",
+      "learnMethod": "level-up",
+      "level_learned_at": 60
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pound",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "powergem",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powergem",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "powersplit",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psywave",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "roleplay",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "safeguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 31
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sludgewave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "spite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "telekinesis",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "thunder",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderbolt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tickle",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxicspikes",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxicspikes",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "trickroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venomdrench",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venomdrench",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "venoshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venoshock",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "level-up",
+      "level_learned_at": 65
+    },
+    {
+      "move": "wonderroom",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "worryseed",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "wrap",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "tutor"
+    }
+  ],
+  "stats": {
+    "hp": 109,
+    "atk": 53,
+    "def": 47,
+    "spa": 127,
+    "spd": 131,
+    "spe": 103
+  },
+  "spawn_rules": [
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:cobblestone",
+      "countRange": [
+        3,
+        6
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "pokeb:pokeball",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:poison_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 1034
+}

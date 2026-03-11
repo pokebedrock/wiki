@@ -1,0 +1,290 @@
+{
+  "name": "Iron Boulder",
+  "description": "It was named after a mysterious object recorded in an old book. Its body seems to be metallic.",
+  "types": [
+    "rock",
+    "psychic"
+  ],
+  "tags": [
+    "Paradox"
+  ],
+  "abilities": {
+    "0": "Quark Drive"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 3
+  },
+  "base_experience": 295,
+  "base_happiness": 0,
+  "growth_rate": "slow",
+  "level_range": [
+    75,
+    75
+  ],
+  "moves": [
+    {
+      "move": "aerialace",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "airslash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brickbreak",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "closecombat",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "counter",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electricterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "electricterrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "level-up",
+      "level_learned_at": 91
+    },
+    {
+      "move": "hornattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leer",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "megahorn",
+      "learnMethod": "level-up",
+      "level_learned_at": 70
+    },
+    {
+      "move": "meteorbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mightycleave",
+      "learnMethod": "level-up",
+      "level_learned_at": 56
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychocut",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "psyshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "quickguard",
+      "learnMethod": "level-up",
+      "level_learned_at": 77
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockthrow",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "sacredsword",
+      "learnMethod": "level-up",
+      "level_learned_at": 49
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "slash",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "solarblade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "level-up",
+      "level_learned_at": 84
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swordsdance",
+      "learnMethod": "level-up",
+      "level_learned_at": 63
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "wildcharge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "xscissor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 90,
+    "atk": 120,
+    "def": 80,
+    "spa": 68,
+    "spd": 108,
+    "spe": 124
+  },
+  "spawn_rules": [
+    {
+      "biome": "forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 1323
+}

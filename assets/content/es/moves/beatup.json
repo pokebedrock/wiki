@@ -1,0 +1,19 @@
+{
+  "name": "Beat Up",
+  "description": "Hits one time for the user and one time for each unfainted Pokemon without a non-volatile status condition in the user's party. The power of each hit is equal to 5+(X/10), where X is each participating Pokemon's base Attack; each hit is considered to come from the user.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Dark",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 53
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Twinkle Tackle",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "fairiumz",
+  "zMove": {},
+  "sortOrder": 902
+}

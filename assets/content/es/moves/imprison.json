@@ -1,0 +1,19 @@
+{
+  "name": "Imprison",
+  "description": "The user prevents all opposing Pokemon from using any moves that the user also knows as long as the user remains active.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Ignores a target's substitute.",
+    null,
+    "Additional PP is deducted due to Pressure when it ordinarily would not."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 433
+}

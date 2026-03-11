@@ -1,0 +1,407 @@
+{
+  "name": "Impidimp",
+  "description": "It sneaks into people’s homes, stealing things and feasting on the negative energy of the frustrated occupants.",
+  "types": [
+    "dark",
+    "fairy"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 1,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Prankster",
+    "1": "Frisk",
+    "H": "Pickpocket"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 1,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 53,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    10,
+    30
+  ],
+  "moves": [
+    {
+      "move": "assurance",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "burningjealousy",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "burningjealousy",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "chillingwater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "darkpulse",
+      "learnMethod": "level-up",
+      "level_learned_at": 33
+    },
+    {
+      "move": "dazzlinggleam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainingkiss",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fakeout",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "faketears",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "flatter",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "fling",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "foulplay",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "lashout",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lashout",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leechlife",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lightscreen",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "lowkick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megakick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "megapunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "metronome",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mistyterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "nastyplot",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "partingshot",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "playrough",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "retaliate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "taunt",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thief",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "throatchop",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thunderwave",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "torment",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "trailblaze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "trick",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uproar",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 45,
+    "def": 30,
+    "spa": 55,
+    "spd": 40,
+    "spe": 50
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+forest+roofed",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "plains",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "hills",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "crimson_forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "rare"
+    },
+    {
+      "biome": "warped_forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "rare"
+    },
+    {
+      "biome": "jungle",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "rare"
+    },
+    {
+      "biome": "nether",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "rare"
+    },
+    {
+      "biome": "flower_forest",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "rare"
+    },
+    {
+      "biome": "cherry_grove",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:ghast_tear",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 100
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:morgrem",
+      "trigger": "level",
+      "level": 32
+    }
+  ],
+  "sortOrder": 1124
+}

@@ -1,0 +1,431 @@
+{
+  "name": "Accelgor",
+  "description": "Discarding its shell made it nimble. To keep itself from dehydrating, it wraps its body in bands of membrane.",
+  "types": [
+    "bug"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Hydration",
+    "1": "Sticky Hold",
+    "H": "Unburden"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 2
+  },
+  "base_experience": 173,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    36,
+    52
+  ],
+  "moves": [
+    {
+      "move": "absorb",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "acid",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "acidarmor",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "acidspray",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "agility",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "batonpass",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "bugbite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bugbuzz",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bugbuzz",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drainpunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "energyball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "finalgambit",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "focusblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gastroacid",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "gigadrain",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "guardswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "guardswap",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "infestation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "knockoff",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "laserfocus",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "leechlife",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "leechlife",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "mefirst",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "megadrain",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powerswap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powerswap",
+      "learnMethod": "level-up",
+      "level_learned_at": 32
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "quickattack",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "recover",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "reversal",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "sludgebomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "spikes",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "strugglebug",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "strugglebug",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swift",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "level-up",
+      "level_learned_at": 52
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "toxicspikes",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "uturn",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "venomdrench",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "venoshock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watershuriken",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "yawn",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    }
+  ],
+  "stats": {
+    "hp": 80,
+    "atk": 70,
+    "def": 40,
+    "spa": 100,
+    "spd": 60,
+    "spe": 145
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+swamp",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "mangrove_swamp",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "pale_garden",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:string",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 62
+    },
+    {
+      "typeId": "minecraft:fermented_spider_eye",
+      "countRange": [
+        1,
+        3
+      ],
+      "chance": 31
+    },
+    {
+      "typeId": "pokeb:bug_gem",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 6
+    }
+  ],
+  "evolutions": [],
+  "sortOrder": 788
+}

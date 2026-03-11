@@ -1,0 +1,16 @@
+{
+  "name": "Freezing Glare",
+  "description": "Has a 10% chance to freeze the target.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move."
+  ],
+  "zMove": {},
+  "sortOrder": 287
+}

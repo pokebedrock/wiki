@@ -1,0 +1,22 @@
+{
+  "name": "Uproar",
+  "description": "The user spends three turns locked into this move. This move targets an opponent at random on each turn. On the first of the three turns, all sleeping active Pokemon wake up. During the three turns, no active Pokemon can fall asleep by any means, and Pokemon switched in during the effect do not wake up. If the user is prevented from moving or the attack is not successful against the target during one of the turns, the effect ends.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "randomNormal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute.",
+    null,
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 906
+}

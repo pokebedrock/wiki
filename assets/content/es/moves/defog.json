@@ -1,0 +1,20 @@
+{
+  "name": "Defog",
+  "description": "Lowers the target's evasiveness by 1 stage. If this move is successful and whether or not the target's evasiveness was affected, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. Ignores a target's substitute, although a substitute will still block the lowering of evasiveness. If there is a terrain active and this move is successful, the terrain will be cleared.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Flying",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 163
+}

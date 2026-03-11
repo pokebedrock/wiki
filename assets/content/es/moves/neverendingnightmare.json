@@ -1,0 +1,15 @@
+{
+  "name": "Never-Ending Nightmare",
+  "description": "",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Physical",
+  "type": "Ghost",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "ghostiumz",
+  "zMove": {},
+  "sortOrder": 570
+}

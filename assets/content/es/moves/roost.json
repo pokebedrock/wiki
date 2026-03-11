@@ -1,0 +1,20 @@
+{
+  "name": "Roost",
+  "description": "The user restores 1/2 of its maximum HP, rounded half up. If the user is not Terastallized, until the end of the turn Flying-type users lose their Flying type and pure Flying-type users become Normal type. Does nothing if the user's HP is full.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Status",
+  "type": "Flying",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Prevented from being executed or selected during Heal Block's effect.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 693
+}

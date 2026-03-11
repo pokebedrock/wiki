@@ -1,0 +1,325 @@
+{
+  "name": "Chewtle",
+  "description": "It starts off battles by attacking with its rock-hard horn, but as soon as the opponent flinches, this Pokémon bites down and never lets go.",
+  "types": [
+    "water"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Strong Jaw",
+    "1": "Shell Armor",
+    "H": "Swift Swim"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 1,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 57,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    7,
+    20
+  ],
+  "moves": [
+    {
+      "move": "assurance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bite",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "level-up",
+      "level_learned_at": 49
+    },
+    {
+      "move": "chillingwater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "counter",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dive",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dragontail",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "falseswipe",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gastroacid",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "level-up",
+      "level_learned_at": 21
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "jawlock",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "liquidation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "liquidation",
+      "learnMethod": "level-up",
+      "level_learned_at": 42
+    },
+    {
+      "move": "mudshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "payback",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "poisonjab",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "level-up",
+      "level_learned_at": 14
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "revenge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaleshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "scaryface",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "shellsmash",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "skittersmack",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "skullbash",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stompingtantrum",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "waterfall",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watergun",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "whirlpool",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 50,
+    "atk": 64,
+    "def": 50,
+    "spa": 38,
+    "spd": 38,
+    "spe": 44
+  },
+  "spawn_rules": [
+    {
+      "biome": "river",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+swamp",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "river+warm",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "meadow",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:salmon",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:scute",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:drednaw",
+      "trigger": "level",
+      "level": 22
+    }
+  ],
+  "sortOrder": 1084
+}

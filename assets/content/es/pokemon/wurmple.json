@@ -1,0 +1,119 @@
+{
+  "name": "Wurmple",
+  "description": "Likes sap and is abundant in the wild. Why it evolves into various different forms is unknown. One cannot tell from a Wurmple's appearance which form it will take when it evolves.",
+  "types": [
+    "bug"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Shield Dust",
+    "H": "Run Away"
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 56,
+  "base_happiness": 50,
+  "growth_rate": "medium_fast",
+  "level_range": [
+    4,
+    8
+  ],
+  "moves": [
+    {
+      "move": "bugbite",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "bugbite",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "electroweb",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "poisonsting",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stringshot",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "stringshot",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    }
+  ],
+  "stats": {
+    "hp": 45,
+    "atk": 45,
+    "def": 35,
+    "spa": 20,
+    "spd": 30,
+    "spe": 20
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "land",
+      "rarity": "common"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:string",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 90
+    },
+    {
+      "typeId": "minecraft:web",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 9
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:silcoon",
+      "trigger": "level",
+      "level": 7
+    },
+    {
+      "typeId": "pokemon:cascoon",
+      "trigger": "level",
+      "level": 7
+    }
+  ],
+  "sortOrder": 364
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Sharpen",
+  "description": "Raises the user's Attack by 1 stage.",
+  "accuracy": true,
+  "pp": 30,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 727
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Extreme Speed",
+  "description": "No additional effect.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 2,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 233
+}

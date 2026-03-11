@@ -1,0 +1,18 @@
+{
+  "name": "Mortal Spin",
+  "description": "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field. Has a 100% chance to poison the target.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Physical",
+  "type": "Poison",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 555
+}

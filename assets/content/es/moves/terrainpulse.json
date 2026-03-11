@@ -1,0 +1,20 @@
+{
+  "name": "Terrain Pulse",
+  "description": "Power doubles if the user is grounded and a terrain is active, and this move's type changes to match. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, and Psychic type during Psychic Terrain.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Power is multiplied by 1.5 when used by a Pokemon with the Ability Mega Launcher."
+  ],
+  "zMove": {
+    "basePower": 160
+  },
+  "sortOrder": 865
+}

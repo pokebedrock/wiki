@@ -1,0 +1,21 @@
+{
+  "name": "Horn Drill",
+  "description": "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
+  "accuracy": 30,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {
+    "basePower": 180
+  },
+  "sortOrder": 407
+}

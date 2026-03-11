@@ -1,0 +1,318 @@
+{
+  "name": "Veluza",
+  "description": "When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor. ",
+  "types": [
+    "water",
+    "psychic"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Mold Breaker",
+    "H": "Sharpness"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 2,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 167,
+  "base_happiness": 50,
+  "growth_rate": "fast",
+  "level_range": [
+    25,
+    50
+  ],
+  "moves": [
+    {
+      "move": "agility",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "aquacutter",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "aquajet",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "chillingwater",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "crunch",
+      "learnMethod": "level-up",
+      "level_learned_at": 50
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "drillrun",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endeavor",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "expandingforce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "filletaway",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "finalgambit",
+      "learnMethod": "level-up",
+      "level_learned_at": 55
+    },
+    {
+      "move": "flipturn",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "focusenergy",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "gigaimpact",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hydropump",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hyperbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icefang",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "liquidation",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "liquidation",
+      "learnMethod": "level-up",
+      "level_learned_at": 45
+    },
+    {
+      "move": "nightslash",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "painsplit",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "pluck",
+      "learnMethod": "level-up",
+      "level_learned_at": 7
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicfangs",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychicterrain",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "psychocut",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "recover",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "scaleshot",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "slash",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snowscape",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "storedpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "thrash",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "waterfall",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "level-up",
+      "level_learned_at": 11
+    },
+    {
+      "move": "zenheadbutt",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 90,
+    "atk": 102,
+    "def": 73,
+    "spa": 78,
+    "spd": 65,
+    "spe": 70
+  },
+  "spawn_rules": [
+    {
+      "biome": "ocean",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+lukewarm",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+lukewarm+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+warm",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "ocean+warm+deep",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "seafloor",
+      "rarity": "ultra-rare"
+    }
+  ],
+  "drops": [],
+  "evolutions": [],
+  "sortOrder": 1266
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Floral Healing",
+  "description": "The target restores 1/2 of its maximum HP, rounded half up. If the terrain is Grassy Terrain, the target instead restores 2/3 of its maximum HP, rounded half down.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Prevented from being executed or selected during Heal Block's effect.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 272
+}

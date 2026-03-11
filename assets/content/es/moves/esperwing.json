@@ -1,0 +1,17 @@
+{
+  "name": "Esper Wing",
+  "description": "Has a 100% chance to raise the user's Speed by 1 stage and a higher chance for a critical hit.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Special",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 227
+}

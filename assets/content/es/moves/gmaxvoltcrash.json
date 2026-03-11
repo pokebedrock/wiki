@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Volt Crash",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, each Pokemon on the opposing side becomes paralyzed, even if they have a substitute.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Electric",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 342
+}

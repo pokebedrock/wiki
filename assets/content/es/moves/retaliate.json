@@ -1,0 +1,19 @@
+{
+  "name": "Retaliate",
+  "description": "Power doubles if one of the user's party members fainted last turn.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 673
+}

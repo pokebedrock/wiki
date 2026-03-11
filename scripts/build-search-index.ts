@@ -52,6 +52,8 @@ type MoveLearnerManifestEntry = {
 type MoveLearnersManifest = Record<string, MoveLearnerManifestEntry[]>;
 
 type JsonRecord = Record<string, unknown>;
+type LocaleCode = "en" | "es";
+const supportedLocales: LocaleCode[] = ["en", "es"];
 
 const ensureString = (value: unknown): string | undefined =>
   typeof value === "string" && value.trim().length > 0 ? value : undefined;
@@ -282,6 +284,9 @@ const buildMoveLearnersManifest = (
   );
 };
 
+const getLocalizedDocsRoot = (locale: LocaleCode) => `docs/${locale}`;
+const getLocalizedContentRoot = (locale: LocaleCode) => `assets/content/${locale}`;
+
 const repoRoot = resolve(process.cwd());
 const wikiIndexUids = {
   docs: "wiki-docs",
@@ -289,84 +294,121 @@ const wikiIndexUids = {
   moves: "wiki-moves",
 } as const;
 
-const files = await glob("docs/**/*.{md,mdx}", {
-  ignore: ["**/_partials/**", "**/snippets/**"]
-});
-
-if (!files.length) {
-  console.warn("No docs found. Skipping search index build.");
+const docsByLocale = await Promise.all(
+  supportedLocales.map(async (locale) => {
+    const root = getLocalizedDocsRoot(locale);
+    const files = await glob(`${root}/**/*.{md,mdx}`, {
+      ignore: [`${root}/**/_partials/**`, `${root}/**/snippets/**`],
+    });
+    return { locale, root, files };
+  }),
+);
+const totalDocFiles = docsByLocale.reduce((total, entry) => total + entry.files.length, 0);
+if (totalDocFiles === 0) {
+  console.warn("No localized docs found. Skipping search index build.");
   process.exit(0);
 }
 
-const docRecords: SearchRecord[] = files.map((filePath, index) => {
-  const source = readFileSync(filePath, "utf8");
-  const { data, content } = matter(source);
-  const frontmatter = data as Record<string, unknown>;
+const docRecords: SearchRecord[] = docsByLocale.flatMap(({ locale, root, files }) =>
+  files.map((filePath, index) => {
+    const source = readFileSync(filePath, "utf8");
+    const { data, content } = matter(source);
+    const frontmatter = data as Record<string, unknown>;
+    const slug = relative(root, filePath).replace(/\\/g, "/").replace(/\.mdx?$/, "");
 
-  const slug = relative("docs", filePath)
-    .replace(/\\/g, "/")
-    .replace(/\.mdx?$/, "");
-
-  return {
-    id: slug,
-    slug,
-    title: ensureString(frontmatter.title),
-    description: ensureString(frontmatter.description),
-    tags: ensureStringArray(frontmatter.tags),
-    lastUpdated: ensureString(frontmatter.lastUpdated),
-    status: ensureString(frontmatter.status) ?? "stable",
-    lang: ensureString(frontmatter.lang) ?? "en",
-    order: ensureNumber(frontmatter.order, index),
-    body: content
-  };
-});
-
-const pokemonEntries = (await readOptionalJsonDirectory("assets/content/pokemon")) ?? [];
-const pokemonManifest = pokemonEntries.map(({ id, value }, index) =>
-  buildPokemonManifestEntry(id, value, index + 1),
+    return {
+      id: `${locale}/${slug}`,
+      slug,
+      title: ensureString(frontmatter.title),
+      description: ensureString(frontmatter.description),
+      tags: ensureStringArray(frontmatter.tags),
+      lastUpdated: ensureString(frontmatter.lastUpdated),
+      status: ensureString(frontmatter.status) ?? "stable",
+      lang: ensureString(frontmatter.lang) ?? locale,
+      order: ensureNumber(frontmatter.order, index),
+      body: content,
+    };
+  }),
 );
-const moveLearnersManifest = buildMoveLearnersManifest(pokemonEntries);
+
+const pokemonEntriesByLocale = new Map<
+  LocaleCode,
+  Array<{ id: string; value: unknown }>
+>();
+const moveEntriesByLocale = new Map<
+  LocaleCode,
+  Array<{ id: string; value: unknown }>
+>();
+const pokemonManifestByLocale = new Map<LocaleCode, PokemonManifestEntry[]>();
+const moveManifestByLocale = new Map<LocaleCode, MoveManifestEntry[]>();
+const moveLearnersManifestByLocale = new Map<LocaleCode, MoveLearnersManifest>();
+
+for (const locale of supportedLocales) {
+  const localizedContentRoot = getLocalizedContentRoot(locale);
+  const pokemonEntries =
+    (await readOptionalJsonDirectory(`${localizedContentRoot}/pokemon`)) ?? [];
+  const moveEntries = (await readOptionalJsonDirectory(`${localizedContentRoot}/moves`)) ?? [];
+
+  pokemonEntriesByLocale.set(locale, pokemonEntries);
+  moveEntriesByLocale.set(locale, moveEntries);
+  pokemonManifestByLocale.set(
+    locale,
+    pokemonEntries.map(({ id, value }, index) => buildPokemonManifestEntry(id, value, index + 1)),
+  );
+  moveManifestByLocale.set(
+    locale,
+    moveEntries.map(({ id, value }, index) => buildMoveManifestEntry(id, value, index + 1)),
+  );
+  moveLearnersManifestByLocale.set(locale, buildMoveLearnersManifest(pokemonEntries));
+}
 
 const pokemonOrderBase = docRecords.length + 1;
-const pokemonRecords: SearchRecord[] = pokemonEntries.map(({ id, value: pokemon }, index) => {
+const pokemonRecords: SearchRecord[] = supportedLocales.flatMap((locale) => {
+  const pokemonEntries = pokemonEntriesByLocale.get(locale) ?? [];
+  const localeOffset = locale === "en" ? 0 : 100_000;
+
+  return pokemonEntries.map(({ id, value: pokemon }, index) => {
     const pokemonData = ensureObject(pokemon);
     const types = ensureStringArray(pokemonData["types"]);
     const tags = ensureStringArray(pokemonData["tags"]);
 
     return {
-      id: `content/pokemon/${id}`,
+      id: `content/${locale}/pokemon/${id}`,
       slug: `content/pokemon/${id}`,
       title: ensureString(pokemonData["name"]) ?? formatLabel(id),
       description: ensureString(pokemonData["description"]),
       tags: normalizeTags(["content", "pokemon", ...types, ...tags]),
       status: "stable",
-      lang: "en",
-      order: pokemonOrderBase + ensureNumber(pokemonData["sortOrder"], index + 1),
-      body: buildPokemonBody(id, pokemonData)
+      lang: locale,
+      order: pokemonOrderBase + localeOffset + ensureNumber(pokemonData["sortOrder"], index + 1),
+      body: buildPokemonBody(id, pokemonData),
     } satisfies SearchRecord;
   });
-
-const moveEntries = (await readOptionalJsonDirectory("assets/content/moves")) ?? [];
-const moveManifest = moveEntries.map(({ id, value }, index) => buildMoveManifestEntry(id, value, index + 1));
+});
 
 const moveOrderBase = pokemonOrderBase + pokemonRecords.length + 1;
-const moveRecords: SearchRecord[] = moveEntries.map(({ id, value: move }, index) => {
+const moveRecords: SearchRecord[] = supportedLocales.flatMap((locale) => {
+  const moveEntries = moveEntriesByLocale.get(locale) ?? [];
+  const localeOffset = locale === "en" ? 0 : 100_000;
+
+  return moveEntries.map(({ id, value: move }, index) => {
     const moveData = ensureObject(move);
     const type = ensureString(moveData["type"]);
     const category = ensureString(moveData["category"]);
 
     return {
-      id: `content/moves/${id}`,
+      id: `content/${locale}/moves/${id}`,
       slug: `content/moves/${id}`,
       title: ensureString(moveData["name"]) ?? formatLabel(id),
       description: ensureString(moveData["description"]),
       tags: normalizeTags(["content", "moves", type ?? "", category ?? ""]),
       status: "stable",
-      lang: "en",
-      order: moveOrderBase + ensureNumber(moveData["sortOrder"], index + 1),
-      body: buildMoveBody(id, moveData)
+      lang: locale,
+      order: moveOrderBase + localeOffset + ensureNumber(moveData["sortOrder"], index + 1),
+      body: buildMoveBody(id, moveData),
     } satisfies SearchRecord;
   });
+});
 
 const indicesPayload: SearchIndicesPayload = {
   docs: docRecords,
@@ -392,17 +434,31 @@ console.log(
   `Wrote docs=${indicesPayload.docs.length}, pokemon=${indicesPayload.pokemon.length}, moves=${indicesPayload.moves.length} to ${indicesOutputPath}`,
 );
 
-const pokemonManifestPath = resolve(buildDir, "pokemon-manifest.json");
-writeFileSync(pokemonManifestPath, JSON.stringify(pokemonManifest, null, 2));
-console.log(`Wrote ${pokemonManifest.length} Pokemon manifest entries to ${pokemonManifestPath}`);
+const contentBuildDir = resolve(buildDir, "content");
+for (const locale of supportedLocales) {
+  const localeBuildDir = resolve(contentBuildDir, locale);
+  mkdirSync(localeBuildDir, { recursive: true });
 
-const moveManifestPath = resolve(buildDir, "moves-manifest.json");
-writeFileSync(moveManifestPath, JSON.stringify(moveManifest, null, 2));
-console.log(`Wrote ${moveManifest.length} move manifest entries to ${moveManifestPath}`);
+  const pokemonManifest = pokemonManifestByLocale.get(locale) ?? [];
+  const moveManifest = moveManifestByLocale.get(locale) ?? [];
+  const moveLearnersManifest = moveLearnersManifestByLocale.get(locale) ?? {};
 
-const moveLearnersManifestPath = resolve(buildDir, "move-learners-manifest.json");
-writeFileSync(moveLearnersManifestPath, JSON.stringify(moveLearnersManifest, null, 2));
-console.log(`Wrote ${Object.keys(moveLearnersManifest).length} move learner entries to ${moveLearnersManifestPath}`);
+  const pokemonManifestPath = resolve(localeBuildDir, "pokemon-manifest.json");
+  writeFileSync(pokemonManifestPath, JSON.stringify(pokemonManifest, null, 2));
+  console.log(
+    `Wrote ${pokemonManifest.length} Pokemon manifest entries to ${pokemonManifestPath}`,
+  );
+
+  const moveManifestPath = resolve(localeBuildDir, "moves-manifest.json");
+  writeFileSync(moveManifestPath, JSON.stringify(moveManifest, null, 2));
+  console.log(`Wrote ${moveManifest.length} move manifest entries to ${moveManifestPath}`);
+
+  const moveLearnersManifestPath = resolve(localeBuildDir, "move-learners-manifest.json");
+  writeFileSync(moveLearnersManifestPath, JSON.stringify(moveLearnersManifest, null, 2));
+  console.log(
+    `Wrote ${Object.keys(moveLearnersManifest).length} move learner entries to ${moveLearnersManifestPath}`,
+  );
+}
 
 const indexSettings = {
   searchableAttributes: ["title", "description", "tags", "slug", "body"],

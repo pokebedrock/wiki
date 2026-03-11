@@ -1,0 +1,19 @@
+{
+  "name": "Vital Throw",
+  "description": "This move does not check accuracy.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": -1,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 915
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Flying Press",
+  "description": "This move combines Flying in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+  "accuracy": 95,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "any",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected during Gravity's effect.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {
+    "basePower": 170
+  },
+  "sortOrder": 276
+}

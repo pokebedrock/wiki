@@ -1,0 +1,518 @@
+{
+  "name": "Spheal",
+  "description": "During the season when drift ice approaches the shore, Spheal prefers living on the ice—where fewer predators lurk—rather than the land. Its fur retains heat superbly and resists harsh cold.",
+  "types": [
+    "ice",
+    "water"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Thick Fat",
+    "1": "Ice Body",
+    "H": "Oblivious"
+  },
+  "evYield": {
+    "hp": 1,
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 58,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    5,
+    30
+  ],
+  "moves": [
+    {
+      "move": "aquaring",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "aquatail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "aurorabeam",
+      "learnMethod": "level-up",
+      "level_learned_at": 28
+    },
+    {
+      "move": "bellydrum",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "blizzard",
+      "learnMethod": "level-up",
+      "level_learned_at": 44
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "level-up",
+      "level_learned_at": 36
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "brine",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "brine",
+      "learnMethod": "level-up",
+      "level_learned_at": 24
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "captivate",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "confide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "dive",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dive",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleedge",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "doubleteam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "earthquake",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "echoedvoice",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "encore",
+      "learnMethod": "level-up",
+      "level_learned_at": 33
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "fissure",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "frostbreath",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "frustration",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "growl",
+      "learnMethod": "level-up",
+      "level_learned_at": 4
+    },
+    {
+      "move": "hail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "hail",
+      "learnMethod": "level-up",
+      "level_learned_at": 48
+    },
+    {
+      "move": "headbutt",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "hiddenpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "iceball",
+      "learnMethod": "level-up",
+      "level_learned_at": 13
+    },
+    {
+      "move": "icebeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "icywind",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "irontail",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mimic",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "naturalgift",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "powdersnow",
+      "learnMethod": "level-up",
+      "level_learned_at": 12
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "raindance",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "level-up",
+      "level_learned_at": 16
+    },
+    {
+      "move": "return",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "rocksmash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "secretpower",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sheercold",
+      "learnMethod": "level-up",
+      "level_learned_at": 52
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "signalbeam",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "snore",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "snore",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "spitup",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "steelroller",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "stockpile",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "strength",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "superfang",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "surf",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "swagger",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "swallow",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "toxic",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "waterfall",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watergun",
+      "learnMethod": "level-up",
+      "level_learned_at": 8
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "waterpulse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "watersport",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "whirlpool",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "yawn",
+      "learnMethod": "egg"
+    }
+  ],
+  "stats": {
+    "hp": 70,
+    "atk": 40,
+    "def": 50,
+    "spa": 55,
+    "spd": 50,
+    "spe": 25
+  },
+  "spawn_rules": [
+    {
+      "biome": "ocean+cold",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    },
+    {
+      "biome": "ocean+cold+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    },
+    {
+      "biome": "ocean+frozen",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    },
+    {
+      "biome": "ocean+frozen+deep",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    },
+    {
+      "biome": "river+frozen",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    },
+    {
+      "biome": "beach+frozen",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    },
+    {
+      "biome": "cold+beach",
+      "brightness": [
+        0,
+        7
+      ],
+      "location": "seafloor",
+      "rarity": "common"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:cod",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:snow",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:sealeo",
+      "trigger": "level",
+      "level": 32
+    }
+  ],
+  "sortOrder": 477
+}

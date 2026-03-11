@@ -1,0 +1,27 @@
+---
+title: Callouts reutilizables
+description: Admonitions comunes que se pueden importar en docs MDX.
+tags:
+  - snippets
+  - mdx
+lastUpdated: "2025-11-21"
+status: stable
+lang: es
+toc: false
+order: 1
+---
+
+export const InfoCallout = () => (
+  <div className="callout callout--note">
+    <strong>Atencion:</strong> Segui la checklist al final de esta pagina antes de hacer merge.
+  </div>
+);
+
+export const WarningCallout = () => (
+  <div className="callout callout--warning">
+    <strong>Advertencia:</strong> Revisa dos veces las notas de lanzamiento del juego antes de actualizar este doc.
+  </div>
+);
+
+
+

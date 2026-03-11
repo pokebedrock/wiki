@@ -1,0 +1,23 @@
+{
+  "name": "Whirlwind",
+  "description": "The target is forced to switch out and be replaced with a random unfainted ally. Fails if the target is the last unfainted Pokemon in its party, or if the target used Ingrain previously or has the Suction Cups Ability.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Normal",
+  "priority": -6,
+  "target": "normal",
+  "flags": [
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    "The move plays its animation when used on an ally.",
+    null,
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Activates the Wind Power and Wind Rider Abilities."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 929
+}

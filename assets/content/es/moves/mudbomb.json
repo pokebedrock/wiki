@@ -1,0 +1,19 @@
+{
+  "name": "Mud Bomb",
+  "description": "Has a 30% chance to lower the target's accuracy by 1 stage.",
+  "accuracy": 85,
+  "pp": 10,
+  "category": "Special",
+  "type": "Ground",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 557
+}

@@ -1,0 +1,145 @@
+{
+  "name": "Applin",
+  "description": "As soon as it’s born, it burrows into an apple. Not only does the apple serve as its food source, but the flavor of the fruit determines its evolution.",
+  "types": [
+    "grass",
+    "dragon"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Ripen",
+    "1": "Gluttony",
+    "H": "Bulletproof"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 52,
+  "base_happiness": 50,
+  "growth_rate": "erratic",
+  "level_range": [
+    10,
+    25
+  ],
+  "moves": [
+    {
+      "move": "astonish",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "defensecurl",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "dracometeor",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "grassyglide",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "pounce",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "recycle",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "rollout",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "suckerpunch",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "withdraw",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    }
+  ],
+  "stats": {
+    "hp": 40,
+    "atk": 40,
+    "def": 80,
+    "spa": 40,
+    "spd": 40,
+    "spe": 20
+  },
+  "spawn_rules": [
+    {
+      "biome": "animal+forest",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "ultra-rare"
+    },
+    {
+      "biome": "animal+forest+mega+monster+overworld+rare+taiga",
+      "brightness": [
+        7,
+        15
+      ],
+      "location": "land",
+      "rarity": "rare"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:apple",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:sugar",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:flapple",
+      "trigger": "useItem",
+      "item": "pokeb:tart_apple"
+    },
+    {
+      "typeId": "pokemon:appletun",
+      "trigger": "useItem",
+      "item": "pokeb:sweet_apple"
+    },
+    {
+      "typeId": "pokemon:dipplin",
+      "trigger": "useItem",
+      "item": "pokeb:syrupy_apple"
+    }
+  ],
+  "sortOrder": 1093
+}

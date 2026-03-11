@@ -1,0 +1,19 @@
+{
+  "name": "Lunar Dance",
+  "description": "The user faints, and if the Pokemon brought out to replace it does not have full HP or PP, or has a non-volatile status condition, its HP and PP are fully restored along with having any non-volatile status condition cured. The replacement is sent out at the end of the turn, and the healing happens before hazards take effect. This effect continues until a Pokemon that meets any of these conditions switches in at the user's position or gets swapped into the position with Ally Switch. Fails if the user is the last unfainted Pokemon in its party.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "When used by a Pokemon, other Pokemon with the Ability Dancer can attempt to execute the same move.",
+    "Prevented from being executed or selected during Heal Block's effect.",
+    null
+  ],
+  "contestType": "Beautiful",
+  "zMove": {},
+  "sortOrder": 483
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Magic Room",
+  "description": "For 5 turns, the held items of all active Pokemon have no effect. An item's effect of causing forme changes is unaffected, but any other effects from such items are negated. During the effect, Fling and Natural Gift are prevented from being used by all active Pokemon. If this move is used during the effect, the effect ends.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "all",
+  "flags": [
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 491
+}

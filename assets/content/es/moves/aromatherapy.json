@@ -1,0 +1,20 @@
+{
+  "name": "Aromatherapy",
+  "description": "Every Pokemon in the user's party is cured of its non-volatile status condition. Active Pokemon with the Sap Sipper Ability are not cured, unless they are the user.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Status",
+  "type": "Grass",
+  "priority": 0,
+  "target": "allyTeam",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    "Can target a Pokemon positioned anywhere in a Triple Battle.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {
+    "effect": "heal"
+  },
+  "sortOrder": 30
+}

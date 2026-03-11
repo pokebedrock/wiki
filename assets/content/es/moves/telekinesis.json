@@ -1,0 +1,21 @@
+{
+  "name": "Telekinesis",
+  "description": "For 3 turns, the target cannot avoid any attacks made against it, other than OHKO moves, as long as it remains active. During the effect, the target is immune to Ground-type attacks and the effects of Spikes, Toxic Spikes, Sticky Web, and the Arena Trap Ability as long as it remains active. If the target uses Baton Pass, the replacement will gain the effect. Ingrain, Smack Down, Thousand Arrows, and Iron Ball override this move if the target is under any of their effects. Fails if the target is already under this effect or the effects of Ingrain, Smack Down, or Thousand Arrows. The target is immune to this move on use if its species is Diglett, Dugtrio, Alolan Diglett, Alolan Dugtrio, Sandygast, Palossand, or Gengar while Mega-Evolved. Mega Gengar cannot be under this effect by any means.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected during Gravity's effect.",
+    "The move plays its animation when used on an ally.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 860
+}

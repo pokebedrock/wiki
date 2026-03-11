@@ -1,0 +1,366 @@
+{
+  "name": "Rolycoly",
+  "description": "It can race around like a unicycle, even on rough, rocky terrain. Burning coal sustains it.",
+  "types": [
+    "rock"
+  ],
+  "tags": [],
+  "genderRatio": {
+    "M": 0,
+    "F": 0
+  },
+  "abilities": {
+    "0": "Steam Engine",
+    "1": "Heatproof",
+    "H": "Flash Fire"
+  },
+  "evYield": {
+    "hp": 0,
+    "atk": 0,
+    "def": 1,
+    "spa": 0,
+    "spd": 0,
+    "spe": 0
+  },
+  "base_experience": 48,
+  "base_happiness": 50,
+  "growth_rate": "medium_slow",
+  "level_range": [
+    7,
+    16
+  ],
+  "moves": [
+    {
+      "move": "ancientpower",
+      "learnMethod": "level-up",
+      "level_learned_at": 20
+    },
+    {
+      "move": "attract",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "block",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "bodyslam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "bulldoze",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "curse",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "dig",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "endure",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "explosion",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "facade",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "gyroball",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatcrash",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "heatcrash",
+      "learnMethod": "level-up",
+      "level_learned_at": 35
+    },
+    {
+      "move": "incinerate",
+      "learnMethod": "level-up",
+      "level_learned_at": 25
+    },
+    {
+      "move": "irondefense",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "ironhead",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "meteorbeam",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "meteorbeam",
+      "learnMethod": "tutor"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "mudslap",
+      "learnMethod": "egg"
+    },
+    {
+      "move": "powergem",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "protect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rapidspin",
+      "learnMethod": "level-up",
+      "level_learned_at": 5
+    },
+    {
+      "move": "reflect",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rest",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockblast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rockblast",
+      "learnMethod": "level-up",
+      "level_learned_at": 40
+    },
+    {
+      "move": "rockpolish",
+      "learnMethod": "level-up",
+      "level_learned_at": 15
+    },
+    {
+      "move": "rockslide",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "rocktomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "round",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandstorm",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sandtomb",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "selfdestruct",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "sleeptalk",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "smackdown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "smackdown",
+      "learnMethod": "level-up",
+      "level_learned_at": 10
+    },
+    {
+      "move": "smokescreen",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "snore",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "spikes",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "stealthrock",
+      "learnMethod": "level-up",
+      "level_learned_at": 30
+    },
+    {
+      "move": "stoneedge",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "substitute",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "tackle",
+      "learnMethod": "level-up",
+      "level_learned_at": 1
+    },
+    {
+      "move": "takedown",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "temperflare",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "terablast",
+      "learnMethod": "machine"
+    },
+    {
+      "move": "willowisp",
+      "learnMethod": "machine"
+    }
+  ],
+  "stats": {
+    "hp": 30,
+    "atk": 40,
+    "def": 50,
+    "spa": 40,
+    "spd": 50,
+    "spe": 30
+  },
+  "spawn_rules": [
+    {
+      "biome": "savanna",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "mesa",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+extreme_hills",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "extreme_hills",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "savanna_mutated",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "savanna_plateau",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "land",
+      "rarity": "rare"
+    },
+    {
+      "biome": "animal+savanna",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "uncommon"
+    },
+    {
+      "biome": "mesa",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "uncommon"
+    },
+    {
+      "biome": "animal+extreme_hills",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "uncommon"
+    },
+    {
+      "biome": "extreme_hills",
+      "brightness": [
+        null,
+        null
+      ],
+      "location": "underground",
+      "rarity": "uncommon"
+    }
+  ],
+  "drops": [
+    {
+      "typeId": "minecraft:coal",
+      "countRange": [
+        1,
+        2
+      ],
+      "chance": 66
+    },
+    {
+      "typeId": "minecraft:blaze_powder",
+      "countRange": [
+        1,
+        1
+      ],
+      "chance": 33
+    }
+  ],
+  "evolutions": [
+    {
+      "typeId": "pokemon:carkol",
+      "trigger": "level",
+      "level": 18
+    }
+  ],
+  "sortOrder": 1089
+}

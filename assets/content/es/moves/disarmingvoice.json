@@ -1,0 +1,20 @@
+{
+  "name": "Disarming Voice",
+  "description": "This move does not check accuracy.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Special",
+  "type": "Fairy",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Has no effect on Pokemon with the Ability Soundproof.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 170
+}

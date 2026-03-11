@@ -1,0 +1,15 @@
+{
+  "name": "Stoked Sparksurfer",
+  "description": "Has a 100% chance to paralyze the target.",
+  "accuracy": true,
+  "pp": 1,
+  "category": "Special",
+  "type": "Electric",
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "contestType": "Cool",
+  "isZ": "aloraichiumz",
+  "zMove": {},
+  "sortOrder": 807
+}

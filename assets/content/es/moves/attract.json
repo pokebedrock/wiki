@@ -1,0 +1,22 @@
+{
+  "name": "Attract",
+  "description": "Causes the target to become infatuated, making it unable to attack 50% of the time. Fails if both the user and the target are the same gender, if either is genderless, or if the target is already infatuated. The effect ends when either the user or the target is no longer active. Pokemon with the Oblivious Ability or protected by the Aroma Veil Ability are immune.",
+  "accuracy": 100,
+  "pp": 15,
+  "category": "Status",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Bounced back to the original user by Magic Coat or the Ability Magic Bounce.",
+    "Can be copied by Mirror Move.",
+    "Ignores a target's substitute.",
+    null
+  ],
+  "contestType": "Cute",
+  "zMove": {
+    "effect": "clearnegativeboost"
+  },
+  "sortOrder": 37
+}

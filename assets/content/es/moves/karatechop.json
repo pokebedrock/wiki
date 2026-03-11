@@ -1,0 +1,19 @@
+{
+  "name": "Karate Chop",
+  "description": "Has a higher chance for a critical hit.",
+  "accuracy": 100,
+  "pp": 25,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 451
+}

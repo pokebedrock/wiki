@@ -1,0 +1,19 @@
+{
+  "name": "Egg Bomb",
+  "description": "",
+  "accuracy": 75,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Normal",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    " Has no effect on Pokemon with the Ability Bulletproof."
+  ],
+  "contestType": "Cute",
+  "zMove": {},
+  "sortOrder": 212
+}

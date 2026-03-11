@@ -1,0 +1,16 @@
+{
+  "name": "Take Heart",
+  "description": "The user cures its non-volatile status condition. Raises the user's Special Attack and Special Defense by 1 stage.",
+  "accuracy": true,
+  "pp": 15,
+  "category": "Status",
+  "type": "Psychic",
+  "priority": 0,
+  "target": "self",
+  "flags": [
+    "Can be stolen from the original user and instead used by another Pokemon using Snatch.",
+    null
+  ],
+  "zMove": {},
+  "sortOrder": 852
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Thunderclap",
+  "description": "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user.",
+  "accuracy": 100,
+  "pp": 5,
+  "category": "Special",
+  "type": "Electric",
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 874
+}

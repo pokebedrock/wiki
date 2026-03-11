@@ -1,0 +1,21 @@
+{
+  "name": "Seismic Toss",
+  "description": "Deals damage to the target equal to the user's level.",
+  "accuracy": 100,
+  "pp": 20,
+  "category": "Physical",
+  "type": "Fighting",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Makes contact.",
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle.",
+    null
+  ],
+  "damage": "level",
+  "contestType": "Tough",
+  "zMove": {},
+  "sortOrder": 719
+}

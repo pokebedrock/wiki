@@ -1,0 +1,18 @@
+{
+  "name": "Precipice Blades",
+  "description": "No additional effect.",
+  "accuracy": 85,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Ground",
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    "Prevented from being executed or selected in a Sky Battle."
+  ],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 629
+}

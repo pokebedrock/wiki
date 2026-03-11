@@ -1,0 +1,14 @@
+{
+  "name": "Max Wyrmwind",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, the Attack of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+  "accuracy": true,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 520
+}

@@ -1,0 +1,14 @@
+{
+  "name": "G-Max Meltdown",
+  "description": "Power is equal to the base move's Max Move power. If this move is successful, the effect of Torment begins for each Pokemon on the opposing side, even if they have a substitute.",
+  "accuracy": true,
+  "pp": 5,
+  "category": "Physical",
+  "type": "Steel",
+  "priority": 0,
+  "target": "adjacentFoe",
+  "flags": [],
+  "contestType": "Cool",
+  "zMove": {},
+  "sortOrder": 326
+}

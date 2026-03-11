@@ -1,0 +1,21 @@
+{
+  "name": "Mirror Move",
+  "description": "The user uses the last move used by the target. The copied move is used against that target, if possible. Fails if the target has not made a move, or if the last move used cannot be copied by this move.",
+  "accuracy": true,
+  "pp": 20,
+  "category": "Status",
+  "type": "Flying",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Encore fails if target used this move.",
+    "Cannot be selected by Sleep Talk.",
+    "Cannot be selected by Assist.",
+    "Cannot be selected by Copycat.",
+    "Cannot be copied by Mimic.",
+    "Cannot be repeated by Instruct."
+  ],
+  "contestType": "Clever",
+  "zMove": {},
+  "sortOrder": 545
+}

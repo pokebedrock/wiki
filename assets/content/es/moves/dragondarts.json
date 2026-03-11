@@ -1,0 +1,18 @@
+{
+  "name": "Dragon Darts",
+  "description": "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. In Double Battles, this move attempts to hit the targeted Pokemon and its ally once each. If hitting one of these Pokemon would be prevented by immunity, protection, semi-invulnerability, an Ability, or accuracy, it attempts to hit the other Pokemon twice instead. If this move is redirected, it hits that target twice.",
+  "accuracy": 100,
+  "pp": 10,
+  "category": "Physical",
+  "type": "Dragon",
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+    "Blocked by Detect, Protect, Spiky Shield, and if not a Status move, King's Shield.",
+    "Can be copied by Mirror Move.",
+    null,
+    "Cannot be made to hit twice via Parental Bond."
+  ],
+  "zMove": {},
+  "sortOrder": 190
+}
