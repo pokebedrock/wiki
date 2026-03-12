@@ -4,7 +4,7 @@ description: Detalles para ejecutar el flujo de indexacion de Meilisearch localm
 tags:
   - reference
   - search
-lastUpdated: "2026-03-11"
+lastUpdated: "2026-03-12"
 status: beta
 lang: es
 toc: true
@@ -37,12 +37,17 @@ order: 2
 | `MEILISEARCH_URL` | URL base de la instancia autohospedada de Meilisearch |
 | `MEILISEARCH_KEY` | Clave de admin o documents con permisos de escritura |
 
-## Configuracion de CI
+## Configuracion opcional de CI
 
 | Secret | Descripcion |
 | --- | --- |
-| `WIKI_SEARCH_SYNC_URL` | URL HTTPS publica del endpoint de sync del backend |
-| `WIKI_SEARCH_SYNC_TOKEN` | Token bearer compartido validado por el backend antes de importar documentos |
+| `WIKI_SEARCH_SYNC_URL` | URL HTTPS publica opcional del endpoint de sync del backend |
+| `WIKI_SEARCH_SYNC_TOKEN` | Token bearer compartido opcional validado por el backend antes de importar documentos |
+
+Cuando ambos secrets estan configurados, el workflow sincroniza
+`build/search-indices.json` con el backend del sitio. Cuando falta alguno, el
+workflow igual construye los payloads de busqueda y sube los artifacts generados
+para que la ejecucion siga siendo depurable.
 
 ## Ejecucion local
 
@@ -60,9 +65,12 @@ indices remotos cuando las variables de entorno estan definidas.
 El flujo de produccion por defecto no expone Meilisearch publicamente:
 
 1. GitHub Actions construye `build/search-index.json` y `build/search-indices.json`.
-2. El workflow hace `POST` de `build/search-indices.json` al backend del sitio.
-3. El backend valida `WIKI_SEARCH_SYNC_TOKEN`.
-4. El backend se conecta a `http://meilisearch:7700` dentro del cluster y reemplaza:
+2. Si `WIKI_SEARCH_SYNC_URL` y `WIKI_SEARCH_SYNC_TOKEN` estan configurados,
+   el workflow hace `POST` de `build/search-indices.json` al backend del sitio.
+3. Cuando esos secrets todavia no estan configurados, el workflow omite el paso
+   de sync del backend y aun asi sube los artifacts generados.
+4. Si el sync se ejecuta, el backend valida `WIKI_SEARCH_SYNC_TOKEN`.
+5. Luego el backend se conecta a `http://meilisearch:7700` dentro del cluster y reemplaza:
    - `wiki-docs`
    - `wiki-pokemon`
    - `wiki-moves`
