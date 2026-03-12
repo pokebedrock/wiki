@@ -19,7 +19,7 @@ npm ci
 
 1. Create a feature branch from `main`.
 2. Commit focused changes (docs + assets + metadata).
-3. Run `npm run check`.
+3. Run `npm run ci`.
 4. Open a PR using the template; link any related issues.
 5. At least one CODEOWNER review is required.
 
@@ -76,7 +76,7 @@ npm run lint
 npm run lint:links
 ```
 
-CI runs the same checks plus link validation and search indexing, so keeping a clean local run prevents surprises.
+`npm run ci` wraps these checks and also verifies generated search/manifests are in sync, so running it before push best matches GitHub CI.
 
 ## Reporting Issues
 
