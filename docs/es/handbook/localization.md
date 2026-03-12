@@ -25,7 +25,7 @@ Mantene los slugs iguales entre idiomas para que el mapeo de rutas y los alterna
 1. **Abri un issue**: usa la plantilla "Content Request" y marcala como tarea de traduccion.
 2. **Crea una rama**: `docs/<lang>/<slug>`.
 3. **Sincroniza con ingles**: compara contra `docs/en/...` para incluir cambios recientes.
-4. **Ejecuta linting**: `npm run lint`.
+4. **Ejecuta validacion**: `npm run ci`.
 5. **Pedi revision**: etiqueta a un maintainer que hable el idioma (si existe) y al owner del tema.
 
 ## Metadatos de idioma

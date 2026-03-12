@@ -71,11 +71,12 @@ lang: en
 Run the following before pushing:
 
 ```bash
-npm run lint
-npm run lint:links
+npm run ci
 ```
 
-`npm run ci` wraps these checks and also verifies generated search/manifests are in sync, so running it before push best matches GitHub CI.
+`npm run ci` runs the same lint + link validation steps as GitHub CI and also
+verifies generated search/manifests are in sync, so it is the best local pre-push
+check.
 
 ## Reporting Issues
 
