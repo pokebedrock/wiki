@@ -19,9 +19,9 @@ order: 3
 
 ## Pasos
 
-1. `npm install`
+1. `npm ci`
 2. Edita los archivos en `docs/`.
-3. Ejecuta `npm run lint` y `npm run lint:links`.
+3. Ejecuta `npm run ci`.
 4. Abre un PR y añade la etiqueta `language:es`.
 
 ## Revisión
