@@ -4,7 +4,7 @@ description: Details for running the Meilisearch indexing workflow locally and i
 tags:
   - reference
   - search
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-11"
 status: beta
 lang: en
 toc: true
@@ -24,8 +24,9 @@ order: 2
     for fast frontend move list/navigation
   - `build/content/en/move-learners-manifest.json` and
     `build/content/es/move-learners-manifest.json` for fast move detail learner lookups
-- If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes the payload
-  directly to the configured index (defaults to `wiki-docs`).
+- If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes each
+  index payload (`wiki-docs`, `wiki-pokemon`, and `wiki-moves`) directly to the
+  corresponding Meilisearch index.
 - `.github/workflows/search-index.yml` runs the script on `main` and nightly, then uploads
   the JSON payload to the website backend's protected sync endpoint so Meilisearch can stay private.
 
@@ -35,7 +36,6 @@ order: 2
 | --- | --- |
 | `MEILISEARCH_URL` | Base URL of the self-hosted Meilisearch instance |
 | `MEILISEARCH_KEY` | Admin or documents key with write access |
-| `MEILISEARCH_INDEX` | Optional override of the index UID |
 
 ## CI Settings
 
