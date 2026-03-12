@@ -13,15 +13,15 @@ order: 2
 
 ## Install Dependencies
 
-<ShellBlock command="npm install" />
+<ShellBlock command="npm ci" />
 
 ## Run Linting
 
-<ShellBlock command="npm run lint" />
+<ShellBlock command="npm run ci" />
 
-The consolidated lint task runs markdown, frontmatter, and asset validation once per
-execution. Re-run it after editing files; there's no watch flag wired up for the
-current tooling stack.
+The CI task runs markdown, frontmatter, image validation, link checks, and generated
+search/manifests drift checks in one pass. Re-run it after editing files; there's no
+watch flag wired up for the current tooling stack.
 
 ## Preview
 
