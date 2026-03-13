@@ -15,7 +15,7 @@ lang: es
 
 - `npm ci`
 - `npm run ci`
-- `npm run audit:prod`
+- verificar que la validacion local pase mediante el gate estandar del repo (incluye checks de search/manifests generados)
 - verificar que cambios en docs tengan frontmatter y media validos
 - verificar que los secrets de CI de search-index existan en el repo objetivo
 
