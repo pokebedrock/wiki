@@ -6,9 +6,8 @@
 
 ## Testing
 
-- [ ] `npm run lint`
-- [ ] `npm run lint:links`
-- [ ] `npm run build:search` (when touching navigation or metadata)
+- [ ] `npm run ci`
+- [ ] Generated search/manifests reviewed if navigation or metadata changed
 
 ## Notes
 
