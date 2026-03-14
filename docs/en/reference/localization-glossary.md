@@ -4,7 +4,7 @@ description: Shared terminology to keep translations consistent across languages
 tags:
   - reference
   - localization
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-14"
 status: draft
 lang: en
 toc: true
