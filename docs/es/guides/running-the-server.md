@@ -5,7 +5,7 @@ tags:
   - guide
   - localization
   - es
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-19"
 status: beta
 lang: es
 toc: true
@@ -22,11 +22,15 @@ order: 3
 1. `npm ci`
 2. Edita los archivos en `docs/`.
 3. Ejecuta `npm run ci`.
-4. Abre un PR y añade la etiqueta `language:es`.
+4. Abre un PR, explica que se trata de una traducción al español y solicita
+   revisión de `@pokebedrock/wiki-maintainers`.
 
 ## Revisión
 
-Marca el estado como `beta` hasta que otra persona revise la traducción.
+- Mantén `lang: es` en el frontmatter y deja `status: beta` hasta que otra
+  persona revise la traducción.
+- Describe cualquier contexto de localización (términos nuevos, capturas, etc.)
+  en la descripción del PR para que los revisores tengan el mismo contexto.
 
 
 
