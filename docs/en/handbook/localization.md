@@ -4,7 +4,7 @@ description: How to structure translated docs, coordinate translators, and revie
 tags:
   - handbook
   - localization
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-03-20"
 status: stable
 lang: en
 toc: true
@@ -43,7 +43,7 @@ Use `draft` or `beta` for translations that still need native review.
 ## Glossary
 
 Maintain terminology consistency by referencing the shared glossary in
-`docs/reference/localization-glossary.md` (to be populated as translations expand).
+`docs/en/reference/localization-glossary.md` (to be populated as translations expand).
 When you introduce a new term, note it in the PR so others can update the glossary.
 
 

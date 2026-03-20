@@ -4,7 +4,7 @@ description: How GitHub pushes trigger the backend webhook and keep the public s
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-20"
 status: beta
 lang: en
 toc: true
@@ -32,13 +32,15 @@ The backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. Se
 
 ## Local Testing
 
-Use the sample payload in `docs/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.
+Use the sample payload in `docs/en/reference/webhook-example.json` (or the localized
+version in `docs/es/reference/webhook-example.json`) with `curl` or
+`Invoke-WebRequest`.
 
 ```powershell
 Invoke-WebRequest `
   -Uri https://api.pokebedrock.com/wiki/webhook `
   -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/reference/webhook-example.json -Raw) `
+  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `
   -Method Post
 ```
 

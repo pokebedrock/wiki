@@ -4,7 +4,7 @@ description: Como estructurar documentacion traducida, coordinar traductores y r
 tags:
   - handbook
   - localization
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-03-20"
 status: stable
 lang: es
 toc: true
@@ -42,7 +42,7 @@ Usa `draft` o `beta` para traducciones que todavia necesiten revision nativa.
 ## Glosario
 
 Manten consistencia terminologica usando el glosario compartido en
-`docs/reference/localization-glossary.md` (se completa a medida que crecen las traducciones).
+`docs/es/reference/localization-glossary.md` (se completa a medida que crecen las traducciones).
 Cuando introduzcas un termino nuevo, anotarlo en la PR para que otros actualicen el glosario.
 
 

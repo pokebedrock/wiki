@@ -4,7 +4,7 @@ description: Guia para versionar y mantener changelog de actualizaciones mayores
 tags:
   - handbook
   - versioning
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-20"
 status: stable
 lang: es
 toc: true
@@ -28,7 +28,7 @@ incompatible. Las ediciones de texto rutinarias permanecen en la version activa.
 
 1. Preparar cambios bajo `docs/`.
 2. Cuando la actualizacion salga, copiar la carpeta a `versions/vX.Y/` y congelar.
-3. Actualizar `docs/reference/changelog.md` con puntos clave y links.
+3. Actualizar `docs/es/reference/changelog.md` con puntos clave y links.
 4. Asegurar que el indexado de busqueda excluya versiones archivadas salvo que se solicite explicitamente (configurar filtro en Meilisearch).
 
 ## Changelog
@@ -41,7 +41,7 @@ Usar encabezados semanticos:
 - ...
 ```
 
-El archivo `docs/reference/changelog.md` mantiene el registro publico sincronizado con los lanzamientos del juego.
+El archivo `docs/es/reference/changelog.md` mantiene el registro publico sincronizado con los lanzamientos del juego.
 
 
 
