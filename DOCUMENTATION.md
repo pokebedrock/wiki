@@ -51,6 +51,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 - `package.json`:
   - Requires Node `>=20` and npm `>=10`.
   - Defines scripts for markdown lint, frontmatter validation, image checks, link checks, combined checks, and search build.
+  - `check:generated` builds search/manifests and fails if tracked JSON drifts from the committed baseline.
   - Uses TypeScript + Node scripts (`scripts/*.ts`) compiled to `build/scripts`.
 - `package-lock.json`: lockfile for reproducible dependency resolution.
 - `tsconfig.json`: TypeScript config for script source (`scripts/**/*.ts`) with `noEmit: true`.
@@ -220,6 +221,8 @@ Media policy from docs/scripts:
 
 - `.git/`: local repository internals; not part of authored documentation.
 - `node_modules/`: installed dependencies from `package-lock.json`.
-- `build/`: generated JS/source maps and generated search index output.
+- `build/`: compiled tooling lives under `build/scripts/` (ignored), while search fallback
+  artifacts (`build/search-index.json`, `build/search-indices.json`, and
+  `build/content/<locale>/*-manifest.json`) are tracked to catch drift.
 
 These directories are expected runtime artifacts for development/CI, not hand-authored wiki source.
