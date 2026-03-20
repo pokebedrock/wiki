@@ -20,6 +20,7 @@
     "lint:links": "linkinator \"docs/**/*.{md,mdx}\" --config linkinator.config.json",
     "lint": "npm run build:scripts && npm run lint:md && npm run lint:frontmatter:run && npm run lint:images:run",
     "check": "npm run lint && npm run lint:links",
+    "build": "npm run build:search",
     "content:split": "npm run build:scripts && node build/scripts/split-content-data.js",
     "build:search": "npm run build:scripts && npm run build:search:run",
     "build:search:run": "node build/scripts/build-search-index.js",
