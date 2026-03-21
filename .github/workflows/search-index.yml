@@ -33,8 +33,6 @@ jobs:
       - run: npm ci
       - name: Build search index
         run: npm run build:search
-        env:
-          MEILISEARCH_INDEX: wiki-docs
       - name: Sync search index via website backend
         env:
           WIKI_SEARCH_SYNC_URL: ${{ secrets.WIKI_SEARCH_SYNC_URL }}
