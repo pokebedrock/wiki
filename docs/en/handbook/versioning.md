@@ -4,7 +4,7 @@ description: Guidelines for rolling versions and changelogging major documentati
 tags:
   - handbook
   - versioning
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-03-21"
 status: stable
 lang: en
 toc: true
@@ -27,7 +27,7 @@ We version docs when the gameplay experience or public APIs change in incompatib
 
 1. Prepare changes under `docs/`.
 2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.
-3. Update `docs/reference/changelog.md` with highlights and links.
+3. Update `docs/en/reference/changelog.md` with highlights and links.
 4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).
 
 ## Changelog
@@ -40,7 +40,7 @@ Use semantic headings:
 - ...
 ```
 
-The `docs/reference/changelog.md` file keeps the public record synchronized with in-game releases.
+The `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.
 
 
 
