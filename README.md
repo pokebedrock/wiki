@@ -37,8 +37,8 @@ consistent before syncing to the public website.
 | `npm run lint:images` | Ensures relative assets exist, are `webp/svg`, and include alt text |
 | `npm run lint:links` | Crawls docs with Linkinator for broken links |
 | `npm run lint` | Runs markdownlint + frontmatter + image checks |
-| `npm run check` | Full suite (`lint` + link check) |
-| `npm run ci` | Launch gate (`lint`, links, search build, generated-file drift check) |
+| `npm run check` | Authoring checks (`lint` + link check) |
+| `npm run ci` | CI gate (`lint`, links, search build, generated-file drift check) |
 | `npm run build` | Default build entrypoint (aliases `build:search`) |
 | `npm run audit:prod` | Audits production dependency graph |
 | `npm run build:search` | Generates search payloads plus frontend content manifests in `build/content/<locale>/` |
@@ -46,11 +46,12 @@ consistent before syncing to the public website.
 
 ## CI & Deployment
 
-- `ci.yml` runs lint + validation + link checks for every PR.
-- `search-index.yml` builds `search-index.json` and `search-indices.json` on pushes to `main`
-  and posts the multi-index payload to the website backend's protected sync endpoint, which
-  reindexes Meilisearch from inside the cluster.
-- The same build also writes content manifests used by the frontend for fast wiki content
+- `ci.yml` runs `npm run ci` plus `npm run audit:prod` for every PR and push.
+- `search-index.yml` builds the search payloads on pushes to `main`, uploads both the
+  search JSON files and generated frontend content manifests as the workflow artifact, and
+  posts `build/search-indices.json` to the website backend's protected sync endpoint so the
+  backend can reindex Meilisearch from inside the cluster.
+- The same build writes content manifests used by the frontend for fast wiki content
   list/detail navigation:
   - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`
   - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`
