@@ -4,7 +4,7 @@ description: Release checks for search-index generation and website sync.
 tags:
   - reference
   - release
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-03-22"
 status: stable
 lang: en
 ---
@@ -17,15 +17,17 @@ lang: en
 - `npm run ci`
 - `npm run audit:prod`
 - verify docs changes have valid frontmatter and media
-- verify search-index CI secrets are present for the target repo
+- verify search-index CI secrets are present if website-backend sync is enabled for the target repo
 
 ## Publish / Sync
 
 1. Merge docs changes to `main`.
 2. Run the normal CI workflow.
 3. Run the search-index workflow if a manual rebuild is needed.
-4. Confirm `build/search-index.json` and `build/search-indices.json` were produced.
-5. Confirm the backend sync endpoint accepted the new payload.
+4. Confirm `build/search-index.json`, `build/search-indices.json`, and the
+   generated frontend content manifests under `build/content/<locale>/` were
+   produced.
+5. If website-backend sync is enabled, confirm the backend sync endpoint accepted the new payload.
 
 ## Post-Publish
 
