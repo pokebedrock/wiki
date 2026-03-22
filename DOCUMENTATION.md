@@ -196,11 +196,12 @@ Media policy from docs/scripts:
 2. `npm run lint:frontmatter` for schema compliance.
 3. `npm run lint:images` for media checks.
 4. `npm run lint:links` for broken links.
-5. `npm run check` to run full suite.
+5. `npm run check` to run the fast local validation suite (`lint` + link checks).
+6. `npm run ci` to mirror the main generated-artifact gate before opening a PR.
 
 ### CI workflow
 
-- `wiki-ci` repeats lint + link checks on push/PR.
+- `wiki-ci` runs `npm run ci` and `npm run audit:prod` on push/PR.
 - `wiki-search` builds search index on main/schedule/manual and publishes artifact.
 
 ### Search workflow
