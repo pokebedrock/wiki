@@ -74,8 +74,8 @@ de busqueda y el frontend puedan comparar entradas individuales.
 .github/
   ISSUE_TEMPLATE/         # Formularios de bug + solicitud de contenido
   workflows/
-    ci.yml                # Lint + chequeo de links en PRs
-    search-index.yml      # Construye y sube docs de busqueda
+    ci.yml                # Ejecuta npm run ci + npm run audit:prod en push/PR
+    search-index.yml      # Construye payloads de busqueda + manifests frontend
   PULL_REQUEST_TEMPLATE.md
 CODEOWNERS
 ```
