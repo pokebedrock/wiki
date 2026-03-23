@@ -4,7 +4,7 @@ description: Verificaciones de release para generacion del search-index y sincro
 tags:
   - reference
   - release
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-03-23"
 status: stable
 lang: es
 ---
@@ -15,7 +15,6 @@ lang: es
 
 - `npm ci`
 - `npm run ci`
-- `npm run audit:prod`
 - verificar que cambios en docs tengan frontmatter y media validos
 - verificar que los secrets de CI de search-index existan en el repo objetivo
 

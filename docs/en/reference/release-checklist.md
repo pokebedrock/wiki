@@ -4,7 +4,7 @@ description: Release checks for search-index generation and website sync.
 tags:
   - reference
   - release
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-03-23"
 status: stable
 lang: en
 ---
@@ -15,7 +15,6 @@ lang: en
 
 - `npm ci`
 - `npm run ci`
-- `npm run audit:prod`
 - verify docs changes have valid frontmatter and media
 - verify search-index CI secrets are present for the target repo
 
