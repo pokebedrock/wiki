@@ -74,8 +74,8 @@ frontend can diff individual entries.
 .github/
   ISSUE_TEMPLATE/         # Bug + content request forms
   workflows/
-    ci.yml                # Lint + link-check on PRs
-    search-index.yml      # Builds and uploads search docs
+    ci.yml                # Runs npm run ci + npm run audit:prod on push/PR
+    search-index.yml      # Builds search payloads + frontend manifests
   PULL_REQUEST_TEMPLATE.md
 CODEOWNERS
 ```
