@@ -16,7 +16,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 - Markdown, links, frontmatter, and media are validated via `npm` scripts.
 - CI (`.github/workflows/ci.yml`) runs on every push and pull request in this repository.
 - Search index is generated from docs by `scripts/build-search-index.ts` and can be pushed to Meilisearch.
-- Website sync behavior is specified in docs (`docs/reference/sync-to-website.md`) and example payload (`docs/reference/webhook-example.json`).
+- Website sync behavior is specified in docs (`docs/en/reference/sync-to-website.md`) and example payload (`docs/en/reference/webhook-example.json`).
 
 ## 3. Directory map
 
