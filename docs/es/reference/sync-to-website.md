@@ -32,13 +32,13 @@ El backend valida el HMAC usando el secreto compartido `WIKI_WEBHOOK_SECRET`. Ve
 
 ## Pruebas locales
 
-Usa el payload de ejemplo en `docs/reference/webhook-example.json` con `curl` o `Invoke-WebRequest`.
+Usa el payload de ejemplo en `docs/es/reference/webhook-example.json` con `curl` o `Invoke-WebRequest`.
 
 ```powershell
 Invoke-WebRequest `
   -Uri https://api.pokebedrock.com/wiki/webhook `
   -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/reference/webhook-example.json -Raw) `
+  -Body (Get-Content docs/es/reference/webhook-example.json -Raw) `
   -Method Post
 ```
 
