@@ -85,9 +85,8 @@ This file documents the tracked repository contents: purpose, structure, and the
   - Triggers on pushes to `main` for docs/content/schema/search-build paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
   - Uploads both `build/search-index.json` and `build/search-indices.json` as artifacts.
-  - Sends the multi-index JSON payload to the website backend sync endpoint using:
-    - `WIKI_SEARCH_SYNC_URL`
-    - `WIKI_SEARCH_SYNC_TOKEN`
+  - If `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are configured, sends the multi-index JSON payload to the website backend sync endpoint.
+  - If either secret is missing, skips backend sync but still uploads the generated artifacts for debugging.
   - Path filter watches `scripts/build-search-index.ts`, matching the TypeScript source emitted into `build/scripts` during CI.
 
 ## 6. Assets (`assets/`)

@@ -4,7 +4,7 @@ description: Details for running the Meilisearch indexing workflow locally and i
 tags:
   - reference
   - search
-lastUpdated: "2026-03-11"
+lastUpdated: "2026-03-12"
 status: beta
 lang: en
 toc: true
@@ -37,12 +37,17 @@ order: 2
 | `MEILISEARCH_URL` | Base URL of the self-hosted Meilisearch instance |
 | `MEILISEARCH_KEY` | Admin or documents key with write access |
 
-## CI Settings
+## Optional CI Settings
 
 | Secret | Description |
 | --- | --- |
-| `WIKI_SEARCH_SYNC_URL` | Public HTTPS URL of the backend sync endpoint |
-| `WIKI_SEARCH_SYNC_TOKEN` | Shared bearer token validated by the backend before importing documents |
+| `WIKI_SEARCH_SYNC_URL` | Optional public HTTPS URL of the backend sync endpoint |
+| `WIKI_SEARCH_SYNC_TOKEN` | Optional shared bearer token validated by the backend before importing documents |
+
+When both secrets are configured, the workflow syncs
+`build/search-indices.json` to the website backend. When either secret is missing,
+the workflow still builds the search payloads and uploads the generated artifacts
+so the run stays debuggable.
 
 ## Local Run
 
@@ -60,9 +65,10 @@ indices when env vars are set.
 The default production flow does not expose Meilisearch publicly:
 
 1. GitHub Actions builds `build/search-index.json` and `build/search-indices.json`.
-2. The workflow `POST`s `build/search-indices.json` to the website backend.
-3. The backend validates `WIKI_SEARCH_SYNC_TOKEN`.
-4. The backend connects to `http://meilisearch:7700` inside the cluster and replaces:
+2. If `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are configured, the workflow `POST`s `build/search-indices.json` to the website backend.
+3. When those secrets are not configured yet, the workflow skips the backend sync step and still uploads the generated artifacts.
+4. If sync runs, the backend validates `WIKI_SEARCH_SYNC_TOKEN`.
+5. The backend then connects to `http://meilisearch:7700` inside the cluster and replaces:
    - `wiki-docs`
    - `wiki-pokemon`
    - `wiki-moves`
