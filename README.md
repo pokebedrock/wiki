@@ -62,7 +62,7 @@ required.
   - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`
   - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`
   - `build/content/en/move-learners-manifest.json` and `build/content/es/move-learners-manifest.json`
-- A webhook (documented in `docs/reference/sync-to-website.md`) notifies the website
+- A webhook (documented in `docs/en/reference/sync-to-website.md`) notifies the website
   backend when docs change; the website fetches raw Markdown via the GitHub API and
   caches using ETags.
 

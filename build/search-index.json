@@ -1,198 +1,19 @@
 [
   {
-    "id": "en/reference/sync-to-website",
-    "slug": "reference/sync-to-website",
-    "title": "Website Sync Pipeline",
-    "description": "How GitHub pushes trigger the backend webhook and keep the public site cached.",
+    "id": "en/content/moves",
+    "slug": "content/moves",
+    "title": "Moves",
+    "description": "Browse every move with category, type, power details, and dedicated move detail pages.",
     "tags": [
-      "reference",
-      "sync"
+      "content",
+      "moves",
+      "battle"
     ],
-    "lastUpdated": "2025-11-21",
-    "status": "beta",
-    "lang": "en",
-    "order": 1,
-    "body": "\n## Overview\n\n1. Docs merge into `main`.\n2. GitHub fires a repository dispatch/webhook handled by the website backend.\n3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.\n4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.\n\n## Webhook Contract\n\n| Field | Description |\n| --- | --- |\n| `event` | Always `wiki.synced` |\n| `commit` | SHA of the merged commit |\n| `files` | Array of changed doc paths |\n| `timestamp` | ISO timestamp |\n\nThe backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See\n`website-backend/src/http/routes/webhooks.ts` for implementation details.\n\n## Local Testing\n\nUse the sample payload in `docs/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.\n\n```powershell\nInvoke-WebRequest `\n  -Uri https://api.pokebedrock.com/wiki/webhook `\n  -Headers @{ \"X-Signature\" = \"<hmac>\" } `\n  -Body (Get-Content docs/reference/webhook-example.json -Raw) `\n  -Method Post\n```\n\n## Cache Busting\n\n- Backend stores the `ETag` returned from GitHub per file.\n- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.\n- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the\n  response to help the client decide whether to fetch fresh data.\n\n\n\n"
-  },
-  {
-    "id": "en/reference/search-indexing",
-    "slug": "reference/search-indexing",
-    "title": "Search Indexing",
-    "description": "Details for running the Meilisearch indexing workflow locally and in CI.",
-    "tags": [
-      "reference",
-      "search"
-    ],
-    "lastUpdated": "2026-03-11",
-    "status": "beta",
-    "lang": "en",
-    "order": 2,
-    "body": "\n## Workflow\n\n- `scripts/build-search-index.ts` scans docs plus JSON content datasets under\n  `assets/content/<locale>/pokemon/` and `assets/content/<locale>/moves/`.\n- It writes:\n  - `build/search-index.json` for local merged search fallback\n  - `build/search-indices.json` for remote multi-index syncing\n  - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`\n    for fast frontend Pokemon list/navigation\n  - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`\n    for fast frontend move list/navigation\n  - `build/content/en/move-learners-manifest.json` and\n    `build/content/es/move-learners-manifest.json` for fast move detail learner lookups\n- If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes each\n  index payload (`wiki-docs`, `wiki-pokemon`, and `wiki-moves`) directly to the\n  corresponding Meilisearch index.\n- `.github/workflows/search-index.yml` runs the script on `main` and nightly, then uploads\n  the JSON payload to the website backend's protected sync endpoint so Meilisearch can stay private.\n\n## Required Settings\n\n| Variable | Description |\n| --- | --- |\n| `MEILISEARCH_URL` | Base URL of the self-hosted Meilisearch instance |\n| `MEILISEARCH_KEY` | Admin or documents key with write access |\n\n## CI Settings\n\n| Secret | Description |\n| --- | --- |\n| `WIKI_SEARCH_SYNC_URL` | Public HTTPS URL of the backend sync endpoint |\n| `WIKI_SEARCH_SYNC_TOKEN` | Shared bearer token validated by the backend before importing documents |\n\n## Local Run\n\n```bash\nMEILISEARCH_URL=https://search.pokebedrock.com \\\nMEILISEARCH_KEY=<docs-key> \\\nnpm run build:search\n```\n\nThe command writes the search payloads plus frontend manifests, and pushes the three remote\nindices when env vars are set.\n\n## Production Sync Endpoint\n\nThe default production flow does not expose Meilisearch publicly:\n\n1. GitHub Actions builds `build/search-index.json` and `build/search-indices.json`.\n2. The workflow `POST`s `build/search-indices.json` to the website backend.\n3. The backend validates `WIKI_SEARCH_SYNC_TOKEN`.\n4. The backend connects to `http://meilisearch:7700` inside the cluster and replaces:\n   - `wiki-docs`\n   - `wiki-pokemon`\n   - `wiki-moves`\n\n## Document Schema\n\n```json\n{\n  \"id\": \"guides/getting-started\",\n  \"slug\": \"guides/getting-started\",\n  \"title\": \"Getting Started\",\n  \"description\": \"Short summary…\",\n  \"tags\": [\"guide\", \"onboarding\"],\n  \"lastUpdated\": \"2025-11-21\",\n  \"status\": \"stable\",\n  \"lang\": \"en\",\n  \"order\": 3,\n  \"body\": \"Markdown content without frontmatter\"\n}\n```\n\nKeep descriptions ≤ 180 characters to avoid truncation in search UIs.\n\n"
-  },
-  {
-    "id": "en/reference/release-checklist",
-    "slug": "reference/release-checklist",
-    "title": "Wiki release checklist",
-    "description": "Release checks for search-index generation and website sync.",
-    "tags": [
-      "reference",
-      "release"
-    ],
-    "lastUpdated": "2026-03-06",
+    "lastUpdated": "2026-03-05",
     "status": "stable",
     "lang": "en",
     "order": 2,
-    "body": "\n# Wiki release checklist\n\n## Pre-Deploy\n\n- `npm ci`\n- `npm run ci`\n- `npm run audit:prod`\n- verify docs changes have valid frontmatter and media\n- verify search-index CI secrets are present for the target repo\n\n## Publish / Sync\n\n1. Merge docs changes to `main`.\n2. Run the normal CI workflow.\n3. Run the search-index workflow if a manual rebuild is needed.\n4. Confirm `build/search-index.json` and `build/search-indices.json` were produced.\n5. Confirm the backend sync endpoint accepted the new payload.\n\n## Post-Publish\n\n- verify wiki pages render in the frontend\n- verify wiki search returns updated docs\n- verify generated manifests exist for pokemon, moves, and move learners\n\n## Rollback\n\n- restore the last known-good wiki commit\n- rerun the search-index workflow\n- verify backend search results match the restored content\n"
-  },
-  {
-    "id": "en/reference/media-policy",
-    "slug": "reference/media-policy",
-    "title": "Media & Asset Policy",
-    "description": "Requirements for adding images, diagrams, and downloadable files to the wiki.",
-    "tags": [
-      "reference",
-      "media"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "en",
-    "order": 3,
-    "body": "\n## Formats\n\n- Prefer `webp` for raster images and `svg` for vector art.\n- Convert PNG/JPEG uploads using ImageMagick or Squoosh before committing.\n- Store diagram source files (`.drawio`, `.excalidraw`) inside `assets/diagrams`.\n\n## Size Limits\n\n- Inline images ≤ 600 KB (enforced by `npm run lint:images`).\n- Diagrams ≤ 5 MB; anything larger must use Git LFS.\n\n## Alt Text & Captions\n\n- Provide descriptive alt text that conveys the same information as the image.\n- Use captions beneath complex diagrams to add context.\n\n## Git LFS\n\nTrack large binaries:\n\n<ShellBlock command='git lfs track \"assets/diagrams/*.drawio\"\\ngit add .gitattributes assets/diagrams/example.drawio' />\n\n## Review Checklist\n\n- [ ] File stored under `assets/`\n- [ ] Alt text filled in\n- [ ] Format is `webp` or `svg`\n- [ ] Size ≤ 600 KB (inline)\n- [ ] Referenced using a relative path in docs\n\n\n\n"
-  },
-  {
-    "id": "en/reference/localization-glossary",
-    "slug": "reference/localization-glossary",
-    "title": "Localization Glossary",
-    "description": "Shared terminology to keep translations consistent across languages.",
-    "tags": [
-      "reference",
-      "localization"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "draft",
-    "lang": "en",
-    "order": 5,
-    "body": "\n| Term | Description | Notes |\n| --- | --- | --- |\n| PokéCoins | In-game premium currency | Keep untranslated |\n| Survival Pass | Seasonal rewards track | Use localized equivalent when the game provides one |\n\nAdd more rows as localization efforts expand.\n\n\n\n"
-  },
-  {
-    "id": "en/reference/changelog",
-    "slug": "reference/changelog",
-    "title": "Documentation Changelog",
-    "description": "Track significant documentation releases aligned with server updates.",
-    "tags": [
-      "reference",
-      "changelog"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "draft",
-    "lang": "en",
-    "order": 4,
-    "body": "\n## [Unreleased]\n\n- Placeholder entry for upcoming wiki improvements.\n\n## [v2.0.0] - 2025-11-21\n\n### Added\n\n- Initial wiki scaffolding, linting, and CI.\n- Search indexing workflow targeting Meilisearch.\n- Localization workflow guide with Spanish example.\n\n\n\n"
-  },
-  {
-    "id": "en/handbook/versioning",
-    "slug": "handbook/versioning",
-    "title": "Docs Versioning Strategy",
-    "description": "Guidelines for rolling versions and changelogging major documentation updates.",
-    "tags": [
-      "handbook",
-      "versioning"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "stable",
-    "lang": "en",
-    "order": 5,
-    "body": "\n## Philosophy\n\nWe version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.\n\n## Version Types\n\n| Version | Trigger | Storage |\n| --- | --- | --- |\n| `current` | Default branch | `docs/` root |\n| `vX.Y` | Major gameplay update | `versions/vX.Y/` (mirrors structure) |\n| `legacy` | Unsupported content | Archived branch or zipped export |\n\n## Release Flow\n\n1. Prepare changes under `docs/`.\n2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.\n3. Update `docs/reference/changelog.md` with highlights and links.\n4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).\n\n## Changelog\n\nUse semantic headings:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nThe `docs/reference/changelog.md` file keeps the public record synchronized with in-game releases.\n\n\n\n"
-  },
-  {
-    "id": "en/handbook/style-guide",
-    "slug": "handbook/style-guide",
-    "title": "Markdown & MDX Style Guide",
-    "description": "Authoring conventions for Markdown, MDX, admonitions, and code snippets.",
-    "tags": [
-      "handbook",
-      "style-guide"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "en",
-    "order": 3,
-    "body": "\n## Formatting Rules\n\n- Keep line length ≤ 100 characters where possible.\n- Use sentence case in headings (`## Getting started`, not `## Getting Started`).\n- Prefer ordered lists for sequences and unordered lists for supporting details.\n- Use code fences with language hints (` ```ts `) for syntax highlighting.\n\n## Admonitions\n\nUse Docusaurus-style blocks:\n\n```text\nShort actionable advice.\n```\n\nCommon options: `note`, `tip`, `warning`, `danger`. Import complex callouts from `docs/<locale>/_partials`.\n\n## Code Snippets\n\n- Favor early-return patterns in pseudo-code to mirror how we write actual services.\n- Keep snippets ≤ 30 lines. Split into multiple sections if longer.\n- Annotate shell commands with comments when the command has side effects.\n\n## Tables\n\n- Align columns using Markdown pipes.\n- Keep header labels concise; wrap long content to the next line instead of widening the table indefinitely.\n\n## MDX Imports\n\n### Auto-injected components\n\nComponents exported from `docs/<locale>/snippets/` (such as `InfoCallout`, `ShellBlock`, and\n`EarlyReturnExample`) are globally available in all MDX files. The website backend\nregisters these automatically, so you can use them without an import statement:\n\n<InfoCallout />\n\n<ShellBlock command=\"npm install\" />\n\nThese should render as components, not code.\n\n### Custom or partial imports\n\nFor components in `docs/<locale>/_partials/` or one-off snippets, use explicit imports at the top\nof the file:\n\n```mdx\nimport ServicenodeCallout from \"../_partials/ServicenodeCallout.mdx\";\n\n<ServicenodeCallout />\n```\n\nKeep imports relative to the document to avoid bundler-dependent aliases.\n\n\n\n"
-  },
-  {
-    "id": "en/handbook/repo-structure",
-    "slug": "handbook/repo-structure",
-    "title": "Repository Structure",
-    "description": "Breakdown of the wiki folders, metadata files, and how the website consumes them.",
-    "tags": [
-      "handbook",
-      "structure"
-    ],
-    "lastUpdated": "2026-03-07",
-    "status": "stable",
-    "lang": "en",
-    "order": 2,
-    "body": "\n## Docs Tree\n\n```text\ndocs/\n  en/\n    _meta.json            # Category metadata\n    handbook/             # Governance, contributor docs\n    guides/               # Tutorials and how-tos\n    reference/            # System specs & automation docs\n    snippets/             # Reusable MDX fragments\n    _partials/            # Shared MDX/Markdown includes\n  es/\n    _meta.json            # Category metadata (Spanish)\n    ...same structure as en\n```\n\nEach page needs valid frontmatter plus a stable slug. Files can be Markdown (`.md`) or\nMDX (`.mdx`). Keep identical slugs across locales, for example:\n`docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`.\n\n## Assets\n\n```text\nassets/\n  images/                 # webp/svg exports\n  diagrams/               # source files (.drawio, .excalidraw, etc.)\n  content/                # normalized JSON datasets for Pokemon + moves\n    en/\n      pokemon/            # one file per Pokemon, generated via content:split\n      moves/              # one file per move, generated via content:split\n    es/\n      pokemon/            # Spanish dataset mirror (currently copied from en)\n      moves/              # Spanish dataset mirror (currently copied from en)\n```\n\nImages referenced from docs must live under `assets/`. Diagrams keep their\neditable sources so future contributors can revise them. Structured datasets for\nPokemon and moves also live under `assets/content/` so search indexing and the\nfrontend can diff individual entries.\n\n> ℹ️ Upstream content drops land as `assets/content/wikiPokemon.json` and\n> `assets/content/wikiMoves.json`. Run `npm run content:split` to regenerate\n> the per-entry files tracked in git.\n\n## Schemas & Scripts\n\n- `schemas/frontmatter.schema.json` – JSON Schema used by `npm run lint:frontmatter`.\n- `scripts/validate-frontmatter.ts` – Ensures metadata consistency.\n- `scripts/check-images.ts` – Validates file format, size, and alt text.\n- `scripts/build-search-index.ts` – Creates search payloads plus frontend\n  content manifests in `build/content/<locale>/`, then optionally pushes the\n  docs/pokemon/moves indices to Meilisearch.\n- `scripts/split-content-data.ts` – Splits upstream `wikiPokemon.json` and\n  `wikiMoves.json` into locale-scoped directories under\n  `assets/content/<locale>/{pokemon,moves}` via\n  `npm run content:split`.\n\n## GitHub Automation\n\n```text\n.github/\n  ISSUE_TEMPLATE/         # Bug + content request forms\n  workflows/\n    ci.yml                # Lint + link-check on PRs\n    search-index.yml      # Builds and uploads search docs\n  PULL_REQUEST_TEMPLATE.md\nCODEOWNERS\n```\n\nThis repository now houses the wiki as a standalone project. All automation lives at\nthe repo root (`.github/workflows`, shared lint scripts, CODEOWNERS) so nothing\ndepends on a surrounding monorepo layout anymore. Downstream jobs (search indexing,\nlink checks, linting) only look at this repo's files, which keeps CI scopes and\nrequired secrets simple.\n"
-  },
-  {
-    "id": "en/handbook/overview",
-    "slug": "handbook/overview",
-    "title": "Wiki Overview",
-    "description": "Understand the goals, scope, and structure of the PokéBedrock wiki repository.",
-    "tags": [
-      "handbook",
-      "onboarding"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "stable",
-    "lang": "en",
-    "order": 1,
-    "body": "\nThe PokéBedrock wiki centralizes all public documentation for the project. This repository serves three purposes:\n\n1. Give contributors a predictable place to propose doc changes.\n2. Provide automation hooks (linting, link checking, search indexing).\n3. Feed the public-facing website through a sync pipeline.\n\n## Key Principles\n\n- **Source of truth** – Treat `main` as the canonical content state.\n- **Automation first** – Every rule worth documenting should be enforced by a script or CI job.\n- **Inclusive authoring** – Markdown by default, MDX when needed, and localization support that grows with the community.\n\n## Repo Highlights\n\n- Structured `docs/` tree with `_meta.json` for ordering.\n- Shared `assets/` folder with LFS guidance for large binary files.\n- JSON Schema–validated frontmatter that keeps metadata consistent.\n- GitHub workflows for linting, link validation, and Meilisearch indexing.\n- Templates for issues, PRs, and CODEOWNERS review.\n\nRefer to the other handbook pages for deep dives into structure, localization, and versioning.\n\n\n\n"
-  },
-  {
-    "id": "en/handbook/localization",
-    "slug": "handbook/localization",
-    "title": "Localization Workflow",
-    "description": "How to structure translated docs, coordinate translators, and review localized changes.",
-    "tags": [
-      "handbook",
-      "localization"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "en",
-    "order": 4,
-    "body": "\n## File Layout\n\n- Default English page: `docs/en/<category>/<slug>.md(x)` — use `.mdx` when the doc\n  needs MDX components.\n- Translated page: `docs/<lang>/<category>/<slug>.md(x)`\n- Example: `docs/en/guides/running-the-server.mdx` + `docs/es/guides/running-the-server.md`\n\nKeep slug paths identical across locales so route mapping and alternates stay stable.\n\n## Workflow\n\n1. **Open an issue** – use the \"Content Request\" template and flag it as a translation task.\n2. **Create a branch** – `docs/<lang>/<slug>`.\n3. **Sync with English** – translators diff against `docs/en/...` to ensure they include\n   fresh changes.\n4. **Run linting** – `npm run lint`.\n5. **Request review** – translators tag a maintainer that speaks the language (if available) plus any subject-matter owner.\n\n## Language Metadata\n\nInclude the `lang` property in frontmatter along with a `status` flag. Example:\n\n```yaml\nlang: es\nstatus: beta\n```\n\nUse `draft` or `beta` for translations that still need native review.\n\n## Glossary\n\nMaintain terminology consistency by referencing the shared glossary in\n`docs/reference/localization-glossary.md` (to be populated as translations expand).\nWhen you introduce a new term, note it in the PR so others can update the glossary.\n\n\n\n"
-  },
-  {
-    "id": "en/guides/running-the-server",
-    "slug": "guides/running-the-server",
-    "title": "Running the Wiki Locally",
-    "description": "Step-by-step instructions for serving docs locally in English.",
-    "tags": [
-      "guide",
-      "localization"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "beta",
-    "lang": "en",
-    "order": 2,
-    "body": "\n## Install Dependencies\n\n<ShellBlock command=\"npm ci\" />\n\n## Run Linting\n\n<ShellBlock command=\"npm run ci\" />\n\nThe CI task runs markdown, frontmatter, image validation, link checks, and generated\nsearch/manifests drift checks in one pass. Re-run it after editing files; there's no\nwatch flag wired up for the current tooling stack.\n\n## Preview\n\nUntil the website frontend wires up MDX rendering, preview using your favorite Markdown\nviewer (VS Code, Obsidian, etc.). Once the Next.js docs portal is ready, run it against\nthe `docs/` directory using the `POKEBEDROCK_WIKI_PATH` env var.\n\n\n\n"
-  },
-  {
-    "id": "en/guides/getting-started",
-    "slug": "guides/getting-started",
-    "title": "Getting Started",
-    "description": "Set up the PokéBedrock wiki repo locally and publish your first doc change.",
-    "tags": [
-      "guide",
-      "onboarding"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "stable",
-    "lang": "en",
-    "order": 1,
-    "body": "\nimport { InfoCallout } from \"../snippets/callouts.mdx\";\nimport { ShellBlock } from \"../snippets/code-blocks.mdx\";\n\n<InfoCallout />\n\n## 1. Clone & Install\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Create a Branch\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Author Content\n\n- Pick a category under `docs/`.\n- Copy the frontmatter template from `CONTRIBUTING.md`.\n- Add assets relative to the document path (for example,\n  `../../assets/images/ui.webp`).\n\nUse MDX if you need components, otherwise stick to Markdown for readability.\n\n## 4. Validate\n\n<ShellBlock command=\"npm run ci\" />\n\n## 5. Open a PR\n\nFill out the PR template, link related issues, and request a review from `@pokebedrock/wiki-maintainers`.\n\n\n\n"
+    "body": "\nThis page is rendered with a custom frontend view.\n\nUse it to browse all moves and open full detail pages for each move.\n"
   },
   {
     "id": "en/content/pokemon",
@@ -211,10 +32,205 @@
     "body": "\nThis page is rendered with a custom frontend view.\n\nUse it to browse all Pokemon entries and open detailed profiles for each one.\n"
   },
   {
-    "id": "en/content/moves",
+    "id": "en/guides/getting-started",
+    "slug": "guides/getting-started",
+    "title": "Getting Started",
+    "description": "Set up the PokéBedrock wiki repo locally and publish your first doc change.",
+    "tags": [
+      "guide",
+      "onboarding"
+    ],
+    "lastUpdated": "2025-11-21",
+    "status": "stable",
+    "lang": "en",
+    "order": 1,
+    "body": "\n<InfoCallout />\n\n## 1. Clone & Install\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Create a Branch\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Author Content\n\n- Pick a category under `docs/`.\n- Copy the frontmatter template from `CONTRIBUTING.md`.\n- Add assets relative to the document path (for example,\n  `../../assets/images/ui.webp`).\n\nUse MDX if you need components, otherwise stick to Markdown for readability.\n\n## 4. Validate\n\n<ShellBlock command=\"npm run ci\" />\n\n## 5. Open a PR\n\nFill out the PR template, link related issues, and request a review from `@pokebedrock/wiki-maintainers`.\n\n\n\n"
+  },
+  {
+    "id": "en/guides/running-the-server",
+    "slug": "guides/running-the-server",
+    "title": "Running the Wiki Locally",
+    "description": "Step-by-step instructions for serving docs locally in English.",
+    "tags": [
+      "guide",
+      "localization"
+    ],
+    "lastUpdated": "2026-03-06",
+    "status": "beta",
+    "lang": "en",
+    "order": 2,
+    "body": "\n## Install Dependencies\n\n<ShellBlock command=\"npm ci\" />\n\n## Run Linting\n\n<ShellBlock command=\"npm run ci\" />\n\nThe CI task runs markdown, frontmatter, image validation, link checks, and generated\nsearch/manifests drift checks in one pass. Re-run it after editing files; there's no\nwatch flag wired up for the current tooling stack.\n\n## Preview\n\nUntil the website frontend wires up MDX rendering, preview using your favorite Markdown\nviewer (VS Code, Obsidian, etc.). Once the Next.js docs portal is ready, run it against\nthe `docs/` directory using the `POKEBEDROCK_WIKI_PATH` env var.\n\n\n\n"
+  },
+  {
+    "id": "en/handbook/localization",
+    "slug": "handbook/localization",
+    "title": "Localization Workflow",
+    "description": "How to structure translated docs, coordinate translators, and review localized changes.",
+    "tags": [
+      "handbook",
+      "localization"
+    ],
+    "lastUpdated": "2026-03-06",
+    "status": "stable",
+    "lang": "en",
+    "order": 4,
+    "body": "\n## File Layout\n\n- Default English page: `docs/en/<category>/<slug>.md(x)` — use `.mdx` when the doc\n  needs MDX components.\n- Translated page: `docs/<lang>/<category>/<slug>.md(x)`\n- Example: `docs/en/guides/running-the-server.mdx` + `docs/es/guides/running-the-server.md`\n\nKeep slug paths identical across locales so route mapping and alternates stay stable.\n\n## Workflow\n\n1. **Open an issue** – use the \"Content Request\" template and flag it as a translation task.\n2. **Create a branch** – `docs/<lang>/<slug>`.\n3. **Sync with English** – translators diff against `docs/en/...` to ensure they include\n   fresh changes.\n4. **Run validation** – `npm run ci`.\n5. **Request review** – translators tag a maintainer that speaks the language (if available) plus any subject-matter owner.\n\n## Language Metadata\n\nInclude the `lang` property in frontmatter along with a `status` flag. Example:\n\n```yaml\nlang: es\nstatus: beta\n```\n\nUse `draft` or `beta` for translations that still need native review.\n\n## Glossary\n\nMaintain terminology consistency by referencing the shared glossary in\n`docs/en/reference/localization-glossary.md` (to be populated as translations expand).\nWhen you introduce a new term, note it in the PR so others can update the glossary.\n\n\n\n"
+  },
+  {
+    "id": "en/handbook/overview",
+    "slug": "handbook/overview",
+    "title": "Wiki Overview",
+    "description": "Understand the goals, scope, and structure of the PokéBedrock wiki repository.",
+    "tags": [
+      "handbook",
+      "onboarding"
+    ],
+    "lastUpdated": "2025-11-21",
+    "status": "stable",
+    "lang": "en",
+    "order": 1,
+    "body": "\nThe PokéBedrock wiki centralizes all public documentation for the project. This repository serves three purposes:\n\n1. Give contributors a predictable place to propose doc changes.\n2. Provide automation hooks (linting, link checking, search indexing).\n3. Feed the public-facing website through a sync pipeline.\n\n## Key Principles\n\n- **Source of truth** – Treat `main` as the canonical content state.\n- **Automation first** – Every rule worth documenting should be enforced by a script or CI job.\n- **Inclusive authoring** – Markdown by default, MDX when needed, and localization support that grows with the community.\n\n## Repo Highlights\n\n- Structured `docs/` tree with `_meta.json` for ordering.\n- Shared `assets/` folder with LFS guidance for large binary files.\n- JSON Schema–validated frontmatter that keeps metadata consistent.\n- GitHub workflows for linting, link validation, and Meilisearch indexing.\n- Templates for issues, PRs, and CODEOWNERS review.\n\nRefer to the other handbook pages for deep dives into structure, localization, and versioning.\n\n\n\n"
+  },
+  {
+    "id": "en/handbook/repo-structure",
+    "slug": "handbook/repo-structure",
+    "title": "Repository Structure",
+    "description": "Breakdown of the wiki folders, metadata files, and how the website consumes them.",
+    "tags": [
+      "handbook",
+      "structure"
+    ],
+    "lastUpdated": "2026-03-07",
+    "status": "stable",
+    "lang": "en",
+    "order": 2,
+    "body": "\n## Docs Tree\n\n```text\ndocs/\n  en/\n    _meta.json            # Category metadata\n    handbook/             # Governance, contributor docs\n    guides/               # Tutorials and how-tos\n    reference/            # System specs & automation docs\n    snippets/             # Reusable MDX fragments\n    _partials/            # Shared MDX/Markdown includes\n  es/\n    _meta.json            # Category metadata (Spanish)\n    ...same structure as en\n```\n\nEach page needs valid frontmatter plus a stable slug. Files can be Markdown (`.md`) or\nMDX (`.mdx`). Keep identical slugs across locales, for example:\n`docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`.\n\n## Assets\n\n```text\nassets/\n  images/                 # webp/svg exports\n  diagrams/               # source files (.drawio, .excalidraw, etc.)\n  content/                # normalized JSON datasets for Pokemon + moves\n    en/\n      pokemon/            # one file per Pokemon, generated via content:split\n      moves/              # one file per move, generated via content:split\n    es/\n      pokemon/            # Spanish dataset mirror (currently copied from en)\n      moves/              # Spanish dataset mirror (currently copied from en)\n```\n\nImages referenced from docs must live under `assets/`. Diagrams keep their\neditable sources so future contributors can revise them. Structured datasets for\nPokemon and moves also live under `assets/content/` so search indexing and the\nfrontend can diff individual entries.\n\n> ℹ️ Upstream content drops land as `assets/content/wikiPokemon.json` and\n> `assets/content/wikiMoves.json`. Run `npm run content:split` to regenerate\n> the per-entry files tracked in git.\n\n## Schemas & Scripts\n\n- `schemas/frontmatter.schema.json` – JSON Schema used by `npm run lint:frontmatter`.\n- `scripts/validate-frontmatter.ts` – Ensures metadata consistency.\n- `scripts/check-images.ts` – Validates file format, size, and alt text.\n- `scripts/build-search-index.ts` – Creates search payloads plus frontend\n  content manifests in `build/content/<locale>/`, then optionally pushes the\n  docs/pokemon/moves indices to Meilisearch.\n- `scripts/split-content-data.ts` – Splits upstream `wikiPokemon.json` and\n  `wikiMoves.json` into locale-scoped directories under\n  `assets/content/<locale>/{pokemon,moves}` via\n  `npm run content:split`.\n\n## GitHub Automation\n\n```text\n.github/\n  ISSUE_TEMPLATE/         # Bug + content request forms\n  workflows/\n    ci.yml                # Runs npm run ci + npm run audit:prod on push/PR\n    search-index.yml      # Builds search payloads + frontend manifests\n  PULL_REQUEST_TEMPLATE.md\nCODEOWNERS\n```\n\nThis repository now houses the wiki as a standalone project. All automation lives at\nthe repo root (`.github/workflows`, shared lint scripts, CODEOWNERS) so nothing\ndepends on a surrounding monorepo layout anymore. Downstream jobs (search indexing,\nlink checks, linting) only look at this repo's files, which keeps CI scopes and\nrequired secrets simple.\n"
+  },
+  {
+    "id": "en/handbook/style-guide",
+    "slug": "handbook/style-guide",
+    "title": "Markdown & MDX Style Guide",
+    "description": "Authoring conventions for Markdown, MDX, admonitions, and code snippets.",
+    "tags": [
+      "handbook",
+      "style-guide"
+    ],
+    "lastUpdated": "2026-03-06",
+    "status": "stable",
+    "lang": "en",
+    "order": 3,
+    "body": "\n## Formatting Rules\n\n- Keep line length ≤ 100 characters where possible.\n- Use sentence case in headings (`## Getting started`, not `## Getting Started`).\n- Prefer ordered lists for sequences and unordered lists for supporting details.\n- Use code fences with language hints (` ```ts `) for syntax highlighting.\n\n## Admonitions\n\nUse Docusaurus-style blocks:\n\n```text\nShort actionable advice.\n```\n\nCommon options: `note`, `tip`, `warning`, `danger`. Import complex callouts from `docs/<locale>/_partials`.\n\n## Code Snippets\n\n- Favor early-return patterns in pseudo-code to mirror how we write actual services.\n- Keep snippets ≤ 30 lines. Split into multiple sections if longer.\n- Annotate shell commands with comments when the command has side effects.\n\n## Tables\n\n- Align columns using Markdown pipes.\n- Keep header labels concise; wrap long content to the next line instead of widening the table indefinitely.\n\n## MDX Imports\n\n### Auto-injected components\n\nComponents exported from `docs/<locale>/snippets/` (such as `InfoCallout`, `ShellBlock`, and\n`EarlyReturnExample`) are globally available in all MDX files. The website backend\nregisters these automatically, so you can use them without an import statement:\n\n<InfoCallout />\n\n<ShellBlock command=\"npm ci\" />\n\nThese should render as components, not code.\n\n### Custom or partial imports\n\nFor components in `docs/<locale>/_partials/` or one-off snippets, use explicit imports at the top\nof the file:\n\n```mdx\nimport ServicenodeCallout from \"../_partials/ServicenodeCallout.mdx\";\n\n<ServicenodeCallout />\n```\n\nKeep imports relative to the document to avoid bundler-dependent aliases.\n\n\n\n"
+  },
+  {
+    "id": "en/handbook/versioning",
+    "slug": "handbook/versioning",
+    "title": "Docs Versioning Strategy",
+    "description": "Guidelines for rolling versions and changelogging major documentation updates.",
+    "tags": [
+      "handbook",
+      "versioning"
+    ],
+    "lastUpdated": "2026-03-21",
+    "status": "stable",
+    "lang": "en",
+    "order": 5,
+    "body": "\n## Philosophy\n\nWe version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.\n\n## Version Types\n\n| Version | Trigger | Storage |\n| --- | --- | --- |\n| `current` | Default branch | `docs/` root |\n| `vX.Y` | Major gameplay update | `versions/vX.Y/` (mirrors structure) |\n| `legacy` | Unsupported content | Archived branch or zipped export |\n\n## Release Flow\n\n1. Prepare changes under `docs/`.\n2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.\n3. Update `docs/en/reference/changelog.md` with highlights and links.\n4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).\n\n## Changelog\n\nUse semantic headings:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nThe `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.\n\n\n\n"
+  },
+  {
+    "id": "en/reference/changelog",
+    "slug": "reference/changelog",
+    "title": "Documentation Changelog",
+    "description": "Track significant documentation releases aligned with server updates.",
+    "tags": [
+      "reference",
+      "changelog"
+    ],
+    "lastUpdated": "2026-03-28",
+    "status": "draft",
+    "lang": "en",
+    "order": 4,
+    "body": "\n## [Unreleased]\n\n- Placeholder entry for upcoming wiki improvements.\n\n## [v2.3.0] - 2026-03-28\n\n- Updated onboarding guides to align with current CI workflow steps.\n- Clarified search index environment variable behavior in contribution docs.\n- Aligned contribution guide with locale layout and `npm run ci` command.\n\n## [v2.2.0] - 2026-03-09\n\n- CI now fails when generated search artifacts (manifests, index files) drift from committed state.\n- Search workflow path triggers broadened to cover shared script and build config changes.\n- Default `npm run build` entrypoint added for the search index pipeline.\n- Refreshed workflow details and automation references across repository documentation.\n- Clarified wiki repo structure and content dataset documentation.\n- Updated installation instructions to use `npm ci` for reproducible installs.\n\n## [v2.1.0] - 2025-12-01\n\n- Content datasets split into per-item JSON files under `assets/content/pokemon/` and `assets/content/moves/`.\n- Search indexing now emits separate `docs`, `pokemon`, and `moves` payloads for Meilisearch sync.\n- Frontend manifests generated: `pokemon-manifest.json`, `moves-manifest.json`, `move-learners-manifest.json`.\n- ShellBlock documentation converted to MDX format.\n- Search sync workflow updated to push JSON payload to website backend.\n\n## [v2.0.0] - 2025-11-21\n\n- Initial wiki scaffolding, linting, and CI.\n- Search indexing workflow targeting Meilisearch.\n- Localization workflow guide with Spanish example.\n\n"
+  },
+  {
+    "id": "en/reference/localization-glossary",
+    "slug": "reference/localization-glossary",
+    "title": "Localization Glossary",
+    "description": "Shared terminology to keep translations consistent across languages.",
+    "tags": [
+      "reference",
+      "localization"
+    ],
+    "lastUpdated": "2026-03-14",
+    "status": "draft",
+    "lang": "en",
+    "order": 5,
+    "body": "\n| Term | Description | Notes |\n| --- | --- | --- |\n| PokéCoins | In-game premium currency | Keep untranslated |\n| Survival Pass | Seasonal rewards track | Use localized equivalent when the game provides one |\n\nAdd more rows as localization efforts expand.\n\n\n\n"
+  },
+  {
+    "id": "en/reference/media-policy",
+    "slug": "reference/media-policy",
+    "title": "Media & Asset Policy",
+    "description": "Requirements for adding images, diagrams, and downloadable files to the wiki.",
+    "tags": [
+      "reference",
+      "media"
+    ],
+    "lastUpdated": "2026-03-19",
+    "status": "stable",
+    "lang": "en",
+    "order": 3,
+    "body": "\nimport { ShellBlock } from \"../snippets/code-blocks.mdx\";\n\n## Formats\n\n- Prefer `webp` for raster images and `svg` for vector art.\n- Convert PNG/JPEG uploads using ImageMagick or Squoosh before committing.\n- Store diagram source files (`.drawio`, `.excalidraw`) inside `assets/diagrams`.\n\n## Size Limits\n\n- Inline images ≤ 600 KB (enforced by `npm run lint:images`).\n- Diagrams ≤ 5 MB; anything larger must use Git LFS.\n\n## Alt Text & Captions\n\n- Provide descriptive alt text that conveys the same information as the image.\n- Use captions beneath complex diagrams to add context.\n\n## Git LFS\n\nTrack large binaries:\n\n<ShellBlock command='git lfs track \"assets/diagrams/*.drawio\"\\ngit add .gitattributes assets/diagrams/example.drawio' />\n\n## Review Checklist\n\n- [ ] File stored under `assets/`\n- [ ] Alt text filled in\n- [ ] Format is `webp` or `svg`\n- [ ] Size ≤ 600 KB (inline)\n- [ ] Referenced using a relative path in docs\n\n\n\n"
+  },
+  {
+    "id": "en/reference/release-checklist",
+    "slug": "reference/release-checklist",
+    "title": "Wiki release checklist",
+    "description": "Release checks for search-index generation and website sync.",
+    "tags": [
+      "reference",
+      "release"
+    ],
+    "lastUpdated": "2026-03-22",
+    "status": "stable",
+    "lang": "en",
+    "order": 12,
+    "body": "\n# Wiki release checklist\n\n## Pre-Deploy\n\n- `npm ci`\n- `npm run ci`\n- verify local validation passes through the standard repo gate (includes generated search/manifests checks)\n- verify docs changes have valid frontmatter and media\n- verify search-index CI secrets are present if website-backend sync is enabled for the target repo\n\n## Publish / Sync\n\n1. Merge docs changes to `main`.\n2. Run the normal CI workflow.\n3. Run the search-index workflow if a manual rebuild is needed.\n4. Confirm `build/search-index.json`, `build/search-indices.json`, and the\n   generated frontend content manifests under `build/content/<locale>/` were\n   produced.\n5. If website-backend sync is enabled, confirm the backend sync endpoint accepted the new payload.\n\n## Post-Publish\n\n- verify wiki pages render in the frontend\n- verify wiki search returns updated docs\n- verify generated manifests exist for pokemon, moves, and move learners\n\n## Rollback\n\n- restore the last known-good wiki commit\n- rerun the search-index workflow\n- verify backend search results match the restored content\n"
+  },
+  {
+    "id": "en/reference/search-indexing",
+    "slug": "reference/search-indexing",
+    "title": "Search Indexing",
+    "description": "Details for running the Meilisearch indexing workflow locally and in CI.",
+    "tags": [
+      "reference",
+      "search"
+    ],
+    "lastUpdated": "2026-03-12",
+    "status": "beta",
+    "lang": "en",
+    "order": 2,
+    "body": "\n## Workflow\n\n- `scripts/build-search-index.ts` scans docs plus JSON content datasets under\n  `assets/content/<locale>/pokemon/` and `assets/content/<locale>/moves/`.\n- It writes:\n  - `build/search-index.json` for local merged search fallback\n  - `build/search-indices.json` for remote multi-index syncing\n  - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`\n    for fast frontend Pokemon list/navigation\n  - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`\n    for fast frontend move list/navigation\n  - `build/content/en/move-learners-manifest.json` and\n    `build/content/es/move-learners-manifest.json` for fast move detail learner lookups\n- If `MEILISEARCH_URL` and `MEILISEARCH_KEY` are set, the script pushes each\n  index payload (`wiki-docs`, `wiki-pokemon`, and `wiki-moves`) directly to the\n  corresponding Meilisearch index.\n- `.github/workflows/search-index.yml` runs the script on `main` and nightly, uploads the\n  generated search payloads plus frontend content manifests as workflow artifacts, then sends\n  the multi-index JSON payload to the website backend's protected sync endpoint so Meilisearch\n  can stay private.\n\n## Required Settings\n\n| Variable | Description |\n| --- | --- |\n| `MEILISEARCH_URL` | Base URL of the self-hosted Meilisearch instance |\n| `MEILISEARCH_KEY` | Admin or documents key with write access |\n\n## Optional CI Settings\n\n| Secret | Description |\n| --- | --- |\n| `WIKI_SEARCH_SYNC_URL` | Optional public HTTPS URL of the backend sync endpoint |\n| `WIKI_SEARCH_SYNC_TOKEN` | Optional shared bearer token validated by the backend before importing documents |\n\nWhen both secrets are configured, the workflow syncs\n`build/search-indices.json` to the website backend. When either secret is missing,\nthe workflow still builds the search payloads and uploads the generated artifacts\nso the run stays debuggable.\n\n## Local Run\n\n```bash\nMEILISEARCH_URL=https://search.pokebedrock.com \\\nMEILISEARCH_KEY=<docs-key> \\\nnpm run build:search\n```\n\nThe command writes the search payloads plus frontend manifests, and pushes the three remote\nindices when env vars are set.\n\n## Production Sync Endpoint\n\nThe default production flow does not expose Meilisearch publicly:\n\n1. GitHub Actions builds `build/search-index.json` and `build/search-indices.json`.\n2. If `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are configured, the workflow `POST`s `build/search-indices.json` to the website backend.\n3. When those secrets are not configured yet, the workflow skips the backend sync step and still uploads the generated artifacts.\n4. If sync runs, the backend validates `WIKI_SEARCH_SYNC_TOKEN`.\n5. The backend then connects to `http://meilisearch:7700` inside the cluster and replaces:\n   - `wiki-docs`\n   - `wiki-pokemon`\n   - `wiki-moves`\n\n## Document Schema\n\n```json\n{\n  \"id\": \"guides/getting-started\",\n  \"slug\": \"guides/getting-started\",\n  \"title\": \"Getting Started\",\n  \"description\": \"Short summary…\",\n  \"tags\": [\"guide\", \"onboarding\"],\n  \"lastUpdated\": \"2025-11-21\",\n  \"status\": \"stable\",\n  \"lang\": \"en\",\n  \"order\": 3,\n  \"body\": \"Markdown content without frontmatter\"\n}\n```\n\nKeep descriptions ≤ 180 characters to avoid truncation in search UIs.\n\n"
+  },
+  {
+    "id": "en/reference/sync-to-website",
+    "slug": "reference/sync-to-website",
+    "title": "Website Sync Pipeline",
+    "description": "How GitHub pushes trigger the backend webhook and keep the public site cached.",
+    "tags": [
+      "reference",
+      "sync"
+    ],
+    "lastUpdated": "2025-11-21",
+    "status": "beta",
+    "lang": "en",
+    "order": 1,
+    "body": "\n## Overview\n\n1. Docs merge into `main`.\n2. GitHub fires a repository dispatch/webhook handled by the website backend.\n3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.\n4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.\n\n## Webhook Contract\n\n| Field | Description |\n| --- | --- |\n| `event` | Always `wiki.synced` |\n| `commit` | SHA of the merged commit |\n| `files` | Array of changed doc paths |\n| `timestamp` | ISO timestamp |\n\nThe backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See\n`website-backend/src/http/routes/webhooks.ts` for implementation details.\n\n## Local Testing\n\nUse the sample payload in `docs/en/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.\n\n```powershell\nInvoke-WebRequest `\n  -Uri https://api.pokebedrock.com/wiki/webhook `\n  -Headers @{ \"X-Signature\" = \"<hmac>\" } `\n  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `\n  -Method Post\n```\n\n## Cache Busting\n\n- Backend stores the `ETag` returned from GitHub per file.\n- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.\n- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the\n  response to help the client decide whether to fetch fresh data.\n\n\n\n"
+  },
+  {
+    "id": "es/content/moves",
     "slug": "content/moves",
-    "title": "Moves",
-    "description": "Browse every move with category, type, power details, and dedicated move detail pages.",
+    "title": "Movimientos",
+    "description": "Explora todos los moves con categoria, tipo, detalles de poder y paginas dedicadas de detalle.",
     "tags": [
       "content",
       "moves",
@@ -222,205 +238,9 @@
     ],
     "lastUpdated": "2026-03-05",
     "status": "stable",
-    "lang": "en",
-    "order": 2,
-    "body": "\nThis page is rendered with a custom frontend view.\n\nUse it to browse all moves and open full detail pages for each move.\n"
-  },
-  {
-    "id": "es/reference/sync-to-website",
-    "slug": "reference/sync-to-website",
-    "title": "Pipeline de sincronizacion con el sitio",
-    "description": "Como los pushes en GitHub disparan el webhook del backend y mantienen cacheado el sitio publico.",
-    "tags": [
-      "reference",
-      "sync"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "beta",
-    "lang": "es",
-    "order": 1,
-    "body": "\n## Resumen\n\n1. Los docs se mergean a `main`.\n2. GitHub dispara un repository dispatch/webhook gestionado por el backend del sitio.\n3. El backend obtiene archivos cambiados via GitHub Contents API usando ETags para cache-busting.\n4. La salida renderizada en HTML/MDX se cachea en Redis con TTL de 15 minutos.\n\n## Contrato del webhook\n\n| Campo | Descripcion |\n| --- | --- |\n| `event` | Siempre `wiki.synced` |\n| `commit` | SHA del commit mergeado |\n| `files` | Arreglo de rutas de docs modificadas |\n| `timestamp` | Timestamp ISO |\n\nEl backend valida el HMAC usando el secreto compartido `WIKI_WEBHOOK_SECRET`. Ver\n`website-backend/src/http/routes/webhooks.ts` para detalles de implementacion.\n\n## Pruebas locales\n\nUsa el payload de ejemplo en `docs/reference/webhook-example.json` con `curl` o `Invoke-WebRequest`.\n\n```powershell\nInvoke-WebRequest `\n  -Uri https://api.pokebedrock.com/wiki/webhook `\n  -Headers @{ \"X-Signature\" = \"<hmac>\" } `\n  -Body (Get-Content docs/reference/webhook-example.json -Raw) `\n  -Method Post\n```\n\n## Cache busting\n\n- El backend guarda el `ETag` devuelto por GitHub por archivo.\n- En sincronizaciones siguientes, envia `If-None-Match`; el contenido sin cambios evita re-render.\n- Cuando el sitio sirve una pagina, incluye `lastUpdated` del frontmatter en la respuesta\n  para ayudar al cliente a decidir si debe pedir datos frescos.\n\n\n\n"
-  },
-  {
-    "id": "es/reference/search-indexing",
-    "slug": "reference/search-indexing",
-    "title": "Indexacion de busqueda",
-    "description": "Detalles para ejecutar el flujo de indexacion de Meilisearch localmente y en CI.",
-    "tags": [
-      "reference",
-      "search"
-    ],
-    "lastUpdated": "2026-03-11",
-    "status": "beta",
     "lang": "es",
     "order": 2,
-    "body": "\n## Flujo\n\n- `scripts/build-search-index.ts` escanea docs y datasets JSON de contenido bajo\n  `assets/content/<locale>/pokemon/` y `assets/content/<locale>/moves/`.\n- Genera:\n  - `build/search-index.json` para fallback local de busqueda combinada\n  - `build/search-indices.json` para sincronizacion remota de multiples indices\n  - `build/content/en/pokemon-manifest.json` y `build/content/es/pokemon-manifest.json`\n    para listado y navegacion rapida de Pokemon en frontend\n  - `build/content/en/moves-manifest.json` y `build/content/es/moves-manifest.json`\n    para listado y navegacion rapida de moves en frontend\n  - `build/content/en/move-learners-manifest.json` y\n    `build/content/es/move-learners-manifest.json` para busqueda rapida de aprendices por move\n- Si `MEILISEARCH_URL` y `MEILISEARCH_KEY` estan definidos, el script publica cada\n  payload de indice (`wiki-docs`, `wiki-pokemon` y `wiki-moves`) directamente en el\n  indice correspondiente de Meilisearch.\n- `.github/workflows/search-index.yml` ejecuta el script en `main` y de forma nocturna, y luego\n  sube el payload JSON al endpoint protegido de sync del backend del sitio para mantener privado Meilisearch.\n\n## Configuracion requerida\n\n| Variable | Descripcion |\n| --- | --- |\n| `MEILISEARCH_URL` | URL base de la instancia autohospedada de Meilisearch |\n| `MEILISEARCH_KEY` | Clave de admin o documents con permisos de escritura |\n\n## Configuracion de CI\n\n| Secret | Descripcion |\n| --- | --- |\n| `WIKI_SEARCH_SYNC_URL` | URL HTTPS publica del endpoint de sync del backend |\n| `WIKI_SEARCH_SYNC_TOKEN` | Token bearer compartido validado por el backend antes de importar documentos |\n\n## Ejecucion local\n\n```bash\nMEILISEARCH_URL=https://search.pokebedrock.com \\\nMEILISEARCH_KEY=<docs-key> \\\nnpm run build:search\n```\n\nEl comando escribe payloads de busqueda y manifiestos del frontend, y publica los tres\nindices remotos cuando las variables de entorno estan definidas.\n\n## Endpoint de sync en produccion\n\nEl flujo de produccion por defecto no expone Meilisearch publicamente:\n\n1. GitHub Actions construye `build/search-index.json` y `build/search-indices.json`.\n2. El workflow hace `POST` de `build/search-indices.json` al backend del sitio.\n3. El backend valida `WIKI_SEARCH_SYNC_TOKEN`.\n4. El backend se conecta a `http://meilisearch:7700` dentro del cluster y reemplaza:\n   - `wiki-docs`\n   - `wiki-pokemon`\n   - `wiki-moves`\n\n## Schema del documento\n\n```json\n{\n  \"id\": \"guides/getting-started\",\n  \"slug\": \"guides/getting-started\",\n  \"title\": \"Comenzando\",\n  \"description\": \"Resumen corto...\",\n  \"tags\": [\"guia\", \"onboarding\"],\n  \"lastUpdated\": \"2025-11-21\",\n  \"status\": \"stable\",\n  \"lang\": \"en\",\n  \"order\": 3,\n  \"body\": \"Contenido Markdown sin frontmatter\"\n}\n```\n\nManten descripciones de hasta 180 caracteres para evitar truncamiento en UIs de busqueda.\n\n"
-  },
-  {
-    "id": "es/reference/release-checklist",
-    "slug": "reference/release-checklist",
-    "title": "Checklist de release de la wiki",
-    "description": "Verificaciones de release para generacion del search-index y sincronizacion con el sitio.",
-    "tags": [
-      "reference",
-      "release"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "es",
-    "order": 2,
-    "body": "\n# Checklist de release de la wiki\n\n## Pre-deploy\n\n- `npm ci`\n- `npm run ci`\n- `npm run audit:prod`\n- verificar que cambios en docs tengan frontmatter y media validos\n- verificar que los secrets de CI de search-index existan en el repo objetivo\n\n## Publicacion / sincronizacion\n\n1. Hacer merge de cambios de docs en `main`.\n2. Ejecutar el workflow normal de CI.\n3. Ejecutar el workflow de search-index si hace falta reconstruccion manual.\n4. Confirmar que se generaron `build/search-index.json` y `build/search-indices.json`.\n5. Confirmar que el endpoint de sync del backend acepto el nuevo payload.\n\n## Post-publicacion\n\n- verificar que las paginas de la wiki rendericen en el frontend\n- verificar que la busqueda de la wiki devuelva docs actualizados\n- verificar que existan manifiestos generados para pokemon, moves y move learners\n\n## Rollback\n\n- restaurar el ultimo commit estable conocido de la wiki\n- volver a ejecutar el workflow de search-index\n- verificar que los resultados de busqueda del backend coincidan con el contenido restaurado\n"
-  },
-  {
-    "id": "es/reference/media-policy",
-    "slug": "reference/media-policy",
-    "title": "Politica de media y assets",
-    "description": "Requisitos para agregar imagenes, diagramas y archivos descargables a la wiki.",
-    "tags": [
-      "reference",
-      "media"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "es",
-    "order": 3,
-    "body": "\n## Formatos\n\n- Preferir `webp` para imagenes raster y `svg` para arte vectorial.\n- Convertir cargas PNG/JPEG usando ImageMagick o Squoosh antes de hacer commit.\n- Guardar archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.\n\n## Limites de tamano\n\n- Imagenes inline <= 600 KB (aplicado por `npm run lint:images`).\n- Diagramas <= 5 MB; cualquier cosa mayor debe usar Git LFS.\n\n## Alt text y captions\n\n- Proveer alt text descriptivo que transmita la misma informacion que la imagen.\n- Usar captions debajo de diagramas complejos para agregar contexto.\n\n## Git LFS\n\nVersionar binarios grandes:\n\n<ShellBlock command='git lfs track \"assets/diagrams/*.drawio\"\\ngit add .gitattributes assets/diagrams/example.drawio' />\n\n## Checklist de revision\n\n- [ ] File stored under `assets/`\n- [ ] Alt text filled in\n- [ ] Format is `webp` or `svg`\n- [ ] Size ≤ 600 KB (inline)\n- [ ] Referenced using a relative path in docs\n\n\n\n"
-  },
-  {
-    "id": "es/reference/localization-glossary",
-    "slug": "reference/localization-glossary",
-    "title": "Glosario de localizacion",
-    "description": "Terminologia compartida para mantener traducciones consistentes entre idiomas.",
-    "tags": [
-      "reference",
-      "localization"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "draft",
-    "lang": "es",
-    "order": 5,
-    "body": "\n| Termino | Descripcion | Notas |\n| --- | --- | --- |\n| PokéCoins | Moneda premium del juego | Mantener sin traducir |\n| Survival Pass | Pase de recompensas de temporada | Usar equivalente localizado cuando el juego lo provea |\n\nAgregar mas filas a medida que crezcan los esfuerzos de localizacion.\n\n\n\n"
-  },
-  {
-    "id": "es/reference/changelog",
-    "slug": "reference/changelog",
-    "title": "Changelog de documentacion",
-    "description": "Registro de lanzamientos importantes de documentacion alineados con actualizaciones del servidor.",
-    "tags": [
-      "reference",
-      "changelog"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "draft",
-    "lang": "es",
-    "order": 4,
-    "body": "\n## [Unreleased]\n\n- Entrada placeholder para proximas mejoras de la wiki.\n\n## [v2.0.0] - 2025-11-21\n\n### Agregado\n\n- Estructura inicial de la wiki, linting y CI.\n- Flujo de indexacion de busqueda orientado a Meilisearch.\n- Guia del flujo de localizacion con ejemplo en espanol.\n\n\n\n"
-  },
-  {
-    "id": "es/handbook/versioning",
-    "slug": "handbook/versioning",
-    "title": "Estrategia de versionado de docs",
-    "description": "Guia para versionar y mantener changelog de actualizaciones mayores de documentacion.",
-    "tags": [
-      "handbook",
-      "versioning"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "stable",
-    "lang": "es",
-    "order": 5,
-    "body": "\n## Filosofia\n\nVersionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma\nincompatible. Las ediciones de texto rutinarias permanecen en la version activa.\n\n## Tipos de version\n\n| Version | Disparador | Almacenamiento |\n| --- | --- | --- |\n| `current` | Rama por defecto | Raiz de `docs/` |\n| `vX.Y` | Actualizacion mayor de gameplay | `versions/vX.Y/` (misma estructura) |\n| `legacy` | Contenido sin soporte | Rama archivada o export zip |\n\n## Flujo de release\n\n1. Preparar cambios bajo `docs/`.\n2. Cuando la actualizacion salga, copiar la carpeta a `versions/vX.Y/` y congelar.\n3. Actualizar `docs/reference/changelog.md` con puntos clave y links.\n4. Asegurar que el indexado de busqueda excluya versiones archivadas salvo que se solicite explicitamente (configurar filtro en Meilisearch).\n\n## Changelog\n\nUsar encabezados semanticos:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nEl archivo `docs/reference/changelog.md` mantiene el registro publico sincronizado con los lanzamientos del juego.\n\n\n\n"
-  },
-  {
-    "id": "es/handbook/style-guide",
-    "slug": "handbook/style-guide",
-    "title": "Guia de estilo de Markdown y MDX",
-    "description": "Convenciones de autoria para Markdown, MDX, admonitions y fragmentos de codigo.",
-    "tags": [
-      "handbook",
-      "style-guide"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "es",
-    "order": 3,
-    "body": "\n## Reglas de formato\n\n- Mantener longitud de linea <= 100 caracteres cuando sea posible.\n- Usar sentence case en titulos (`## Getting started`, no `## Getting Started`).\n- Preferir listas ordenadas para secuencias y listas sin ordenar para detalles de apoyo.\n- Usar bloques de codigo con lenguaje (` ```ts `) para resaltado de sintaxis.\n\n## Admonitions\n\nUsar bloques estilo Docusaurus:\n\n```text\nConsejo breve y accionable.\n```\n\nOpciones comunes: `note`, `tip`, `warning`, `danger`. Importar callouts complejos desde `docs/<locale>/_partials`.\n\n## Fragmentos de codigo\n\n- Priorizar patrones de early-return en pseudo-codigo para reflejar como escribimos servicios reales.\n- Mantener snippets <= 30 lineas. Si es mas largo, dividir en varias secciones.\n- Anotar comandos de shell con comentarios cuando tengan efectos secundarios.\n\n## Tablas\n\n- Alinear columnas usando pipes de Markdown.\n- Mantener encabezados concisos; envolver contenido largo en la siguiente linea en vez de ensanchar la tabla sin limite.\n\n## Imports de MDX\n\n### Componentes autoinyectados\n\nLos componentes exportados desde `docs/<locale>/snippets/` (como `InfoCallout`, `ShellBlock` y\n`EarlyReturnExample`) estan disponibles globalmente en todos los archivos MDX. El backend\ndel sitio los registra automaticamente, por lo que se pueden usar sin sentencia de import:\n\n<InfoCallout />\n\n<ShellBlock command=\"npm install\" />\n\nDeben renderizarse como componentes, no como codigo.\n\n### Imports custom o parciales\n\nPara componentes en `docs/<locale>/_partials/` o snippets de uso unico, usar imports explicitos al inicio\ndel archivo:\n\n```mdx\nimport ServicenodeCallout from \"../_partials/ServicenodeCallout.mdx\";\n\n<ServicenodeCallout />\n```\n\nMantener imports relativos al documento para evitar aliases dependientes del bundler.\n\n\n\n"
-  },
-  {
-    "id": "es/handbook/repo-structure",
-    "slug": "handbook/repo-structure",
-    "title": "Estructura del repositorio",
-    "description": "Desglose de carpetas de la wiki, archivos de metadatos y como los consume el sitio web.",
-    "tags": [
-      "handbook",
-      "structure"
-    ],
-    "lastUpdated": "2026-03-07",
-    "status": "stable",
-    "lang": "es",
-    "order": 2,
-    "body": "\n## Arbol de docs\n\n```text\ndocs/\n  en/\n    _meta.json            # Metadatos de categorias\n    handbook/             # Gobernanza y docs de contribuidores\n    guides/               # Tutoriales y guias\n    reference/            # Especificaciones del sistema y automatizacion\n    snippets/             # Fragmentos MDX reutilizables\n    _partials/            # Includes compartidos de MDX/Markdown\n  es/\n    _meta.json            # Metadatos de categorias (espanol)\n    ...misma estructura que en\n```\n\nCada pagina necesita frontmatter valido y un slug estable. Los archivos pueden ser Markdown (`.md`) o\nMDX (`.mdx`). Mantene slugs identicos entre idiomas, por ejemplo:\n`docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`.\n\n## Assets\n\n```text\nassets/\n  images/                 # exports webp/svg\n  diagrams/               # archivos fuente (.drawio, .excalidraw, etc.)\n  content/                # datasets JSON normalizados de Pokemon + moves\n    en/\n      pokemon/            # un archivo por Pokemon, generado por content:split\n      moves/              # un archivo por move, generado por content:split\n    es/\n      pokemon/            # espejo del dataset en espanol (hoy copiado desde en)\n      moves/              # espejo del dataset en espanol (hoy copiado desde en)\n```\n\nLas imagenes referenciadas desde docs deben vivir bajo `assets/`. Los diagramas conservan\nsus fuentes editables para que futuros contribuidores puedan revisarlos. Los datasets\nestructurados de Pokemon y moves tambien viven en `assets/content/` para que el indexado\nde busqueda y el frontend puedan comparar entradas individuales.\n\n> ℹ️ Las actualizaciones de contenido upstream llegan como `assets/content/wikiPokemon.json` y\n> `assets/content/wikiMoves.json`. Ejecuta `npm run content:split` para regenerar\n> los archivos por entrada versionados en git.\n\n## Schemas y scripts\n\n- `schemas/frontmatter.schema.json` - JSON Schema usado por `npm run lint:frontmatter`.\n- `scripts/validate-frontmatter.ts` - Garantiza consistencia de metadatos.\n- `scripts/check-images.ts` - Valida formato, tamano y alt text.\n- `scripts/build-search-index.ts` - Crea payloads de busqueda y manifiestos de contenido\n  del frontend en `build/content/<locale>/`, y opcionalmente publica los indices de\n  docs/pokemon/moves en Meilisearch.\n- `scripts/split-content-data.ts` - Divide `wikiPokemon.json` y `wikiMoves.json`\n  de upstream en directorios por idioma bajo\n  `assets/content/<locale>/{pokemon,moves}` usando\n  `npm run content:split`.\n\n## Automatizacion de GitHub\n\n```text\n.github/\n  ISSUE_TEMPLATE/         # Formularios de bug + solicitud de contenido\n  workflows/\n    ci.yml                # Lint + chequeo de links en PRs\n    search-index.yml      # Construye y sube docs de busqueda\n  PULL_REQUEST_TEMPLATE.md\nCODEOWNERS\n```\n\nEste repositorio ahora contiene la wiki como proyecto independiente. Toda la automatizacion\nvive en la raiz (`.github/workflows`, scripts de lint compartidos, CODEOWNERS), asi nada\ndepende de un monorepo externo. Los jobs downstream (indexado de busqueda, chequeo de links,\nlinting) solo miran archivos de este repo, lo que mantiene simples los alcances de CI y los\nsecrets requeridos.\n"
-  },
-  {
-    "id": "es/handbook/overview",
-    "slug": "handbook/overview",
-    "title": "Vision general de la wiki",
-    "description": "Comprende los objetivos, alcance y estructura del repositorio wiki de PokéBedrock.",
-    "tags": [
-      "handbook",
-      "onboarding"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "stable",
-    "lang": "es",
-    "order": 1,
-    "body": "\nLa wiki de PokéBedrock centraliza toda la documentacion publica del proyecto. Este repositorio cumple tres objetivos:\n\n1. Dar a los contribuidores un lugar predecible para proponer cambios de docs.\n2. Proveer puntos de automatizacion (linting, chequeo de links, indexado de busqueda).\n3. Alimentar el sitio publico mediante un pipeline de sincronizacion.\n\n## Principios clave\n\n- **Fuente de verdad**: trata `main` como el estado canonico del contenido.\n- **Automatizacion primero**: toda regla que valga documentar deberia aplicarse con script o job de CI.\n- **Autoría inclusiva**: Markdown por defecto, MDX cuando sea necesario y soporte de localizacion que crece con la comunidad.\n\n## Puntos destacados del repo\n\n- Arbol estructurado de `docs/` con `_meta.json` para orden.\n- Carpeta compartida `assets/` con guia de LFS para binarios grandes.\n- Frontmatter validado por JSON Schema para mantener metadatos consistentes.\n- Workflows de GitHub para linting, validacion de links e indexado en Meilisearch.\n- Plantillas para issues, PRs y revisiones de CODEOWNERS.\n\nConsulta las otras paginas del handbook para profundizar en estructura, localizacion y versionado.\n\n\n\n"
-  },
-  {
-    "id": "es/handbook/localization",
-    "slug": "handbook/localization",
-    "title": "Flujo de localizacion",
-    "description": "Como estructurar documentacion traducida, coordinar traductores y revisar cambios localizados.",
-    "tags": [
-      "handbook",
-      "localization"
-    ],
-    "lastUpdated": "2026-03-06",
-    "status": "stable",
-    "lang": "es",
-    "order": 4,
-    "body": "\n## Estructura de archivos\n\n- Pagina base en ingles: `docs/en/<category>/<slug>.md(x)`; usa `.mdx` cuando el doc\n  necesite componentes MDX.\n- Pagina traducida: `docs/<lang>/<category>/<slug>.md(x)`\n- Ejemplo: `docs/en/guides/running-the-server.mdx` + `docs/es/guides/running-the-server.md`\n\nMantene los slugs iguales entre idiomas para que el mapeo de rutas y los alternates sean estables.\n\n## Flujo\n\n1. **Abri un issue**: usa la plantilla \"Content Request\" y marcala como tarea de traduccion.\n2. **Crea una rama**: `docs/<lang>/<slug>`.\n3. **Sincroniza con ingles**: compara contra `docs/en/...` para incluir cambios recientes.\n4. **Ejecuta linting**: `npm run lint`.\n5. **Pedi revision**: etiqueta a un maintainer que hable el idioma (si existe) y al owner del tema.\n\n## Metadatos de idioma\n\nInclui la propiedad `lang` en el frontmatter junto con el campo `status`. Ejemplo:\n\n```yaml\nlang: es\nstatus: beta\n```\n\nUsa `draft` o `beta` para traducciones que todavia necesiten revision nativa.\n\n## Glosario\n\nManten consistencia terminologica usando el glosario compartido en\n`docs/reference/localization-glossary.md` (se completa a medida que crecen las traducciones).\nCuando introduzcas un termino nuevo, anotarlo en la PR para que otros actualicen el glosario.\n\n\n\n"
-  },
-  {
-    "id": "es/guides/running-the-server",
-    "slug": "guides/running-the-server",
-    "title": "Ejecutar la Wiki Localmente",
-    "description": "Guía en español para instalar dependencias y validar la wiki.",
-    "tags": [
-      "guide",
-      "localization",
-      "es"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "beta",
-    "lang": "es",
-    "order": 3,
-    "body": "\n## Requisitos\n\n- Node.js 20+\n- npm 10+\n\n## Pasos\n\n1. `npm ci`\n2. Edita los archivos en `docs/`.\n3. Ejecuta `npm run ci`.\n4. Abre un PR y añade la etiqueta `language:es`.\n\n## Revisión\n\nMarca el estado como `beta` hasta que otra persona revise la traducción.\n\n\n\n"
-  },
-  {
-    "id": "es/guides/getting-started",
-    "slug": "guides/getting-started",
-    "title": "Primeros pasos",
-    "description": "Configura el repo de la wiki de PokéBedrock localmente y publica tu primer cambio de docs.",
-    "tags": [
-      "guide",
-      "onboarding"
-    ],
-    "lastUpdated": "2025-11-21",
-    "status": "stable",
-    "lang": "es",
-    "order": 1,
-    "body": "\nimport { InfoCallout } from \"../snippets/callouts.mdx\";\nimport { ShellBlock } from \"../snippets/code-blocks.mdx\";\n\n<InfoCallout />\n\n## 1. Clonar e instalar\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Crear una rama\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Crear contenido\n\n- Elegi una categoria bajo `docs/`.\n- Copia la plantilla de frontmatter desde `CONTRIBUTING.md`.\n- Agrega assets con ruta relativa al documento (por ejemplo,\n  `../../assets/images/ui.webp`).\n\nUsa MDX si necesitas componentes; en caso contrario, usa Markdown por legibilidad.\n\n## 4. Validar\n\n<ShellBlock command=\"npm run ci\" />\n\n## 5. Abrir una PR\n\nCompleta la plantilla de PR, enlaza issues relacionados y solicita revision a `@pokebedrock/wiki-maintainers`.\n\n\n\n"
+    "body": "\nEsta pagina se renderiza con una vista personalizada del frontend.\n\nUsala para explorar todos los moves y abrir paginas completas de detalle para cada uno.\n"
   },
   {
     "id": "es/content/pokemon",
@@ -439,20 +259,200 @@
     "body": "\nEsta pagina se renderiza con una vista personalizada del frontend.\n\nUsala para explorar todas las entradas de Pokemon y abrir perfiles detallados de cada uno.\n"
   },
   {
-    "id": "es/content/moves",
-    "slug": "content/moves",
-    "title": "Movimientos",
-    "description": "Explora todos los moves con categoria, tipo, detalles de poder y paginas dedicadas de detalle.",
+    "id": "es/guides/getting-started",
+    "slug": "guides/getting-started",
+    "title": "Primeros pasos",
+    "description": "Configura el repo de la wiki de PokéBedrock localmente y publica tu primer cambio de docs.",
     "tags": [
-      "content",
-      "moves",
-      "battle"
+      "guide",
+      "onboarding"
     ],
-    "lastUpdated": "2026-03-05",
+    "lastUpdated": "2025-11-21",
+    "status": "stable",
+    "lang": "es",
+    "order": 1,
+    "body": "\n<InfoCallout />\n\n## 1. Clonar e instalar\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Crear una rama\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Crear contenido\n\n- Elegi una categoria bajo `docs/`.\n- Copia la plantilla de frontmatter desde `CONTRIBUTING.md`.\n- Agrega assets con ruta relativa al documento (por ejemplo,\n  `../../assets/images/ui.webp`).\n\nUsa MDX si necesitas componentes; en caso contrario, usa Markdown por legibilidad.\n\n## 4. Validar\n\n<ShellBlock command=\"npm run ci\" />\n\n## 5. Abrir una PR\n\nCompleta la plantilla de PR, enlaza issues relacionados y solicita revision a `@pokebedrock/wiki-maintainers`.\n\n\n\n"
+  },
+  {
+    "id": "es/guides/running-the-server",
+    "slug": "guides/running-the-server",
+    "title": "Ejecutar la Wiki Localmente",
+    "description": "Guía en español para instalar dependencias y validar la wiki.",
+    "tags": [
+      "guide",
+      "localization",
+      "es"
+    ],
+    "lastUpdated": "2026-03-19",
+    "status": "beta",
+    "lang": "es",
+    "order": 3,
+    "body": "\n## Requisitos\n\n- Node.js 20+\n- npm 10+\n\n## Pasos\n\n1. `npm ci`\n2. Edita los archivos en `docs/`.\n3. Ejecuta `npm run ci`.\n4. Abre un PR, explica que se trata de una traducción al español y solicita\n   revisión de `@pokebedrock/wiki-maintainers`.\n\n## Revisión\n\n- Mantén `lang: es` en el frontmatter y deja `status: beta` hasta que otra\n  persona revise la traducción.\n- Describe cualquier contexto de localización (términos nuevos, capturas, etc.)\n  en la descripción del PR para que los revisores tengan el mismo contexto.\n\n\n\n"
+  },
+  {
+    "id": "es/handbook/localization",
+    "slug": "handbook/localization",
+    "title": "Flujo de localizacion",
+    "description": "Como estructurar documentacion traducida, coordinar traductores y revisar cambios localizados.",
+    "tags": [
+      "handbook",
+      "localization"
+    ],
+    "lastUpdated": "2026-03-06",
+    "status": "stable",
+    "lang": "es",
+    "order": 4,
+    "body": "\n## Estructura de archivos\n\n- Pagina base en ingles: `docs/en/<category>/<slug>.md(x)`; usa `.mdx` cuando el doc\n  necesite componentes MDX.\n- Pagina traducida: `docs/<lang>/<category>/<slug>.md(x)`\n- Ejemplo: `docs/en/guides/running-the-server.mdx` + `docs/es/guides/running-the-server.md`\n\nMantene los slugs iguales entre idiomas para que el mapeo de rutas y los alternates sean estables.\n\n## Flujo\n\n1. **Abri un issue**: usa la plantilla \"Content Request\" y marcala como tarea de traduccion.\n2. **Crea una rama**: `docs/<lang>/<slug>`.\n3. **Sincroniza con ingles**: compara contra `docs/en/...` para incluir cambios recientes.\n4. **Ejecuta validacion**: `npm run ci`.\n5. **Pedi revision**: etiqueta a un maintainer que hable el idioma (si existe) y al owner del tema.\n\n## Metadatos de idioma\n\nInclui la propiedad `lang` en el frontmatter junto con el campo `status`. Ejemplo:\n\n```yaml\nlang: es\nstatus: beta\n```\n\nUsa `draft` o `beta` para traducciones que todavia necesiten revision nativa.\n\n## Glosario\n\nManten consistencia terminologica usando el glosario compartido en\n`docs/es/reference/localization-glossary.md` (se completa a medida que crecen las traducciones).\nCuando introduzcas un termino nuevo, anotarlo en la PR para que otros actualicen el glosario.\n\n\n\n"
+  },
+  {
+    "id": "es/handbook/overview",
+    "slug": "handbook/overview",
+    "title": "Vision general de la wiki",
+    "description": "Comprende los objetivos, alcance y estructura del repositorio wiki de PokéBedrock.",
+    "tags": [
+      "handbook",
+      "onboarding"
+    ],
+    "lastUpdated": "2025-11-21",
+    "status": "stable",
+    "lang": "es",
+    "order": 1,
+    "body": "\nLa wiki de PokéBedrock centraliza toda la documentacion publica del proyecto. Este repositorio cumple tres objetivos:\n\n1. Dar a los contribuidores un lugar predecible para proponer cambios de docs.\n2. Proveer puntos de automatizacion (linting, chequeo de links, indexado de busqueda).\n3. Alimentar el sitio publico mediante un pipeline de sincronizacion.\n\n## Principios clave\n\n- **Fuente de verdad**: trata `main` como el estado canonico del contenido.\n- **Automatizacion primero**: toda regla que valga documentar deberia aplicarse con script o job de CI.\n- **Autoría inclusiva**: Markdown por defecto, MDX cuando sea necesario y soporte de localizacion que crece con la comunidad.\n\n## Puntos destacados del repo\n\n- Arbol estructurado de `docs/` con `_meta.json` para orden.\n- Carpeta compartida `assets/` con guia de LFS para binarios grandes.\n- Frontmatter validado por JSON Schema para mantener metadatos consistentes.\n- Workflows de GitHub para linting, validacion de links e indexado en Meilisearch.\n- Plantillas para issues, PRs y revisiones de CODEOWNERS.\n\nConsulta las otras paginas del handbook para profundizar en estructura, localizacion y versionado.\n\n\n\n"
+  },
+  {
+    "id": "es/handbook/repo-structure",
+    "slug": "handbook/repo-structure",
+    "title": "Estructura del repositorio",
+    "description": "Desglose de carpetas de la wiki, archivos de metadatos y como los consume el sitio web.",
+    "tags": [
+      "handbook",
+      "structure"
+    ],
+    "lastUpdated": "2026-03-07",
     "status": "stable",
     "lang": "es",
     "order": 2,
-    "body": "\nEsta pagina se renderiza con una vista personalizada del frontend.\n\nUsala para explorar todos los moves y abrir paginas completas de detalle para cada uno.\n"
+    "body": "\n## Arbol de docs\n\n```text\ndocs/\n  en/\n    _meta.json            # Metadatos de categorias\n    handbook/             # Gobernanza y docs de contribuidores\n    guides/               # Tutoriales y guias\n    reference/            # Especificaciones del sistema y automatizacion\n    snippets/             # Fragmentos MDX reutilizables\n    _partials/            # Includes compartidos de MDX/Markdown\n  es/\n    _meta.json            # Metadatos de categorias (espanol)\n    ...misma estructura que en\n```\n\nCada pagina necesita frontmatter valido y un slug estable. Los archivos pueden ser Markdown (`.md`) o\nMDX (`.mdx`). Mantene slugs identicos entre idiomas, por ejemplo:\n`docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`.\n\n## Assets\n\n```text\nassets/\n  images/                 # exports webp/svg\n  diagrams/               # archivos fuente (.drawio, .excalidraw, etc.)\n  content/                # datasets JSON normalizados de Pokemon + moves\n    en/\n      pokemon/            # un archivo por Pokemon, generado por content:split\n      moves/              # un archivo por move, generado por content:split\n    es/\n      pokemon/            # espejo del dataset en espanol (hoy copiado desde en)\n      moves/              # espejo del dataset en espanol (hoy copiado desde en)\n```\n\nLas imagenes referenciadas desde docs deben vivir bajo `assets/`. Los diagramas conservan\nsus fuentes editables para que futuros contribuidores puedan revisarlos. Los datasets\nestructurados de Pokemon y moves tambien viven en `assets/content/` para que el indexado\nde busqueda y el frontend puedan comparar entradas individuales.\n\n> ℹ️ Las actualizaciones de contenido upstream llegan como `assets/content/wikiPokemon.json` y\n> `assets/content/wikiMoves.json`. Ejecuta `npm run content:split` para regenerar\n> los archivos por entrada versionados en git.\n\n## Schemas y scripts\n\n- `schemas/frontmatter.schema.json` - JSON Schema usado por `npm run lint:frontmatter`.\n- `scripts/validate-frontmatter.ts` - Garantiza consistencia de metadatos.\n- `scripts/check-images.ts` - Valida formato, tamano y alt text.\n- `scripts/build-search-index.ts` - Crea payloads de busqueda y manifiestos de contenido\n  del frontend en `build/content/<locale>/`, y opcionalmente publica los indices de\n  docs/pokemon/moves en Meilisearch.\n- `scripts/split-content-data.ts` - Divide `wikiPokemon.json` y `wikiMoves.json`\n  de upstream en directorios por idioma bajo\n  `assets/content/<locale>/{pokemon,moves}` usando\n  `npm run content:split`.\n\n## Automatizacion de GitHub\n\n```text\n.github/\n  ISSUE_TEMPLATE/         # Formularios de bug + solicitud de contenido\n  workflows/\n    ci.yml                # Ejecuta npm run ci + npm run audit:prod en push/PR\n    search-index.yml      # Construye payloads de busqueda + manifests frontend\n  PULL_REQUEST_TEMPLATE.md\nCODEOWNERS\n```\n\nEste repositorio ahora contiene la wiki como proyecto independiente. Toda la automatizacion\nvive en la raiz (`.github/workflows`, scripts de lint compartidos, CODEOWNERS), asi nada\ndepende de un monorepo externo. Los jobs downstream (indexado de busqueda, chequeo de links,\nlinting) solo miran archivos de este repo, lo que mantiene simples los alcances de CI y los\nsecrets requeridos.\n"
+  },
+  {
+    "id": "es/handbook/style-guide",
+    "slug": "handbook/style-guide",
+    "title": "Guia de estilo de Markdown y MDX",
+    "description": "Convenciones de autoria para Markdown, MDX, admonitions y fragmentos de codigo.",
+    "tags": [
+      "handbook",
+      "style-guide"
+    ],
+    "lastUpdated": "2026-03-06",
+    "status": "stable",
+    "lang": "es",
+    "order": 3,
+    "body": "\n## Reglas de formato\n\n- Mantener longitud de linea <= 100 caracteres cuando sea posible.\n- Usar sentence case en titulos (`## Getting started`, no `## Getting Started`).\n- Preferir listas ordenadas para secuencias y listas sin ordenar para detalles de apoyo.\n- Usar bloques de codigo con lenguaje (` ```ts `) para resaltado de sintaxis.\n\n## Admonitions\n\nUsar bloques estilo Docusaurus:\n\n```text\nConsejo breve y accionable.\n```\n\nOpciones comunes: `note`, `tip`, `warning`, `danger`. Importar callouts complejos desde `docs/<locale>/_partials`.\n\n## Fragmentos de codigo\n\n- Priorizar patrones de early-return en pseudo-codigo para reflejar como escribimos servicios reales.\n- Mantener snippets <= 30 lineas. Si es mas largo, dividir en varias secciones.\n- Anotar comandos de shell con comentarios cuando tengan efectos secundarios.\n\n## Tablas\n\n- Alinear columnas usando pipes de Markdown.\n- Mantener encabezados concisos; envolver contenido largo en la siguiente linea en vez de ensanchar la tabla sin limite.\n\n## Imports de MDX\n\n### Componentes autoinyectados\n\nLos componentes exportados desde `docs/<locale>/snippets/` (como `InfoCallout`, `ShellBlock` y\n`EarlyReturnExample`) estan disponibles globalmente en todos los archivos MDX. El backend\ndel sitio los registra automaticamente, por lo que se pueden usar sin sentencia de import:\n\n<InfoCallout />\n\n<ShellBlock command=\"npm ci\" />\n\nDeben renderizarse como componentes, no como codigo.\n\n### Imports custom o parciales\n\nPara componentes en `docs/<locale>/_partials/` o snippets de uso unico, usar imports explicitos al inicio\ndel archivo:\n\n```mdx\nimport ServicenodeCallout from \"../_partials/ServicenodeCallout.mdx\";\n\n<ServicenodeCallout />\n```\n\nMantener imports relativos al documento para evitar aliases dependientes del bundler.\n\n\n\n"
+  },
+  {
+    "id": "es/handbook/versioning",
+    "slug": "handbook/versioning",
+    "title": "Estrategia de versionado de docs",
+    "description": "Guia para versionar y mantener changelog de actualizaciones mayores de documentacion.",
+    "tags": [
+      "handbook",
+      "versioning"
+    ],
+    "lastUpdated": "2026-03-21",
+    "status": "stable",
+    "lang": "es",
+    "order": 5,
+    "body": "\n## Filosofia\n\nVersionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma\nincompatible. Las ediciones de texto rutinarias permanecen en la version activa.\n\n## Tipos de version\n\n| Version | Disparador | Almacenamiento |\n| --- | --- | --- |\n| `current` | Rama por defecto | Raiz de `docs/` |\n| `vX.Y` | Actualizacion mayor de gameplay | `versions/vX.Y/` (misma estructura) |\n| `legacy` | Contenido sin soporte | Rama archivada o export zip |\n\n## Flujo de release\n\n1. Preparar cambios bajo `docs/`.\n2. Cuando la actualizacion salga, copiar la carpeta a `versions/vX.Y/` y congelar.\n3. Actualizar `docs/es/reference/changelog.md` con puntos clave y links.\n4. Asegurar que el indexado de busqueda excluya versiones archivadas salvo que se solicite explicitamente (configurar filtro en Meilisearch).\n\n## Changelog\n\nUsar encabezados semanticos:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nEl archivo `docs/es/reference/changelog.md` mantiene el registro publico sincronizado con los lanzamientos del juego.\n\n\n\n"
+  },
+  {
+    "id": "es/reference/changelog",
+    "slug": "reference/changelog",
+    "title": "Changelog de documentacion",
+    "description": "Registro de lanzamientos importantes de documentacion alineados con actualizaciones del servidor.",
+    "tags": [
+      "reference",
+      "changelog"
+    ],
+    "lastUpdated": "2026-03-28",
+    "status": "draft",
+    "lang": "es",
+    "order": 4,
+    "body": "\n## [Sin publicar]\n\n- Entrada placeholder para proximas mejoras de la wiki.\n\n## [v2.3.0] - 2026-03-28\n\n- Guias de incorporacion actualizadas para alinearse con los pasos actuales del flujo CI.\n- Comportamiento de variables de entorno del indice de busqueda clarificado en la documentacion de contribucion.\n- Guia de contribucion alineada con el diseño de locales y el comando `npm run ci`.\n\n## [v2.2.0] - 2026-03-09\n\n- El CI ahora falla cuando los artefactos de busqueda generados difieren del estado confirmado.\n- Activadores de rutas del flujo de busqueda ampliados para cubrir scripts compartidos y configuracion de build.\n- Punto de entrada `npm run build` predeterminado agregado para el pipeline del indice de busqueda.\n- Detalles del flujo de trabajo y referencias de automatizacion actualizados en la documentacion del repositorio.\n- Estructura del repositorio wiki y documentacion del conjunto de datos de contenido clarificados.\n- Instrucciones de instalacion actualizadas para usar `npm ci` para instalaciones reproducibles.\n\n## [v2.1.0] - 2025-12-01\n\n- Conjuntos de datos divididos en archivos JSON por elemento en `assets/content/pokemon/` y `assets/content/moves/`.\n- La indexacion de busqueda ahora emite payloads separados de `docs`, `pokemon` y `moves` para Meilisearch.\n- Manifiestos de frontend generados: `pokemon-manifest.json`, `moves-manifest.json`, `move-learners-manifest.json`.\n- Documentacion de ShellBlock convertida al formato MDX.\n- Flujo de sincronizacion de busqueda actualizado para enviar payload JSON al backend del sitio web.\n\n## [v2.0.0] - 2025-11-21\n\n- Estructura inicial de la wiki, linting y CI.\n- Flujo de indexacion de busqueda orientado a Meilisearch.\n- Guia del flujo de localizacion con ejemplo en espanol.\n\n"
+  },
+  {
+    "id": "es/reference/localization-glossary",
+    "slug": "reference/localization-glossary",
+    "title": "Glosario de localizacion",
+    "description": "Terminologia compartida para mantener traducciones consistentes entre idiomas.",
+    "tags": [
+      "reference",
+      "localization"
+    ],
+    "lastUpdated": "2025-11-21",
+    "status": "draft",
+    "lang": "es",
+    "order": 5,
+    "body": "\n| Termino | Descripcion | Notas |\n| --- | --- | --- |\n| PokéCoins | Moneda premium del juego | Mantener sin traducir |\n| Survival Pass | Pase de recompensas de temporada | Usar equivalente localizado cuando el juego lo provea |\n\nAgregar mas filas a medida que crezcan los esfuerzos de localizacion.\n\n\n\n"
+  },
+  {
+    "id": "es/reference/media-policy",
+    "slug": "reference/media-policy",
+    "title": "Politica de media y assets",
+    "description": "Requisitos para agregar imagenes, diagramas y archivos descargables a la wiki.",
+    "tags": [
+      "reference",
+      "media"
+    ],
+    "lastUpdated": "2026-03-19",
+    "status": "stable",
+    "lang": "es",
+    "order": 3,
+    "body": "\nimport { ShellBlock } from \"../snippets/code-blocks.mdx\";\n\n## Formatos\n\n- Preferir `webp` para imagenes raster y `svg` para arte vectorial.\n- Convertir cargas PNG/JPEG usando ImageMagick o Squoosh antes de hacer commit.\n- Guardar archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.\n\n## Limites de tamano\n\n- Imagenes inline <= 600 KB (aplicado por `npm run lint:images`).\n- Diagramas <= 5 MB; cualquier cosa mayor debe usar Git LFS.\n\n## Alt text y captions\n\n- Proveer alt text descriptivo que transmita la misma informacion que la imagen.\n- Usar captions debajo de diagramas complejos para agregar contexto.\n\n## Git LFS\n\nVersionar binarios grandes:\n\n<ShellBlock command='git lfs track \"assets/diagrams/*.drawio\"\\ngit add .gitattributes assets/diagrams/example.drawio' />\n\n## Checklist de revision\n\n- [ ] File stored under `assets/`\n- [ ] Alt text filled in\n- [ ] Format is `webp` or `svg`\n- [ ] Size ≤ 600 KB (inline)\n- [ ] Referenced using a relative path in docs\n\n\n\n"
+  },
+  {
+    "id": "es/reference/release-checklist",
+    "slug": "reference/release-checklist",
+    "title": "Checklist de release de la wiki",
+    "description": "Verificaciones de release para generacion del search-index y sincronizacion con el sitio.",
+    "tags": [
+      "reference",
+      "release"
+    ],
+    "lastUpdated": "2026-03-22",
+    "status": "stable",
+    "lang": "es",
+    "order": 12,
+    "body": "\n# Checklist de release de la wiki\n\n## Pre-deploy\n\n- `npm ci`\n- `npm run ci`\n- verificar que la validacion local pase mediante el gate estandar del repo (incluye checks de search/manifests generados)\n- verificar que cambios en docs tengan frontmatter y media validos\n- verificar que los secrets de CI de search-index existan si la sincronizacion con website-backend esta habilitada para el repo objetivo\n\n## Publicacion / sincronizacion\n\n1. Hacer merge de cambios de docs en `main`.\n2. Ejecutar el workflow normal de CI.\n3. Ejecutar el workflow de search-index si hace falta reconstruccion manual.\n4. Confirmar que se generaron `build/search-index.json`, `build/search-indices.json` y los manifiestos de contenido del frontend bajo `build/content/<locale>/`.\n5. Si la sincronizacion con website-backend esta habilitada, confirmar que el endpoint de sync del backend acepto el nuevo payload.\n\n## Post-publicacion\n\n- verificar que las paginas de la wiki rendericen en el frontend\n- verificar que la busqueda de la wiki devuelva docs actualizados\n- verificar que existan manifiestos generados para pokemon, moves y move learners\n\n## Rollback\n\n- restaurar el ultimo commit estable conocido de la wiki\n- volver a ejecutar el workflow de search-index\n- verificar que los resultados de busqueda del backend coincidan con el contenido restaurado\n"
+  },
+  {
+    "id": "es/reference/search-indexing",
+    "slug": "reference/search-indexing",
+    "title": "Indexacion de busqueda",
+    "description": "Detalles para ejecutar el flujo de indexacion de Meilisearch localmente y en CI.",
+    "tags": [
+      "reference",
+      "search"
+    ],
+    "lastUpdated": "2026-03-12",
+    "status": "beta",
+    "lang": "es",
+    "order": 2,
+    "body": "\n## Flujo\n\n- `scripts/build-search-index.ts` escanea docs y datasets JSON de contenido bajo\n  `assets/content/<locale>/pokemon/` y `assets/content/<locale>/moves/`.\n- Genera:\n  - `build/search-index.json` para fallback local de busqueda combinada\n  - `build/search-indices.json` para sincronizacion remota de multiples indices\n  - `build/content/en/pokemon-manifest.json` y `build/content/es/pokemon-manifest.json`\n    para listado y navegacion rapida de Pokemon en frontend\n  - `build/content/en/moves-manifest.json` y `build/content/es/moves-manifest.json`\n    para listado y navegacion rapida de moves en frontend\n  - `build/content/en/move-learners-manifest.json` y\n    `build/content/es/move-learners-manifest.json` para busqueda rapida de aprendices por move\n- Si `MEILISEARCH_URL` y `MEILISEARCH_KEY` estan definidos, el script publica cada\n  payload de indice (`wiki-docs`, `wiki-pokemon` y `wiki-moves`) directamente en el\n  indice correspondiente de Meilisearch.\n- `.github/workflows/search-index.yml` ejecuta el script en `main` y de forma nocturna, sube los\n  payloads de busqueda generados y los manifiestos de contenido del frontend como artifacts del workflow,\n  y luego envia el payload JSON multi-indice al endpoint protegido de sync del backend del sitio para\n  mantener privado Meilisearch.\n\n## Configuracion requerida\n\n| Variable | Descripcion |\n| --- | --- |\n| `MEILISEARCH_URL` | URL base de la instancia autohospedada de Meilisearch |\n| `MEILISEARCH_KEY` | Clave de admin o documents con permisos de escritura |\n\n## Configuracion opcional de CI\n\n| Secret | Descripcion |\n| --- | --- |\n| `WIKI_SEARCH_SYNC_URL` | URL HTTPS publica opcional del endpoint de sync del backend |\n| `WIKI_SEARCH_SYNC_TOKEN` | Token bearer compartido opcional validado por el backend antes de importar documentos |\n\nCuando ambos secrets estan configurados, el workflow sincroniza\n`build/search-indices.json` con el backend del sitio. Cuando falta alguno, el\nworkflow igual construye los payloads de busqueda y sube los artifacts generados\npara que la ejecucion siga siendo depurable.\n\n## Ejecucion local\n\n```bash\nMEILISEARCH_URL=https://search.pokebedrock.com \\\nMEILISEARCH_KEY=<docs-key> \\\nnpm run build:search\n```\n\nEl comando escribe payloads de busqueda y manifiestos del frontend, y publica los tres\nindices remotos cuando las variables de entorno estan definidas.\n\n## Endpoint de sync en produccion\n\nEl flujo de produccion por defecto no expone Meilisearch publicamente:\n\n1. GitHub Actions construye `build/search-index.json` y `build/search-indices.json`.\n2. Si `WIKI_SEARCH_SYNC_URL` y `WIKI_SEARCH_SYNC_TOKEN` estan configurados,\n   el workflow hace `POST` de `build/search-indices.json` al backend del sitio.\n3. Cuando esos secrets todavia no estan configurados, el workflow omite el paso\n   de sync del backend y aun asi sube los artifacts generados.\n4. Si el sync se ejecuta, el backend valida `WIKI_SEARCH_SYNC_TOKEN`.\n5. Luego el backend se conecta a `http://meilisearch:7700` dentro del cluster y reemplaza:\n   - `wiki-docs`\n   - `wiki-pokemon`\n   - `wiki-moves`\n\n## Schema del documento\n\n```json\n{\n  \"id\": \"guides/getting-started\",\n  \"slug\": \"guides/getting-started\",\n  \"title\": \"Comenzando\",\n  \"description\": \"Resumen corto...\",\n  \"tags\": [\"guia\", \"onboarding\"],\n  \"lastUpdated\": \"2025-11-21\",\n  \"status\": \"stable\",\n  \"lang\": \"en\",\n  \"order\": 3,\n  \"body\": \"Contenido Markdown sin frontmatter\"\n}\n```\n\nManten descripciones de hasta 180 caracteres para evitar truncamiento en UIs de busqueda.\n\n"
+  },
+  {
+    "id": "es/reference/sync-to-website",
+    "slug": "reference/sync-to-website",
+    "title": "Pipeline de sincronizacion con el sitio",
+    "description": "Como los pushes en GitHub disparan el webhook del backend y mantienen cacheado el sitio publico.",
+    "tags": [
+      "reference",
+      "sync"
+    ],
+    "lastUpdated": "2025-11-21",
+    "status": "beta",
+    "lang": "es",
+    "order": 1,
+    "body": "\n## Resumen\n\n1. Los docs se mergean a `main`.\n2. GitHub dispara un repository dispatch/webhook gestionado por el backend del sitio.\n3. El backend obtiene archivos cambiados via GitHub Contents API usando ETags para cache-busting.\n4. La salida renderizada en HTML/MDX se cachea en Redis con TTL de 15 minutos.\n\n## Contrato del webhook\n\n| Campo | Descripcion |\n| --- | --- |\n| `event` | Siempre `wiki.synced` |\n| `commit` | SHA del commit mergeado |\n| `files` | Arreglo de rutas de docs modificadas |\n| `timestamp` | Timestamp ISO |\n\nEl backend valida el HMAC usando el secreto compartido `WIKI_WEBHOOK_SECRET`. Ver\n`website-backend/src/http/routes/webhooks.ts` para detalles de implementacion.\n\n## Pruebas locales\n\nUsa el payload de ejemplo en `docs/es/reference/webhook-example.json` con `curl` o `Invoke-WebRequest`.\n\n```powershell\nInvoke-WebRequest `\n  -Uri https://api.pokebedrock.com/wiki/webhook `\n  -Headers @{ \"X-Signature\" = \"<hmac>\" } `\n  -Body (Get-Content docs/es/reference/webhook-example.json -Raw) `\n  -Method Post\n```\n\n## Cache busting\n\n- El backend guarda el `ETag` devuelto por GitHub por archivo.\n- En sincronizaciones siguientes, envia `If-None-Match`; el contenido sin cambios evita re-render.\n- Cuando el sitio sirve una pagina, incluye `lastUpdated` del frontmatter en la respuesta\n  para ayudar al cliente a decidir si debe pedir datos frescos.\n\n\n\n"
   },
   {
     "id": "content/en/pokemon/abomasnow",

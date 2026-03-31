@@ -2,8 +2,8 @@
   "event": "wiki.synced",
   "commit": "0123456789abcdef0123456789abcdef01234567",
   "files": [
-    "docs/guides/getting-started.mdx",
-    "docs/reference/sync-to-website.md"
+    "docs/es/guides/getting-started.mdx",
+    "docs/es/reference/sync-to-website.md"
   ],
   "timestamp": "2025-11-21T10:00:00Z"
 }

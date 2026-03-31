@@ -297,9 +297,9 @@ const wikiIndexUids = {
 const docsByLocale = await Promise.all(
   supportedLocales.map(async (locale) => {
     const root = getLocalizedDocsRoot(locale);
-    const files = await glob(`${root}/**/*.{md,mdx}`, {
+    const files = (await glob(`${root}/**/*.{md,mdx}`, {
       ignore: [`${root}/**/_partials/**`, `${root}/**/snippets/**`],
-    });
+    })).sort((a, b) => a.localeCompare(b));
     return { locale, root, files };
   }),
 );
