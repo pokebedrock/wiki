@@ -27,8 +27,10 @@ order: 2
 - Si `MEILISEARCH_URL` y `MEILISEARCH_KEY` estan definidos, el script publica cada
   payload de indice (`wiki-docs`, `wiki-pokemon` y `wiki-moves`) directamente en el
   indice correspondiente de Meilisearch.
-- `.github/workflows/search-index.yml` ejecuta el script en `main` y de forma nocturna, y luego
-  sube el payload JSON al endpoint protegido de sync del backend del sitio para mantener privado Meilisearch.
+- `.github/workflows/search-index.yml` ejecuta el script en `main` y de forma nocturna, sube los
+  payloads de busqueda generados y los manifiestos de contenido del frontend como artifacts del workflow,
+  y luego envia el payload JSON multi-indice al endpoint protegido de sync del backend del sitio para
+  mantener privado Meilisearch.
 
 ## Configuracion requerida
 
