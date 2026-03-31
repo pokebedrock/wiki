@@ -15,7 +15,7 @@ lang: en
 
 - `npm ci`
 - `npm run ci`
-- `npm run audit:prod`
+- verify local validation passes through the standard repo gate (includes generated search/manifests checks)
 - verify docs changes have valid frontmatter and media
 - verify search-index CI secrets are present for the target repo
 
