@@ -4,7 +4,7 @@ description: Verificaciones de release para generacion del search-index y sincro
 tags:
   - reference
   - release
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-03-22"
 status: stable
 lang: es
 ---
@@ -17,15 +17,15 @@ lang: es
 - `npm run ci`
 - verificar que la validacion local pase mediante el gate estandar del repo (incluye checks de search/manifests generados)
 - verificar que cambios en docs tengan frontmatter y media validos
-- verificar que los secrets de CI de search-index existan en el repo objetivo
+- verificar que los secrets de CI de search-index existan si la sincronizacion con website-backend esta habilitada para el repo objetivo
 
 ## Publicacion / sincronizacion
 
 1. Hacer merge de cambios de docs en `main`.
 2. Ejecutar el workflow normal de CI.
 3. Ejecutar el workflow de search-index si hace falta reconstruccion manual.
-4. Confirmar que se generaron `build/search-index.json` y `build/search-indices.json`.
-5. Confirmar que el endpoint de sync del backend acepto el nuevo payload.
+4. Confirmar que se generaron `build/search-index.json`, `build/search-indices.json` y los manifiestos de contenido del frontend bajo `build/content/<locale>/`.
+5. Si la sincronizacion con website-backend esta habilitada, confirmar que el endpoint de sync del backend acepto el nuevo payload.
 
 ## Post-publicacion
 
