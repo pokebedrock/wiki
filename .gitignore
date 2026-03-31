@@ -5,9 +5,12 @@ node_modules/
 .cache/
 .tmp/
 dist/
-build/
+build/*
+!build/search-index.json
+!build/search-indices.json
+!build/content/
+!build/content/**
+build/scripts/
 coverage/
 *.log
 !.gitkeep
-
-
