@@ -13,6 +13,7 @@
     "ci": "npm run lint && npm run lint:links && npm run check:generated",
     "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\"",
     "build:scripts": "tsc -p tsconfig.build.json",
+    "build": "npm run build:search",
     "lint:frontmatter": "npm run build:scripts && npm run lint:frontmatter:run",
     "lint:frontmatter:run": "node build/scripts/validate-frontmatter.js",
     "lint:images": "npm run build:scripts && npm run lint:images:run",
