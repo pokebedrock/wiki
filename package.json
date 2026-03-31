@@ -10,7 +10,7 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "ci": "npm run lint && npm run lint:links && npm run check:generated",
+    "ci": "npm run lint && npm run lint:links && npm run check:generated && npm run audit:prod",
     "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\" \"*.md\"",
     "build:scripts": "tsc -p tsconfig.build.json",
     "build": "npm run build:search",
