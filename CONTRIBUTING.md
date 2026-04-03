@@ -72,11 +72,13 @@ Run the following before pushing:
 
 ```bash
 npm run ci
+npm run audit:prod
 ```
 
-`npm run ci` runs the same lint + link validation steps as GitHub CI and also
-verifies generated search/manifests are in sync, so it is the best local pre-push
-check.
+`npm run ci` covers the authoring checks from GitHub CI (linting, link validation,
+and generated search/manifests drift detection). GitHub Actions also runs
+`npm run audit:prod`, so contributors should run that locally before opening a PR
+when they touched dependencies or refreshed the lockfile.
 
 ## Reporting Issues
 
