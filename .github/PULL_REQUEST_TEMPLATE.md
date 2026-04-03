@@ -6,9 +6,9 @@
 
 ## Testing
 
-- [ ] `npm run lint`
-- [ ] `npm run lint:links`
-- [ ] `npm run build:search` (when touching navigation or metadata)
+- [ ] `npm run ci`
+- [ ] `npm run audit:prod`
+- [ ] Generated search/manifests reviewed (when touching navigation, metadata, or content datasets)
 
 ## Notes
 
