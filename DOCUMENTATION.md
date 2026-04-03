@@ -84,7 +84,15 @@ This file documents the tracked repository contents: purpose, structure, and the
 - `.github/workflows/search-index.yml` (`wiki-search`):
   - Triggers on pushes to `main` for docs/content/schema/search-build paths, manual dispatch, and daily schedule.
   - Builds search index via `npm run build:search`.
-  - Uploads both `build/search-index.json` and `build/search-indices.json` as artifacts.
+  - Uploads these generated outputs as artifacts:
+    - `build/search-index.json`
+    - `build/search-indices.json`
+    - `build/content/en/pokemon-manifest.json`
+    - `build/content/en/moves-manifest.json`
+    - `build/content/en/move-learners-manifest.json`
+    - `build/content/es/pokemon-manifest.json`
+    - `build/content/es/moves-manifest.json`
+    - `build/content/es/move-learners-manifest.json`
   - Sends the multi-index JSON payload to the website backend sync endpoint using:
     - `WIKI_SEARCH_SYNC_URL`
     - `WIKI_SEARCH_SYNC_TOKEN`
@@ -201,7 +209,7 @@ Media policy from docs/scripts:
 ### CI workflow
 
 - `wiki-ci` repeats lint + link checks on push/PR.
-- `wiki-search` builds search index on main/schedule/manual and publishes artifact.
+- `wiki-search` builds search index on main/schedule/manual and publishes search payload + content-manifest artifacts.
 
 ### Search workflow
 

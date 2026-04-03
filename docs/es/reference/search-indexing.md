@@ -27,8 +27,10 @@ order: 2
 - Si `MEILISEARCH_URL` y `MEILISEARCH_KEY` estan definidos, el script publica cada
   payload de indice (`wiki-docs`, `wiki-pokemon` y `wiki-moves`) directamente en el
   indice correspondiente de Meilisearch.
-- `.github/workflows/search-index.yml` ejecuta el script en `main` y de forma nocturna, y luego
-  sube el payload JSON al endpoint protegido de sync del backend del sitio para mantener privado Meilisearch.
+- `.github/workflows/search-index.yml` ejecuta el script en `main` y de forma nocturna.
+  Sube como artefactos `build/search-index.json`, `build/search-indices.json` y los manifiestos generados en
+  `build/content/<locale>/`, y luego envia `build/search-indices.json` al endpoint protegido de sync del backend
+  del sitio para mantener privado Meilisearch.
 
 ## Configuracion requerida
 
@@ -59,8 +61,8 @@ indices remotos cuando las variables de entorno estan definidas.
 
 El flujo de produccion por defecto no expone Meilisearch publicamente:
 
-1. GitHub Actions construye `build/search-index.json` y `build/search-indices.json`.
-2. El workflow hace `POST` de `build/search-indices.json` al backend del sitio.
+1. GitHub Actions construye `build/search-index.json`, `build/search-indices.json` y los manifiestos de contenido en `build/content/<locale>/`.
+2. El workflow publica esos archivos como artefactos y hace `POST` de `build/search-indices.json` al backend del sitio.
 3. El backend valida `WIKI_SEARCH_SYNC_TOKEN`.
 4. El backend se conecta a `http://meilisearch:7700` dentro del cluster y reemplaza:
    - `wiki-docs`
