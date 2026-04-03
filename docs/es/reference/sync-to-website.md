@@ -1,10 +1,10 @@
 ---
 title: Pipeline de sincronizacion con el sitio
-description: Como los pushes en GitHub disparan el webhook del backend y mantienen cacheado el sitio publico.
+description: Como el workflow de search-index envia payloads generados al backend del sitio.
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-03"
 status: beta
 lang: es
 toc: true
@@ -13,41 +13,64 @@ order: 1
 
 ## Resumen
 
-1. Los docs se mergean a `main`.
-2. GitHub dispara un repository dispatch/webhook gestionado por el backend del sitio.
-3. El backend obtiene archivos cambiados via GitHub Contents API usando ETags para cache-busting.
-4. La salida renderizada en HTML/MDX se cachea en Redis con TTL de 15 minutos.
+1. Los cambios de docs o contenido estructurado llegan a `main`.
+2. `.github/workflows/search-index.yml` instala dependencias y ejecuta
+   `npm run build:search`.
+3. El workflow sube artifacts generados para debugging e inspeccion manual.
+4. Si los secrets de sync del backend estan configurados, el workflow hace `POST`
+   de `build/search-indices.json` al backend del sitio.
+5. El backend reindexa la instancia privada de Meilisearch a partir de ese payload JSON.
 
-## Contrato del webhook
+## Que envia el workflow
 
-| Campo | Descripcion |
+El paso de sync del backend envia el contenido exacto de `build/search-indices.json` con:
+
+- `Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN`
+- `Content-Type: application/json`
+
+Ese payload contiene los documentos generados para `wiki-docs`, `wiki-pokemon` y
+`wiki-moves`, construidos desde los docs del repo y los datasets bajo
+`assets/content/<locale>/`.
+
+## Secrets de CI requeridos
+
+| Secret | Descripcion |
 | --- | --- |
-| `event` | Siempre `wiki.synced` |
-| `commit` | SHA del commit mergeado |
-| `files` | Arreglo de rutas de docs modificadas |
-| `timestamp` | Timestamp ISO |
+| `WIKI_SEARCH_SYNC_URL` | Endpoint HTTPS publico expuesto por el backend del sitio para importar search |
+| `WIKI_SEARCH_SYNC_TOKEN` | Token bearer compartido que el backend valida antes de aceptar el payload |
 
-El backend valida el HMAC usando el secreto compartido `WIKI_WEBHOOK_SECRET`. Ver
-`website-backend/src/http/routes/webhooks.ts` para detalles de implementacion.
+Si falta alguno de los secrets, el workflow omite el sync del backend y aun asi sube
+los artifacts generados para que maintainers puedan inspeccionar los payloads.
 
 ## Pruebas locales
 
-Usa el payload de ejemplo en `docs/es/reference/webhook-example.json` con `curl` o `Invoke-WebRequest`.
+Puedes probar el sync estilo produccion de forma local despues de generar los payloads:
 
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/es/reference/webhook-example.json -Raw) `
-  -Method Post
+```bash
+npm ci
+npm run build:search
+curl --fail-with-body --show-error --silent \
+  -X POST \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  --data-binary @build/search-indices.json \
+  https://api.pokebedrock.com/wiki/search/sync
 ```
 
-## Cache busting
+Reemplaza la URL y el token por los del entorno del backend objetivo.
 
-- El backend guarda el `ETag` devuelto por GitHub por archivo.
-- En sincronizaciones siguientes, envia `If-None-Match`; el contenido sin cambios evita re-render.
-- Cuando el sitio sirve una pagina, incluye `lastUpdated` del frontmatter en la respuesta
-  para ayudar al cliente a decidir si debe pedir datos frescos.
+## Artifacts que produce el workflow
 
+El workflow sube estos archivos generados incluso cuando el sync del backend se omite:
 
+- `build/search-index.json`
+- `build/search-indices.json`
+- `build/content/en/pokemon-manifest.json`
+- `build/content/en/moves-manifest.json`
+- `build/content/en/move-learners-manifest.json`
+- `build/content/es/pokemon-manifest.json`
+- `build/content/es/moves-manifest.json`
+- `build/content/es/move-learners-manifest.json`
 
+Estos artifacts hacen mas facil comparar datos generados de search sin exponer
+Meilisearch privado directamente.
