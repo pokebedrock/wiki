@@ -4,7 +4,7 @@ description: Details for running the Meilisearch indexing workflow locally and i
 tags:
   - reference
   - search
-lastUpdated: "2026-03-12"
+lastUpdated: "2026-04-03"
 status: beta
 lang: en
 toc: true
@@ -66,7 +66,10 @@ indices when env vars are set.
 
 The default production flow does not expose Meilisearch publicly:
 
-1. GitHub Actions builds `build/search-index.json` and `build/search-indices.json`.
+1. GitHub Actions builds `build/search-index.json`, `build/search-indices.json`,
+   and the frontend content manifests under `build/content/<locale>/`
+   (`pokemon-manifest.json`, `moves-manifest.json`, `move-learners-manifest.json`).
+   All of these are uploaded as workflow artifacts.
 2. If `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are configured, the workflow `POST`s `build/search-indices.json` to the website backend.
 3. When those secrets are not configured yet, the workflow skips the backend sync step and still uploads the generated artifacts.
 4. If sync runs, the backend validates `WIKI_SEARCH_SYNC_TOKEN`.
