@@ -4,7 +4,7 @@ description: Detalles para ejecutar el flujo de indexacion de Meilisearch localm
 tags:
   - reference
   - search
-lastUpdated: "2026-03-12"
+lastUpdated: "2026-04-03"
 status: beta
 lang: es
 toc: true
@@ -66,7 +66,10 @@ indices remotos cuando las variables de entorno estan definidas.
 
 El flujo de produccion por defecto no expone Meilisearch publicamente:
 
-1. GitHub Actions construye `build/search-index.json` y `build/search-indices.json`.
+1. GitHub Actions construye `build/search-index.json`, `build/search-indices.json`
+   y los manifiestos de contenido del frontend bajo `build/content/<locale>/`
+   (`pokemon-manifest.json`, `moves-manifest.json`, `move-learners-manifest.json`).
+   Todos estos se suben como artifacts del workflow.
 2. Si `WIKI_SEARCH_SYNC_URL` y `WIKI_SEARCH_SYNC_TOKEN` estan configurados,
    el workflow hace `POST` de `build/search-indices.json` al backend del sitio.
 3. Cuando esos secrets todavia no estan configurados, el workflow omite el paso
