@@ -26,6 +26,9 @@ env:
 jobs:
   build-and-sync:
     runs-on: ubuntu-latest
+    env:
+      WIKI_SEARCH_SYNC_URL: ${{ secrets.WIKI_SEARCH_SYNC_URL }}
+      WIKI_SEARCH_SYNC_TOKEN: ${{ secrets.WIKI_SEARCH_SYNC_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,10 +40,7 @@ jobs:
       - name: Build search index
         run: npm run build:search
       - name: Sync search index via website backend
-        if: ${{ secrets.WIKI_SEARCH_SYNC_URL != '' && secrets.WIKI_SEARCH_SYNC_TOKEN != '' }}
-        env:
-          WIKI_SEARCH_SYNC_URL: ${{ secrets.WIKI_SEARCH_SYNC_URL }}
-          WIKI_SEARCH_SYNC_TOKEN: ${{ secrets.WIKI_SEARCH_SYNC_TOKEN }}
+        if: ${{ env.WIKI_SEARCH_SYNC_URL != '' && env.WIKI_SEARCH_SYNC_TOKEN != '' }}
         run: |
           curl --fail-with-body --show-error --silent \
             -X POST \
@@ -49,7 +49,7 @@ jobs:
             --data-binary @build/search-indices.json \
             "$WIKI_SEARCH_SYNC_URL"
       - name: Note skipped sync when backend credentials are unset
-        if: ${{ secrets.WIKI_SEARCH_SYNC_URL == '' || secrets.WIKI_SEARCH_SYNC_TOKEN == '' }}
+        if: ${{ env.WIKI_SEARCH_SYNC_URL == '' || env.WIKI_SEARCH_SYNC_TOKEN == '' }}
         run: |
           echo 'WIKI_SEARCH_SYNC_URL or WIKI_SEARCH_SYNC_TOKEN is unset; skipped backend sync after building search artifacts.'
       - name: Upload artifact
