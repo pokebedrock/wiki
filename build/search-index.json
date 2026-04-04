@@ -70,11 +70,11 @@
       "handbook",
       "localization"
     ],
-    "lastUpdated": "2026-03-06",
+    "lastUpdated": "2026-04-04",
     "status": "stable",
     "lang": "en",
     "order": 4,
-    "body": "\n## File Layout\n\n- Default English page: `docs/en/<category>/<slug>.md(x)` — use `.mdx` when the doc\n  needs MDX components.\n- Translated page: `docs/<lang>/<category>/<slug>.md(x)`\n- Example: `docs/en/guides/running-the-server.mdx` + `docs/es/guides/running-the-server.md`\n\nKeep slug paths identical across locales so route mapping and alternates stay stable.\n\n## Workflow\n\n1. **Open an issue** – use the \"Content Request\" template and flag it as a translation task.\n2. **Create a branch** – `docs/<lang>/<slug>`.\n3. **Sync with English** – translators diff against `docs/en/...` to ensure they include\n   fresh changes.\n4. **Run validation** – `npm run ci`.\n5. **Request review** – translators tag a maintainer that speaks the language (if available) plus any subject-matter owner.\n\n## Language Metadata\n\nInclude the `lang` property in frontmatter along with a `status` flag. Example:\n\n```yaml\nlang: es\nstatus: beta\n```\n\nUse `draft` or `beta` for translations that still need native review.\n\n## Glossary\n\nMaintain terminology consistency by referencing the shared glossary in\n`docs/en/reference/localization-glossary.md` (to be populated as translations expand).\nWhen you introduce a new term, note it in the PR so others can update the glossary.\n\n\n\n"
+    "body": "\n## File Layout\n\n- Default English page: `docs/en/<category>/<slug>.md(x)` — use `.mdx` when the doc\n  needs MDX components.\n- Translated page: `docs/<lang>/<category>/<slug>.md(x)`\n- Example: `docs/en/guides/running-the-server.mdx` + `docs/es/guides/running-the-server.md`\n\nKeep slug paths identical across locales so route mapping and alternates stay stable.\n\n## Workflow\n\n1. **Open an issue** – use the \"Content Request\" template and flag it as a translation task.\n2. **Create a branch** – `docs/<lang>/<slug>`.\n3. **Sync with English** – translators diff against `docs/en/...` to ensure they include\n   fresh changes.\n4. **Run validation** – `npm run ci` for the standard docs/search checks,\n   then `npm run audit:prod` before opening or updating a PR so local\n   validation matches the GitHub CI gate.\n5. **Request review** – translators tag a maintainer that speaks the language (if available) plus any subject-matter owner.\n\n## Language Metadata\n\nInclude the `lang` property in frontmatter along with a `status` flag. Example:\n\n```yaml\nlang: es\nstatus: beta\n```\n\nUse `draft` or `beta` for translations that still need native review.\n\n## Glossary\n\nMaintain terminology consistency by referencing the shared glossary in\n`docs/en/reference/localization-glossary.md` (to be populated as translations expand).\nWhen you introduce a new term, note it in the PR so others can update the glossary.\n\n\n\n"
   },
   {
     "id": "en/handbook/overview",
@@ -190,11 +190,11 @@
       "reference",
       "release"
     ],
-    "lastUpdated": "2026-03-22",
+    "lastUpdated": "2026-04-04",
     "status": "stable",
     "lang": "en",
     "order": 12,
-    "body": "\n# Wiki release checklist\n\n## Pre-Deploy\n\n- `npm ci`\n- `npm run ci`\n- verify local validation passes through the standard repo gate (includes generated search/manifests checks)\n- verify docs changes have valid frontmatter and media\n- verify search-index CI secrets are present if website-backend sync is enabled for the target repo\n\n## Publish / Sync\n\n1. Merge docs changes to `main`.\n2. Run the normal CI workflow.\n3. Run the search-index workflow if a manual rebuild is needed.\n4. Confirm `build/search-index.json`, `build/search-indices.json`, and the\n   generated frontend content manifests under `build/content/<locale>/` were\n   produced.\n5. If website-backend sync is enabled, confirm the backend sync endpoint accepted the new payload.\n\n## Post-Publish\n\n- verify wiki pages render in the frontend\n- verify wiki search returns updated docs\n- verify generated manifests exist for pokemon, moves, and move learners\n\n## Rollback\n\n- restore the last known-good wiki commit\n- rerun the search-index workflow\n- verify backend search results match the restored content\n"
+    "body": "\n# Wiki release checklist\n\n## Pre-Deploy\n\n- `npm ci`\n- `npm run ci`\n- `npm run audit:prod`\n- verify local validation passes through the standard repo gate (`npm run ci`) and the extra production dependency audit enforced by GitHub CI\n- verify docs changes have valid frontmatter and media\n- verify search-index CI secrets are present if website-backend sync is enabled for the target repo\n\n## Publish / Sync\n\n1. Merge docs changes to `main`.\n2. Run the normal CI workflow.\n3. Run the search-index workflow if a manual rebuild is needed.\n4. Confirm `build/search-index.json`, `build/search-indices.json`, and the\n   generated frontend content manifests under `build/content/<locale>/` were\n   produced.\n5. If website-backend sync is enabled, confirm the backend sync endpoint accepted the new payload.\n\n## Post-Publish\n\n- verify wiki pages render in the frontend\n- verify wiki search returns updated docs\n- verify generated manifests exist for pokemon, moves, and move learners\n\n## Rollback\n\n- restore the last known-good wiki commit\n- rerun the search-index workflow\n- verify backend search results match the restored content\n"
   },
   {
     "id": "en/reference/search-indexing",

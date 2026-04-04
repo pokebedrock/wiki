@@ -4,7 +4,7 @@ description: Release checks for search-index generation and website sync.
 tags:
   - reference
   - release
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-04"
 status: stable
 lang: en
 ---
@@ -15,7 +15,8 @@ lang: en
 
 - `npm ci`
 - `npm run ci`
-- verify local validation passes through the standard repo gate (includes generated search/manifests checks)
+- `npm run audit:prod`
+- verify local validation passes through the standard repo gate (`npm run ci`) and the extra production dependency audit enforced by GitHub CI
 - verify docs changes have valid frontmatter and media
 - verify search-index CI secrets are present if website-backend sync is enabled for the target repo
 

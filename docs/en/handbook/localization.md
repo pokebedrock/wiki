@@ -4,7 +4,7 @@ description: How to structure translated docs, coordinate translators, and revie
 tags:
   - handbook
   - localization
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-04-04"
 status: stable
 lang: en
 toc: true
@@ -26,7 +26,9 @@ Keep slug paths identical across locales so route mapping and alternates stay st
 2. **Create a branch** – `docs/<lang>/<slug>`.
 3. **Sync with English** – translators diff against `docs/en/...` to ensure they include
    fresh changes.
-4. **Run validation** – `npm run ci`.
+4. **Run validation** – `npm run ci` for the standard docs/search checks,
+   then `npm run audit:prod` before opening or updating a PR so local
+   validation matches the GitHub CI gate.
 5. **Request review** – translators tag a maintainer that speaks the language (if available) plus any subject-matter owner.
 
 ## Language Metadata
