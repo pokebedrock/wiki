@@ -33,7 +33,11 @@ Use MDX if you need components, otherwise stick to Markdown for readability.
 
 ## 4. Validate
 
-<ShellBlock command="npm run ci" />
+<ShellBlock command="npm run ci\nnpm run audit:prod" />
+
+`npm run ci` covers linting, link checks, and generated search/manifests drift. Run
+`npm run audit:prod` as well before opening a PR so your branch matches the same
+production dependency audit that GitHub Actions enforces on pushes and pull requests.
 
 ## 5. Open a PR
 

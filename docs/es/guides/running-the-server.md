@@ -21,9 +21,14 @@ order: 3
 
 1. `npm ci`
 2. Edita los archivos en `docs/`.
-3. Ejecuta `npm run ci`.
+3. Ejecuta `npm run ci` y luego `npm run audit:prod`.
 4. Abre un PR, explica que se trata de una traducción al español y solicita
    revisión de `@pokebedrock/wiki-maintainers`.
+
+`npm run ci` cubre linting, revisión de links y drift de los artifacts generados de
+search/manifests. Antes de abrir una PR, ejecuta también `npm run audit:prod` para que tu
+rama coincida con la misma auditoría de dependencias de producción que GitHub Actions
+exige en pushes y pull requests.
 
 ## Revisión
 

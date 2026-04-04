@@ -44,7 +44,7 @@
     "status": "stable",
     "lang": "en",
     "order": 1,
-    "body": "\n<InfoCallout />\n\n## 1. Clone & Install\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Create a Branch\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Author Content\n\n- Pick a category under `docs/`.\n- Copy the frontmatter template from `CONTRIBUTING.md`.\n- Add assets relative to the document path (for example,\n  `../../assets/images/ui.webp`).\n\nUse MDX if you need components, otherwise stick to Markdown for readability.\n\n## 4. Validate\n\n<ShellBlock command=\"npm run ci\" />\n\n## 5. Open a PR\n\nFill out the PR template, link related issues, and request a review from `@pokebedrock/wiki-maintainers`.\n\n\n\n"
+    "body": "\n<InfoCallout />\n\n## 1. Clone & Install\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Create a Branch\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Author Content\n\n- Pick a category under `docs/`.\n- Copy the frontmatter template from `CONTRIBUTING.md`.\n- Add assets relative to the document path (for example,\n  `../../assets/images/ui.webp`).\n\nUse MDX if you need components, otherwise stick to Markdown for readability.\n\n## 4. Validate\n\n<ShellBlock command=\"npm run ci\\nnpm run audit:prod\" />\n\n`npm run ci` covers linting, link checks, and generated search/manifests drift. Run\n`npm run audit:prod` as well before opening a PR so your branch matches the same\nproduction dependency audit that GitHub Actions enforces on pushes and pull requests.\n\n## 5. Open a PR\n\nFill out the PR template, link related issues, and request a review from `@pokebedrock/wiki-maintainers`.\n\n\n\n"
   },
   {
     "id": "en/guides/running-the-server",
@@ -59,7 +59,7 @@
     "status": "beta",
     "lang": "en",
     "order": 2,
-    "body": "\n## Install Dependencies\n\n<ShellBlock command=\"npm ci\" />\n\n## Run Linting\n\n<ShellBlock command=\"npm run ci\" />\n\nThe CI task runs markdown, frontmatter, image validation, link checks, and generated\nsearch/manifests drift checks in one pass. Re-run it after editing files; there's no\nwatch flag wired up for the current tooling stack.\n\n## Preview\n\nUntil the website frontend wires up MDX rendering, preview using your favorite Markdown\nviewer (VS Code, Obsidian, etc.). Once the Next.js docs portal is ready, run it against\nthe `docs/` directory using the `POKEBEDROCK_WIKI_PATH` env var.\n\n\n\n"
+    "body": "\n## Install Dependencies\n\n<ShellBlock command=\"npm ci\" />\n\n## Run Validation\n\n<ShellBlock command=\"npm run ci\\nnpm run audit:prod\" />\n\n`npm run ci` runs markdown, frontmatter, image validation, link checks, and generated\nsearch/manifests drift checks in one pass. Re-run it after editing files; there's no\nwatch flag wired up for the current tooling stack. Before you open a PR, run\n`npm run audit:prod` too so your branch matches the production dependency audit that\nGitHub Actions enforces on pushes and pull requests.\n\n## Preview\n\nUntil the website frontend wires up MDX rendering, preview using your favorite Markdown\nviewer (VS Code, Obsidian, etc.). Once the Next.js docs portal is ready, run it against\nthe `docs/` directory using the `POKEBEDROCK_WIKI_PATH` env var.\n\n\n\n"
   },
   {
     "id": "en/handbook/localization",
@@ -271,7 +271,7 @@
     "status": "stable",
     "lang": "es",
     "order": 1,
-    "body": "\n<InfoCallout />\n\n## 1. Clonar e instalar\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Crear una rama\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Crear contenido\n\n- Elegi una categoria bajo `docs/`.\n- Copia la plantilla de frontmatter desde `CONTRIBUTING.md`.\n- Agrega assets con ruta relativa al documento (por ejemplo,\n  `../../assets/images/ui.webp`).\n\nUsa MDX si necesitas componentes; en caso contrario, usa Markdown por legibilidad.\n\n## 4. Validar\n\n<ShellBlock command=\"npm run ci\" />\n\n## 5. Abrir una PR\n\nCompleta la plantilla de PR, enlaza issues relacionados y solicita revision a `@pokebedrock/wiki-maintainers`.\n\n\n\n"
+    "body": "\n<InfoCallout />\n\n## 1. Clonar e instalar\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Crear una rama\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n\n\n## 3. Crear contenido\n\n- Elegi una categoria bajo `docs/`.\n- Copia la plantilla de frontmatter desde `CONTRIBUTING.md`.\n- Agrega assets con ruta relativa al documento (por ejemplo,\n  `../../assets/images/ui.webp`).\n\nUsa MDX si necesitas componentes; en caso contrario, usa Markdown por legibilidad.\n\n## 4. Validar\n\n<ShellBlock command=\"npm run ci\\nnpm run audit:prod\" />\n\n`npm run ci` cubre linting, revision de links y drift de los artifacts generados de\nsearch/manifests. Ejecuta tambien `npm run audit:prod` antes de abrir una PR para que tu\nrama coincida con la misma auditoria de dependencias de produccion que GitHub Actions\nexige en pushes y pull requests.\n\n## 5. Abrir una PR\n\nCompleta la plantilla de PR, enlaza issues relacionados y solicita revision a `@pokebedrock/wiki-maintainers`.\n\n\n\n"
   },
   {
     "id": "es/guides/running-the-server",
@@ -287,7 +287,7 @@
     "status": "beta",
     "lang": "es",
     "order": 3,
-    "body": "\n## Requisitos\n\n- Node.js 20+\n- npm 10+\n\n## Pasos\n\n1. `npm ci`\n2. Edita los archivos en `docs/`.\n3. Ejecuta `npm run ci`.\n4. Abre un PR, explica que se trata de una traducción al español y solicita\n   revisión de `@pokebedrock/wiki-maintainers`.\n\n## Revisión\n\n- Mantén `lang: es` en el frontmatter y deja `status: beta` hasta que otra\n  persona revise la traducción.\n- Describe cualquier contexto de localización (términos nuevos, capturas, etc.)\n  en la descripción del PR para que los revisores tengan el mismo contexto.\n\n\n\n"
+    "body": "\n## Requisitos\n\n- Node.js 20+\n- npm 10+\n\n## Pasos\n\n1. `npm ci`\n2. Edita los archivos en `docs/`.\n3. Ejecuta `npm run ci` y luego `npm run audit:prod`.\n4. Abre un PR, explica que se trata de una traducción al español y solicita\n   revisión de `@pokebedrock/wiki-maintainers`.\n\n`npm run ci` cubre linting, revisión de links y drift de los artifacts generados de\nsearch/manifests. Antes de abrir una PR, ejecuta también `npm run audit:prod` para que tu\nrama coincida con la misma auditoría de dependencias de producción que GitHub Actions\nexige en pushes y pull requests.\n\n## Revisión\n\n- Mantén `lang: es` en el frontmatter y deja `status: beta` hasta que otra\n  persona revise la traducción.\n- Describe cualquier contexto de localización (términos nuevos, capturas, etc.)\n  en la descripción del PR para que los revisores tengan el mismo contexto.\n\n\n\n"
   },
   {
     "id": "es/handbook/localization",

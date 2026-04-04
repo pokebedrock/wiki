@@ -33,7 +33,12 @@ Usa MDX si necesitas componentes; en caso contrario, usa Markdown por legibilida
 
 ## 4. Validar
 
-<ShellBlock command="npm run ci" />
+<ShellBlock command="npm run ci\nnpm run audit:prod" />
+
+`npm run ci` cubre linting, revision de links y drift de los artifacts generados de
+search/manifests. Ejecuta tambien `npm run audit:prod` antes de abrir una PR para que tu
+rama coincida con la misma auditoria de dependencias de produccion que GitHub Actions
+exige en pushes y pull requests.
 
 ## 5. Abrir una PR
 

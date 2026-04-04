@@ -15,13 +15,15 @@ order: 2
 
 <ShellBlock command="npm ci" />
 
-## Run Linting
+## Run Validation
 
-<ShellBlock command="npm run ci" />
+<ShellBlock command="npm run ci\nnpm run audit:prod" />
 
-The CI task runs markdown, frontmatter, image validation, link checks, and generated
+`npm run ci` runs markdown, frontmatter, image validation, link checks, and generated
 search/manifests drift checks in one pass. Re-run it after editing files; there's no
-watch flag wired up for the current tooling stack.
+watch flag wired up for the current tooling stack. Before you open a PR, run
+`npm run audit:prod` too so your branch matches the production dependency audit that
+GitHub Actions enforces on pushes and pull requests.
 
 ## Preview
 
