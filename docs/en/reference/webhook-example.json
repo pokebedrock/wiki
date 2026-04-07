@@ -1,11 +1,44 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/en/guides/getting-started.mdx",
-    "docs/en/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Spin up PokéBedrock locally and run the wiki checks.",
+      "tags": ["guide", "server"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "en",
+      "order": 10,
+      "body": "Markdown body without frontmatter"
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "A partner Pokémon that stores electricity in each cheek.",
+      "tags": ["content", "pokemon", "electric"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "en",
+      "order": 1025,
+      "body": "Pikachu\nTypes: electric\nAbilities: Static, Lightning Rod\nBase stats: HP:35, ATK:55, DEF:40, SPA:50, SPD:50, SPE:90"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Thunderbolt",
+      "description": "A strong electric blast that may also leave the target with paralysis.",
+      "tags": ["content", "moves", "electric", "special"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "en",
+      "order": 2050,
+      "body": "Thunderbolt\nType: Electric\nCategory: Special\nAccuracy: 100 | PP: 15 | Priority: 0"
+    }
+  ]
 }
-
-

@@ -1,11 +1,44 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/es/guides/getting-started.mdx",
-    "docs/es/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "es/guides/running-the-server",
+      "slug": "guides/running-the-server",
+      "title": "Ejecutar la Wiki Localmente",
+      "description": "Pasos para instalar dependencias y validar la wiki en español.",
+      "tags": ["guide", "localizacion", "es"],
+      "lastUpdated": "2026-03-19",
+      "status": "beta",
+      "lang": "es",
+      "order": 3,
+      "body": "Markdown en español sin frontmatter"
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/es/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Compañero eléctrico que almacena energía en las mejillas.",
+      "tags": ["content", "pokemon", "electric"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "es",
+      "order": 101003,
+      "body": "Pikachu\nTipos: electric\nHabilidades: Static, Lightning Rod\nEstadísticas base: HP:35, ATK:55, DEF:40, SPA:50, SPD:50, SPE:90"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/es/moves/rayo",
+      "slug": "content/moves/rayo",
+      "title": "Rayo",
+      "description": "Descarga eléctrica potente que puede paralizar al objetivo.",
+      "tags": ["content", "moves", "electric", "special"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "es",
+      "order": 201003,
+      "body": "Rayo\nTipo: Electric\nCategoría: Special\nPrecisión: 100 | PP: 15 | Prioridad: 0"
+    }
+  ]
 }
-
-
