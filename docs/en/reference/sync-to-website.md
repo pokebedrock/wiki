@@ -4,7 +4,7 @@ description: How GitHub pushes trigger the backend webhook and keep the public s
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-07"
 status: beta
 lang: en
 toc: true
@@ -14,40 +14,83 @@ order: 1
 ## Overview
 
 1. Docs merge into `main`.
-2. GitHub fires a repository dispatch/webhook handled by the website backend.
-3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.
-4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.
+2. The `wiki-search` workflow builds the docs search payload plus every locale manifest via
+   `npm run build:search`.
+3. The workflow always uploads the generated artifacts. When `WIKI_SEARCH_SYNC_URL` **and**
+   `WIKI_SEARCH_SYNC_TOKEN` are set, it also `POST`s `build/search-indices.json` to the website
+   backend.
+4. The backend authenticates the request, replaces the Meilisearch indices (`wiki-docs`,
+   `wiki-pokemon`, `wiki-moves`), then invalidates cached wiki responses so the public site serves
+   the refreshed content.
 
-## Webhook Contract
+This flow replaces the legacy `wiki.synced` webhook. Search + manifest data now flows one
+way—from CI to the website backend—so deployments only need GitHub credentials and the backend
+URL/token.
+
+## Sync Endpoint Contract
+
+- **Method**: `POST`
+- **URL**: `WIKI_SEARCH_SYNC_URL`
+- **Headers**:
+  - `Authorization: Bearer <WIKI_SEARCH_SYNC_TOKEN>`
+  - `Content-Type: application/json`
+- **Body**: the full contents of `build/search-indices.json`
+
+The backend expects the entire dataset on every call (not just changed files) so it can replace its
+Meilisearch indices atomically.
+
+## Payload Schema
+
+`build/search-indices.json` is a JSON object with three arrays: `docs`, `pokemon`, and `moves`.
+Every entry matches the search record structure below.
 
 | Field | Description |
 | --- | --- |
-| `event` | Always `wiki.synced` |
-| `commit` | SHA of the merged commit |
-| `files` | Array of changed doc paths |
-| `timestamp` | ISO timestamp |
+| `id` | Stable identifier (`en/reference/release-checklist`, `content/en/pokemon/pikachu`, etc.). |
+| `slug` | URL slug relative to the wiki root or content bucket. |
+| `title` | Rendered title used for display + ranking. |
+| `description` | Short summary shown in search results. |
+| `tags` | Normalized tags (`guide`, `content`, `electric`). |
+| `lastUpdated` | ISO timestamp from frontmatter when available. |
+| `status` | `draft`, `beta`, or `stable`. |
+| `lang` | Locale code (`en`, `es`). |
+| `order` | Numeric sort weighting (docs first, then pokemon, then moves). |
+| `body` | Markdown/MDX body text or synthesized summary for content datasets. |
 
-The backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See
-`website-backend/src/http/routes/webhooks.ts` for implementation details.
+### Example Payload
+
+See `docs/en/reference/webhook-example.json` for a truncated sample that matches the current schema
+without uploading the full repo contents.
 
 ## Local Testing
 
-Use the sample payload in `docs/en/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.
-
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `
-  -Method Post
+```bash
+curl --fail-with-body --show-error --silent \
+  -X POST \
+  -H "Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN" \
+  -H "Content-Type: application/json" \
+  --data-binary @docs/en/reference/webhook-example.json \
+  "$WIKI_SEARCH_SYNC_URL"
 ```
+
+The backend should respond with `200 OK`. Any non-2xx response causes the GitHub Actions step to
+fail so the run surfaces in CI.
+
+## Failure + Retry Guidance
+
+- **4xx** responses usually mean the bearer token is invalid or missing. Rotate
+  `WIKI_SEARCH_SYNC_TOKEN` and rerun the workflow.
+- **5xx** responses come from the backend or Meilisearch. Rerun the job once the service
+  recovers; the workflow will rebuild the payload before retrying.
+- **Timeouts**: GitHub cancels the request after ~360 seconds. The backend should stream progress
+  logs so failures include enough context.
 
 ## Cache Busting
 
-- Backend stores the `ETag` returned from GitHub per file.
-- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.
-- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the
-  response to help the client decide whether to fetch fresh data.
-
-
+- After a successful sync the backend refreshes Meilisearch and warms wiki caches for the updated
+  slugs.
+- Frontend clients rely on the `lastUpdated` field surfaced in API responses to decide whether to
+  fetch fresh Markdown.
+- When a sync fails, the previously indexed data remains in place—the workflow never partially
+  updates the indices.
 

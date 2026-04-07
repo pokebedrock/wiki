@@ -1,11 +1,54 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/en/guides/getting-started.mdx",
-    "docs/en/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "en/reference/release-checklist",
+      "slug": "reference/release-checklist",
+      "title": "Wiki release checklist",
+      "description": "Release checks for search-index generation and website sync.",
+      "tags": ["reference", "release"],
+      "lastUpdated": "2026-03-22",
+      "status": "stable",
+      "lang": "en",
+      "order": 42,
+      "body": "Run npm run ci locally, verify generated manifests, and confirm the wiki-search workflow can sync to production."
+    },
+    {
+      "id": "en/reference/sync-to-website",
+      "slug": "reference/sync-to-website",
+      "title": "Website Sync Pipeline",
+      "description": "How the wiki-search workflow delivers data to the website backend.",
+      "tags": ["reference", "sync"],
+      "lastUpdated": "2026-04-07",
+      "status": "beta",
+      "lang": "en",
+      "order": 43,
+      "body": "The sync endpoint accepts the full search payload with docs, pokemon, and moves so Meilisearch can be replaced atomically."
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Electric-type partner with strong utility coverage.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "en",
+      "order": 100001,
+      "body": "Pikachu\nType: Electric\nAbilities: Static, Lightning Rod\nBase stats: HP:35, ATK:55, DEF:40, SPA:50, SPD:50, SPE:90"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Thunderbolt",
+      "description": "Reliable special Electric-type move with a paralysis chance.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "en",
+      "order": 200001,
+      "body": "Thunderbolt\nType: Electric\nCategory: Special\nAccuracy: 100 | PP: 15 | Priority: 0\nFlags: Protect, Mirror"
+    }
+  ]
 }
-
-

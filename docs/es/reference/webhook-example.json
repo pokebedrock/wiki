@@ -1,11 +1,54 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/es/guides/getting-started.mdx",
-    "docs/es/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "es/reference/release-checklist",
+      "slug": "reference/release-checklist",
+      "title": "Checklist de releases del wiki",
+      "description": "Pasos para validar la generación del índice y el sync del sitio.",
+      "tags": ["reference", "release"],
+      "lastUpdated": "2026-03-22",
+      "status": "stable",
+      "lang": "es",
+      "order": 42,
+      "body": "Ejecuta npm run ci localmente, verifica los manifiestos generados y confirma que el workflow wiki-search pueda sincronizar con producción."
+    },
+    {
+      "id": "es/reference/sync-to-website",
+      "slug": "reference/sync-to-website",
+      "title": "Pipeline de sincronización",
+      "description": "Cómo el workflow wiki-search entrega datos al backend del sitio.",
+      "tags": ["reference", "sync"],
+      "lastUpdated": "2026-04-07",
+      "status": "beta",
+      "lang": "es",
+      "order": 43,
+      "body": "El endpoint de sincronización recibe el payload completo (docs, pokemon y moves) para reemplazar Meilisearch de manera atómica."
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/es/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Compañero eléctrico con mucha utilidad.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "es",
+      "order": 100001,
+      "body": "Pikachu\nTipo: Electric\nHabilidades: Static, Lightning Rod\nStats base: HP:35, ATK:55, DEF:40, SPA:50, SPD:50, SPE:90"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/es/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Rayo",
+      "description": "Movimiento especial eléctrico confiable con chance de parálisis.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "es",
+      "order": 200001,
+      "body": "Rayo\nTipo: Electric\nCategoría: Special\nAccuracy: 100 | PP: 15 | Priority: 0\nFlags: Protect, Mirror"
+    }
+  ]
 }
-
-
