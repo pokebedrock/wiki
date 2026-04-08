@@ -1,11 +1,43 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/en/guides/getting-started.mdx",
-    "docs/en/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Local setup steps for new contributors.",
+      "tags": ["guide", "onboarding"],
+      "lastUpdated": "2026-04-01",
+      "status": "stable",
+      "lang": "en",
+      "order": 3,
+      "body": "Full Markdown body omitted for brevity."
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Electric-type mascot with strong special attack.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "en",
+      "order": 1201,
+      "body": "Pikachu\nType: Electric\nAbilities: Static, Lightning Rod"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Thunderbolt",
+      "description": "Reliable special Electric attack.",
+      "tags": ["content", "moves", "electric"],
+      "status": "stable",
+      "lang": "en",
+      "order": 2403,
+      "body": "Thunderbolt\nType: Electric\nCategory: Special"
+    }
+  ]
 }
-
 

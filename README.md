@@ -62,9 +62,9 @@ required.
   - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`
   - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`
   - `build/content/en/move-learners-manifest.json` and `build/content/es/move-learners-manifest.json`
-- A webhook (documented in `docs/en/reference/sync-to-website.md`) notifies the website
-  backend when docs change; the website fetches raw Markdown via the GitHub API and
-  caches using ETags.
+- The website frontend mounts a sibling checkout of this repo (configurable via
+  `POKEBEDROCK_WIKI_PATH`) and renders Markdown/MDX directly from disk; deployment details and
+  search sync notes live in `docs/en/reference/sync-to-website.md`.
 
 ## Contributing
 
@@ -73,4 +73,3 @@ workflow, and content guidelines. Issue templates cover bugs and content request
 CODEOWNERS ensures the docs team reviews every change.
 
 Release checklist: [`docs/en/reference/release-checklist.md`](./docs/en/reference/release-checklist.md)
-
