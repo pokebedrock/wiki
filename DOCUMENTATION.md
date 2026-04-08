@@ -16,7 +16,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 - Markdown, links, frontmatter, and media are validated via `npm` scripts.
 - CI (`.github/workflows/ci.yml`) runs on every push and pull request in this repository.
 - Search index is generated from docs by `scripts/build-search-index.ts` and can be pushed to Meilisearch.
-- Website sync behavior is specified in docs (`docs/en/reference/sync-to-website.md`) and example payload (`docs/en/reference/webhook-example.json`).
+- Website sync behavior is specified in docs (`docs/en/reference/sync-to-website.md`) and the sample multi-index payload (`docs/en/reference/search-sync-example.json`).
 
 ## 3. Directory map
 
@@ -178,7 +178,7 @@ Media policy from docs/scripts:
 - `docs/<locale>/reference/media-policy.mdx`: format, size, alt-text, and LFS rules.
 - `docs/<locale>/reference/changelog.md`: release-aligned documentation changelog.
 - `docs/<locale>/reference/localization-glossary.md`: shared terminology for translators.
-- `docs/<locale>/reference/webhook-example.json`: example webhook payload for local testing.
+- `docs/<locale>/reference/search-sync-example.json`: trimmed search sync payload for local testing.
 
 ### Reusable MDX building blocks
 
