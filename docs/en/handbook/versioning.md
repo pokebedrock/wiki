@@ -4,7 +4,7 @@ description: Guidelines for rolling versions and changelogging major documentati
 tags:
   - handbook
   - versioning
-lastUpdated: "2026-03-21"
+lastUpdated: "2026-04-08"
 status: stable
 lang: en
 toc: true
@@ -15,20 +15,28 @@ order: 5
 
 We version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.
 
-## Version Types
+## Version Tracks
 
-| Version | Trigger | Storage |
+| Track | Trigger | Storage |
 | --- | --- | --- |
-| `current` | Default branch | `docs/` root |
-| `vX.Y` | Major gameplay update | `versions/vX.Y/` (mirrors structure) |
-| `legacy` | Unsupported content | Archived branch or zipped export |
+| `current` | Default branch | `docs/` root (English + localized content) |
+| `release` | Major gameplay update | Git tag `wiki-vX.Y` plus release artifact zip |
+| `legacy` | Unsupported content | Dedicated branch (optional) or off-site archive |
+
+Version snapshots now live in git history—**we no longer mirror docs into a `versions/`
+directory.** Tags keep the repo small while still giving downstream teams a permanent
+reference point for each launch.
 
 ## Release Flow
 
 1. Prepare changes under `docs/`.
-2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.
-3. Update `docs/en/reference/changelog.md` with highlights and links.
-4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).
+2. When the matching gameplay update ships, create a git tag
+   (`git tag wiki-vX.Y && git push origin wiki-vX.Y`).
+3. Generate a zip of the docs tree from that tag
+   (`git archive --format zip wiki-vX.Y docs/ > wiki-vX.Y-docs.zip`) and attach it
+   to the release if external teams need a frozen copy.
+4. Update `docs/en/reference/changelog.md` with highlights and links back to the tag/release.
+5. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filters via `lang`/`status`).
 
 ## Changelog
 
@@ -41,6 +49,3 @@ Use semantic headings:
 ```
 
 The `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.
-
-
-

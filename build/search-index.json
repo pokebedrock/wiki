@@ -130,11 +130,11 @@
       "handbook",
       "versioning"
     ],
-    "lastUpdated": "2026-03-21",
+    "lastUpdated": "2026-04-08",
     "status": "stable",
     "lang": "en",
     "order": 5,
-    "body": "\n## Philosophy\n\nWe version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.\n\n## Version Types\n\n| Version | Trigger | Storage |\n| --- | --- | --- |\n| `current` | Default branch | `docs/` root |\n| `vX.Y` | Major gameplay update | `versions/vX.Y/` (mirrors structure) |\n| `legacy` | Unsupported content | Archived branch or zipped export |\n\n## Release Flow\n\n1. Prepare changes under `docs/`.\n2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.\n3. Update `docs/en/reference/changelog.md` with highlights and links.\n4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).\n\n## Changelog\n\nUse semantic headings:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nThe `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.\n\n\n\n"
+    "body": "\n## Philosophy\n\nWe version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.\n\n## Version Tracks\n\n| Track | Trigger | Storage |\n| --- | --- | --- |\n| `current` | Default branch | `docs/` root (English + localized content) |\n| `release` | Major gameplay update | Git tag `wiki-vX.Y` plus release artifact zip |\n| `legacy` | Unsupported content | Dedicated branch (optional) or off-site archive |\n\nVersion snapshots now live in git history—**we no longer mirror docs into a `versions/`\ndirectory.** Tags keep the repo small while still giving downstream teams a permanent\nreference point for each launch.\n\n## Release Flow\n\n1. Prepare changes under `docs/`.\n2. When the matching gameplay update ships, create a git tag\n   (`git tag wiki-vX.Y && git push origin wiki-vX.Y`).\n3. Generate a zip of the docs tree from that tag\n   (`git archive --format zip wiki-vX.Y docs/ > wiki-vX.Y-docs.zip`) and attach it\n   to the release if external teams need a frozen copy.\n4. Update `docs/en/reference/changelog.md` with highlights and links back to the tag/release.\n5. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filters via `lang`/`status`).\n\n## Changelog\n\nUse semantic headings:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nThe `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.\n"
   },
   {
     "id": "en/reference/changelog",
