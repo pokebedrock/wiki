@@ -1,0 +1,42 @@
+{
+  "docs": [
+    {
+      "id": "docs/es/reference/sync-to-website",
+      "slug": "reference/sync-to-website",
+      "title": "Pipeline de sincronización con el sitio",
+      "description": "Cómo el workflow de búsqueda sube los índices generados al backend.",
+      "tags": ["reference", "sync"],
+      "lastUpdated": "2026-04-08",
+      "status": "beta",
+      "lang": "es",
+      "order": 1,
+      "body": "Los docs se fusionan en main, el workflow wiki-search recompila los índices y el backend los empuja dentro de Meilisearch."
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "content/es/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Compañero eléctrico que mantiene las raids cargadas.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "es",
+      "order": 1001,
+      "body": "Pikachu\nTipos: Eléctrico\nHabilidades: Static, Lightning Rod\nMovimientos aprendibles: Thunderbolt, Volt Tackle"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/es/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Rayo",
+      "description": "Ataque especial eléctrico confiable.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "es",
+      "order": 2001,
+      "body": "Rayo\nTipo: Eléctrico\nCategoría: Especial\nPrecisión: 100 | PP: 15"
+    }
+  ]
+}

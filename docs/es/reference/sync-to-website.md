@@ -1,10 +1,10 @@
 ---
-title: Pipeline de sincronizacion con el sitio
-description: Como los pushes en GitHub disparan el webhook del backend y mantienen cacheado el sitio publico.
+title: Pipeline de sincronización con el sitio
+description: Cómo el workflow de búsqueda de la wiki sube los índices generados al backend y actualiza Meilisearch.
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-08"
 status: beta
 lang: es
 toc: true
@@ -13,41 +13,86 @@ order: 1
 
 ## Resumen
 
-1. Los docs se mergean a `main`.
-2. GitHub dispara un repository dispatch/webhook gestionado por el backend del sitio.
-3. El backend obtiene archivos cambiados via GitHub Contents API usando ETags para cache-busting.
-4. La salida renderizada en HTML/MDX se cachea en Redis con TTL de 15 minutos.
+1. Los docs se mergean en `main`.
+2. El workflow de GitHub Actions `wiki-search` ejecuta `npm run build:search` y genera
+   `build/search-index.json`, `build/search-indices.json` y los manifiestos de contenido por idioma.
+3. El workflow siempre publica esos artefactos para descarga manual.
+4. Cuando los secretos `WIKI_SEARCH_SYNC_URL` y `WIKI_SEARCH_SYNC_TOKEN` existen, el job hace
+   `POST` de `build/search-indices.json` hacia el backend.
+5. El backend ingiere cada payload (`docs`, `pokemon`, `moves`) en el cluster interno de Meilisearch,
+   que alimenta la búsqueda de la wiki y la Pokédex.
 
-## Contrato del webhook
+## Endpoint de sincronización
 
-| Campo | Descripcion |
-| --- | --- |
-| `event` | Siempre `wiki.synced` |
-| `commit` | SHA del commit mergeado |
-| `files` | Arreglo de rutas de docs modificadas |
-| `timestamp` | Timestamp ISO |
+- **Ruta:** `POST /internal/wiki/search-index` (apunta `WIKI_SEARCH_SYNC_URL` aquí, p. ej.
+  `https://api.pokebedrock.com/internal/wiki/search-index`).
+- **Auth:** `Authorization: Bearer <WIKI_SEARCH_SYNC_TOKEN>`.
+- **Límite de cuerpo:** 20 MiB (`WIKI_SEARCH_SYNC_BODY_LIMIT_BYTES`).
+- **Prerequisitos backend:** Deben existir `WIKI_SEARCH_SYNC_TOKEN`, `MEILI_URL` y alguno de
+  `MEILI_KEY` o `MEILI_MASTER_KEY`; si faltan el endpoint responde `503`.
 
-El backend valida el HMAC usando el secreto compartido `WIKI_WEBHOOK_SECRET`. Ver
-`website-backend/src/http/routes/webhooks.ts` para detalles de implementacion.
+### Forma del payload
+
+`build/search-indices.json` contiene tres arreglos que comparten la misma estructura de registro.
+
+| Campo | Tipo | Descripción |
+| --- | --- | --- |
+| `docs` | `SearchRecord[]` | Páginas de documentación (frontmatter + contenido MDX). |
+| `pokemon` | `SearchRecord[]` | Registros generados de la Pokédex. |
+| `moves` | `SearchRecord[]` | Registros generados de movimientos. |
+
+Propiedades de `SearchRecord`:
+
+| Campo | Tipo | Notas |
+| --- | --- | --- |
+| `id` | `string` | Identificador estable (`docs/es/...`, `content/es/pokemon/...`, etc.). |
+| `slug` | `string` | Ruta lista para URL sin prefijo de locale. |
+| `title` | `string?` | Desde frontmatter o desde el JSON de contenido. |
+| `description` | `string?` | Texto mostrado en autocomplete/resultados. |
+| `tags` | `string[]` | Tags normalizados (locale, categoría, tipo, estado). |
+| `lastUpdated` | `string?` | Fecha ISO tomada del frontmatter cuando existe. |
+| `status` | `string` | `stable`/`beta`/`draft`, igual que en los docs. |
+| `lang` | `string` | Código de idioma (`en` o `es`). |
+| `order` | `number` | Orden estable para paginación determinística. |
+| `body` | `string?` | Markdown del doc o resumen generado (datos). |
+
+### Forma de la respuesta
+
+El backend responde con estadísticas por índice una vez que Meilisearch termina la ingesta:
+
+```json
+{
+  "ok": true,
+  "indices": {
+    "docs": { "indexUid": "wiki-docs", "documentCount": 420, "taskUid": 1012 },
+    "pokemon": { "indexUid": "wiki-pokemon", "documentCount": 1025, "taskUid": 1013 },
+    "moves": { "indexUid": "wiki-moves", "documentCount": 890, "taskUid": 1014 }
+  }
+}
+```
 
 ## Pruebas locales
 
-Usa el payload de ejemplo en `docs/es/reference/webhook-example.json` con `curl` o `Invoke-WebRequest`.
+1. Ejecuta `npm run build:search` para generar `build/search-indices.json` en tu máquina.
+2. Usa el payload de ejemplo `docs/es/reference/search-sync-example.json`, que respeta el esquema.
+3. Envía el payload hacia tu backend de pruebas:
 
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/es/reference/webhook-example.json -Raw) `
-  -Method Post
+```bash
+WIKI_SEARCH_SYNC_URL=https://api.pokebedrock.com/internal/wiki/search-index \
+WIKI_SEARCH_SYNC_TOKEN=dev-secret \
+curl --fail --show-error --silent \
+  -X POST \
+  -H "Authorization: Bearer ${WIKI_SEARCH_SYNC_TOKEN}" \
+  -H "Content-Type: application/json" \
+  --data-binary @docs/es/reference/search-sync-example.json \
+  "${WIKI_SEARCH_SYNC_URL}"
 ```
 
-## Cache busting
+## Cache y consumidores
 
-- El backend guarda el `ETag` devuelto por GitHub por archivo.
-- En sincronizaciones siguientes, envia `If-None-Match`; el contenido sin cambios evita re-render.
-- Cuando el sitio sirve una pagina, incluye `lastUpdated` del frontmatter en la respuesta
-  para ayudar al cliente a decidir si debe pedir datos frescos.
-
+- La ingesta en Meilisearch es síncrona dentro del backend, así que la wiki, la Pokédex y la búsqueda
+  de movimientos ven los datos frescos apenas termina el workflow.
+- Las páginas de la wiki siguen incluyendo `lastUpdated` desde el frontmatter; los clientes pueden
+  usar ese campo para decidir si purgan caches propios después de una sincronización.
 
 

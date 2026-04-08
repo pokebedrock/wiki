@@ -1,0 +1,42 @@
+{
+  "docs": [
+    {
+      "id": "docs/en/reference/sync-to-website",
+      "slug": "reference/sync-to-website",
+      "title": "Website Sync Pipeline",
+      "description": "How the wiki search workflow uploads generated indices to the backend.",
+      "tags": ["reference", "sync"],
+      "lastUpdated": "2026-04-08",
+      "status": "beta",
+      "lang": "en",
+      "order": 1,
+      "body": "Docs merge into main, the wiki-search workflow rebuilds the indices, and the backend pushes them into Meilisearch."
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Electric-type partner that keeps raids energized.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "en",
+      "order": 1001,
+      "body": "Pikachu\nTypes: Electric\nAbilities: Static, Lightning Rod\nLearnable moves: Thunderbolt, Volt Tackle"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Thunderbolt",
+      "description": "Reliable electric special attack.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "en",
+      "order": 2001,
+      "body": "Thunderbolt\nType: Electric\nCategory: Special\nAccuracy: 100 | PP: 15"
+    }
+  ]
+}
