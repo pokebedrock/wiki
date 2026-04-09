@@ -4,7 +4,7 @@ description: Desglose de carpetas de la wiki, archivos de metadatos y como los c
 tags:
   - handbook
   - structure
-lastUpdated: "2026-03-07"
+lastUpdated: "2026-04-09"
 status: stable
 lang: es
 toc: true
@@ -39,22 +39,25 @@ assets/
   diagrams/               # archivos fuente (.drawio, .excalidraw, etc.)
   content/                # datasets JSON normalizados de Pokemon + moves
     en/
-      pokemon/            # un archivo por Pokemon, generado por content:split
-      moves/              # un archivo por move, generado por content:split
+      pokemon/            # un archivo por Pokémon, editado manualmente (fuente en inglés)
+      moves/              # un archivo por move, editado manualmente (fuente en inglés)
     es/
-      pokemon/            # espejo del dataset en espanol (hoy copiado desde en)
-      moves/              # espejo del dataset en espanol (hoy copiado desde en)
+      pokemon/            # espejo del dataset en español (hoy copiado desde en)
+      moves/              # espejo del dataset en español (hoy copiado desde en)
 ```
 
-Las imagenes referenciadas desde docs deben vivir bajo `assets/`. Los diagramas conservan
+Las imágenes referenciadas desde docs deben vivir bajo `assets/`. Los diagramas conservan
 sus fuentes editables para que futuros contribuidores puedan revisarlos. Los datasets
-estructurados de Pokemon y moves tambien viven en `assets/content/` para que el indexado
-de busqueda y el frontend puedan comparar entradas individuales.
+estructurados de Pokémon y moves también viven en `assets/content/` para que el indexado
+de búsqueda y el frontend puedan comparar entradas individuales.
 
-Los JSON en ingles ubicados en `assets/content/en/{pokemon,moves}` son la fuente
-canonica. Actualiza esos archivos por entrada cuando haya cambios y luego copia
+Los JSON en inglés ubicados en `assets/content/en/{pokemon,moves}` son la fuente
+canónica. Actualiza esos archivos por entrada cuando haya cambios y luego copia
 las mismas modificaciones en `assets/content/es/**` hasta que existan traducciones
-propias.
+propias. Ya no existe la automatización `content:split`: después de editar los
+datasets ejecuta `npm run build:search` (o `npm run check:generated`) para
+reconstruir los manifiestos y asegurarte de que CI detecte los nuevos payloads de
+búsqueda.
 
 ## Schemas y scripts
 

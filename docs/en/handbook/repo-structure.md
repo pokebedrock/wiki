@@ -4,7 +4,7 @@ description: Breakdown of the wiki folders, metadata files, and how the website 
 tags:
   - handbook
   - structure
-lastUpdated: "2026-03-07"
+lastUpdated: "2026-04-09"
 status: stable
 lang: en
 toc: true
@@ -39,8 +39,8 @@ assets/
   diagrams/               # source files (.drawio, .excalidraw, etc.)
   content/                # normalized JSON datasets for Pokemon + moves
     en/
-      pokemon/            # one file per Pokemon, generated via content:split
-      moves/              # one file per move, generated via content:split
+      pokemon/            # one file per Pokémon, edited manually (English source)
+      moves/              # one file per move, edited manually (English source)
     es/
       pokemon/            # Spanish dataset mirror (currently copied from en)
       moves/              # Spanish dataset mirror (currently copied from en)
@@ -54,6 +54,9 @@ frontend can diff individual entries.
 English JSON entries under `assets/content/en/{pokemon,moves}` are the canonical
 source of truth. Update those per-entry files directly when data changes arrive,
 then mirror the changes into `assets/content/es/**` until localized content ships.
+There is no `content:split` automation anymore—after editing the datasets, run
+`npm run build:search` (or `npm run check:generated`) to rebuild the manifests and
+ensure CI sees the updated search payloads.
 
 ## Schemas & Scripts
 
