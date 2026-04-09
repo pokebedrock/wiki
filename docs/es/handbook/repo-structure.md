@@ -51,9 +51,10 @@ sus fuentes editables para que futuros contribuidores puedan revisarlos. Los dat
 estructurados de Pokemon y moves tambien viven en `assets/content/` para que el indexado
 de busqueda y el frontend puedan comparar entradas individuales.
 
-> ℹ️ Las actualizaciones de contenido upstream llegan como `assets/content/wikiPokemon.json` y
-> `assets/content/wikiMoves.json`. Ejecuta `npm run content:split` para regenerar
-> los archivos por entrada versionados en git.
+Los JSON en ingles ubicados en `assets/content/en/{pokemon,moves}` son la fuente
+canonica. Actualiza esos archivos por entrada cuando haya cambios y luego copia
+las mismas modificaciones en `assets/content/es/**` hasta que existan traducciones
+propias.
 
 ## Schemas y scripts
 
@@ -63,10 +64,6 @@ de busqueda y el frontend puedan comparar entradas individuales.
 - `scripts/build-search-index.ts` - Crea payloads de busqueda y manifiestos de contenido
   del frontend en `build/content/<locale>/`, y opcionalmente publica los indices de
   docs/pokemon/moves en Meilisearch.
-- `scripts/split-content-data.ts` - Divide `wikiPokemon.json` y `wikiMoves.json`
-  de upstream en directorios por idioma bajo
-  `assets/content/<locale>/{pokemon,moves}` usando
-  `npm run content:split`.
 
 ## Automatizacion de GitHub
 

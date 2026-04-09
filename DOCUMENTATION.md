@@ -100,6 +100,11 @@ This file documents the tracked repository contents: purpose, structure, and the
 - `assets/README.md`: policy summary for media placement and formats.
 - `assets/images/.gitkeep`: keeps empty `images/` directory tracked.
 - `assets/diagrams/.gitkeep`: keeps empty `diagrams/` directory tracked.
+- `assets/content/<locale>/{pokemon,moves}`: per-entry datasets consumed by the wiki frontend/search builds.
+
+English entries under `assets/content/en/**` are canonical. Update those JSON files
+first and mirror the same changes into `assets/content/es/**` until localized
+content exists.
 
 Media policy from docs/scripts:
 
@@ -146,10 +151,6 @@ Media policy from docs/scripts:
     - `wiki-pokemon`
     - `wiki-moves`
   - Production CI instead sends the generated multi-index payload to the backend, which reindexes Meilisearch internally.
-- `scripts/split-content-data.ts`:
-  - Splits legacy monolithic content JSON into per-item files.
-  - Writes Pokemon files to `assets/content/<locale>/pokemon/`.
-  - Writes move files to `assets/content/<locale>/moves/`.
 
 ## 9. Docs content (`docs/`)
 

@@ -43,7 +43,7 @@ consistent before syncing to the public website.
 | `npm run audit:prod` | Audits production dependency graph |
 | `npm run build:search` | Generates search payloads plus frontend content manifests in `build/content/<locale>/` |
 | `npm run check:generated` | Builds search/manifests and fails if tracked JSON drifts from the repo copies |
-| `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/<locale>/` |
+| Edit datasets | Modify the per-entry JSON under `assets/content/<locale>/{pokemon,moves}` directly; English entries remain canonical and should be copied to `es/` until localized translations ship |
 
 Search fallback artifacts (`build/search-index.json`, `build/search-indices.json`, and
 `build/content/<locale>/*-manifest.json`) are tracked in git so `npm run check:generated`
