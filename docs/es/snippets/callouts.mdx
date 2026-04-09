@@ -4,7 +4,7 @@ description: Admonitions comunes que se pueden importar en docs MDX.
 tags:
   - snippets
   - mdx
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-09"
 status: stable
 lang: es
 toc: false
@@ -13,7 +13,9 @@ order: 1
 
 export const InfoCallout = () => (
   <div className="callout callout--note">
-    <strong>Atencion:</strong> Segui la checklist al final de esta pagina antes de hacer merge.
+    <strong>Atención:</strong> Los componentes exportados desde
+    <code>docs/&lt;locale&gt;/snippets/</code> se registran automáticamente, así que no hace
+    falta importar manualmente helpers como <code>ShellBlock</code>.
   </div>
 );
 
@@ -22,6 +24,5 @@ export const WarningCallout = () => (
     <strong>Advertencia:</strong> Revisa dos veces las notas de lanzamiento del juego antes de actualizar este doc.
   </div>
 );
-
 
 

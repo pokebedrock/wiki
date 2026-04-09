@@ -4,7 +4,7 @@ description: Common admonitions that can be imported into MDX docs.
 tags:
   - snippets
   - mdx
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-09"
 status: stable
 lang: en
 toc: false
@@ -13,7 +13,9 @@ order: 1
 
 export const InfoCallout = () => (
   <div className="callout callout--note">
-    <strong>Heads up:</strong> Follow the checklist at the bottom of this page before merging.
+    <strong>Heads up:</strong> Components exported from <code>docs/&lt;locale&gt;/snippets/</code>
+    are auto-registered, so you don’t need to import helpers such as <code>ShellBlock</code>
+    manually.
   </div>
 );
 
@@ -22,6 +24,5 @@ export const WarningCallout = () => (
     <strong>Warning:</strong> Double-check the in-game release notes before updating this doc.
   </div>
 );
-
 
 
