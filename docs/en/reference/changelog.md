@@ -4,7 +4,7 @@ description: Track significant documentation releases aligned with server update
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-09"
 status: draft
 lang: en
 toc: true
@@ -14,6 +14,16 @@ order: 4
 ## [Unreleased]
 
 - Placeholder entry for upcoming wiki improvements.
+
+## [v2.4.0] - 2026-04-08
+
+- Added an end-to-end "Website Sync Pipeline" reference that documents the backend
+  endpoint contract, required secrets, and a sample multi-index payload for local
+  testing.
+- Mirrored the sync pipeline guidance in Spanish so both locales explain how
+  Meilisearch stays private and how operators can trigger manual resyncs.
+- Clarified the search-index workflow outputs, including the new move learner
+  manifest that ships with the generated frontend content bundles.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +53,3 @@ order: 4
 - Initial wiki scaffolding, linting, and CI.
 - Search indexing workflow targeting Meilisearch.
 - Localization workflow guide with Spanish example.
-

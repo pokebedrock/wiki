@@ -4,7 +4,7 @@ description: Registro de lanzamientos importantes de documentacion alineados con
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-09"
 status: draft
 lang: es
 toc: true
@@ -14,6 +14,17 @@ order: 4
 ## [Sin publicar]
 
 - Entrada placeholder para proximas mejoras de la wiki.
+
+## [v2.4.0] - 2026-04-08
+
+- Se agregó una referencia completa de "Pipeline de sincronización con el sitio" que
+  documenta el contrato del endpoint backend, los secretos requeridos y un payload
+  multi-índice de ejemplo para pruebas locales.
+- Se reflejó la guía de sincronización en español para que ambos idiomas expliquen
+  cómo Meilisearch permanece privado y cómo los operadores pueden forzar resync manual.
+- Se aclararon los resultados del workflow de indexación, incluyendo el nuevo
+  manifiesto de aprendices de movimientos que acompaña a los bundles de contenido
+  del frontend.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +54,3 @@ order: 4
 - Estructura inicial de la wiki, linting y CI.
 - Flujo de indexacion de busqueda orientado a Meilisearch.
 - Guia del flujo de localizacion con ejemplo en espanol.
-
