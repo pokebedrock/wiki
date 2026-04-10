@@ -48,12 +48,7 @@
       "type": "string",
       "enum": [
         "en",
-        "es",
-        "fr",
-        "de",
-        "pt",
-        "it",
-        "ja"
+        "es"
       ],
       "default": "en"
     },
@@ -69,5 +64,4 @@
   },
   "additionalProperties": true
 }
-
 

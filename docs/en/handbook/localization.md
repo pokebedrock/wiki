@@ -4,7 +4,7 @@ description: How to structure translated docs, coordinate translators, and revie
 tags:
   - handbook
   - localization
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-04-10"
 status: stable
 lang: en
 toc: true
@@ -40,11 +40,15 @@ status: beta
 
 Use `draft` or `beta` for translations that still need native review.
 
+> ℹ️ **Supported locales:** The automation stack (linting, search indexing, and the
+> website ingestion pipeline) currently supports English (`en`) and Spanish (`es`).
+> Use one of those values for `lang`. Proposing a new locale requires a GitHub
+> issue so we can wire the additional language into the build scripts and
+> manifests before any docs ship.
+
 ## Glossary
 
 Maintain terminology consistency by referencing the shared glossary in
 `docs/en/reference/localization-glossary.md` (to be populated as translations expand).
 When you introduce a new term, note it in the PR so others can update the glossary.
-
-
 
