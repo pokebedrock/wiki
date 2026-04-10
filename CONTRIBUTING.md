@@ -68,7 +68,17 @@ lang: en
 
 ### Content Validation
 
-Run the following before pushing:
+During active edits you can use the faster authoring pass:
+
+```bash
+npm run check
+```
+
+`npm run check` bundles the markdown, frontmatter, image, and link lint steps
+without rebuilding the tracked search artifacts, so it finishes quickly while
+still catching most authoring mistakes.
+
+Before pushing, run the full gate:
 
 ```bash
 npm run ci
