@@ -1,11 +1,42 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/es/guides/getting-started.mdx",
-    "docs/es/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "es/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Comenzando",
+      "description": "Prepara el repositorio de la wiki localmente y publica tu primer cambio.",
+      "tags": ["guia", "onboarding"],
+      "lastUpdated": "2025-11-21",
+      "status": "stable",
+      "lang": "es",
+      "order": 1,
+      "body": "Texto abreviado para el payload de ejemplo"
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/es/pokemon/bulbasaur",
+      "slug": "content/pokemon/bulbasaur",
+      "title": "Bulbasaur",
+      "description": "Entrada placeholder de Bulbasaur.",
+      "tags": ["content", "pokemon", "planta", "veneno"],
+      "status": "stable",
+      "lang": "es",
+      "order": 4001,
+      "body": "Cuerpo de ejemplo para el contrato de sync"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/es/moves/tackle",
+      "slug": "content/moves/tackle",
+      "title": "Placaje",
+      "description": "Ataque fisico basico para el ejemplo.",
+      "tags": ["content", "moves", "normal"],
+      "status": "stable",
+      "lang": "es",
+      "order": 9001,
+      "body": "Detalle de movimiento para el contrato de sync"
+    }
+  ]
 }
-
-

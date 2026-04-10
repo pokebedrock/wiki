@@ -1,53 +1,73 @@
 ---
 title: Website Sync Pipeline
-description: How GitHub pushes trigger the backend webhook and keep the public site cached.
+description: How the wiki-search workflow posts fresh search payloads to the website backend.
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-10"
 status: beta
 lang: en
 toc: true
 order: 1
 ---
 
-## Overview
+## Workflow Overview
 
-1. Docs merge into `main`.
-2. GitHub fires a repository dispatch/webhook handled by the website backend.
-3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.
-4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.
+1. Changes that touch docs, localized content, schemas, or build tooling land on `main`.
+2. The `wiki-search` GitHub Actions workflow (`.github/workflows/search-index.yml`) runs on
+   every push to `main`, on manual dispatch, and nightly at 06:00 UTC.
+3. The workflow installs Node 20, runs `npm ci`, and executes `npm run build:search`.
+4. `npm run build:search` produces `build/search-index.json`, `build/search-indices.json`, and the
+   localized manifests under `build/content/<locale>/` for Pokémon, moves, and move learners.
+5. The workflow always uploads those artifacts so reviewers can inspect the payloads even if
+   backend credentials are absent.
+6. When secrets are configured, the workflow posts the multi-index JSON payload to the website
+   backend so it can refresh the private Meilisearch cluster.
 
-## Webhook Contract
+## Backend Sync Contract
 
-| Field | Description |
+When both `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are defined, the _Sync search index via
+website backend_ step runs. The request looks like this:
+
+| Item | Value |
 | --- | --- |
-| `event` | Always `wiki.synced` |
-| `commit` | SHA of the merged commit |
-| `files` | Array of changed doc paths |
-| `timestamp` | ISO timestamp |
+| Method | `POST` |
+| URL | Value of `WIKI_SEARCH_SYNC_URL` |
+| Headers | `Authorization: Bearer <WIKI_SEARCH_SYNC_TOKEN>`, `Content-Type: application/json` |
+| Body | Contents of `build/search-indices.json` (see `docs/en/reference/webhook-example.json` for a trimmed sample) |
 
-The backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See
-`website-backend/src/http/routes/webhooks.ts` for implementation details.
+The backend validates the bearer token before streaming the payload into Meilisearch. Each payload
+contains three arrays: `docs`, `pokemon`, and `moves`. Every array entry already matches the schema
+documented in [Search Indexing](./search-indexing.md), so the backend only needs to forward the data
+to the internal `wiki-*` indices.
+
+When either secret is missing, the workflow prints a skipped-sync note and still publishes the build
+artifacts. This allows staging environments to run safely without write credentials.
 
 ## Local Testing
 
-Use the sample payload in `docs/en/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.
+1. Run `npm run build:search` so the latest payloads exist under `build/`.
+2. Use `curl` (or PowerShell's `Invoke-WebRequest`) to mimic the GitHub Actions request:
 
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `
-  -Method Post
+```bash
+curl --fail --show-error --silent \
+  -X POST \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  --data-binary @build/search-indices.json \
+  https://api.pokebedrock.com/wiki/search-sync
 ```
 
-## Cache Busting
+For testing without rebuilding the dataset, you can also post the trimmed example payload in
+`docs/en/reference/webhook-example.json`.
 
-- Backend stores the `ETag` returned from GitHub per file.
-- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.
-- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the
-  response to help the client decide whether to fetch fresh data.
+## Rollback and Replays
 
+- Re-run the `wiki-search` workflow against the last known-good commit (or manually upload the
+  artifacts) to regenerate the search payloads.
+- Trigger a manual workflow dispatch once the rollback commit is on `main` to resend the payload to
+  the backend.
+- If Meilisearch needs to be reseeded without new docs, dispatch the workflow and supply an
+  override commit SHA so reviewers can trace what data was imported.
 
 

@@ -1,11 +1,42 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/en/guides/getting-started.mdx",
-    "docs/en/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Set up the PokéBedrock wiki repo locally and publish your first doc change.",
+      "tags": ["guide", "onboarding"],
+      "lastUpdated": "2025-11-21",
+      "status": "stable",
+      "lang": "en",
+      "order": 1,
+      "body": "Shortened body text for the example payload"
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/bulbasaur",
+      "slug": "content/pokemon/bulbasaur",
+      "title": "Bulbasaur",
+      "description": "Seed Pokémon placeholder entry.",
+      "tags": ["content", "pokemon", "grass", "poison"],
+      "status": "stable",
+      "lang": "en",
+      "order": 4001,
+      "body": "Bulbasaur body preview for sync contract examples"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/tackle",
+      "slug": "content/moves/tackle",
+      "title": "Tackle",
+      "description": "Basic physical attack example.",
+      "tags": ["content", "moves", "normal"],
+      "status": "stable",
+      "lang": "en",
+      "order": 9001,
+      "body": "Move body preview for sync contract examples"
+    }
+  ]
 }
-
-
