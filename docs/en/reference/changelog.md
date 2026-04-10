@@ -4,7 +4,7 @@ description: Track significant documentation releases aligned with server update
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-10"
 status: draft
 lang: en
 toc: true
@@ -14,6 +14,12 @@ order: 4
 ## [Unreleased]
 
 - Placeholder entry for upcoming wiki improvements.
+
+## [v2.4.0] - 2026-04-10
+
+- Documented the end-to-end website sync pipeline, including workflow triggers, required secrets, and local `curl` testing guidance.
+- Expanded the media and asset policy with enforced format/size requirements plus Git LFS expectations.
+- Clarified search-index automation details so contributors understand the generated manifests and backend sync fallbacks.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +49,3 @@ order: 4
 - Initial wiki scaffolding, linting, and CI.
 - Search indexing workflow targeting Meilisearch.
 - Localization workflow guide with Spanish example.
-
