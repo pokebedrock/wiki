@@ -22,23 +22,45 @@ if (!files.length) {
 
 let hasErrors = false;
 
+const ensureString = (value: unknown): string | null =>
+  typeof value === "string" && value.trim().length > 0 ? value : null;
+
+const detectLocaleFromPath = (filePath: string): string | null => {
+  const normalizedPath = filePath.replace(/\\/g, "/");
+  const match = normalizedPath.match(/^docs\/([a-z]{2})\//i);
+  return match?.[1] ?? null;
+};
+
 for (const file of files) {
   const source = readFileSync(file, "utf8");
   const { data } = matter(source);
   const frontmatter = data as Record<string, unknown>;
   const isValid = validate(frontmatter);
+  const errors: string[] = [];
 
-  if (isValid) {
+  if (!isValid) {
+    for (const error of validate.errors ?? []) {
+      const path = error.instancePath || "/";
+      const message = error.message ?? "Unknown error";
+      errors.push(`${path}: ${message}`);
+    }
+  }
+
+  const expectedLocale = detectLocaleFromPath(file);
+  const declaredLang = ensureString(frontmatter["lang"]);
+
+  if (expectedLocale && declaredLang && declaredLang !== expectedLocale) {
+    errors.push(`lang: expected \"${expectedLocale}\" based on file path, received \"${declaredLang}\"`);
+  }
+
+  if (!errors.length) {
     continue;
   }
 
   hasErrors = true;
   console.error(`\nFrontmatter errors in ${file}`);
-
-  for (const error of validate.errors ?? []) {
-    const path = error.instancePath || "/";
-    const message = error.message ?? "Unknown error";
-    console.error(`  • ${path}: ${message}`);
+  for (const message of errors) {
+    console.error(`  • ${message}`);
   }
 }
 
