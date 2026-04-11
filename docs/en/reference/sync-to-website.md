@@ -1,10 +1,10 @@
 ---
 title: Website Sync Pipeline
-description: How GitHub pushes trigger the backend webhook and keep the public site cached.
+description: How the website frontend mounts the wiki repo and keeps content fresh.
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-11"
 status: beta
 lang: en
 toc: true
@@ -13,41 +13,73 @@ order: 1
 
 ## Overview
 
-1. Docs merge into `main`.
-2. GitHub fires a repository dispatch/webhook handled by the website backend.
-3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.
-4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.
+The public site no longer waits for `wiki.synced` webhooks. Instead, the
+Next.js frontend keeps a local checkout of `pokebedrock/wiki` alongside the app
+and renders Markdown from disk on demand (see
+`website-frontend/src/lib/wiki.ts`). The runtime flow is:
 
-## Webhook Contract
+1. Deployments clone (or mount) the wiki repo next to
+   `website-frontend`, usually as `/srv/pokebedrock/wiki`, and set
+   `POKEBEDROCK_WIKI_PATH` if the default relative path (`../wiki`) is different.
+2. Route handlers call `getWikiDoc()`/`getWikiNav()` which read Markdown/MDX
+   files directly from that checkout, compile them with `compileMDX`, and serve
+   the rendered React tree.
+3. Spanish (`es`) requests fall back to English when a translation is missing,
+   mirroring the logic in `resolveDocPath()`.
+4. React's `cache()` helper memoizes navigation + slug lists per web process.
+   Restarting the website (or redeploying) invalidates the cache.
 
-| Field | Description |
+Because docs are served straight off disk, content updates go live as soon as
+the servers pull the latest wiki commit and restart the Next.js app. No Redis or
+HMAC webhook is involved anymore.
+
+## Updating production content
+
+To roll out new docs after merging to `main`:
+
+1. SSH into the website host(s) and refresh the wiki checkout, for example:
+
+   ```bash
+   cd /srv/pokebedrock/wiki
+   git fetch origin
+   git reset --hard origin/main
+   ```
+
+2. Restart the frontend so the in-process caches drop and fresh Markdown is
+   read on next request (e.g. `systemctl restart website-frontend` or redeploy
+   through the orchestrator).
+3. Run the wiki search-index workflow if you also need new content reflected in
+   Meilisearch (see `docs/en/reference/search-indexing.md`).
+
+## Environment variables
+
+| Variable | Description |
 | --- | --- |
-| `event` | Always `wiki.synced` |
-| `commit` | SHA of the merged commit |
-| `files` | Array of changed doc paths |
-| `timestamp` | ISO timestamp |
+| `POKEBEDROCK_WIKI_PATH` | Optional absolute path to the wiki checkout. Defaults to `../wiki` relative to the frontend app. |
+| `WIKI_EDIT_BASE_URL` | Optional override for the "Edit this page" links. Defaults to `https://github.com/pokebedrock/wiki/blob/main`. |
 
-The backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See
-`website-backend/src/http/routes/webhooks.ts` for implementation details.
+Leave `POKEBEDROCK_WIKI_PATH` unset when deploying the wiki repo as a sibling
+directory. Set it when the wiki lives elsewhere on disk (for example, when
+packaging both repos into a single container image).
 
-## Local Testing
+## Cache behavior
 
-Use the sample payload in `docs/en/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.
+- `getWikiNav()` and `getAllDocSlugs()` are wrapped in React `cache()` so that a
+  process only scans the filesystem once per boot.
+- `getWikiDoc()` reads Markdown directly every time; no Redis layer exists.
+- Restarting the website (rolling deploy or `pm2/systemd` restart) is the
+  supported way to flush cached navigation metadata.
 
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `
-  -Method Post
-```
+## Search + website sync
 
-## Cache Busting
+The website backend only exposes search endpoints now. To refresh search:
 
-- Backend stores the `ETag` returned from GitHub per file.
-- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.
-- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the
-  response to help the client decide whether to fetch fresh data.
-
+1. Run `npm run build:search` (or `npm run check:generated`) locally to verify
+   manifests/search payloads.
+2. Push to `main` and let `.github/workflows/search-index.yml` upload
+   `build/search-indices.json`.
+3. When `WIKI_SEARCH_SYNC_URL`/`WIKI_SEARCH_SYNC_TOKEN` are configured in the
+   backend, that workflow posts the payload to `/internal/wiki/search-index`,
+   allowing the backend to re-seed Meilisearch inside the cluster.
 
 
