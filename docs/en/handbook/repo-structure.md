@@ -53,7 +53,10 @@ frontend can diff individual entries.
 
 > ℹ️ Upstream content drops land as `assets/content/wikiPokemon.json` and
 > `assets/content/wikiMoves.json`. Run `npm run content:split` to regenerate
-> the per-entry files tracked in git.
+> the per-entry files tracked in git. When the monoliths are unavailable, the
+> same script clones the committed English per-entry JSON under
+> `assets/content/en/{pokemon,moves}` into other locales so Spanish stays in
+> lockstep.
 
 ## Schemas & Scripts
 

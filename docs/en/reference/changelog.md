@@ -13,7 +13,9 @@ order: 4
 
 ## [Unreleased]
 
-- Placeholder entry for upcoming wiki improvements.
+- Fixed `npm run content:split` so it falls back to the committed English
+  dataset when the upstream monolith JSON dumps are missing, keeping
+  localization mirrors regenerable.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +45,3 @@ order: 4
 - Initial wiki scaffolding, linting, and CI.
 - Search indexing workflow targeting Meilisearch.
 - Localization workflow guide with Spanish example.
-
