@@ -1,11 +1,43 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/en/guides/getting-started.mdx",
-    "docs/en/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Set up the Pok\u00e9Bedrock wiki repo locally and publish your first doc change.",
+      "tags": ["guide", "onboarding"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "en",
+      "order": 1,
+      "body": "Clone the repo, run npm ci, create a docs/ branch, and ship your first change."
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Electric-type partner with fast access to Thunderbolt.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "en",
+      "order": 101,
+      "body": "Pikachu\nType: electric\nAbilities: Static, Lightning Rod\nBase stats: HP:35, ATK:55, DEF:40, SPA:50, SPD:50, SPE:90"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Thunderbolt",
+      "description": "Reliable STAB special attack.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "en",
+      "order": 205,
+      "body": "Thunderbolt\nType: electric\nCategory: special\nAccuracy: 100 | PP: 15 | Priority: 0"
+    }
+  ]
 }
-
 
