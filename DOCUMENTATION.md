@@ -148,8 +148,12 @@ Media policy from docs/scripts:
   - Production CI instead sends the generated multi-index payload to the backend, which reindexes Meilisearch internally.
 - `scripts/split-content-data.ts`:
   - Splits legacy monolithic content JSON into per-item files.
+  - Accepts optional monolithic dumps in `assets/content/wikiPokemon.json` and
+    `assets/content/wikiMoves.json`; when they are missing it clones the tracked English
+    fallback directories so every locale keeps data.
   - Writes Pokemon files to `assets/content/<locale>/pokemon/`.
   - Writes move files to `assets/content/<locale>/moves/`.
+  - Normalizes any missing `sortOrder` fields so downstream manifests remain stable.
 
 ## 9. Docs content (`docs/`)
 

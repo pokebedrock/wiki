@@ -4,7 +4,7 @@ description: Detalles para ejecutar el flujo de indexacion de Meilisearch localm
 tags:
   - reference
   - search
-lastUpdated: "2026-04-03"
+lastUpdated: "2026-04-11"
 status: beta
 lang: es
 toc: true
@@ -31,6 +31,24 @@ order: 2
   payloads de busqueda generados y los manifiestos de contenido del frontend como artifacts del workflow,
   y luego envia el payload JSON multi-indice al endpoint protegido de sync del backend del sitio para
   mantener privado Meilisearch.
+
+## Datasets de contenido y fallback del split
+
+- Los dumps autoritativos de Pokémon y movimientos se pueden colocar en
+  `assets/content/wikiPokemon.json` y `assets/content/wikiMoves.json`. Estos monolitos suelen
+  venir del exportador de datos del juego.
+- Ejecuta `npm run content:split` despues de actualizar cualquiera de los monolitos. El script
+  divide las entradas en un archivo por Pokémon/movimiento bajo `assets/content/<locale>/**` y
+  normaliza los campos `sortOrder` faltantes.
+- Cuando los JSON monoliticos no existen (valor por defecto actual), el script clona los
+  directorios fallback en ingles ya versionados (`assets/content/en/pokemon/` y
+  `assets/content/en/moves/`) a todos los locales para que las builds de search/index sigan
+  teniendo datos.
+- El contenido en Español (`es`) actualmente refleja el fallback en ingles hasta que lleguen
+  datasets localizados. El comando de split seguira haciendolo automaticamente, asi que los
+  traductores solo tienen que commitear el JSON localizado cuando exista.
+- Como los archivos generados `assets/content/<locale>/**` se versionan, `npm run ci` puede
+  detectar drift en los manifiestos/payloads sin volver a ejecutar el exportador en cada PR.
 
 ## Configuracion requerida
 
@@ -98,4 +116,3 @@ El flujo de produccion por defecto no expone Meilisearch publicamente:
 ```
 
 Manten descripciones de hasta 180 caracteres para evitar truncamiento en UIs de busqueda.
-

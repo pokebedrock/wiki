@@ -4,7 +4,7 @@ description: Details for running the Meilisearch indexing workflow locally and i
 tags:
   - reference
   - search
-lastUpdated: "2026-04-03"
+lastUpdated: "2026-04-11"
 status: beta
 lang: en
 toc: true
@@ -31,6 +31,24 @@ order: 2
   generated search payloads plus frontend content manifests as workflow artifacts, then sends
   the multi-index JSON payload to the website backend's protected sync endpoint so Meilisearch
   can stay private.
+
+## Content datasets & fallback split
+
+- Authoritative Pokemon and move dumps can be dropped into
+  `assets/content/wikiPokemon.json` and `assets/content/wikiMoves.json`. These monolith files
+  usually come from the game data exporter.
+- Run `npm run content:split` after updating either monolith. The script splits the entries
+  into one file per Pokemon/move under `assets/content/<locale>/**` and normalizes any missing
+  `sortOrder` fields.
+- When the monolith JSON files are absent (current default), the split script clones the
+  already-tracked English fallback directories (`assets/content/en/pokemon/` and
+  `assets/content/en/moves/`) into every locale so search/index builds still have data.
+- Spanish (`es`) content currently mirrors the English fallback until localized datasets are
+  delivered. The split command will keep doing that automatically, so translators only need to
+  commit the localized JSON once it exists.
+- Because the generated `assets/content/<locale>/**` files are committed, `npm run ci` can
+  detect drift in manifests/search payloads without having to re-run the exporter during every
+  PR.
 
 ## Required Settings
 
@@ -96,4 +114,3 @@ The default production flow does not expose Meilisearch publicly:
 ```
 
 Keep descriptions ≤ 180 characters to avoid truncation in search UIs.
-
