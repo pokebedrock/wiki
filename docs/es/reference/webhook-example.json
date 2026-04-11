@@ -1,11 +1,43 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/es/guides/getting-started.mdx",
-    "docs/es/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "es/guides/running-the-server",
+      "slug": "guides/running-the-server",
+      "title": "Ejecutar la wiki localmente",
+      "description": "Pasos para servir la wiki en español en tu máquina.",
+      "tags": ["guide", "localization"],
+      "lastUpdated": "2026-03-06",
+      "status": "beta",
+      "lang": "es",
+      "order": 2,
+      "body": "\n## Instalar dependencias\n\n<ShellBlock command=\"npm ci\" />\n\n## Lint\n\n<ShellBlock command=\"npm run ci\" />\n"
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/abomasnow",
+      "slug": "content/pokemon/abomasnow",
+      "title": "Abomasnow",
+      "description": "A powerful Pokémon that can split huge boulders with ease.",
+      "tags": ["content", "pokemon", "grass", "ice"],
+      "status": "stable",
+      "lang": "en",
+      "order": 621,
+      "body": "Abomasnow\nA powerful Pokémon that can split huge boulders with ease.\nTypes: grass, ice\nAbilities: Snow Warning, Soundproof"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/10000000voltthunderbolt",
+      "slug": "content/moves/10000000voltthunderbolt",
+      "title": "10,000,000 Volt Thunderbolt",
+      "description": "Has a very high chance for a critical hit.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "en",
+      "order": 2689,
+      "body": "10000000voltthunderbolt\nType: Electric\nCategory: Special\nAccuracy: true"
+    }
+  ]
 }
-
 

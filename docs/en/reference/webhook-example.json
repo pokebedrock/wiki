@@ -1,11 +1,42 @@
 {
-  "event": "wiki.synced",
-  "commit": "0123456789abcdef0123456789abcdef01234567",
-  "files": [
-    "docs/en/guides/getting-started.mdx",
-    "docs/en/reference/sync-to-website.md"
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Set up the PokéBedrock wiki repo locally and publish your first doc change.",
+      "tags": ["guide", "onboarding"],
+      "lastUpdated": "2025-11-21",
+      "status": "stable",
+      "lang": "en",
+      "order": 1,
+      "body": "\n## 1. Clone & Install\n\n<ShellBlock command=\"git clone git@github.com:pokebedrock/wiki.git\\ncd wiki\\nnpm ci\" />\n\n## 2. Create a Branch\n\n<ShellBlock command=\"git checkout -b docs/my-topic\" />\n"
+    }
   ],
-  "timestamp": "2025-11-21T10:00:00Z"
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/abomasnow",
+      "slug": "content/pokemon/abomasnow",
+      "title": "Abomasnow",
+      "description": "A powerful Pokémon that can split huge boulders with ease.",
+      "tags": ["content", "pokemon", "grass", "ice"],
+      "status": "stable",
+      "lang": "en",
+      "order": 621,
+      "body": "Abomasnow\nA powerful Pokémon that can split huge boulders with ease.\nTypes: grass, ice\nAbilities: Snow Warning, Soundproof"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/10000000voltthunderbolt",
+      "slug": "content/moves/10000000voltthunderbolt",
+      "title": "10,000,000 Volt Thunderbolt",
+      "description": "Has a very high chance for a critical hit.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "en",
+      "order": 2689,
+      "body": "10000000voltthunderbolt\nType: Electric\nCategory: Special\nAccuracy: true"
+    }
+  ]
 }
-
-

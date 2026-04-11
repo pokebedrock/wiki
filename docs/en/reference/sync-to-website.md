@@ -1,11 +1,11 @@
 ---
 title: Website Sync Pipeline
-description: How GitHub pushes trigger the backend webhook and keep the public site cached.
+description: How the wiki-search workflow hands search payloads to the website backend.
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
-status: beta
+lastUpdated: "2026-04-11"
+status: stable
 lang: en
 toc: true
 order: 1
@@ -13,41 +13,80 @@ order: 1
 
 ## Overview
 
-1. Docs merge into `main`.
-2. GitHub fires a repository dispatch/webhook handled by the website backend.
-3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.
-4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.
+The website no longer polls GitHub for changed Markdown. Instead, the
+`wiki-search` workflow (`.github/workflows/search-index.yml`) builds the search
+payload plus frontend manifests and POSTs them directly to the website backend.
 
-## Webhook Contract
+Workflow trigger summary:
 
-| Field | Description |
+1. Pushes to `main` that touch docs, schemas, scripts, or build config.
+2. Manual `workflow_dispatch` runs for hotfixes.
+3. A nightly cron (`0 6 * * *`) to keep Meilisearch fresh even if no commits
+   landed that day.
+
+Each run performs:
+
+| Step | Description |
 | --- | --- |
-| `event` | Always `wiki.synced` |
-| `commit` | SHA of the merged commit |
-| `files` | Array of changed doc paths |
-| `timestamp` | ISO timestamp |
+| Install | `npm ci` on Node 20 with npm cache reuse. |
+| Build | `npm run build:search` produces `build/search-indices.json`, the frontend manifests under `build/content/<locale>/`, and the merged `build/search-index.json` fallback. |
+| Sync | When sync secrets exist, the job POSTs `build/search-indices.json` to the website backend via HTTPS. |
+| Artifact | The raw JSON outputs upload as an Actions artifact for audit trails and manual replays. |
 
-The backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See
-`website-backend/src/http/routes/webhooks.ts` for implementation details.
+## Required Secrets
 
-## Local Testing
+| Secret | Description |
+| --- | --- |
+| `WIKI_SEARCH_SYNC_URL` | HTTPS endpoint exposed by the website backend (for example `https://api.pokebedrock.com/wiki/search-sync`). |
+| `WIKI_SEARCH_SYNC_TOKEN` | Bearer token validated by the backend before accepting a payload. |
 
-Use the sample payload in `docs/en/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.
+If either secret is blank the workflow still builds artifacts but logs that the
+backend sync was skipped.
 
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `
-  -Method Post
+## HTTP Contract
+
+The sync step issues:
+
+```bash
+curl --fail-with-body --silent --show-error \
+  -X POST \
+  -H "Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN" \
+  -H "Content-Type: application/json" \
+  --data-binary @build/search-indices.json \
+  "$WIKI_SEARCH_SYNC_URL"
 ```
 
-## Cache Busting
+- `Content-Type` must remain `application/json`.
+- The Authorization header contains the raw token (no HMAC). Rotate the token in
+  both repos when access changes.
+- The POST body is exactly the contents of `build/search-indices.json`.
 
-- Backend stores the `ETag` returned from GitHub per file.
-- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.
-- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the
-  response to help the client decide whether to fetch fresh data.
+## Payload Shape
 
+`docs/en/reference/webhook-example.json` mirrors a trimmed payload. The top-level
+keys represent individual Meilisearch indexes:
 
+| Key | Example Index |
+| --- | --- |
+| `docs` | Markdown/MDX pages rendered into search documents. |
+| `pokemon` | Generated Pokédex entries sourced from `assets/content`. |
+| `moves` | Generated move detail entries sourced from `assets/content`. |
+
+Each entry contains the search metadata (`id`, `slug`, `title`, `description`,
+`tags`, `status`, `lang`, `order`, and `body`). The backend streams the payload
+into the internal Meilisearch cluster, replacing the entire index on each run.
+
+## Cache & Website Invalidation
+
+After ingesting the payload the backend:
+
+1. Rebuilds the `wiki-docs`, `wiki-pokemon`, and `wiki-moves` indexes inside the
+   private Meilisearch instance.
+2. Invalidates the website cache for the affected docs so the frontend fetches
+   fresh search results immediately.
+3. Exposes the merged `build/search-index.json` artifact to the frontend as a
+   fallback when Meilisearch is unavailable.
+
+This flow eliminates the legacy GitHub Contents polling and keeps the public
+site aligned with the exact data the CI run validated.
 
