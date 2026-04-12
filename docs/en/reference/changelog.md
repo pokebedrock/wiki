@@ -4,7 +4,7 @@ description: Track significant documentation releases aligned with server update
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-12"
 status: draft
 lang: en
 toc: true
@@ -13,7 +13,7 @@ order: 4
 
 ## [Unreleased]
 
-- Placeholder entry for upcoming wiki improvements.
+- Clarified admonition examples in the Markdown/MDX style guide for both locales.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +43,3 @@ order: 4
 - Initial wiki scaffolding, linting, and CI.
 - Search indexing workflow targeting Meilisearch.
 - Localization workflow guide with Spanish example.
-

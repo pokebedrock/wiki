@@ -4,7 +4,7 @@ description: Registro de lanzamientos importantes de documentacion alineados con
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-12"
 status: draft
 lang: es
 toc: true
@@ -13,7 +13,7 @@ order: 4
 
 ## [Sin publicar]
 
-- Entrada placeholder para proximas mejoras de la wiki.
+- Ejemplos de admonitions aclarados en la guia de estilo de Markdown/MDX para ambos idiomas.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +43,3 @@ order: 4
 - Estructura inicial de la wiki, linting y CI.
 - Flujo de indexacion de busqueda orientado a Meilisearch.
 - Guia del flujo de localizacion con ejemplo en espanol.
-

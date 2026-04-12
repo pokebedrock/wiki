@@ -4,7 +4,7 @@ description: Convenciones de autoria para Markdown, MDX, admonitions y fragmento
 tags:
   - handbook
   - style-guide
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-04-12"
 status: stable
 lang: es
 toc: true
@@ -22,9 +22,14 @@ order: 3
 
 Usar bloques estilo Docusaurus:
 
-```text
+```md
+:::note
 Consejo breve y accionable.
+:::
 ```
+
+Siempre cierra el bloque con `:::` y elige el tono adecuado para el mensaje
+(`note`, `tip`, `warning` o `danger`).
 
 Opciones comunes: `note`, `tip`, `warning`, `danger`. Importar callouts complejos desde `docs/<locale>/_partials`.
 
@@ -65,6 +70,5 @@ import ServicenodeCallout from "../_partials/ServicenodeCallout.mdx";
 ```
 
 Mantener imports relativos al documento para evitar aliases dependientes del bundler.
-
 
 
