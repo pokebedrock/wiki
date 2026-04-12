@@ -4,7 +4,7 @@ description: Breakdown of the wiki folders, metadata files, and how the website 
 tags:
   - handbook
   - structure
-lastUpdated: "2026-03-07"
+lastUpdated: "2026-04-12"
 status: stable
 lang: en
 toc: true
@@ -39,8 +39,8 @@ assets/
   diagrams/               # source files (.drawio, .excalidraw, etc.)
   content/                # normalized JSON datasets for Pokemon + moves
     en/
-      pokemon/            # one file per Pokemon, generated via content:split
-      moves/              # one file per move, generated via content:split
+      pokemon/            # one file per Pokemon, committed directly
+      moves/              # one file per move, committed directly
     es/
       pokemon/            # Spanish dataset mirror (currently copied from en)
       moves/              # Spanish dataset mirror (currently copied from en)
@@ -51,9 +51,10 @@ editable sources so future contributors can revise them. Structured datasets for
 Pokemon and moves also live under `assets/content/` so search indexing and the
 frontend can diff individual entries.
 
-> ℹ️ Upstream content drops land as `assets/content/wikiPokemon.json` and
-> `assets/content/wikiMoves.json`. Run `npm run content:split` to regenerate
-> the per-entry files tracked in git.
+> ℹ️ Upstream content now lands as already-split JSON entries. Update the
+> per-Pokémon and per-move files directly inside
+> `assets/content/<locale>/{pokemon,moves}` or copy fresh exports from the
+> backend data drop before committing.
 
 ## Schemas & Scripts
 
@@ -63,10 +64,11 @@ frontend can diff individual entries.
 - `scripts/build-search-index.ts` – Creates search payloads plus frontend
   content manifests in `build/content/<locale>/`, then optionally pushes the
   docs/pokemon/moves indices to Meilisearch.
-- `scripts/split-content-data.ts` – Splits upstream `wikiPokemon.json` and
-  `wikiMoves.json` into locale-scoped directories under
-  `assets/content/<locale>/{pokemon,moves}` via
-  `npm run content:split`.
+- Content datasets are maintained directly under
+  `assets/content/<locale>/{pokemon,moves}`; there is no longer a
+  `content:split` script to regenerate them. Copy new entries into those
+  directories (or edit the JSON in place) and re-run `npm run build:search`
+  so manifests stay in sync.
 
 ## GitHub Automation
 
