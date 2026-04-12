@@ -43,7 +43,6 @@ consistent before syncing to the public website.
 | `npm run audit:prod` | Audits production dependency graph |
 | `npm run build:search` | Generates search payloads plus frontend content manifests in `build/content/<locale>/` |
 | `npm run check:generated` | Builds search/manifests and fails if tracked JSON drifts from the repo copies |
-| `npm run content:split` | Splits legacy monolithic content JSON into per-item files under `assets/content/<locale>/` |
 
 Search fallback artifacts (`build/search-index.json`, `build/search-indices.json`, and
 `build/content/<locale>/*-manifest.json`) are tracked in git so `npm run check:generated`
@@ -73,4 +72,3 @@ workflow, and content guidelines. Issue templates cover bugs and content request
 CODEOWNERS ensures the docs team reviews every change.
 
 Release checklist: [`docs/en/reference/release-checklist.md`](./docs/en/reference/release-checklist.md)
-
