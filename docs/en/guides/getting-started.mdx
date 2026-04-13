@@ -4,7 +4,7 @@ description: Set up the PokéBedrock wiki repo locally and publish your first do
 tags:
   - guide
   - onboarding
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-13"
 status: stable
 lang: en
 toc: true
@@ -12,6 +12,19 @@ order: 1
 ---
 
 <InfoCallout />
+
+## Prerequisites
+
+- Node.js 20.0.0 or newer (matches the `"engines"` field in `package.json`)
+- npm 10.x (bundled with Node 20)
+
+Verify your versions:
+
+<ShellBlock command="node --version\nnpm --version" />
+
+If you use `nvm`, install and activate the right runtime before running any repo commands:
+
+<ShellBlock command="nvm install 20\nnvm use 20" />
 
 ## 1. Clone & Install
 
@@ -38,6 +51,4 @@ Use MDX if you need components, otherwise stick to Markdown for readability.
 ## 5. Open a PR
 
 Fill out the PR template, link related issues, and request a review from `@pokebedrock/wiki-maintainers`.
-
-
 
