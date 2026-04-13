@@ -1,10 +1,10 @@
 ---
-title: Politica de media y assets
-description: Requisitos para agregar imagenes, diagramas y archivos descargables a la wiki.
+title: Política de medios y assets
+description: Requisitos para agregar imágenes, diagramas y archivos descargables a la wiki.
 tags:
   - reference
   - media
-lastUpdated: "2026-03-19"
+lastUpdated: "2026-04-13"
 status: stable
 lang: es
 toc: true
@@ -15,33 +15,33 @@ import { ShellBlock } from "../snippets/code-blocks.mdx";
 
 ## Formatos
 
-- Preferir `webp` para imagenes raster y `svg` para arte vectorial.
-- Convertir cargas PNG/JPEG usando ImageMagick o Squoosh antes de hacer commit.
-- Guardar archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.
+- Prefiere `webp` para imágenes ráster y `svg` para arte vectorial.
+- Convierte los PNG/JPEG con ImageMagick o Squoosh antes de hacer commit.
+- Guarda los archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.
 
-## Limites de tamano
+## Límites de tamaño
 
-- Imagenes inline <= 600 KB (aplicado por `npm run lint:images`).
-- Diagramas <= 5 MB; cualquier cosa mayor debe usar Git LFS.
+- Imágenes inline ≤ 600 KB (validado por `npm run lint:images`).
+- Diagramas ≤ 5 MB; si son más grandes deben versionarse con Git LFS.
 
-## Alt text y captions
+## Texto alternativo y pies de foto
 
-- Proveer alt text descriptivo que transmita la misma informacion que la imagen.
-- Usar captions debajo de diagramas complejos para agregar contexto.
+- Proporciona texto alternativo descriptivo que comunique lo mismo que la imagen.
+- Añade un pie de foto debajo de diagramas complejos para aportar contexto.
 
 ## Git LFS
 
-Versionar binarios grandes:
+Versiona los binarios grandes:
 
 <ShellBlock command='git lfs track "assets/diagrams/*.drawio"\ngit add .gitattributes assets/diagrams/example.drawio' />
 
-## Checklist de revision
+## Lista de verificación de revisión
 
-- [ ] File stored under `assets/`
-- [ ] Alt text filled in
-- [ ] Format is `webp` or `svg`
-- [ ] Size ≤ 600 KB (inline)
-- [ ] Referenced using a relative path in docs
+- [ ] Archivo guardado en `assets/`
+- [ ] Texto alternativo completo
+- [ ] Formato `webp` o `svg`
+- [ ] Tamaño ≤ 600 KB (inline)
+- [ ] Referenciada con una ruta relativa en la documentación
 
 
 
