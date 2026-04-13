@@ -1,10 +1,10 @@
 ---
-title: Politica de media y assets
-description: Requisitos para agregar imagenes, diagramas y archivos descargables a la wiki.
+title: Política de media y assets
+description: Requisitos para agregar imágenes, diagramas y archivos descargables a la wiki.
 tags:
   - reference
   - media
-lastUpdated: "2026-03-19"
+lastUpdated: "2026-04-13"
 status: stable
 lang: es
 toc: true
@@ -15,18 +15,18 @@ import { ShellBlock } from "../snippets/code-blocks.mdx";
 
 ## Formatos
 
-- Preferir `webp` para imagenes raster y `svg` para arte vectorial.
+- Preferir `webp` para imágenes ráster y `svg` para arte vectorial.
 - Convertir cargas PNG/JPEG usando ImageMagick o Squoosh antes de hacer commit.
 - Guardar archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.
 
-## Limites de tamano
+## Límites de tamaño
 
-- Imagenes inline <= 600 KB (aplicado por `npm run lint:images`).
-- Diagramas <= 5 MB; cualquier cosa mayor debe usar Git LFS.
+- Imágenes inline ≤ 600 KB (aplicado por `npm run lint:images`).
+- Diagramas ≤ 5 MB; cualquier archivo mayor debe usar Git LFS.
 
-## Alt text y captions
+## Texto alternativo y captions
 
-- Proveer alt text descriptivo que transmita la misma informacion que la imagen.
+- Proveer texto alternativo descriptivo que transmita la misma información que la imagen.
 - Usar captions debajo de diagramas complejos para agregar contexto.
 
 ## Git LFS
@@ -35,13 +35,12 @@ Versionar binarios grandes:
 
 <ShellBlock command='git lfs track "assets/diagrams/*.drawio"\ngit add .gitattributes assets/diagrams/example.drawio' />
 
-## Checklist de revision
+## Lista de verificación
 
-- [ ] File stored under `assets/`
-- [ ] Alt text filled in
-- [ ] Format is `webp` or `svg`
-- [ ] Size ≤ 600 KB (inline)
-- [ ] Referenced using a relative path in docs
-
+- [ ] Archivo guardado en `assets/`
+- [ ] Texto alternativo completo
+- [ ] Formato `webp` o `svg`
+- [ ] Tamaño ≤ 600 KB (uso inline)
+- [ ] Referenciado con una ruta relativa dentro de los docs
 
 
