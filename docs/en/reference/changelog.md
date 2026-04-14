@@ -4,7 +4,7 @@ description: Track significant documentation releases aligned with server update
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-14"
 status: draft
 lang: en
 toc: true
@@ -14,6 +14,16 @@ order: 4
 ## [Unreleased]
 
 - Placeholder entry for upcoming wiki improvements.
+
+## [v2.4.0] - 2026-04-14
+
+- Release checklist now calls out the required `MEILISEARCH_URL`/`MEILISEARCH_KEY` and
+  `WIKI_SEARCH_SYNC_URL`/`WIKI_SEARCH_SYNC_TOKEN` secrets so Meilisearch pushes and backend
+  syncs are covered during prep.
+- Added an explicit "review search-index workflow logs" step to catch backend sync failures
+  before publishing release notes.
+- Clarified that generated search payloads and manifests should be confirmed prior to
+  announcing a wiki release.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +53,3 @@ order: 4
 - Initial wiki scaffolding, linting, and CI.
 - Search indexing workflow targeting Meilisearch.
 - Localization workflow guide with Spanish example.
-

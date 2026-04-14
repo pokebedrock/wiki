@@ -4,7 +4,7 @@ description: Registro de lanzamientos importantes de documentacion alineados con
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-14"
 status: draft
 lang: es
 toc: true
@@ -14,6 +14,16 @@ order: 4
 ## [Sin publicar]
 
 - Entrada placeholder para proximas mejoras de la wiki.
+
+## [v2.4.0] - 2026-04-14
+
+- La checklist de release ahora menciona los secrets requeridos `MEILISEARCH_URL`/
+  `MEILISEARCH_KEY` y `WIKI_SEARCH_SYNC_URL`/`WIKI_SEARCH_SYNC_TOKEN` para cubrir los envios a
+  Meilisearch y la sincronizacion con el backend.
+- Se agrego un paso explicito para revisar los logs del workflow `search-index` y detectar
+  fallos de sincronizacion del backend antes de publicar la release.
+- Se aclaro que se deben confirmar los payloads y manifiestos generados del buscador antes de
+  anunciar una release de la wiki.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +53,3 @@ order: 4
 - Estructura inicial de la wiki, linting y CI.
 - Flujo de indexacion de busqueda orientado a Meilisearch.
 - Guia del flujo de localizacion con ejemplo en espanol.
-
