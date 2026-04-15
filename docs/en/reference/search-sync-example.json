@@ -1,0 +1,42 @@
+{
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Spin up a PokéBedrock development environment with npm scripts and linting hooks.",
+      "tags": ["guides", "onboarding"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "en",
+      "order": 3,
+      "body": "## Prerequisites\n- Node 20+\n- npm 10+\n\nFollow the onboarding checklist to install dependencies and run npm run ci."
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Electric-type partner that focuses on speed and utility coverage.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "en",
+      "order": 4050,
+      "body": "Pikachu\nType: Electric\nBase stats: HP:35, ATK:55, DEF:40, SPA:50, SPD:50, SPE:90\nLearnable moves: Thunderbolt, Volt Tackle, Iron Tail"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/thunderbolt",
+      "slug": "content/moves/thunderbolt",
+      "title": "Thunderbolt",
+      "description": "Reliable Electric-type special attack with a para chance.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "en",
+      "order": 8123,
+      "body": "Thunderbolt\nType: Electric\nCategory: Special\nAccuracy: 100 | PP: 15 | Target: chosen\nFlags: protect, mirror, non-sky"
+    }
+  ]
+}
