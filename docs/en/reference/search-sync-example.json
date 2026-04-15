@@ -1,0 +1,41 @@
+{
+  "docs": [
+    {
+      "id": "en/guides/getting-started",
+      "slug": "guides/getting-started",
+      "title": "Getting Started",
+      "description": "Everything a new trainer needs to connect to PokéBedrock servers.",
+      "tags": ["guide", "onboarding"],
+      "status": "stable",
+      "lang": "en",
+      "order": 1,
+      "body": "Install Minecraft Bedrock, add the PokéBedrock server, then claim your starter kit."
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "content/en/pokemon/bulbasaur",
+      "slug": "content/pokemon/bulbasaur",
+      "title": "Bulbasaur",
+      "description": "Grass/Poison starter available from Professor Oak.",
+      "tags": ["content", "pokemon", "grass", "poison"],
+      "status": "stable",
+      "lang": "en",
+      "order": 5001,
+      "body": "Bulbasaur excels in early gyms thanks to Sleep Powder and Leech Seed."
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/en/moves/vine-whip",
+      "slug": "content/moves/vine-whip",
+      "title": "Vine Whip",
+      "description": "Basic physical Grass attack.",
+      "tags": ["content", "moves", "grass", "physical"],
+      "status": "stable",
+      "lang": "en",
+      "order": 9001,
+      "body": "Vine Whip hits for 45 base power and is learned naturally by most Grass starters."
+    }
+  ]
+}
