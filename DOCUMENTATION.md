@@ -83,7 +83,10 @@ This file documents the tracked repository contents: purpose, structure, and the
   - Uses Node 20 with npm cache restoration.
   - Executes `npm ci`, `npm run ci` (lint + links + search build), and `npm run audit:prod`.
 - `.github/workflows/search-index.yml` (`wiki-search`):
-  - Triggers on pushes to `main` for docs/content/schema/search-build paths, manual dispatch, and daily schedule.
+  - Triggers on matching pushes to `main`, manual dispatch, and a daily schedule.
+  - Push path filters currently watch `docs/**`, `assets/content/**`, `schemas/**`,
+    `scripts/**`, `.github/workflows/search-index.yml`, `tsconfig*.json`,
+    `package.json`, and `package-lock.json`.
   - Builds search index via `npm run build:search`.
   - Uploads the generated search payloads plus frontend content manifests as artifacts:
     - `build/search-index.json`
@@ -93,7 +96,6 @@ This file documents the tracked repository contents: purpose, structure, and the
     - `build/content/<locale>/move-learners-manifest.json`
   - If `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are configured, sends the multi-index JSON payload to the website backend sync endpoint.
   - If either secret is missing, skips backend sync but still uploads the generated artifacts for debugging.
-  - Path filter watches `scripts/build-search-index.ts`, matching the TypeScript source emitted into `build/scripts` during CI.
 
 ## 6. Assets (`assets/`)
 

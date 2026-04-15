@@ -53,10 +53,12 @@ required.
 ## CI & Deployment
 
 - `ci.yml` runs `npm run ci` plus `npm run audit:prod` for every PR and push.
-- `search-index.yml` builds the search payloads on pushes to `main`, uploads both the
-  search JSON files and generated frontend content manifests as the workflow artifact, and
-  posts `build/search-indices.json` to the website backend's protected sync endpoint so the
-  backend can reindex Meilisearch from inside the cluster.
+- `search-index.yml` builds the search payloads on matching pushes to `main`, on manual
+  dispatch, and on a daily schedule. It watches docs/content inputs plus search-build files
+  such as `scripts/**`, `schemas/**`, `tsconfig*.json`, `package.json`, and
+  `package-lock.json`, uploads both the search JSON files and generated frontend content
+  manifests as the workflow artifact, and posts `build/search-indices.json` to the website
+  backend's protected sync endpoint when the backend sync secrets are configured.
 - The same build writes content manifests used by the frontend for fast wiki content
   list/detail navigation:
   - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`
