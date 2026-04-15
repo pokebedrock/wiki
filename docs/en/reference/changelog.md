@@ -4,7 +4,7 @@ description: Track significant documentation releases aligned with server update
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-14"
 status: draft
 lang: en
 toc: true
@@ -14,6 +14,16 @@ order: 4
 ## [Unreleased]
 
 - Placeholder entry for upcoming wiki improvements.
+
+## [v2.4.0] - 2026-04-14
+
+- Added a dedicated docs versioning strategy (EN + ES) so contributors know when to cut
+  changelog entries, release tags, and search-index reruns.
+- Expanded the release checklist to require drafting the changelog entry, tagging the
+  wiki release (`wiki-vX.Y.Z`), and verifying the `wiki-search` workflow artifacts
+  before calling a deploy complete.
+- Clarified the release flow to link backend sync verification, changelog entries, and
+  search payload uploads so the website always ingests the matching content snapshot.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +53,3 @@ order: 4
 - Initial wiki scaffolding, linting, and CI.
 - Search indexing workflow targeting Meilisearch.
 - Localization workflow guide with Spanish example.
-

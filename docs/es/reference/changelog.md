@@ -4,7 +4,7 @@ description: Registro de lanzamientos importantes de documentacion alineados con
 tags:
   - reference
   - changelog
-lastUpdated: "2026-03-28"
+lastUpdated: "2026-04-14"
 status: draft
 lang: es
 toc: true
@@ -14,6 +14,17 @@ order: 4
 ## [Sin publicar]
 
 - Entrada placeholder para proximas mejoras de la wiki.
+
+## [v2.4.0] - 2026-04-14
+
+- Se agrego una estrategia dedicada de versionado (EN + ES) para explicar cuando crear
+  entradas del changelog, tags de release y reruns del indice de busqueda.
+- Se amplio el checklist de release para exigir redactar el changelog, etiquetar la
+  release (`wiki-vX.Y.Z`) y verificar los artefactos del workflow `wiki-search` antes de
+  dar por finalizado un despliegue.
+- Se aclaro el flujo de release enlazando la verificacion de sincronizacion con el
+  backend, las entradas del changelog y la subida de payloads de busqueda para que el
+  sitio procese el snapshot correcto.
 
 ## [v2.3.0] - 2026-03-28
 
@@ -43,4 +54,3 @@ order: 4
 - Estructura inicial de la wiki, linting y CI.
 - Flujo de indexacion de busqueda orientado a Meilisearch.
 - Guia del flujo de localizacion con ejemplo en espanol.
-
