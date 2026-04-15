@@ -1,0 +1,42 @@
+{
+  "docs": [
+    {
+      "id": "es/guides/empezar",
+      "slug": "guides/empezar",
+      "title": "Primeros pasos",
+      "description": "Levanta un entorno de desarrollo PokéBedrock con scripts npm y hooks de linting.",
+      "tags": ["guides", "onboarding"],
+      "lastUpdated": "2026-03-28",
+      "status": "stable",
+      "lang": "es",
+      "order": 3,
+      "body": "## Requisitos\n- Node 20+\n- npm 10+\n\nSigue la checklist de onboarding para instalar dependencias y ejecutar npm run ci."
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "content/es/pokemon/pikachu",
+      "slug": "content/pokemon/pikachu",
+      "title": "Pikachu",
+      "description": "Compañero de tipo Eléctrico enfocado en velocidad y cobertura utilitaria.",
+      "tags": ["content", "pokemon", "electric"],
+      "status": "stable",
+      "lang": "es",
+      "order": 4050,
+      "body": "Pikachu\nTipo: Eléctrico\nStats base: PS:35, ATQ:55, DEF:40, ATQESP:50, DEFESP:50, VEL:90\nMovimientos aprendibles: Thunderbolt, Volt Tackle, Iron Tail"
+    }
+  ],
+  "moves": [
+    {
+      "id": "content/es/moves/rayo",
+      "slug": "content/moves/rayo",
+      "title": "Rayo",
+      "description": "Ataque especial de tipo Eléctrico confiable con probabilidad de parálisis.",
+      "tags": ["content", "moves", "electric", "special"],
+      "status": "stable",
+      "lang": "es",
+      "order": 8123,
+      "body": "Rayo\nTipo: Eléctrico\nCategoría: Especial\nPrecisión: 100 | PP: 15 | Objetivo: elegido\nFlags: protect, mirror, non-sky"
+    }
+  ]
+}
