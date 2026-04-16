@@ -4,7 +4,7 @@ description: Common admonitions that can be imported into MDX docs.
 tags:
   - snippets
   - mdx
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-04-16"
 status: stable
 lang: en
 toc: false
@@ -13,13 +13,13 @@ order: 1
 
 export const InfoCallout = () => (
   <div className="callout callout--note">
-    <strong>Heads up:</strong> Follow the checklist at the bottom of this page before merging.
+    <strong>Heads up:</strong> Run `npm run ci` and review the generated search artifacts before opening or updating a PR.
   </div>
 );
 
 export const WarningCallout = () => (
   <div className="callout callout--warning">
-    <strong>Warning:</strong> Double-check the in-game release notes before updating this doc.
+    <strong>Warning:</strong> When a doc depends on automation or generated content, verify the current workflow behavior before publishing changes.
   </div>
 );
 
