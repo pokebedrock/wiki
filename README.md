@@ -56,15 +56,14 @@ required.
 - `search-index.yml` builds the search payloads on pushes to `main`, uploads both the
   search JSON files and generated frontend content manifests as the workflow artifact, and
   posts `build/search-indices.json` to the website backend's protected sync endpoint so the
-  backend can reindex Meilisearch from inside the cluster.
+  backend can refresh its Meilisearch indices from inside the cluster.
 - The same build writes content manifests used by the frontend for fast wiki content
   list/detail navigation:
   - `build/content/en/pokemon-manifest.json` and `build/content/es/pokemon-manifest.json`
   - `build/content/en/moves-manifest.json` and `build/content/es/moves-manifest.json`
   - `build/content/en/move-learners-manifest.json` and `build/content/es/move-learners-manifest.json`
-- A webhook (documented in `docs/en/reference/sync-to-website.md`) notifies the website
-  backend when docs change; the website fetches raw Markdown via the GitHub API and
-  caches using ETags.
+- For the current sync contract, workflow behavior, and local verification steps, see
+  `docs/en/reference/search-indexing.md`.
 
 ## Contributing
 

@@ -16,7 +16,9 @@ This file documents the tracked repository contents: purpose, structure, and the
 - Markdown, links, frontmatter, and media are validated via `npm` scripts.
 - CI (`.github/workflows/ci.yml`) runs on every push and pull request in this repository.
 - Search index is generated from docs by `scripts/build-search-index.ts` and can be pushed to Meilisearch.
-- Website sync behavior is specified in docs (`docs/en/reference/sync-to-website.md`) and example payload (`docs/en/reference/webhook-example.json`).
+- Current website sync behavior is specified in
+  `docs/en/reference/search-indexing.md`, including the workflow upload contract
+  and protected backend sync step.
 
 ## 3. Directory map
 
@@ -173,12 +175,13 @@ Media policy from docs/scripts:
 
 ### Reference pages
 
-- `docs/<locale>/reference/sync-to-website.md`: webhook-driven sync design, cache behavior, local test example.
-- `docs/<locale>/reference/search-indexing.md`: local and CI indexing behavior for Meilisearch integration.
+- `docs/<locale>/reference/search-indexing.md`: local and CI indexing behavior
+  for Meilisearch integration, generated content manifests, and backend sync.
+- `docs/<locale>/reference/sync-to-website.md`: legacy/compatibility notes for older website cache flows still referenced in historical docs.
 - `docs/<locale>/reference/media-policy.mdx`: format, size, alt-text, and LFS rules.
 - `docs/<locale>/reference/changelog.md`: release-aligned documentation changelog.
 - `docs/<locale>/reference/localization-glossary.md`: shared terminology for translators.
-- `docs/<locale>/reference/webhook-example.json`: example webhook payload for local testing.
+- `docs/<locale>/reference/webhook-example.json`: sample payload kept for manual compatibility testing of legacy sync endpoints.
 
 ### Reusable MDX building blocks
 
@@ -218,9 +221,9 @@ Media policy from docs/scripts:
 ### Website sync workflow
 
 1. Docs merge to `main`.
-2. Backend receives webhook/dispatch event.
-3. Changed files are fetched through GitHub API with ETag caching.
-4. Rendered docs are cached by backend for serving.
+2. GitHub Actions builds and uploads the generated search/content artifacts.
+3. If sync secrets are configured, the workflow POSTs `build/search-indices.json` to the protected website-backend sync endpoint.
+4. The backend refreshes remote search data without fetching changed markdown files individually.
 
 ## 11. Notes on non-source directories
 
