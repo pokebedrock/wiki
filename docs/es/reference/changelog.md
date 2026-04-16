@@ -13,7 +13,7 @@ order: 4
 
 ## [Sin publicar]
 
-- Entrada placeholder para proximas mejoras de la wiki.
+- No hay cambios de documentacion pendientes de publicar en este momento.
 
 ## [v2.3.0] - 2026-03-28
 

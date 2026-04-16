@@ -13,7 +13,7 @@ order: 4
 
 ## [Unreleased]
 
-- Placeholder entry for upcoming wiki improvements.
+- No unreleased documentation changes are queued right now.
 
 ## [v2.3.0] - 2026-03-28
 
