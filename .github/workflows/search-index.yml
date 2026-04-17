@@ -34,8 +34,8 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
-      - name: Build search index
-        run: npm run build:search
+      - name: Run wiki validation and generated-artifact checks
+        run: npm run ci
       - name: Sync search index via website backend
         if: ${{ secrets.WIKI_SEARCH_SYNC_URL != '' && secrets.WIKI_SEARCH_SYNC_TOKEN != '' }}
         env:
