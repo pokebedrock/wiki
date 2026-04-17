@@ -4,7 +4,7 @@ description: Step-by-step instructions for serving docs locally in English.
 tags:
   - guide
   - localization
-lastUpdated: "2026-03-06"
+lastUpdated: "2026-04-17"
 status: beta
 lang: en
 toc: true
@@ -25,9 +25,15 @@ watch flag wired up for the current tooling stack.
 
 ## Preview
 
-Until the website frontend wires up MDX rendering, preview using your favorite Markdown
-viewer (VS Code, Obsidian, etc.). Once the Next.js docs portal is ready, run it against
-the `docs/` directory using the `POKEBEDROCK_WIKI_PATH` env var.
+This repo does not ship a dedicated docs dev server. For day-to-day doc work:
+
+- Use your editor's Markdown/MDX preview (VS Code, Obsidian, etc.) to check prose,
+  headings, and callout rendering.
+- Run `npm run build:search` when you want to regenerate the tracked search payloads
+  and frontend manifests after larger content edits.
+- Use the website frontend repo for full-site rendering checks; follow whatever wiki-path
+  override that repo currently documents instead of assuming this repo exposes its own
+  preview app.
 
 
 

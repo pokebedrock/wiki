@@ -5,7 +5,7 @@ tags:
   - guide
   - localization
   - es
-lastUpdated: "2026-03-19"
+lastUpdated: "2026-04-17"
 status: beta
 lang: es
 toc: true
@@ -32,5 +32,15 @@ order: 3
 - Describe cualquier contexto de localización (términos nuevos, capturas, etc.)
   en la descripción del PR para que los revisores tengan el mismo contexto.
 
+## Preview
 
+Este repo no trae un servidor de docs dedicado. Para el trabajo diario:
+
+- Usa el preview Markdown/MDX de tu editor (VS Code, Obsidian, etc.) para revisar
+  texto, encabezados y callouts.
+- Ejecuta `npm run build:search` si necesitas regenerar los payloads de búsqueda y
+  los manifiestos del frontend después de cambios grandes de contenido.
+- Usa el repo del website frontend para validar el render completo del sitio; seguí
+  la documentación actual de ese repo para apuntarlo a esta copia de la wiki, en vez
+  de asumir que acá existe una app de preview propia.
 
