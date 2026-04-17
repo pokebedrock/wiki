@@ -30,7 +30,9 @@ npm ci
 - Use early returns in code snippets to match project conventions.
 - Keep paragraphs short (3 sentences max) and prefer lists/tables for structured data.
 - Use MDX when you need interactive snippets, imports, or layout tweaks.
-- Import reusable callouts from `docs/<locale>/_partials`.
+- Import reusable callouts and helper fragments from `docs/<locale>/_partials`
+  or `docs/<locale>/snippets`, depending on where the shared MDX block
+  already lives.
 
 ### Frontmatter Reference
 
