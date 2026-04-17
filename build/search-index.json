@@ -160,11 +160,11 @@
       "reference",
       "localization"
     ],
-    "lastUpdated": "2026-03-14",
+    "lastUpdated": "2026-04-17",
     "status": "draft",
     "lang": "en",
     "order": 5,
-    "body": "\n| Term | Description | Notes |\n| --- | --- | --- |\n| PokéCoins | In-game premium currency | Keep untranslated |\n| Survival Pass | Seasonal rewards track | Use localized equivalent when the game provides one |\n\nAdd more rows as localization efforts expand.\n\n\n\n"
+    "body": "\n| Term | Description | Notes |\n| --- | --- | --- |\n| PokéCoins | In-game premium currency | Keep untranslated |\n| Survival Pass | Seasonal rewards track | Use localized equivalent when the game provides one |\n| search index | Generated search payload consumed locally or synced remotely | Prefer a consistent noun phrase instead of alternating between `index`, `payload`, and `search data` in the same page |\n| frontend manifest | Generated JSON manifest used by the website frontend for Pokemon, moves, and move learners | Translate `manifest` naturally, but keep the frontend/backend distinction explicit |\n| move learner | Pokemon entry listed as able to learn a move | Keep this distinct from the move itself and from broader learnset terminology |\n| website backend | Protected backend service that receives synced wiki search payloads | Keep this distinct from the wiki repo and the public frontend |\n| Content Request | GitHub issue template for requesting new pages or localization work | Keep the template name capitalized when referencing the repo form |\n\nAdd more rows as localization efforts expand, especially when repeated automation terms start appearing across multiple localized pages.\n\n\n\n"
   },
   {
     "id": "en/reference/media-policy",
@@ -388,11 +388,11 @@
       "reference",
       "localization"
     ],
-    "lastUpdated": "2025-11-21",
+    "lastUpdated": "2026-04-17",
     "status": "draft",
     "lang": "es",
     "order": 5,
-    "body": "\n| Termino | Descripcion | Notas |\n| --- | --- | --- |\n| PokéCoins | Moneda premium del juego | Mantener sin traducir |\n| Survival Pass | Pase de recompensas de temporada | Usar equivalente localizado cuando el juego lo provea |\n\nAgregar mas filas a medida que crezcan los esfuerzos de localizacion.\n\n\n\n"
+    "body": "\n| Termino | Descripcion | Notas |\n| --- | --- | --- |\n| PokéCoins | Moneda premium del juego | Mantener sin traducir |\n| Survival Pass | Pase de recompensas de temporada | Usar equivalente localizado cuando el juego lo provea |\n| search index | Payload de busqueda para uso local o sync remota | No alternar entre `indice`, `payload` y `datos de busqueda` en la misma pagina |\n| frontend manifest | Manifest JSON generado que usa el frontend del sitio para Pokemon, moves y move learners | Traducir `manifest` de forma natural, pero dejando explicita la diferencia entre frontend y backend |\n| move learner | Entrada de Pokemon que puede aprender un movimiento | Mantenerlo separado del movimiento en si y de terminos mas amplios como learnset |\n| website backend | Servicio backend protegido que recibe payloads de busqueda sincronizados desde la wiki | Mantenerlo separado del repo de la wiki y del frontend publico |\n| Content Request | Plantilla de issue de GitHub para pedir paginas nuevas o trabajo de localizacion | Mantener el nombre de la plantilla en mayusculas cuando se refiera al formulario del repo |\n\nAgregar mas filas a medida que crezcan los esfuerzos de localizacion.\nPriorizar terminos de automatizacion que se repitan en varias paginas traducidas.\n\n\n\n"
   },
   {
     "id": "es/reference/media-policy",
