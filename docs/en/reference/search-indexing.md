@@ -4,7 +4,7 @@ description: Details for running the Meilisearch indexing workflow locally and i
 tags:
   - reference
   - search
-lastUpdated: "2026-04-03"
+lastUpdated: "2026-04-17"
 status: beta
 lang: en
 toc: true
@@ -32,12 +32,15 @@ order: 2
   the multi-index JSON payload to the website backend's protected sync endpoint so Meilisearch
   can stay private.
 
-## Required Settings
+## Optional Remote Index Push Settings
 
 | Variable | Description |
 | --- | --- |
 | `MEILISEARCH_URL` | Base URL of the self-hosted Meilisearch instance |
 | `MEILISEARCH_KEY` | Admin or documents key with write access |
+
+These variables are only needed when you want `npm run build:search` to push
+records directly to Meilisearch after generating the local JSON artifacts.
 
 ## Optional CI Settings
 
@@ -53,14 +56,22 @@ so the run stays debuggable.
 
 ## Local Run
 
+Generate the tracked JSON artifacts without any remote push:
+
+```bash
+npm run build:search
+```
+
+Push the three remote indices too when Meilisearch credentials are available:
+
 ```bash
 MEILISEARCH_URL=https://search.pokebedrock.com \
 MEILISEARCH_KEY=<docs-key> \
 npm run build:search
 ```
 
-The command writes the search payloads plus frontend manifests, and pushes the three remote
-indices when env vars are set.
+In both cases the command writes the search payloads plus frontend manifests locally;
+remote sync only happens when the env vars are set.
 
 ## Production Sync Endpoint
 

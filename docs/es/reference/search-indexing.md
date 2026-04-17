@@ -4,7 +4,7 @@ description: Detalles para ejecutar el flujo de indexacion de Meilisearch localm
 tags:
   - reference
   - search
-lastUpdated: "2026-04-03"
+lastUpdated: "2026-04-17"
 status: beta
 lang: es
 toc: true
@@ -32,12 +32,15 @@ order: 2
   y luego envia el payload JSON multi-indice al endpoint protegido de sync del backend del sitio para
   mantener privado Meilisearch.
 
-## Configuracion requerida
+## Configuracion opcional para publicar indices remotos
 
 | Variable | Descripcion |
 | --- | --- |
 | `MEILISEARCH_URL` | URL base de la instancia autohospedada de Meilisearch |
 | `MEILISEARCH_KEY` | Clave de admin o documents con permisos de escritura |
+
+Estas variables solo hacen falta cuando queres que `npm run build:search` publique
+los registros directamente en Meilisearch despues de generar los artifacts JSON locales.
 
 ## Configuracion opcional de CI
 
@@ -53,14 +56,22 @@ para que la ejecucion siga siendo depurable.
 
 ## Ejecucion local
 
+Genera los artifacts JSON versionados sin publicar nada en remoto:
+
+```bash
+npm run build:search
+```
+
+Publica tambien los tres indices remotos cuando existan credenciales de Meilisearch:
+
 ```bash
 MEILISEARCH_URL=https://search.pokebedrock.com \
 MEILISEARCH_KEY=<docs-key> \
 npm run build:search
 ```
 
-El comando escribe payloads de busqueda y manifiestos del frontend, y publica los tres
-indices remotos cuando las variables de entorno estan definidas.
+En ambos casos el comando escribe los payloads de busqueda y los manifiestos del frontend
+en local; la publicacion remota solo ocurre cuando las variables de entorno estan definidas.
 
 ## Endpoint de sync en produccion
 
@@ -91,7 +102,7 @@ El flujo de produccion por defecto no expone Meilisearch publicamente:
   "tags": ["guia", "onboarding"],
   "lastUpdated": "2025-11-21",
   "status": "stable",
-  "lang": "en",
+  "lang": "es",
   "order": 3,
   "body": "Contenido Markdown sin frontmatter"
 }
