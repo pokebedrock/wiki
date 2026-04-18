@@ -26,7 +26,9 @@ Usar bloques estilo Docusaurus:
 Consejo breve y accionable.
 ```
 
-Opciones comunes: `note`, `tip`, `warning`, `danger`. Importar callouts complejos desde `docs/<locale>/_partials`.
+Opciones comunes: `note`, `tip`, `warning`, `danger`. Priorizar componentes
+auto-registrados desde `docs/<locale>/snippets/` y usar imports explicitos desde
+`docs/<locale>/_partials/` para bloques compartidos personalizados.
 
 ## Fragmentos de codigo
 
@@ -55,16 +57,18 @@ Deben renderizarse como componentes, no como codigo.
 
 ### Imports custom o parciales
 
-Para componentes en `docs/<locale>/_partials/` o snippets de uso unico, usar imports explicitos al inicio
-del archivo:
+Para fragmentos compartidos en `docs/<locale>/_partials/`, usar imports explicitos al inicio del archivo.
+Los ejemplos deben apuntar a archivos que existan realmente en el repo para evitar copy-paste roto.
 
 ```mdx
-import ServicenodeCallout from "../_partials/ServicenodeCallout.mdx";
+import ReleaseChecklist from "../_partials/ReleaseChecklist.mdx";
 
-<ServicenodeCallout />
+<ReleaseChecklist />
 ```
 
-Mantener imports relativos al documento para evitar aliases dependientes del bundler.
+Mantener imports relativos al documento para evitar aliases dependientes del bundler. Reservar
+`_partials/` para bloques compartidos importados, mientras que las exportaciones de `snippets/`
+quedan auto-registradas.
 
 
 

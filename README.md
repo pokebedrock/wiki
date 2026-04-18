@@ -24,7 +24,9 @@ consistent before syncing to the public website.
 
 - Every page must include the schema defined in `schemas/frontmatter.schema.json`.
 - Use MDX when you need components, tabs, or callouts; plain Markdown is fine for simple prose.
-- Prefer admonitions (`:::note`) for tips/warnings and reuse snippets from `docs/<locale>/_partials`.
+- Prefer admonitions (`:::note`) for tips/warnings. Use auto-registered
+  components from `docs/<locale>/snippets/` when they fit, and explicit imports
+  from `docs/<locale>/_partials/` for shared one-off blocks.
 - Images should live inside `assets/` and be referenced with relative paths. Always supply descriptive alt text.
 - Keep docs slugs aligned across locales, for example `docs/en/guides/getting-started.mdx` and `docs/es/guides/getting-started.mdx`.
 
