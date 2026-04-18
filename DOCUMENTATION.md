@@ -5,7 +5,8 @@ This file documents the tracked repository contents: purpose, structure, and the
 ## 1. Scope and conventions
 
 - Scope of this document: repository-tracked files returned by `git ls-files`.
-- Not documented file-by-file: local/runtime artifacts such as `.git/`, `node_modules/`, and generated `build/` output.
+- Not documented file-by-file: local/runtime artifacts such as `.git/`, `node_modules/`, and transient generated tooling output under `build/scripts/`.
+- Exception: selected generated fallback/search artifacts under `build/` are intentionally tracked in git and documented below.
 - Primary content source: `docs/` (Markdown/MDX).
 - Governance and automation source: root configs, `scripts/`, `schemas/`, and `.github/`.
 
@@ -226,8 +227,11 @@ Media policy from docs/scripts:
 
 - `.git/`: local repository internals; not part of authored documentation.
 - `node_modules/`: installed dependencies from `package-lock.json`.
-- `build/`: compiled tooling lives under `build/scripts/` (ignored), while search fallback
-  artifacts (`build/search-index.json`, `build/search-indices.json`, and
-  `build/content/<locale>/*-manifest.json`) are tracked to catch drift.
+- `build/`: mixed generated output.
+  - `build/scripts/` contains compiled helper tooling used during lint/build steps and is runtime-only.
+  - `build/search-index.json`, `build/search-indices.json`, and
+    `build/content/<locale>/*-manifest.json` are generated fallback/search artifacts
+    that are intentionally tracked in git so `npm run check:generated` can detect
+    drift.
 
 These directories are expected runtime artifacts for development/CI, not hand-authored wiki source.
