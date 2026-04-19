@@ -7,7 +7,7 @@ const allowedExtensions = new Set<string>([".webp", ".svg"]);
 const maxSizeBytes = 600 * 1024; // 600 KB
 
 const docs = await glob("docs/**/*.{md,mdx}", {
-  ignore: ["**/_partials/**", "**/snippets/**", "**/node_modules/**"]
+  ignore: ["**/_partials/**", "**/node_modules/**"]
 });
 
 if (!docs.length) {

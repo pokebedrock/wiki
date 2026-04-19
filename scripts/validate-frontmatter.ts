@@ -12,7 +12,7 @@ const ajv = new Ajv({ allErrors: true, allowUnionTypes: true });
 const validate = ajv.compile<Record<string, unknown>>(schema);
 
 const files = await glob("docs/**/*.{md,mdx}", {
-  ignore: ["**/_partials/**", "**/snippets/**", "**/node_modules/**", "**/README.md"]
+  ignore: ["**/_partials/**", "**/node_modules/**", "**/README.md"]
 });
 
 if (!files.length) {
