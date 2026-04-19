@@ -43,6 +43,8 @@ jobs:
           WIKI_SEARCH_SYNC_TOKEN: ${{ secrets.WIKI_SEARCH_SYNC_TOKEN }}
         run: |
           curl --fail-with-body --show-error --silent \
+            --connect-timeout 10 \
+            --max-time 30 \
             -X POST \
             -H "Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN" \
             -H "Content-Type: application/json" \
