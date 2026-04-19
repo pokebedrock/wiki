@@ -35,7 +35,8 @@ consistent before syncing to the public website.
 | `npm run lint:md` | markdownlint checks + formatting rules |
 | `npm run lint:frontmatter` | Validates doc metadata using JSON Schema |
 | `npm run lint:images` | Ensures relative assets exist, are `webp/svg`, and include alt text |
-| `npm run lint:links` | Crawls docs with Linkinator for broken links |
+| `npm run lint:relative-links` | Validates relative links in root repo docs plus `docs/` |
+| `npm run lint:links` | Runs relative-link validation, then crawls root repo docs plus `docs/` with Linkinator |
 | `npm run lint` | Runs markdownlint + frontmatter + image checks |
 | `npm run check` | Authoring checks (`lint` + link check) |
 | `npm run ci` | CI gate (`lint`, links, search build, generated-file drift check) |
@@ -53,6 +54,9 @@ required.
 ## CI & Deployment
 
 - `ci.yml` runs `npm run ci` plus `npm run audit:prod` for every PR and push.
+- The link-check step validates `README.md`, `CONTRIBUTING.md`,
+  `DOCUMENTATION.md`, and the localized docs tree so contributor-facing references
+  fail fast in CI.
 - `search-index.yml` builds the search payloads on pushes to `main`, uploads both the
   search JSON files and generated frontend content manifests as the workflow artifact, and
   posts `build/search-indices.json` to the website backend's protected sync endpoint so the

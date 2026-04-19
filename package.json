@@ -18,14 +18,16 @@
     "lint:frontmatter:run": "node build/scripts/validate-frontmatter.js",
     "lint:images": "npm run build:scripts && npm run lint:images:run",
     "lint:images:run": "node build/scripts/check-images.js",
-    "lint:links": "linkinator \"docs/**/*.{md,mdx}\" --config linkinator.config.json",
+    "lint:links": "npm run build:scripts && npm run lint:relative-links:run && linkinator README.md CONTRIBUTING.md DOCUMENTATION.md \"docs/**/*.{md,mdx}\" --config linkinator.config.json",
     "lint": "npm run build:scripts && npm run lint:md && npm run lint:frontmatter:run && npm run lint:images:run",
     "check": "npm run lint && npm run lint:links",
     "content:split": "npm run build:scripts && node build/scripts/split-content-data.js",
     "build:search": "npm run build:scripts && npm run build:search:run",
     "build:search:run": "node build/scripts/build-search-index.js",
     "check:generated": "npm run build:search && git diff --exit-code -- build/search-index.json build/search-indices.json build/content/en/pokemon-manifest.json build/content/en/moves-manifest.json build/content/en/move-learners-manifest.json build/content/es/pokemon-manifest.json build/content/es/moves-manifest.json build/content/es/move-learners-manifest.json",
-    "audit:prod": "npm audit --omit=dev"
+    "audit:prod": "npm audit --omit=dev",
+    "lint:relative-links": "npm run build:scripts && npm run lint:relative-links:run",
+    "lint:relative-links:run": "node build/scripts/validate-relative-links.js"
   },
   "devDependencies": {
     "@types/node": "^20.16.10",

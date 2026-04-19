@@ -13,7 +13,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 
 - Authors write docs in `docs/<locale>/**/*.md` and `docs/<locale>/**/*.mdx`.
 - Frontmatter is validated against `schemas/frontmatter.schema.json`.
-- Markdown, links, frontmatter, and media are validated via `npm` scripts.
+- Markdown, root-doc links, docs links, frontmatter, and media are validated via `npm` scripts.
 - CI (`.github/workflows/ci.yml`) runs on every push and pull request in this repository.
 - Search index is generated from docs by `scripts/build-search-index.ts` and can be pushed to Meilisearch.
 - Website sync behavior is specified in docs (`docs/en/reference/sync-to-website.md`) and example payload (`docs/en/reference/webhook-example.json`).
@@ -56,7 +56,7 @@ This file documents the tracked repository contents: purpose, structure, and the
 - `package-lock.json`: lockfile for reproducible dependency resolution.
 - `tsconfig.json`: TypeScript config for script source (`scripts/**/*.ts`) with `noEmit: true`.
 - `tsconfig.build.json`: extends base config, enables emit into `build/scripts`.
-- `linkinator.config.json`: link-check retry/timeout behavior and skipped schemes.
+- `linkinator.config.json`: link-check retry/timeout behavior and skipped schemes for root docs plus `docs/`.
 
 ### Lint and ignore config
 
@@ -127,6 +127,10 @@ Media policy from docs/scripts:
   - Enforces descriptive alt text.
   - Enforces local image existence (unless external URL).
   - Enforces extension whitelist (`.webp`, `.svg`) and max size (`600 KB`).
+- `scripts/validate-relative-links.ts`:
+  - Scans `README.md`, `CONTRIBUTING.md`, `DOCUMENTATION.md`, and `docs/**/*.{md,mdx}`.
+  - Fails on missing relative Markdown/HTML anchor targets before external crawling runs.
+  - Skips external URLs, anchors, `mailto:`, `tel:`, and `data:` links.
 - `scripts/build-search-index.ts`:
   - Scans docs (excluding `_partials` and `snippets`).
   - Parses frontmatter + content and writes:
@@ -200,7 +204,7 @@ Media policy from docs/scripts:
 1. `npm run lint:md` for markdown rules.
 2. `npm run lint:frontmatter` for schema compliance.
 3. `npm run lint:images` for media checks.
-4. `npm run lint:links` for broken links.
+4. `npm run lint:links` for broken links in root repo docs plus `docs/`.
 5. `npm run check` to run the fast local validation suite (`lint` + link checks).
 6. `npm run ci` to mirror the main generated-artifact gate before opening a PR.
 

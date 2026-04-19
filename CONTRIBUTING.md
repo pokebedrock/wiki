@@ -74,9 +74,9 @@ Run the following before pushing:
 npm run ci
 ```
 
-`npm run ci` runs the same lint + link validation steps as GitHub CI and also
-verifies generated search/manifests are in sync, so it is the best local pre-push
-check.
+`npm run ci` runs the same markdown, root-doc link, and docs link validation
+steps as GitHub CI and also verifies generated search/manifests are in sync, so it
+is the best local pre-push check.
 
 ## Reporting Issues
 
