@@ -32,7 +32,7 @@ order: 4
 
 ## [v2.1.0] - 2025-12-01
 
-- Content datasets split into per-item JSON files under `assets/content/pokemon/` and `assets/content/moves/`.
+- Content datasets split into per-item JSON files under `assets/content/<locale>/pokemon/` and `assets/content/<locale>/moves/`.
 - Search indexing now emits separate `docs`, `pokemon`, and `moves` payloads for Meilisearch sync.
 - Frontend manifests generated: `pokemon-manifest.json`, `moves-manifest.json`, `move-learners-manifest.json`.
 - ShellBlock documentation converted to MDX format.

@@ -32,7 +32,7 @@ order: 4
 
 ## [v2.1.0] - 2025-12-01
 
-- Conjuntos de datos divididos en archivos JSON por elemento en `assets/content/pokemon/` y `assets/content/moves/`.
+- Conjuntos de datos divididos en archivos JSON por elemento en `assets/content/<locale>/pokemon/` y `assets/content/<locale>/moves/`.
 - La indexacion de busqueda ahora emite payloads separados de `docs`, `pokemon` y `moves` para Meilisearch.
 - Manifiestos de frontend generados: `pokemon-manifest.json`, `moves-manifest.json`, `move-learners-manifest.json`.
 - Documentacion de ShellBlock convertida al formato MDX.
