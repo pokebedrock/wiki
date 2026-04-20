@@ -26,7 +26,6 @@ This file documents the tracked repository contents: purpose, structure, and the
 │   ├── ISSUE_TEMPLATE/
 │   └── workflows/
 ├── assets/
-│   ├── content/
 │   ├── diagrams/
 │   └── images/
 ├── docs/
@@ -100,6 +99,10 @@ This file documents the tracked repository contents: purpose, structure, and the
 - `assets/README.md`: policy summary for media placement and formats.
 - `assets/images/.gitkeep`: keeps empty `images/` directory tracked.
 - `assets/diagrams/.gitkeep`: keeps empty `diagrams/` directory tracked.
+- Optional generated/split datasets may also appear under
+  `assets/content/<locale>/{pokemon,moves}/` when maintainers run
+  `npm run content:split`, but those paths are not part of the repo's
+  always-present tracked skeleton.
 
 Media policy from docs/scripts:
 
@@ -135,9 +138,10 @@ Media policy from docs/scripts:
     - `build/content/<locale>/pokemon-manifest.json` (frontend Pokemon summaries)
     - `build/content/<locale>/moves-manifest.json` (frontend move summaries)
     - `build/content/<locale>/move-learners-manifest.json` (frontend move learner lookup)
-  - Reads content JSON from:
+  - Optionally reads locale-scoped content JSON from:
     - `assets/content/<locale>/pokemon/*.json`
     - `assets/content/<locale>/moves/*.json`
+    - Missing directories are tolerated so docs-only checkouts still build/search cleanly.
   - Optionally pushes documents to Meilisearch when env vars are provided:
     - `MEILISEARCH_URL`
     - `MEILISEARCH_KEY`
@@ -147,7 +151,7 @@ Media policy from docs/scripts:
     - `wiki-moves`
   - Production CI instead sends the generated multi-index payload to the backend, which reindexes Meilisearch internally.
 - `scripts/split-content-data.ts`:
-  - Splits legacy monolithic content JSON into per-item files.
+  - Splits upstream/legacy monolithic content JSON into per-item locale-scoped files when those datasets are present.
   - Writes Pokemon files to `assets/content/<locale>/pokemon/`.
   - Writes move files to `assets/content/<locale>/moves/`.
 

@@ -37,23 +37,19 @@ MDX (`.mdx`). Keep identical slugs across locales, for example:
 assets/
   images/                 # webp/svg exports
   diagrams/               # source files (.drawio, .excalidraw, etc.)
-  content/                # normalized JSON datasets for Pokemon + moves
-    en/
-      pokemon/            # one file per Pokemon, generated via content:split
-      moves/              # one file per move, generated via content:split
-    es/
-      pokemon/            # Spanish dataset mirror (currently copied from en)
-      moves/              # Spanish dataset mirror (currently copied from en)
 ```
 
 Images referenced from docs must live under `assets/`. Diagrams keep their
-editable sources so future contributors can revise them. Structured datasets for
-Pokemon and moves also live under `assets/content/` so search indexing and the
-frontend can diff individual entries.
+editable sources so future contributors can revise them.
 
-> ℹ️ Upstream content drops land as `assets/content/wikiPokemon.json` and
-> `assets/content/wikiMoves.json`. Run `npm run content:split` to regenerate
-> the per-entry files tracked in git.
+Optional upstream content datasets can also be split into locale-scoped files under
+`assets/content/<locale>/{pokemon,moves}` when maintainers need to regenerate the
+search/manifests input data. Those directories are script-managed inputs, not part of
+the repo's always-present tracked tree.
+
+> ℹ️ When upstream content drops arrive as monolithic locale files, run
+> `npm run content:split` to regenerate `assets/content/<locale>/pokemon/*.json`
+> and `assets/content/<locale>/moves/*.json` before committing them.
 
 ## Schemas & Scripts
 

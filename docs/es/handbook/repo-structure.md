@@ -37,23 +37,19 @@ MDX (`.mdx`). Mantene slugs identicos entre idiomas, por ejemplo:
 assets/
   images/                 # exports webp/svg
   diagrams/               # archivos fuente (.drawio, .excalidraw, etc.)
-  content/                # datasets JSON normalizados de Pokemon + moves
-    en/
-      pokemon/            # un archivo por Pokemon, generado por content:split
-      moves/              # un archivo por move, generado por content:split
-    es/
-      pokemon/            # espejo del dataset en espanol (hoy copiado desde en)
-      moves/              # espejo del dataset en espanol (hoy copiado desde en)
 ```
 
 Las imagenes referenciadas desde docs deben vivir bajo `assets/`. Los diagramas conservan
-sus fuentes editables para que futuros contribuidores puedan revisarlos. Los datasets
-estructurados de Pokemon y moves tambien viven en `assets/content/` para que el indexado
-de busqueda y el frontend puedan comparar entradas individuales.
+sus fuentes editables para que futuros contribuidores puedan revisarlos.
 
-> ℹ️ Las actualizaciones de contenido upstream llegan como `assets/content/wikiPokemon.json` y
-> `assets/content/wikiMoves.json`. Ejecuta `npm run content:split` para regenerar
-> los archivos por entrada versionados en git.
+Los datasets upstream opcionales tambien se pueden dividir en archivos por idioma bajo
+`assets/content/<locale>/{pokemon,moves}` cuando haga falta regenerar las entradas que
+consumen la busqueda y los manifiestos. Esos directorios son inputs manejados por los
+scripts, no parte fija del arbol versionado que siempre existe en el repo.
+
+> ℹ️ Cuando lleguen drops monoliticos de contenido upstream, ejecuta
+> `npm run content:split` para regenerar `assets/content/<locale>/pokemon/*.json`
+> y `assets/content/<locale>/moves/*.json` antes de versionarlos.
 
 ## Schemas y scripts
 
