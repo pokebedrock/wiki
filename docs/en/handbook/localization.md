@@ -40,6 +40,9 @@ status: beta
 
 Use `draft` or `beta` for translations that still need native review.
 
+At the moment this repository only validates and builds `en` and `es` locale codes, so
+frontmatter should use one of those values until additional locales are actually added.
+
 ## Glossary
 
 Maintain terminology consistency by referencing the shared glossary in

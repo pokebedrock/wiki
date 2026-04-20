@@ -39,6 +39,9 @@ status: beta
 
 Usa `draft` o `beta` para traducciones que todavia necesiten revision nativa.
 
+Hoy este repositorio solo valida y construye los locales `en` y `es`, asi que el
+frontmatter debe usar uno de esos valores hasta que se agreguen mas idiomas de verdad.
+
 ## Glosario
 
 Manten consistencia terminologica usando el glosario compartido en

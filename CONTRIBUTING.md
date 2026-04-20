@@ -56,6 +56,7 @@ lang: en
 
 - English source docs live under `docs/en/**` (for example `docs/en/guides/getting-started.mdx`).
 - Spanish translations live under `docs/es/**` and should keep the same category + slug path when possible (for example `docs/es/guides/getting-started.mdx`).
+- `lang` must currently be `en` or `es` to match the locales this repository builds and validates.
 - Keep the English page updated first when content changes so translators can diff against the latest source.
 - Add translation context in the PR description when possible.
 
