@@ -4,7 +4,7 @@ description: Guidelines for rolling versions and changelogging major documentati
 tags:
   - handbook
   - versioning
-lastUpdated: "2026-03-21"
+lastUpdated: "2026-04-21"
 status: stable
 lang: en
 toc: true
@@ -19,16 +19,16 @@ We version docs when the gameplay experience or public APIs change in incompatib
 
 | Version | Trigger | Storage |
 | --- | --- | --- |
-| `current` | Default branch | `docs/` root |
-| `vX.Y` | Major gameplay update | `versions/vX.Y/` (mirrors structure) |
-| `legacy` | Unsupported content | Archived branch or zipped export |
+| `current` | Default branch | `docs/` root on `main` |
+| `vX.Y` | Major gameplay update | Annotated git tag/release pointing at the snapshot commit |
+| `legacy` | Unsupported content | Archived branch, git tag, or zipped export |
 
 ## Release Flow
 
-1. Prepare changes under `docs/`.
-2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.
-3. Update `docs/en/reference/changelog.md` with highlights and links.
-4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).
+1. Prepare changes under `docs/` on `main`.
+2. Once the update ships, create a release tag for the commit that should represent the frozen docs snapshot (for example `v2.4.0`).
+3. Update `docs/en/reference/changelog.md` with highlights and links to the tagged release when relevant.
+4. Ensure search indexing keeps the live `main` docs current, and only index historical snapshots separately if a consumer explicitly needs them.
 
 ## Changelog
 

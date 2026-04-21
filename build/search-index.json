@@ -130,11 +130,11 @@
       "handbook",
       "versioning"
     ],
-    "lastUpdated": "2026-03-21",
+    "lastUpdated": "2026-04-21",
     "status": "stable",
     "lang": "en",
     "order": 5,
-    "body": "\n## Philosophy\n\nWe version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.\n\n## Version Types\n\n| Version | Trigger | Storage |\n| --- | --- | --- |\n| `current` | Default branch | `docs/` root |\n| `vX.Y` | Major gameplay update | `versions/vX.Y/` (mirrors structure) |\n| `legacy` | Unsupported content | Archived branch or zipped export |\n\n## Release Flow\n\n1. Prepare changes under `docs/`.\n2. Once the update ships, copy the folder into `versions/vX.Y/` and freeze.\n3. Update `docs/en/reference/changelog.md` with highlights and links.\n4. Ensure search indexing excludes archived versions unless explicitly requested (configure Meilisearch filter).\n\n## Changelog\n\nUse semantic headings:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nThe `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.\n\n\n\n"
+    "body": "\n## Philosophy\n\nWe version docs when the gameplay experience or public APIs change in incompatible ways. Routine copy edits stay on the live version.\n\n## Version Types\n\n| Version | Trigger | Storage |\n| --- | --- | --- |\n| `current` | Default branch | `docs/` root on `main` |\n| `vX.Y` | Major gameplay update | Annotated git tag/release pointing at the snapshot commit |\n| `legacy` | Unsupported content | Archived branch, git tag, or zipped export |\n\n## Release Flow\n\n1. Prepare changes under `docs/` on `main`.\n2. Once the update ships, create a release tag for the commit that should represent the frozen docs snapshot (for example `v2.4.0`).\n3. Update `docs/en/reference/changelog.md` with highlights and links to the tagged release when relevant.\n4. Ensure search indexing keeps the live `main` docs current, and only index historical snapshots separately if a consumer explicitly needs them.\n\n## Changelog\n\nUse semantic headings:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nThe `docs/en/reference/changelog.md` file keeps the public record synchronized with in-game releases.\n\n\n\n"
   },
   {
     "id": "en/reference/changelog",
@@ -358,11 +358,11 @@
       "handbook",
       "versioning"
     ],
-    "lastUpdated": "2026-03-21",
+    "lastUpdated": "2026-04-21",
     "status": "stable",
     "lang": "es",
     "order": 5,
-    "body": "\n## Filosofia\n\nVersionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma\nincompatible. Las ediciones de texto rutinarias permanecen en la version activa.\n\n## Tipos de version\n\n| Version | Disparador | Almacenamiento |\n| --- | --- | --- |\n| `current` | Rama por defecto | Raiz de `docs/` |\n| `vX.Y` | Actualizacion mayor de gameplay | `versions/vX.Y/` (misma estructura) |\n| `legacy` | Contenido sin soporte | Rama archivada o export zip |\n\n## Flujo de release\n\n1. Preparar cambios bajo `docs/`.\n2. Cuando la actualizacion salga, copiar la carpeta a `versions/vX.Y/` y congelar.\n3. Actualizar `docs/es/reference/changelog.md` con puntos clave y links.\n4. Asegurar que el indexado de busqueda excluya versiones archivadas salvo que se solicite explicitamente (configurar filtro en Meilisearch).\n\n## Changelog\n\nUsar encabezados semanticos:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nEl archivo `docs/es/reference/changelog.md` mantiene el registro publico sincronizado con los lanzamientos del juego.\n\n\n\n"
+    "body": "\n## Filosofia\n\nVersionamos docs cuando la experiencia de juego o las APIs publicas cambian de forma\nincompatible. Las ediciones de texto rutinarias permanecen en la version activa.\n\n## Tipos de version\n\n| Version | Disparador | Almacenamiento |\n| --- | --- | --- |\n| `current` | Rama por defecto | Raiz de `docs/` en `main` |\n| `vX.Y` | Actualizacion mayor de gameplay | Tag/release anotado de git que apunta al commit snapshot |\n| `legacy` | Contenido sin soporte | Rama archivada, tag de git o export zip |\n\n## Flujo de release\n\n1. Preparar cambios bajo `docs/` en `main`.\n2. Cuando la actualizacion salga, crear un tag de release para el commit\n   que debe representar el snapshot congelado de docs (por ejemplo `v2.4.0`).\n3. Actualizar `docs/es/reference/changelog.md` con puntos clave y links al\n   release tageado cuando corresponda.\n4. Asegurar que el indexado de busqueda mantenga actualizadas las docs vivas\n   de `main`, e indexar snapshots historicos por separado solo si algun\n   consumidor lo necesita explicitamente.\n\n## Changelog\n\nUsar encabezados semanticos:\n\n```text\n## [v2.0.0] - 2025-11-21\n### Added\n- ...\n```\n\nEl archivo `docs/es/reference/changelog.md` mantiene el registro publico sincronizado con los lanzamientos del juego.\n\n\n\n"
   },
   {
     "id": "es/reference/changelog",
