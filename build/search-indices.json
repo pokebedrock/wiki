@@ -404,11 +404,11 @@
         "reference",
         "media"
       ],
-      "lastUpdated": "2026-03-19",
+      "lastUpdated": "2026-04-22",
       "status": "stable",
       "lang": "es",
       "order": 3,
-      "body": "\nimport { ShellBlock } from \"../snippets/code-blocks.mdx\";\n\n## Formatos\n\n- Preferir `webp` para imagenes raster y `svg` para arte vectorial.\n- Convertir cargas PNG/JPEG usando ImageMagick o Squoosh antes de hacer commit.\n- Guardar archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.\n\n## Limites de tamano\n\n- Imagenes inline <= 600 KB (aplicado por `npm run lint:images`).\n- Diagramas <= 5 MB; cualquier cosa mayor debe usar Git LFS.\n\n## Alt text y captions\n\n- Proveer alt text descriptivo que transmita la misma informacion que la imagen.\n- Usar captions debajo de diagramas complejos para agregar contexto.\n\n## Git LFS\n\nVersionar binarios grandes:\n\n<ShellBlock command='git lfs track \"assets/diagrams/*.drawio\"\\ngit add .gitattributes assets/diagrams/example.drawio' />\n\n## Checklist de revision\n\n- [ ] File stored under `assets/`\n- [ ] Alt text filled in\n- [ ] Format is `webp` or `svg`\n- [ ] Size ≤ 600 KB (inline)\n- [ ] Referenced using a relative path in docs\n\n\n\n"
+      "body": "\nimport { ShellBlock } from \"../snippets/code-blocks.mdx\";\n\n## Formatos\n\n- Preferir `webp` para imagenes raster y `svg` para arte vectorial.\n- Convertir cargas PNG/JPEG usando ImageMagick o Squoosh antes de hacer commit.\n- Guardar archivos fuente de diagramas (`.drawio`, `.excalidraw`) en `assets/diagrams`.\n\n## Limites de tamano\n\n- Imagenes inline <= 600 KB (aplicado por `npm run lint:images`).\n- Diagramas <= 5 MB; cualquier cosa mayor debe usar Git LFS.\n\n## Alt text y captions\n\n- Proveer alt text descriptivo que transmita la misma informacion que la imagen.\n- Usar captions debajo de diagramas complejos para agregar contexto.\n\n## Git LFS\n\nVersionar binarios grandes:\n\n<ShellBlock command='git lfs track \"assets/diagrams/*.drawio\"\\ngit add .gitattributes assets/diagrams/example.drawio' />\n\n## Checklist de revision\n\n- [ ] Archivo guardado bajo `assets/`\n- [ ] Texto alternativo completo\n- [ ] Formato en `webp` o `svg`\n- [ ] Tamano <= 600 KB (inline)\n- [ ] Referenciado con una ruta relativa en la documentacion\n\n\n\n"
     },
     {
       "id": "es/reference/release-checklist",
