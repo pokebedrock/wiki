@@ -6,12 +6,12 @@ import { glob } from "glob";
 const allowedExtensions = new Set<string>([".webp", ".svg"]);
 const maxSizeBytes = 600 * 1024; // 600 KB
 
-const docs = await glob("docs/**/*.{md,mdx}", {
+const filesToValidate = await glob(["docs/**/*.{md,mdx}", "assets/**/*.md"], {
   ignore: ["**/_partials/**", "**/snippets/**", "**/node_modules/**"]
 });
 
-if (!docs.length) {
-  console.log("No markdown files found under docs/ for image validation.");
+if (!filesToValidate.length) {
+  console.log("No markdown files found for image validation.");
   process.exit(0);
 }
 
@@ -60,7 +60,7 @@ const validateAsset = (file: string, target: string, altText?: string): void => 
   }
 };
 
-for (const file of docs) {
+for (const file of filesToValidate) {
   const source = readFileSync(file, "utf8");
   markdownImageRegex.lastIndex = 0;
 
@@ -89,6 +89,5 @@ if (hasErrors) {
   process.exit(1);
 }
 
-console.log(`Image validation succeeded for ${docs.length} docs.`);
-
+console.log(`Image validation succeeded for ${filesToValidate.length} markdown files.`);
 
