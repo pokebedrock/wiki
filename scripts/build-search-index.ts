@@ -109,22 +109,32 @@ const readOptionalJsonDirectory = async (
     return null;
   }
 
-  return filePaths
-    .sort((left, right) => left.localeCompare(right))
-    .map((filePath) => {
-      const id = filePath.split("/").pop()?.replace(/\.json$/i, "");
-      if (!id) {
-        return null;
-      }
+  const entries: Array<{ id: string; value: unknown }> = [];
 
-      const absolutePath = resolve(repoRoot, filePath);
+  for (const filePath of filePaths.sort((left, right) => left.localeCompare(right))) {
+    const id = filePath.split("/").pop()?.replace(/\.json$/i, "");
+    if (!id) {
+      continue;
+    }
+
+    const absolutePath = resolve(repoRoot, filePath);
+
+    try {
       const source = readFileSync(absolutePath, "utf8");
-      return {
+      entries.push({
         id,
         value: JSON.parse(source) as unknown,
-      };
-    })
-    .filter((entry): entry is { id: string; value: unknown } => entry !== null);
+      });
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.warn(`Skipping malformed JSON record ${filePath}: ${error.message}`);
+      } else {
+        console.warn(`Skipping malformed JSON record ${filePath}`);
+      }
+    }
+  }
+
+  return entries;
 };
 
 const buildPokemonBody = (id: string, pokemonRaw: unknown): string => {
