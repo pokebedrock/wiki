@@ -86,4 +86,6 @@ check.
 
 ## Questions
 
-Ping `@pokebedrock/wiki-maintainers` in GitHub Discussions or the docs Slack channel for help with tooling, schema updates, or localization blockers.
+- Open a GitHub issue when you need help with wiki content, localization, or repository tooling.
+- Use [pokebedrock.com/support](https://pokebedrock.com/support) for account, purchase, or other non-documentation issues.
+- Tag `@pokebedrock/wiki-maintainers` on the related PR or issue when you need maintainer input on schema or review blockers.
