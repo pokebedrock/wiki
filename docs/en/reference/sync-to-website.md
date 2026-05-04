@@ -1,10 +1,10 @@
 ---
 title: Website Sync Pipeline
-description: How GitHub pushes trigger the backend webhook and keep the public site cached.
+description: How search-index builds POST manifest payloads to the website backend and refresh the public site cache.
 tags:
   - reference
   - sync
-lastUpdated: "2025-11-21"
+lastUpdated: "2026-05-04"
 status: beta
 lang: en
 toc: true
@@ -13,41 +13,48 @@ order: 1
 
 ## Overview
 
-1. Docs merge into `main`.
-2. GitHub fires a repository dispatch/webhook handled by the website backend.
-3. Backend fetches the changed files via the GitHub Contents API using ETags for cache-busting.
-4. Rendered HTML/MDX output is cached in Redis with a 15-minute TTL.
+1. Docs or structured content merge into `main`.
+2. `.github/workflows/search-index.yml` runs `npm run build:search`.
+3. The workflow `POST`s `build/search-indices.json` to the website backend when
+   `WIKI_SEARCH_SYNC_URL` and `WIKI_SEARCH_SYNC_TOKEN` are configured.
+4. The backend refreshes the search payload consumed by the public site.
 
-## Webhook Contract
+## Sync Request Contract
 
-| Field | Description |
+The current sync is a bearer-authenticated JSON upload, not a repository webhook.
+The request body is the generated `build/search-indices.json` file.
+
+| Part | Description |
 | --- | --- |
-| `event` | Always `wiki.synced` |
-| `commit` | SHA of the merged commit |
-| `files` | Array of changed doc paths |
-| `timestamp` | ISO timestamp |
+| `Authorization` header | `Bearer $WIKI_SEARCH_SYNC_TOKEN` |
+| `Content-Type` header | `application/json` |
+| Request body | Raw `build/search-indices.json` payload |
+| Target URL | `WIKI_SEARCH_SYNC_URL` |
 
-The backend validates the HMAC using the shared secret `WIKI_WEBHOOK_SECRET`. See
-`website-backend/src/http/routes/webhooks.ts` for implementation details.
+See `.github/workflows/search-index.yml` for the exact CI request shape.
 
 ## Local Testing
 
-Use the sample payload in `docs/en/reference/webhook-example.json` with `curl` or `Invoke-WebRequest`.
+Build the payload locally, then `POST` the generated artifact to the backend.
 
-```powershell
-Invoke-WebRequest `
-  -Uri https://api.pokebedrock.com/wiki/webhook `
-  -Headers @{ "X-Signature" = "<hmac>" } `
-  -Body (Get-Content docs/en/reference/webhook-example.json -Raw) `
-  -Method Post
+```bash
+npm run build:search
+curl --fail-with-body --show-error --silent \
+  -X POST \
+  -H "Authorization: Bearer $WIKI_SEARCH_SYNC_TOKEN" \
+  -H "Content-Type: application/json" \
+  --data-binary @build/search-indices.json \
+  "$WIKI_SEARCH_SYNC_URL"
 ```
 
-## Cache Busting
+## Cache Behavior
 
-- Backend stores the `ETag` returned from GitHub per file.
-- On subsequent syncs, it sends `If-None-Match`; unchanged content skips re-rendering.
-- When the website serves a page, it includes the doc `lastUpdated` frontmatter in the
-  response to help the client decide whether to fetch fresh data.
+- `scripts/build-search-index.ts` regenerates the combined docs, Pokemon, and moves
+  search payloads before every sync.
+- If backend sync credentials are unset, the workflow still uploads the generated
+  artifacts so maintainers can inspect or replay the payload manually.
+- The public site reads the refreshed search dataset from the website backend rather
+  than fetching changed markdown files directly from GitHub.
 
 
 
